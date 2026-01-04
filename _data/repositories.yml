@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - cyz14
+  - F25-CSE535
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - cyz14/nlp-assignment
+  - F25-CSE535/cft-cyz14
+  - F25-CSE535/bft-cyz14
+  - F25-CSE535/2pc-cyz14
