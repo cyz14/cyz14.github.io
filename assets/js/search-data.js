@@ -44,9 +44,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
+        },{id: "nav-learn-from-famous-ai-courses",
+          title: "Learn From Famous AI Courses",
+          description: "AI From Scratch, Image Classification, Language Models, and Generative Models",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
