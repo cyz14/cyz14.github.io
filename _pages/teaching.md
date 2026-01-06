@@ -21,8 +21,8 @@ Organize your courses by years, topics, or universities, however you like! -->
 - [李宏毅 Machine Learning and Having It Deep and Structured, 2018 Spring](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
 - [KAIST 492(D) Diffusion Models and Their Applications,24 Fall](https://mhsung.github.io/kaist-cs492d-fall-2024/)
 - [MIT Diffusion course 2025](https://diffusion.csail.mit.edu/2025/index.html)
-- [Dive into Deep Learning](https://d2l.ai/index.html)
-- [Berkeley CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse-fa23/)
+- [MIT EECS 6.7960 Deep Learning Fall 2025](https://deeplearning6-7960.github.io/)
+- [MIT EECS 6.S978 Deep Generative Models Fall 2024](https://mit-6s978.github.io/)
 
 ## 1. AI system与图像分类模型
 
@@ -43,28 +43,46 @@ Organize your courses by years, topics, or universities, however you like! -->
 - 计算框架基础
 - 矩阵计算与体系结构
 - 环境搭建:
+  - 安装git
   - 安装gpu driver: nvidia-smi
   - 安装cuda toolkit: nvcc compiler
+  - 安装cuDNN
   - 安装miniconda，创建env，安装pytorch，验证gpu available
   - linux系统: 查看 nvidia-fabric-manager状态
-  - jupyter notebook
+  - 安装jupyter notebook
   - 安装docker
 
-练习  
-cs231n python/numpy练习 Colab
+练习
+
+- [zhihu 安装GPU驱动，CUDA和cuDNN](https://zhuanlan.zhihu.com/p/143429249)
+- cs231n python/numpy练习 Colab
 
 第二讲：
 
 - CSE 538 maximum entropy classifier (Logistic regression)
-- cs231n Lecture 4: Neural Networks and Backpropagation
+- cs231n Lecture 1: Deep Learning for Computer Vision
 
 练习
 
 - pytorch.org tutorial with examples [tensor, function, auto grad, module](https://docs.pytorch.org/tutorials/beginner/pytorch_with_examples.html)
+
+第三讲：
+
+- cs231n Lecture 2: Image Classification with Linear Classifiers
+- cs231n Lecture 3: Regularization and Optimization
+- cs231n Lecture 4: Neural Networks and Backpropagation
+
+练习
+
 - cs231n Backprop Review Session Colab
 
-第三讲：  
-cs231n Lecture 5: Image Classification with CNNs
+第四讲：
+
+- cs231n Lecture 5: Image Classification with CNNs
+
+第五讲：
+
+- cs231n Lecture 6: CNN Architectures
 
 练习
 
@@ -81,6 +99,7 @@ cs231n Lecture 5: Image Classification with CNNs
 阅读：
 
 - [tensorflow从0到N：反向传播的推导](https://github.com/EthanYuan/TensorFlow-Zero-to-N/blob/master/TensorFlow%E4%BB%8E0%E5%88%B0N/TensorFlow%E4%BB%8E0%E5%88%B01/10-NN%E5%9F%BA%E6%9C%AC%E5%8A%9F%EF%BC%9A%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%9A%84%E6%8E%A8%E5%AF%BC.md)
+- [Cheatsheet CNN](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
 - [shervine blog: 图片识别模型的演化](https://stanford.edu/~shervine/blog/evolution-image-classification-explained)：  
   LeNet->(ImageNet)->AlexNet->VGGNet->GoogLeNet->ResNet->DenseNet
 - [UvA Tutorial 5: Inception, ResNet, DenseNet](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial5/Inception_ResNet_DenseNet.html)
@@ -167,6 +186,8 @@ CS492D:
 
 ## 其他内容
 
+- [Dive into Deep Learning](https://d2l.ai/index.html)
+- [Berkeley CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse-fa23/)
 - [Transformers as a Computational Model (UC Berkeley, Simons Institute)](https://www.youtube.com/playlist?list=PLgKuh-lKre11RuxGM038u0OSxVdCicIMF)
 - [CS287 Advanced Robotics at UC Berkeley Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
 - [Github Awesome AI](https://github.com/owainlewis/awesome-artificial-intelligence)
