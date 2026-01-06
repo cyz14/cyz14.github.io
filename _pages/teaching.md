@@ -55,8 +55,8 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 练习
 
-- [zhihu 安装GPU驱动，CUDA和cuDNN](https://zhuanlan.zhihu.com/p/143429249)
-- cs231n python/numpy练习 Colab
+- [知乎专栏：安装GPU驱动，CUDA和cuDNN](https://zhuanlan.zhihu.com/p/143429249)
+- cs231n python/numpy Review [[Colab]](https://colab.research.google.com/github/cs231n/cs231n.github.io/blob/master/python-colab.ipynb), [Tutorial](https://cs231n.github.io/python-numpy-tutorial/)
 
 第二讲：
 
@@ -65,6 +65,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 练习
 
+- MIT EECS 6.7960 Deep Learning Fall 2025, pytorch tutorial [[colab]](https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing)
 - pytorch.org tutorial with examples [tensor, function, auto grad, module](https://docs.pytorch.org/tutorials/beginner/pytorch_with_examples.html)
 
 第三讲：
@@ -75,11 +76,20 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 练习
 
-- cs231n Backprop Review Session Colab
+- cs231n Backprop Review Session [Slides](https://cs231n.stanford.edu/slides/2025/section_2.pdf), [[Colab]](https://colab.research.google.com/drive/1yjxfAugU5JrbgCb1TcCbXDMCKE_G_P-e)
+- [pytorch nn tutorial](https://docs.pytorch.org/tutorials/beginner/nn_tutorial.html): mnist 图片识别
 
 第四讲：
 
 - cs231n Lecture 5: Image Classification with CNNs
+
+练习
+
+- cs231n PyTorch Review Session on [[Colab]](https://colab.research.google.com/drive/1Dl_Xs5GKjEOAedQUVOjG_fPMB1eXtLSm)
+- [AI system Lab1](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab1/README.md)： mnist，模型可视化，逐layer性能profiling
+- [AI system Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现一个张量运算C++，profiling
+- [AI system Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： cuda实现和优化，profiling
+- [UvA DL Notebooks Tutorial 2: Introduction to PyTorch](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial2/Introduction_to_PyTorch.html)
 
 第五讲：
 
@@ -87,25 +97,18 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 练习
 
-- cs231n PyTorch Review Session on Colab
-- [UvA DL Notebooks Tutorial 2: Introduction to PyTorch](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial2/Introduction_to_PyTorch.html)
-- [pytorch nn tutorial](https://docs.pytorch.org/tutorials/beginner/nn_tutorial.html) mnist 图片识别
-- [AI system Lab1](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab1/README.md)： mnist 样例，模型可视化，逐layer性能profiling
-- [AI system Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现一个张量运算C++，profiling
-- [AI system Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： cuda实现和优化，profiling
-- Lab4 Optional: 使用 horovod 分布式并行训练
-- Lab5 Optional：使用docker容器部署训练和推理任务
 - cs231n Assignment 1 on Colab: [Image Classification, kNN, Softmax, Fully-Connected Neural Network, Fully-Connected Nets](https://cs231n.github.io/assignments2025/assignment1/)
+- Microsoft Lab4 (Optional): 使用 horovod 分布式并行训练
+- Microsoft Lab5 (Optional)：使用docker容器部署训练和推理任务
 
 阅读：
 
 - [tensorflow从0到N：反向传播的推导](https://github.com/EthanYuan/TensorFlow-Zero-to-N/blob/master/TensorFlow%E4%BB%8E0%E5%88%B0N/TensorFlow%E4%BB%8E0%E5%88%B01/10-NN%E5%9F%BA%E6%9C%AC%E5%8A%9F%EF%BC%9A%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%9A%84%E6%8E%A8%E5%AF%BC.md)
-- [Cheatsheet CNN](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
-- [shervine blog: 图片识别模型的演化](https://stanford.edu/~shervine/blog/evolution-image-classification-explained)：  
-  LeNet->(ImageNet)->AlexNet->VGGNet->GoogLeNet->ResNet->DenseNet
-- [UvA Tutorial 5: Inception, ResNet, DenseNet](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial5/Inception_ResNet_DenseNet.html)
-  pytorch样例 https://github.com/pytorch/examples
-- AI system 5~6 分布式训练算法、系统
+- shervine blog: [Cheatsheet CNN](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
+- shervine blog: [图片识别模型的演化](https://stanford.edu/~shervine/blog/evolution-image-classification-explained)：LeNet->(ImageNet)->AlexNet->VGGNet->GoogLeNet->ResNet->DenseNet
+- UvA Tutorial 5: [Inception, ResNet, DenseNet](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial5/Inception_ResNet_DenseNet.html)
+- pytorch官方样例仓库 [github](https://github.com/pytorch/examples)
+- Mircosoft AI system Lecutures 5~6 分布式训练算法、系统
 
 ## 2. Language Model
 
@@ -123,11 +126,19 @@ Slides:
 
 练习
 
-- cs231n RNNs & Transformers Colab
-- [UvA Tutorial Transformers and MHAttention](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial6/Transformers_and_MHAttention.html)
-- cs231n Assignment 2 on Colab: [Batch Normalization, Dropout, Convolutional Nets, Network Visualization, Image Captioning with RNNs](https://cs231n.github.io/assignments2025/assignment2/)
-- CSE538 Assignment 2: RNN LM
-- CSE538 Assignment 3: Transformer LM
+- cs231n RNNs & Transformers [[Colab]](https://colab.research.google.com/drive/1mC5CWwekbZ2NrYv6Zfpuv55z8DuOZXVP?usp=sharing), [slides](https://cs231n.stanford.edu/slides/2025/section_5.pdf)
+- UvA Tutorial [Transformers and MHAttention](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial6/Transformers_and_MHAttention.html)
+
+作业
+
+- RNN 二选一
+
+  - cs231n Assignment 2 on Colab: [Batch Normalization, Dropout, Convolutional Nets, Network Visualization, Image Captioning with RNNs](https://cs231n.github.io/assignments2025/assignment2/)
+  - CSE538 Assignment 2: RNN LM
+
+- Transformer 二选一
+  - cs231n Assignment 3 on Colab or Locally: [Image Captioning with Transformers, Self-Supervised Learning, Diffusion Models, CLIP and DINO Models](https://cs231n.github.io/assignments2025/assignment3/)
+  - CSE538 Assignment 3: Transformer LM
 
 阅读
 
@@ -135,8 +146,11 @@ Slides:
 - [The Annotated Transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
 - [Jay Alammar: Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - [Lilian Weng blog: Attention? Attention](https://lilianweng.github.io/posts/2018-06-24-attention/)
-- ViT: Transformers for Image Recognition [Blog](https://research.google/blog/transformers-for-image-recognition-at-scale/?m=1)
+- visionbook.mit.edu: [transformers](https://visionbook.mit.edu/transformers.html)
+- ViT: Transformers for Image Recognition [[Blog]](https://research.google/blog/transformers-for-image-recognition-at-scale/?m=1)
+- DETR: End-to-End Object Detection with Transformers [[Paper]](https://arxiv.org/abs/2005.12872) [[Blog]](https://ai.facebook.com/blog/end-to-end-object-detection-with-transformers/) [[Video]](https://www.youtube.com/watch?v=utxbUlo9CyY)
 - Github Huggingface/transformers [notebooks](https://github.com/huggingface/transformers/tree/main/notebooks), [examples](https://github.com/huggingface/transformers/tree/main/examples)
+- DINO: Emerging Properties in Self-Supervised Vision Transformers [[Paper]](https://arxiv.org/abs/2104.14294) [[Blog]](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training) [[Video]](https://youtu.be/h3ij3F3cPIk) [[Code]](https://github.com/facebookresearch/detr)
 
 ## 3. Generative Model 生成模型
 
@@ -157,20 +171,26 @@ KAIST CS492D
 - lecture 7 Classifier-Free Guidance，Latent Diffusion，ControlNet，LoRA
 - ODE/DPM solver, score-matching，flow matching
 
+CS231n
+
+- Lecture 17: Robot Learning
+  - Deep Reinforcement Learning
+  - Model Learning
+  - Robotic Manipulation
+
 练习
 
 - VAE: Auto-encoding Variational Bayes, [pytorch/examples/vae](https://github.com/pytorch/examples/blob/main/vae/README.md)
 - GAN: [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/main/dcgan)
-- [李宏毅MLDS 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php) Assignment 3.1 3.2
-- cs231n Assignment 3 on Colab or Locally: [Image Captioning with Transformers, Self-Supervised Learning, Diffusion Models, CLIP and DINO Models](https://cs231n.github.io/assignments2025/assignment3/)
 
-CS492D:
+作业：
 
-- [Assignments 1: ddpm](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment1-DDPM)
-- [Assignments 2: ddim/CFG](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment2-DDIM-CFG)
-- [Assignments 3: ControlNet and LoRA](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment3-ControlNet-LoRA)
-- [2025 Assignment 2 (DPMSolver)](https://github.com/KAIST-Visual-AI-Group/Diffusion-2025-Assignment2-DPMSolver)
-- [Assignment7 (Flow)](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment7-Flow)
+- [MLDS 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php): Assignment 3.1 3.2
+- CS492D: [Assignments 1: ddpm](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment1-DDPM)
+- CS492D: [Assignments 2: ddim/CFG](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment2-DDIM-CFG)
+- CS492D: [Assignments 3: ControlNet and LoRA](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment3-ControlNet-LoRA)
+- CS492D: [2025 Assignment 2 (DPMSolver)](https://github.com/KAIST-Visual-AI-Group/Diffusion-2025-Assignment2-DPMSolver)
+- CS492D: [Assignment7 (Flow)](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment7-Flow)
 
 阅读
 
