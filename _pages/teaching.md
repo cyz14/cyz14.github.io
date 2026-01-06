@@ -47,7 +47,8 @@ Organize your courses by years, topics, or universities, however you like! -->
   - 安装gpu driver: nvidia-smi
   - 安装cuda toolkit: nvcc compiler
   - 安装cuDNN
-  - 安装miniconda，创建env，安装pytorch，验证gpu available
+  - 安装miniconda，创建env
+  - 安装pytorch，验证gpu available
   - linux系统: 查看 nvidia-fabric-manager状态
   - 安装jupyter notebook
   - 安装docker
