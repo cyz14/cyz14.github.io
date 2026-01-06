@@ -44,13 +44,13 @@ Organize your courses by years, topics, or universities, however you like! -->
 - 矩阵计算与体系结构
 - 环境搭建:
   - 安装git
-  - 安装gpu driver: nvidia-smi
-  - 安装cuda toolkit: nvcc compiler
-  - 安装cuDNN
-  - 安装miniconda，创建env
+  - 安装python环境：miniconda，创建env
+  - 安装jupyter notebook（打开colab试用）
+  - 安装CUDA环境
+    - 安装gpu driver: nvidia-smi
+    - 安装cuda toolkit: nvcc compiler
+    - 安装cuDNN
   - 安装pytorch，验证gpu available
-  - linux系统: 查看 nvidia-fabric-manager状态
-  - 安装jupyter notebook
   - 安装docker
 
 练习
@@ -140,14 +140,22 @@ Slides:
 
 ## 3. Generative Model 生成模型
 
-李宏毅 GAN Introduction, Conditional GAN, Unsupervised Conditioned GAN, Theory, General Framework, WGAN & EBGAN
+[李宏毅 MLDS 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
+
+- GAN Introduction
+- Conditional GAN
+- Unsupervised Conditioned GAN
+- Theory
+- General Framework
+- WGAN & EBGAN
 
 KAIST CS492D
-lecture 2 GAN-VAE
-lecture 3 DDPM1
-lecture 4 DDPM2
-lecture 7 Classifier-Free Guidance，Latent Diffusion，ControlNet，LoRA
-ODE/DPM solver, score-matching，flow matching
+
+- lecture 2 GAN-VAE
+- lecture 3 DDPM1
+- lecture 4 DDPM2
+- lecture 7 Classifier-Free Guidance，Latent Diffusion，ControlNet，LoRA
+- ODE/DPM solver, score-matching，flow matching
 
 练习
 
