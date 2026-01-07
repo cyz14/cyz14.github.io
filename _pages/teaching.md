@@ -60,15 +60,15 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 第二讲：
 
-- CSE 538 maximum entropy classifier (Logistic regression)
 - cs231n Lecture 1: Deep Learning for Computer Vision
+- CSE 538 maximum entropy classifier (Logistic regression)
+- pytorch.org tutorial with examples [tensor, function, auto grad, module](https://docs.pytorch.org/tutorials/beginner/pytorch_with_examples.html)
 
 练习
 
-- cse538 Spring 2025: [Demo of Logistic Regression with Gradient Descent](https://adithya8.github.io/assets/cse538-sp25/intro_numpy_LogisticRegression.txt)
+- CSE538 Spring 2025: [Demo of Logistic Regression with Gradient Descent](https://adithya8.github.io/assets/cse538-sp25/intro_numpy_LogisticRegression.txt)
 - MIT EECS 6.7960 Deep Learning Fall 2025, pytorch tutorial [[colab]](https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing)
-- pytorch.org tutorial with examples [tensor, function, auto grad, module](https://docs.pytorch.org/tutorials/beginner/pytorch_with_examples.html)
-- cse538 Spring 2025 Assignment 1: Multi-Class Logistic Regression [[Google Drive Download]](https://drive.google.com/drive/folders/1Uj1li3QE-EEl3SVNipbaMqsc6mGWp9_F?usp=drive_link)
+- CSE538 Spring 2025 Assignment 1: Multi-Class Logistic Regression [[Google Drive Download]](https://drive.google.com/drive/folders/1Uj1li3QE-EEl3SVNipbaMqsc6mGWp9_F?usp=drive_link)
 
 第三讲：
 
