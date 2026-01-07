@@ -81,6 +81,12 @@
       "level": "graduate",
       "icon": "fa-solid fa-hashtag",
       "keywords": ["OpenGL", "paramterization"]
+    },
+    {
+      "name": "Distributed System",
+      "level": "graduate",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": ["Paxos", "PBFT", "2PC"]
     }
   ],
   "languages": [
@@ -103,5 +109,14 @@
     }
   ],
   "references": [],
-  "projects": []
+  "projects": [
+    {
+      "name": "2 Phase Commit over Multi-Paxos",
+      "summary": "CSE 535 Distributed System course project. A distributed bank application using 2 phase commit over multi-paxos implemented in C++.",
+      "highlights": ["Multi-Paxos", "2PC"],
+      "startDate": "2025-11-01",
+      "endDate": "2025-12-10",
+      "url": "https://github.com/F25-CSE535/2pc-cyz14"
+    }
+  ]
 }
