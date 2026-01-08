@@ -74,28 +74,29 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 - cs231n Lecture 2: Image Classification with Linear Classifiers
 - cs231n Lecture 3: Regularization and Optimization
-- cs231n Lecture 4: Neural Networks and Backpropagation
 
 练习
 
-- cs231n Backprop Review Session [Slides](https://cs231n.stanford.edu/slides/2025/section_2.pdf), [[Colab]](https://colab.research.google.com/drive/1yjxfAugU5JrbgCb1TcCbXDMCKE_G_P-e)
 - AI system [Lab1](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab1/README.md)： mnist，模型可视化，逐layer性能profiling
 - pytorch nn tutorial [What is torch.nn really?](https://docs.pytorch.org/tutorials/beginner/nn_tutorial.html): mnist 图片识别
 - UvA DL Notebooks [Tutorial 2: Introduction to PyTorch](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial2/Introduction_to_PyTorch.html)
 
 第四讲：
 
+- cs231n Lecture 4: Neural Networks and Backpropagation
 - cs231n Lecture 5: Image Classification with CNNs
 
 阅读：
 
+- Kaiming He CVPR25 talk: [Workshop: What's After Diffusion?](https://people.csail.mit.edu/kaiming/cvpr25talk/cvpr2025_meanflow_kaiming.pdf)
 - cs231n [Convolutional Networks](https://cs231n.github.io/convolutional-networks/)
 
 练习
 
+- cs231n Backprop Review Session [Slides](https://cs231n.stanford.edu/slides/2025/section_2.pdf), [[Colab]](https://colab.research.google.com/drive/1yjxfAugU5JrbgCb1TcCbXDMCKE_G_P-e)
 - cs231n PyTorch Review Session on [[Colab]](https://colab.research.google.com/drive/1Dl_Xs5GKjEOAedQUVOjG_fPMB1eXtLSm)
-- AI system [Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现一个张量运算C++，profiling
-- AI system [Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： cuda实现和优化，profiling
+- AI system [Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现了一个C++张量运算，profiling
+- AI system [Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： 实现了一个cuda算子，profiling
 
 第五讲：
 
@@ -136,6 +137,8 @@ Slides:
 - CSE538 sp25 (7) Attention and Transformer LMs 4-2
 - cs231n Lecture 7: RNNs and LSTMs
 - cs231n Lecture 8: Attention and Transformers
+- 线性注意力模型 Songlin Yang's Blog: [DeltaNet Explained Part 1](https://sustcsonglin.github.io/blog/2024/deltanet-1/)
+- RWKV，Mamba
 
 练习
 
@@ -162,8 +165,8 @@ Slides:
 - visionbook.mit.edu: [transformers](https://visionbook.mit.edu/transformers.html)
 - ViT: Transformers for Image Recognition [[Blog]](https://research.google/blog/transformers-for-image-recognition-at-scale/?m=1)
 - DETR: End-to-End Object Detection with Transformers [[Paper]](https://arxiv.org/abs/2005.12872) [[Blog]](https://ai.facebook.com/blog/end-to-end-object-detection-with-transformers/) [[Video]](https://www.youtube.com/watch?v=utxbUlo9CyY)
-- Github Huggingface/transformers [notebooks](https://github.com/huggingface/transformers/tree/main/notebooks), [examples](https://github.com/huggingface/transformers/tree/main/examples)
 - DINO: Emerging Properties in Self-Supervised Vision Transformers [[Paper]](https://arxiv.org/abs/2104.14294) [[Blog]](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training) [[Video]](https://youtu.be/h3ij3F3cPIk) [[Code]](https://github.com/facebookresearch/detr)
+- Github huggingface/transformers [notebooks](https://github.com/huggingface/transformers/tree/main/notebooks), [examples](https://github.com/huggingface/transformers/tree/main/examples), [awesome-transformers](https://github.com/huggingface/transformers/blob/main/awesome-transformers.md)
 
 ## 3. Generative Model 生成模型
 
@@ -176,7 +179,7 @@ Slides:
 - General Framework
 - WGAN & EBGAN
 
-KAIST CS492D
+KAIST [CS492D](https://mhsung.github.io/kaist-cs492d-fall-2024/)
 
 - lecture 2 GAN-VAE
 - lecture 3 DDPM1
@@ -195,6 +198,7 @@ CS231n
 
 - VAE: Auto-encoding Variational Bayes, [pytorch/examples/vae](https://github.com/pytorch/examples/blob/main/vae/README.md)
 - GAN: [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/main/dcgan)
+- Lil's Blog: [Video Generation Modeling from Scratch](https://lilianweng.github.io/posts/2024-04-12-diffusion-video/)
 
 作业：
 
@@ -225,6 +229,10 @@ CS231n
   - MIT Diffusion Lab1: working with SDEs
   - MIT Diffusion Lab2: Flow matching and Score matching
   - MIT Diffusion Lab3: conditional image generation
+
+阅读
+
+- Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/)
 
 ## 其他内容
 
