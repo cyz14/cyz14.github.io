@@ -79,23 +79,34 @@ Organize your courses by years, topics, or universities, however you like! -->
 练习
 
 - cs231n Backprop Review Session [Slides](https://cs231n.stanford.edu/slides/2025/section_2.pdf), [[Colab]](https://colab.research.google.com/drive/1yjxfAugU5JrbgCb1TcCbXDMCKE_G_P-e)
-- [pytorch nn tutorial](https://docs.pytorch.org/tutorials/beginner/nn_tutorial.html): mnist 图片识别
+- AI system [Lab1](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab1/README.md)： mnist，模型可视化，逐layer性能profiling
+- pytorch nn tutorial [What is torch.nn really?](https://docs.pytorch.org/tutorials/beginner/nn_tutorial.html): mnist 图片识别
+- UvA DL Notebooks [Tutorial 2: Introduction to PyTorch](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial2/Introduction_to_PyTorch.html)
 
 第四讲：
 
 - cs231n Lecture 5: Image Classification with CNNs
 
+阅读：
+
+- cs231n [Convolutional Networks](https://cs231n.github.io/convolutional-networks/)
+
 练习
 
 - cs231n PyTorch Review Session on [[Colab]](https://colab.research.google.com/drive/1Dl_Xs5GKjEOAedQUVOjG_fPMB1eXtLSm)
-- [AI system Lab1](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab1/README.md)： mnist，模型可视化，逐layer性能profiling
-- [AI system Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现一个张量运算C++，profiling
-- [AI system Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： cuda实现和优化，profiling
-- [UvA DL Notebooks Tutorial 2: Introduction to PyTorch](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial2/Introduction_to_PyTorch.html)
+- AI system [Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现一个张量运算C++，profiling
+- AI system [Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： cuda实现和优化，profiling
 
 第五讲：
 
-- cs231n Lecture 6: CNN Architectures
+- cs231n Lecture 6: Training CNNs and CNN Architectures
+
+论文：
+
+- [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
+- [VGGNet](https://arxiv.org/abs/1409.1556)
+- [GoogLeNet](https://arxiv.org/abs/1409.4842)
+- [ResNet](https://arxiv.org/abs/1512.03385)
 
 练习
 
