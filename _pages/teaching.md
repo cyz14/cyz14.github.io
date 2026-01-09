@@ -202,7 +202,7 @@ CS231n
 
 - VAE: Auto-encoding Variational Bayes, [pytorch/examples/vae](https://github.com/pytorch/examples/blob/main/vae/README.md)
 - GAN: [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/main/dcgan)
-- hugginface/diffusers [[Tutorial Github]](https://github.com/huggingface/diffusers)
+- hugginface/diffusers [[Github]](https://github.com/huggingface/diffusers), [Tutorial: Diffusion models from scratch](https://huggingface.co/learn/diffusion-course/unit1/3)
 
 作业：
 
@@ -224,8 +224,6 @@ CS231n
 - Latent-Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models, [[Github]](https://github.com/CompVis/latent-diffusion)
 - ICML 2025 Benjamin Burchfiel: [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
 - Toyota Research robotics [blogs](https://medium.com/toyotaresearch/subpage/e87b98e0bd5c), [publications](https://www.tri.global/publications)
-- 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, [Wan2.1 Github](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2)
-- Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/)
 
 ## 后续
 
@@ -238,6 +236,14 @@ CS231n
   - MIT Diffusion Lab1: working with SDEs
   - MIT Diffusion Lab2: Flow matching and Score matching
   - MIT Diffusion Lab3: conditional image generation
+
+视频生成扩散模型训练与推理
+
+- TurboDiffusion: 100–200× Acceleration for Video Diffusion Models, [[Paper]](https://github.com/thu-ml/TurboDiffusion?tab=readme-ov-file)
+- rCM: Score-Regularized Continuous-Time Consistency Model, [[Code]](https://github.com/NVlabs/rcm)
+- SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse–Linear Attention, [[Code]](https://github.com/thu-ml/SLA)
+- 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, [Wan2.1 Github](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2)
+- Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/)
 
 ## 其他内容
 
