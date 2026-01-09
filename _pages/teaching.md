@@ -142,8 +142,11 @@ Slides:
   - CSE538 Assignment 2: RNN LM
 
 - Transformer 二选一
+
   - cs231n Assignment 3 on Colab or Locally: [Image Captioning with Transformers, Self-Supervised Learning, Diffusion Models, CLIP and DINO Models](https://cs231n.github.io/assignments2025/assignment3/)
   - CSE538 Assignment 3: Transformer LM
+
+- CS336: Language Modeling from Scratch, Stanford / Spring 2025, [5 Assignments](https://stanford-cs336.github.io/spring2025/)
 
 阅读
 
@@ -231,8 +234,9 @@ CS231n
 - TurboDiffusion: 100–200× Acceleration for Video Diffusion Models, [[Paper]](https://github.com/thu-ml/TurboDiffusion?tab=readme-ov-file)
 - rCM: Score-Regularized Continuous-Time Consistency Model, [[Code]](https://github.com/NVlabs/rcm)
 - SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse–Linear Attention, [[Code]](https://github.com/thu-ml/SLA)
-- 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, [Wan2.1 Github](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2)
-- Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/)
+- 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, [Wan2.1 Github](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2), 基于 DiffSynth-Studio 的训练[[Code]](https://github.com/modelscope/DiffSynth-Studio/blob/main/docs/zh/Model_Details/Wan.md)
+- Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/), Unofficial implementation [[lucidrains/lumiere-pytorch]](https://github.com/lucidrains/lumiere-pytorch), [[kyegomez/LUMIERE]](https://github.com/kyegomez/LUMIERE)
+- Tencent: Hunyuan [[Project]](https://hunyuan.tencent.com/video/zh?tabIndex=0), [[Github]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5), [[Training Section]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5?tab=readme-ov-file#-training)
 
 ## 其他内容
 
