@@ -108,6 +108,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 - cs231n PyTorch Review Session on [[Colab]](https://colab.research.google.com/drive/1Dl_Xs5GKjEOAedQUVOjG_fPMB1eXtLSm)
 - AI system [Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现了一个C++张量运算，profiling
 - AI system [Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： 实现了一个cuda算子，profiling
+- pytorch 使用 tensorboard 降维查看 embedding [tensorboard tutorial](https://docs.pytorch.org/tutorials/intermediate/tensorboard_tutorial.html)
 - cs231n Assignment 1 on Colab: [Image Classification, kNN, Softmax, Fully-Connected Neural Network, Fully-Connected Nets](https://cs231n.github.io/assignments2025/assignment1/)
 - Microsoft Lab4 (Optional): 使用 horovod 分布式并行训练
 - Microsoft Lab5 (Optional)：使用docker容器部署训练和推理任务
