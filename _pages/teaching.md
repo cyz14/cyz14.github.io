@@ -85,11 +85,22 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 - cs231n Lecture 4: Neural Networks and Backpropagation
 - cs231n Lecture 5: Image Classification with CNNs
+- cs231n Lecture 6: Training CNNs and CNN Architectures
 
 阅读：
 
 - Kaiming He CVPR25 talk: [Workshop: What's After Diffusion?](https://people.csail.mit.edu/kaiming/cvpr25talk/cvpr2025_meanflow_kaiming.pdf)
 - cs231n [Convolutional Networks](https://cs231n.github.io/convolutional-networks/)
+- [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
+- [VGGNet](https://arxiv.org/abs/1409.1556)
+- [GoogLeNet](https://arxiv.org/abs/1409.4842)
+- [ResNet](https://arxiv.org/abs/1512.03385)
+- [tensorflow从0到N：反向传播的推导](https://github.com/EthanYuan/TensorFlow-Zero-to-N/blob/master/TensorFlow%E4%BB%8E0%E5%88%B0N/TensorFlow%E4%BB%8E0%E5%88%B01/10-NN%E5%9F%BA%E6%9C%AC%E5%8A%9F%EF%BC%9A%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%9A%84%E6%8E%A8%E5%AF%BC.md)
+- shervine blog: [Cheatsheet CNN](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
+- shervine blog: [图片识别模型的演化](https://stanford.edu/~shervine/blog/evolution-image-classification-explained)：LeNet->(ImageNet)->AlexNet->VGGNet->GoogLeNet->ResNet->DenseNet
+- UvA Tutorial 5: [Inception, ResNet, DenseNet](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial5/Inception_ResNet_DenseNet.html)
+- pytorch官方样例仓库 [github](https://github.com/pytorch/examples)
+- Mircosoft AI system Lecutures 5~6 分布式训练算法、系统
 
 练习
 
@@ -97,32 +108,9 @@ Organize your courses by years, topics, or universities, however you like! -->
 - cs231n PyTorch Review Session on [[Colab]](https://colab.research.google.com/drive/1Dl_Xs5GKjEOAedQUVOjG_fPMB1eXtLSm)
 - AI system [Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现了一个C++张量运算，profiling
 - AI system [Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： 实现了一个cuda算子，profiling
-
-第五讲：
-
-- cs231n Lecture 6: Training CNNs and CNN Architectures
-
-论文：
-
-- [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
-- [VGGNet](https://arxiv.org/abs/1409.1556)
-- [GoogLeNet](https://arxiv.org/abs/1409.4842)
-- [ResNet](https://arxiv.org/abs/1512.03385)
-
-练习
-
 - cs231n Assignment 1 on Colab: [Image Classification, kNN, Softmax, Fully-Connected Neural Network, Fully-Connected Nets](https://cs231n.github.io/assignments2025/assignment1/)
 - Microsoft Lab4 (Optional): 使用 horovod 分布式并行训练
 - Microsoft Lab5 (Optional)：使用docker容器部署训练和推理任务
-
-阅读：
-
-- [tensorflow从0到N：反向传播的推导](https://github.com/EthanYuan/TensorFlow-Zero-to-N/blob/master/TensorFlow%E4%BB%8E0%E5%88%B0N/TensorFlow%E4%BB%8E0%E5%88%B01/10-NN%E5%9F%BA%E6%9C%AC%E5%8A%9F%EF%BC%9A%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%9A%84%E6%8E%A8%E5%AF%BC.md)
-- shervine blog: [Cheatsheet CNN](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
-- shervine blog: [图片识别模型的演化](https://stanford.edu/~shervine/blog/evolution-image-classification-explained)：LeNet->(ImageNet)->AlexNet->VGGNet->GoogLeNet->ResNet->DenseNet
-- UvA Tutorial 5: [Inception, ResNet, DenseNet](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial5/Inception_ResNet_DenseNet.html)
-- pytorch官方样例仓库 [github](https://github.com/pytorch/examples)
-- Mircosoft AI system Lecutures 5~6 分布式训练算法、系统
 
 ## 2. Language Model
 
