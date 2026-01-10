@@ -152,9 +152,10 @@ Slides:
 
 - Seq2seq https://github.com/harvardnlp/seq2seq-attn
 - [The Annotated Transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
-- [Jay Alammar: Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- [Lilian Weng blog: Attention? Attention](https://lilianweng.github.io/posts/2018-06-24-attention/)
+- Jay Alammar: [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- Lilian's blog: [Attention? Attention](https://lilianweng.github.io/posts/2018-06-24-attention/)
 - visionbook.mit.edu: [transformers](https://visionbook.mit.edu/transformers.html)
+- Linear Attention Transformer, [[Github]](https://github.com/lucidrains/linear-attention-transformer)
 - ViT: Transformers for Image Recognition [[Blog]](https://research.google/blog/transformers-for-image-recognition-at-scale/?m=1)
 - DETR: End-to-End Object Detection with Transformers [[Paper]](https://arxiv.org/abs/2005.12872) [[Blog]](https://ai.facebook.com/blog/end-to-end-object-detection-with-transformers/) [[Video]](https://www.youtube.com/watch?v=utxbUlo9CyY)
 - DINO: Emerging Properties in Self-Supervised Vision Transformers [[Paper]](https://arxiv.org/abs/2104.14294) [[Blog]](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training) [[Video]](https://youtu.be/h3ij3F3cPIk) [[Code]](https://github.com/facebookresearch/detr)
@@ -200,6 +201,7 @@ CS231n
 - 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , [colab tutorial in pytorch](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
 - 2020 Jonathan Ho, Ajay Jain, Pieter Abbeel, Denoising Diffusion Probabilistic Models, [[arxiv]](https://arxiv.org/abs/2006.11239), [[Code]](https://github.com/hojonathanho/diffusion)
 - [The Annotated Diffusion Model](https://huggingface.co/blog/annotated-diffusion)
+- Lilian's Blog, [Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
 - KAIST CS492d [ Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
 - MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
 - 2022 William Peebles and Saining Xie, DiT: Scalable Diffusion Models with Transformers, [[arxiv]](https://arxiv.org/abs/2212.09748), [[Github]](https://github.com/facebookresearch/DiT)
