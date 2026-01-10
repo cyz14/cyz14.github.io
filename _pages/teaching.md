@@ -164,7 +164,7 @@ Slides:
 
 ## 3. Generative Model 生成模型
 
-[李宏毅 MLDS 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
+[MLDS 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
 
 - GAN Introduction
 - Conditional GAN
@@ -190,11 +190,27 @@ CS231n
   - Model Learning
   - Robotic Manipulation
 
+阅读：
+
+- Yunfan's Blog: [ELBO — What & Why](https://yunfanj.com/blog/2021/01/11/ELBO.html)
+- 2015 Sohl-Dickstein et al. Deep Unsupervised Learning using Nonequilibrium Thermodynamics [[arxiv]](https://arxiv.org/pdf/1503.03585), [[Code]](https://github.com/Sohl-Dickstein/Diffusion-Probabilistic-Models)
+- 2019 Yang Song, Stefano Ermon, Generative Modeling by Estimating Gradients of the Data Distribution, [[arxiv]](https://arxiv.org/abs/1907.05600)
+- 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , [colab tutorial in pytorch](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
+- 2020 Jonathan Ho, Ajay Jain, Pieter Abbeel, Denoising Diffusion Probabilistic Models, [[arxiv]](https://arxiv.org/abs/2006.11239), [[Code]](https://github.com/hojonathanho/diffusion)
+- [The Annotated Diffusion Model](https://huggingface.co/blog/annotated-diffusion)
+- KAIST CS492d [ Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
+- MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
+- 2022 William Peebles and Saining Xie, DiT: Scalable Diffusion Models with Transformers, [[arxiv]](https://arxiv.org/abs/2212.09748), [[Github]](https://github.com/facebookresearch/DiT)
+- Latent-Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models, [[Github]](https://github.com/CompVis/latent-diffusion)
+
 练习
 
 - VAE: Auto-encoding Variational Bayes, [pytorch/examples/vae](https://github.com/pytorch/examples/blob/main/vae/README.md)
 - GAN: [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/main/dcgan)
 - hugginface/diffusers [[Github]](https://github.com/huggingface/diffusers), [Tutorial: Diffusion models from scratch](https://huggingface.co/learn/diffusion-course/unit1/3)
+- UvA DL Tutorial [11: Normalized Flow Image Modeling](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial11/NF_image_modeling.html)
+- UvA DL Tutorial [15: Vision Transformers](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial15/Vision_Transformer.html)
+- UvA DL Tutorial [Dynamic systems Neural ODEs](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/DL2/Dynamical_systems/dynamical_systems_neural_odes.html)
 
 作业：
 
@@ -204,46 +220,34 @@ CS231n
 - CS492D: [Assignments 3: ControlNet and LoRA](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment3-ControlNet-LoRA)
 - CS492D: [2025 Assignment 2 (DPMSolver)](https://github.com/KAIST-Visual-AI-Group/Diffusion-2025-Assignment2-DPMSolver)
 - CS492D: [Assignment7 (Flow)](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment7-Flow)
-
-阅读：
-
-- Yunfan's Blog: [ELBO — What & Why](https://yunfanj.com/blog/2021/01/11/ELBO.html)
-- Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , [colab tutorial in pytorch](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
-- KAIST CS492d [ Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
-- Lil's Blog: [Video Generation Modeling from Scratch](https://lilianweng.github.io/posts/2024-04-12-diffusion-video/)
-- MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
-- William Peebles and Saining Xie, DiT: Scalable Diffusion Models with Transformers, [[Github]](https://github.com/facebookresearch/DiT)
-- Latent-Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models, [[Github]](https://github.com/CompVis/latent-diffusion)
-- ICML 2025 Benjamin Burchfiel: [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
-- Toyota Research robotics [blogs](https://medium.com/toyotaresearch/subpage/e87b98e0bd5c), [publications](https://www.tri.global/publications)
-
-## 后续
-
-练习
-
-- UvA DL Tutorial [11: Normalized Flow Image Modeling](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial11/NF_image_modeling.html)
-- UvA DL Tutorial [15: Vision Transformers](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial15/Vision_Transformer.html)
-- UvA DL Tutorial [Dynamic systems Neural ODEs](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/DL2/Dynamical_systems/dynamical_systems_neural_odes.html)
-- [MIT Diffusion Labs](https://diffusion.csail.mit.edu/2025/index.html)
+- [MIT Diffusion Course](https://diffusion.csail.mit.edu/2025/index.html)
   - MIT Diffusion Lab1: working with SDEs
   - MIT Diffusion Lab2: Flow matching and Score matching
   - MIT Diffusion Lab3: conditional image generation
 
-视频生成扩散模型训练与推理
+## 后续
 
-- TurboDiffusion: 100–200× Acceleration for Video Diffusion Models, [[Paper]](https://github.com/thu-ml/TurboDiffusion?tab=readme-ov-file)
+### Robotics
+
+- ICML 2025 Benjamin Burchfiel: [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
+- Toyota Research robotics [blogs](https://medium.com/toyotaresearch/subpage/e87b98e0bd5c), [publications](https://www.tri.global/publications)
+- [CS287 Advanced Robotics at UC Berkeley Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
+
+### Video Generation
+
+- Lil's Blog: [Video Generation Modeling from Scratch](https://lilianweng.github.io/posts/2024-04-12-diffusion-video/)
+- 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, [Wan2.1 Github](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2), 基于 DiffSynth-Studio 的训练[[Code]](https://github.com/modelscope/DiffSynth-Studio/blob/main/docs/zh/Model_Details/Wan.md)
+- Tencent: Hunyuan [[Project]](https://hunyuan.tencent.com/video/zh?tabIndex=0), [[Github]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5), [[Training Section]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5?tab=readme-ov-file#-training)
+- Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/), Unofficial implementation [[lucidrains/lumiere-pytorch]](https://github.com/lucidrains/lumiere-pytorch), [[kyegomez/LUMIERE]](https://github.com/kyegomez/LUMIERE)
+- TurboDiffusion: 100–200× Acceleration for Video Diffusion Models, [[Paper]](https://github.com/thu-ml/TurboDiffusion)
 - rCM: Score-Regularized Continuous-Time Consistency Model, [[Code]](https://github.com/NVlabs/rcm)
 - SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse–Linear Attention, [[Code]](https://github.com/thu-ml/SLA)
-- 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, [Wan2.1 Github](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2), 基于 DiffSynth-Studio 的训练[[Code]](https://github.com/modelscope/DiffSynth-Studio/blob/main/docs/zh/Model_Details/Wan.md)
-- Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/), Unofficial implementation [[lucidrains/lumiere-pytorch]](https://github.com/lucidrains/lumiere-pytorch), [[kyegomez/LUMIERE]](https://github.com/kyegomez/LUMIERE)
-- Tencent: Hunyuan [[Project]](https://hunyuan.tencent.com/video/zh?tabIndex=0), [[Github]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5), [[Training Section]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5?tab=readme-ov-file#-training)
 
 ## 其他内容
 
 - [Dive into Deep Learning](https://d2l.ai/index.html)
 - [Berkeley CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse-fa23/)
 - [Transformers as a Computational Model (UC Berkeley, Simons Institute)](https://www.youtube.com/playlist?list=PLgKuh-lKre11RuxGM038u0OSxVdCicIMF)
-- [CS287 Advanced Robotics at UC Berkeley Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
 - [Github Awesome AI](https://github.com/owainlewis/awesome-artificial-intelligence)
 - [Building Effective Agents (Anthropic)](https://www.anthropic.com/engineering/building-effective-agents)
 - [推荐系统相关论文汇总](https://github.com/tangxyw/RecSysPapers)
