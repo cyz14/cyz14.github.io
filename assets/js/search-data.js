@@ -100,11 +100,11 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-2pc-with-multi-paxos",
+          title: '2PC with Multi-Paxos',
+          description: "CSE 535 Distributed System course project. A distributed bank application using 2 phase commit over multi-paxos implemented in C++.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/templates/1_project/";
+              window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
