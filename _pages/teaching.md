@@ -115,9 +115,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 ## 2. Language Model
 
-embedding：word2vec
-RNN/LSTM: encoder, decoder
-Attention, positional encoding, Transformers
+参考教材: Speech and Language Processing (3rd ed. draft), Dan Jurafsky and James H. Martin, [[Book]](https://web.stanford.edu/~jurafsky/slp3/)
 
 Slides:
 
