@@ -148,12 +148,12 @@ Slides:
 - RNN 二选一
 
   - cs231n Assignment 2 on Colab: [Batch Normalization, Dropout, Convolutional Nets, Network Visualization, Image Captioning with RNNs](https://cs231n.github.io/assignments2025/assignment2/)
-  - CSE538 Assignment 2: RNN LM
+  - CSE538 Assignment 2: RNN LM. Instructions [Google Drive](https://drive.google.com/drive/folders/1snFSimiWyiKAxPYXMfB-mykTIVaYJPPu?usp=sharing)
 
 - Transformer 二选一
 
   - cs231n Assignment 3 on Colab or Locally: [Image Captioning with Transformers, Self-Supervised Learning, Diffusion Models, CLIP and DINO Models](https://cs231n.github.io/assignments2025/assignment3/)
-  - CSE538 Assignment 3: Transformer LM
+  - CSE538 Assignment 3: Transformer LM. Instructions [Google Drive](https://drive.google.com/drive/folders/1jhslUZkQ9hFWPoGrv6OqDwih0DYLMluV?usp=sharing)
 
 - CS336: Language Modeling from Scratch, Stanford / Spring 2025, [5 Assignments](https://stanford-cs336.github.io/spring2025/)
 
