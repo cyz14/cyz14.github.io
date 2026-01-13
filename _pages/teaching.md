@@ -24,6 +24,15 @@ Organize your courses by years, topics, or universities, however you like! -->
 - [MIT EECS 6.7960 Deep Learning Fall 2025](https://deeplearning6-7960.github.io/)
 - [MIT EECS 6.S978 Deep Generative Models Fall 2024](https://mit-6s978.github.io/)
 
+其他可参考的资源包括
+
+- pytorch官方样例仓库 [github](https://github.com/pytorch/examples)
+- huggingface/transformers on Github: [notebooks](https://github.com/huggingface/transformers/tree/main/notebooks), [examples](https://github.com/huggingface/transformers/tree/main/examples), [awesome-transformers](https://github.com/huggingface/transformers/blob/main/awesome-transformers.md)
+- hugginface/diffusers [[Github]](https://github.com/huggingface/diffusers), [Tutorial: Diffusion models from scratch](https://huggingface.co/learn/diffusion-course/unit1/3)
+- KAIST CS492d [Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
+- CMU 10-799 Diffusion & Flow Matching, [[Resources]](https://kellyyutonghe.github.io/10799S26/resources/)
+- labml.ai: Annotated Deep Learning Paper Implementation, [[Github]](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
+
 ## 1. AI system与图像分类模型
 
 运行环境：本地nvidia gpu，或colab
@@ -50,7 +59,7 @@ Organize your courses by years, topics, or universities, however you like! -->
     - 安装gpu driver: nvidia-smi
     - 安装cuda toolkit: nvcc compiler
     - 安装cuDNN
-  - 安装pytorch，验证gpu available
+  - 安装pytorch，验证 torch.cuda.is_available()
   - 安装docker
 
 练习
@@ -91,15 +100,14 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 - Kaiming He CVPR25 talk: [Workshop: What's After Diffusion?](https://people.csail.mit.edu/kaiming/cvpr25talk/cvpr2025_meanflow_kaiming.pdf)
 - cs231n [Convolutional Networks](https://cs231n.github.io/convolutional-networks/)
-- [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
-- [VGGNet](https://arxiv.org/abs/1409.1556)
-- [GoogLeNet](https://arxiv.org/abs/1409.4842)
-- [ResNet](https://arxiv.org/abs/1512.03385)
-- [tensorflow从0到N：反向传播的推导](https://github.com/EthanYuan/TensorFlow-Zero-to-N/blob/master/TensorFlow%E4%BB%8E0%E5%88%B0N/TensorFlow%E4%BB%8E0%E5%88%B01/10-NN%E5%9F%BA%E6%9C%AC%E5%8A%9F%EF%BC%9A%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%9A%84%E6%8E%A8%E5%AF%BC.md)
+- AlexNet [paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
+- VGGNet [arxiv](https://arxiv.org/abs/1409.1556)
+- GoogLeNet [arxiv](https://arxiv.org/abs/1409.4842)
+- ResNet [arxiv](https://arxiv.org/abs/1512.03385)
+- EthanYuan/Tensorflow从0到N [反向传播的推导](https://github.com/EthanYuan/TensorFlow-Zero-to-N/blob/master/TensorFlow%E4%BB%8E0%E5%88%B0N/TensorFlow%E4%BB%8E0%E5%88%B01/10-NN%E5%9F%BA%E6%9C%AC%E5%8A%9F%EF%BC%9A%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%9A%84%E6%8E%A8%E5%AF%BC.md)
 - shervine blog: [Cheatsheet CNN](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
-- shervine blog: [图片识别模型的演化](https://stanford.edu/~shervine/blog/evolution-image-classification-explained)：LeNet->(ImageNet)->AlexNet->VGGNet->GoogLeNet->ResNet->DenseNet
+- shervine blog: [图片识别模型的演化](https://stanford.edu/~shervine/blog/evolution-image-classification-explained)
 - UvA Tutorial 5: [Inception, ResNet, DenseNet](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial5/Inception_ResNet_DenseNet.html)
-- pytorch官方样例仓库 [github](https://github.com/pytorch/examples)
 - Mircosoft AI system Lecutures 5~6 分布式训练算法、系统
 
 练习
@@ -124,13 +132,15 @@ Slides:
 - CSE538 sp25 (7) Attention and Transformer LMs 4-2
 - cs231n Lecture 7: RNNs and LSTMs
 - cs231n Lecture 8: Attention and Transformers
-- 线性注意力模型 Songlin Yang's Blog: [DeltaNet Explained Part 1](https://sustcsonglin.github.io/blog/2024/deltanet-1/)
-- [RWKV](https://www.rwkv.com/)
-- [Mamba]()
+- RWKV, Peng Bo, [Project Website](https://www.rwkv.com/), [知乎-PENG Bo: 推荐几个RWKV的Chat模型...](https://zhuanlan.zhihu.com/p/618011122)
+- Mamba, Albert Gu, Tri Dao, [arxiv](https://arxiv.org/abs/2312.00752)
+- DeltaNet, Songlin Yang's Blog: [DeltaNet Explained Part 1](https://sustcsonglin.github.io/blog/2024/deltanet-1/)
 
 练习
 
+- Karpathy's char-rnn of Shakespear [[Github]](https://github.com/karpathy/char-rnn)
 - cs231n RNNs & Transformers [[Colab]](https://colab.research.google.com/drive/1mC5CWwekbZ2NrYv6Zfpuv55z8DuOZXVP?usp=sharing), [slides](https://cs231n.stanford.edu/slides/2025/section_5.pdf)
+- Karpathy's build-nanogpt [[Github]](https://github.com/karpathy/build-nanogpt)
 - UvA Tutorial [Transformers and MHAttention](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial6/Transformers_and_MHAttention.html)
 
 作业
@@ -158,7 +168,7 @@ Slides:
 - ViT: Transformers for Image Recognition [[Blog]](https://research.google/blog/transformers-for-image-recognition-at-scale/?m=1)
 - DETR: End-to-End Object Detection with Transformers [[Paper]](https://arxiv.org/abs/2005.12872) [[Blog]](https://ai.facebook.com/blog/end-to-end-object-detection-with-transformers/) [[Video]](https://www.youtube.com/watch?v=utxbUlo9CyY)
 - DINO: Emerging Properties in Self-Supervised Vision Transformers [[Paper]](https://arxiv.org/abs/2104.14294) [[Blog]](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training) [[Video]](https://youtu.be/h3ij3F3cPIk) [[Code]](https://github.com/facebookresearch/detr)
-- Github huggingface/transformers [notebooks](https://github.com/huggingface/transformers/tree/main/notebooks), [examples](https://github.com/huggingface/transformers/tree/main/examples), [awesome-transformers](https://github.com/huggingface/transformers/blob/main/awesome-transformers.md)
+- Maarten Grootendorst: [A Visual Guide to Mamba and State Space Models](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state)
 - OpenAI CLIP (Contrastive Language-Image Pre-Training), [[Github]](https://github.com/openai/CLIP), [[Colab]](https://colab.research.google.com/github/openai/clip/blob/master/notebooks/Interacting_with_CLIP.ipynb)
 - open_clip: An open source implementation of CLIP. [Github](https://github.com/mlfoundations/open_clip)
 
@@ -193,15 +203,12 @@ CS231n
 阅读：
 
 - The Principles of Diffusion Models - From Origins to Advances, Chieh-Hsin Lai, Yang Song, Dongjun Kim, Yuki Mitsufuji, Stefano Ermon. [[Book Page]](https://the-principles-of-diffusion-models.github.io/)
-- CMU 10-799 Diffusion & Flow Matching, [[Resources]](https://kellyyutonghe.github.io/10799S26/resources/)
 - Yunfan's Blog: [ELBO — What & Why](https://yunfanj.com/blog/2021/01/11/ELBO.html)
 - 2015 Sohl-Dickstein et al. Deep Unsupervised Learning using Nonequilibrium Thermodynamics [[arxiv]](https://arxiv.org/pdf/1503.03585), [[Code]](https://github.com/Sohl-Dickstein/Diffusion-Probabilistic-Models)
 - 2019 Yang Song, Stefano Ermon, Generative Modeling by Estimating Gradients of the Data Distribution, [[arxiv]](https://arxiv.org/abs/1907.05600)
 - 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , [colab tutorial in pytorch](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
 - 2020 Jonathan Ho, Ajay Jain, Pieter Abbeel, Denoising Diffusion Probabilistic Models, [[arxiv]](https://arxiv.org/abs/2006.11239), [[Code]](https://github.com/hojonathanho/diffusion)
-- [The Annotated Diffusion Model](https://huggingface.co/blog/annotated-diffusion)
 - Lilian's Blog, [Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
-- KAIST CS492d [ Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
 - MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
 - 2022 William Peebles and Saining Xie, DiT: Scalable Diffusion Models with Transformers, [[arxiv]](https://arxiv.org/abs/2212.09748), [[Github]](https://github.com/facebookresearch/DiT)
 - Latent-Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models, [[Github]](https://github.com/CompVis/latent-diffusion)
@@ -210,8 +217,8 @@ CS231n
 
 - VAE: Auto-encoding Variational Bayes, [pytorch/examples/vae](https://github.com/pytorch/examples/blob/main/vae/README.md)
 - GAN: [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/main/dcgan)
-- [labml.ai](https://nn.labml.ai/index.html): Annotated Deep Learning Paper Implementation, [[Github]](https://github.com/labmlai/annotated_deep_learning_paper_implementations), [labml.ai/Diffusion/DDPM](https://nn.labml.ai/diffusion/ddpm/index.html)
-- hugginface/diffusers [[Github]](https://github.com/huggingface/diffusers), [Tutorial: Diffusion models from scratch](https://huggingface.co/learn/diffusion-course/unit1/3)
+- DDPM: The Annotated Diffusion Model, [huggingface blog](https://huggingface.co/blog/annotated-diffusion)
+- labml.ai [Diffusion/DDPM](https://nn.labml.ai/diffusion/ddpm/index.html)
 - UvA DL Tutorial [11: Normalized Flow Image Modeling](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial11/NF_image_modeling.html)
 - UvA DL Tutorial [15: Vision Transformers](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial15/Vision_Transformer.html)
 - UvA DL Tutorial [Dynamic systems Neural ODEs](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/DL2/Dynamical_systems/dynamical_systems_neural_odes.html)
@@ -240,7 +247,7 @@ CS231n
 ### Video Generation
 
 - Lil's Blog: [Video Generation Modeling from Scratch](https://lilianweng.github.io/posts/2024-04-12-diffusion-video/)
-- 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, [Wan2.1 Github](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2), 基于 DiffSynth-Studio 的训练[[Code]](https://github.com/modelscope/DiffSynth-Studio/blob/main/docs/zh/Model_Details/Wan.md)
+- 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, Github [Wan2.1](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2), 基于 DiffSynth-Studio 的训练[[Code]](https://github.com/modelscope/DiffSynth-Studio/blob/main/docs/zh/Model_Details/Wan.md)
 - Tencent: Hunyuan [[Project]](https://hunyuan.tencent.com/video/zh?tabIndex=0), [[Github]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5), [[Training Section]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5?tab=readme-ov-file#-training)
 - Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/), Unofficial implementation [[lucidrains/lumiere-pytorch]](https://github.com/lucidrains/lumiere-pytorch), [[kyegomez/LUMIERE]](https://github.com/kyegomez/LUMIERE)
 - TurboDiffusion: 100–200× Acceleration for Video Diffusion Models, [[Paper]](https://github.com/thu-ml/TurboDiffusion)
