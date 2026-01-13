@@ -18,19 +18,19 @@
       {
         "network": "",
         "username": "",
-        "url": "https://twitter.com/"
+        "url": ""
       }
     ]
   },
   "work": [
     {
       "name": "RealAI Inc, Beijing",
-      "position": "AI Platform Development Engineer",
+      "position": "ML Platform Development Engineer",
       "url": "",
       "startDate": "2021-07-01",
       "endDate": "2024-12-01",
       "summary": "",
-      "highlights": ["Federated Learning Platform"]
+      "highlights": ["Federated Learning", "k8s"]
     }
   ],
   "volunteer": [],
@@ -43,20 +43,20 @@
       "studyType": "PhD",
       "startDate": "2025-01",
       "endDate": "now",
-      "courses": [""]
+      "courses": ["Computer Vision", "Computer Graphics", "Natural Language Processing", "Distributed Systems", "Analysis of Algorithms"]
     },
     {
-      "institution": "Tsinghua University, New York, USA",
+      "institution": "Tsinghua University, Beijing, China",
       "location": "Beijing, USA",
       "url": "",
-      "area": "Network Sciences and Cyberspace",
+      "area": "Network Sciences",
       "studyType": "master",
       "startDate": "2018-07",
       "endDate": "2021-06",
-      "courses": [""]
+      "courses": ["architecture of the Internet"]
     },
     {
-      "institution": "Tsinghua University, New York, USA",
+      "institution": "Tsinghua University, Beijing, China",
       "location": "Beijing, USA",
       "url": "",
       "area": "Computer Sciences and Technology",
@@ -105,7 +105,7 @@
     {
       "name": "Geometry and Topology",
       "icon": "fa-solid fa-tag",
-      "keywords": ["Differential Geometry", "Conformal Mapping", "Optimal Transport", "Ricci Flow"]
+      "keywords": ["Differential Geometry", "Computational Conformal Geometry", "Optimal Transport", "Ricci Flow", "Riemann Surfaces"]
     }
   ],
   "references": [],
