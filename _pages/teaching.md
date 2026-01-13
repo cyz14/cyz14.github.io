@@ -17,7 +17,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 - [Microsoft AI System course on Github](https://microsoft.github.io/AI-System/)
 - [Stanford CS231n Spring 2025](https://cs231n.stanford.edu/schedule.html)
-- Stony Brook CSE 538 NLP 2025 Spring
+- Stony Brook CSE 538 NLP 2025 Spring [slides](https://www3.cs.stonybrook.edu/~has/CSE538/Slides/)
 - [李宏毅 Machine Learning and Having It Deep and Structured, 2018 Spring](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
 - [KAIST 492(D) Diffusion Models and Their Applications,24 Fall](https://mhsung.github.io/kaist-cs492d-fall-2024/)
 - [MIT Diffusion course 2025](https://diffusion.csail.mit.edu/2025/index.html)
@@ -125,7 +125,8 @@ Slides:
 - cs231n Lecture 7: RNNs and LSTMs
 - cs231n Lecture 8: Attention and Transformers
 - 线性注意力模型 Songlin Yang's Blog: [DeltaNet Explained Part 1](https://sustcsonglin.github.io/blog/2024/deltanet-1/)
-- RWKV，Mamba
+- [RWKV](https://www.rwkv.com/)
+- [Mamba]()
 
 练习
 
