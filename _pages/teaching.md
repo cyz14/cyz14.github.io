@@ -240,9 +240,24 @@ CS231n
 
 ### Robotics
 
+- [CS287 Advanced Robotics at UC Berkeley Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
 - ICML 2025 Benjamin Burchfiel: [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
 - Toyota Research robotics [blogs](https://medium.com/toyotaresearch/subpage/e87b98e0bd5c), [publications](https://www.tri.global/publications)
-- [CS287 Advanced Robotics at UC Berkeley Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
+- Galaxea/G0: [GalaxeaVLA](https://github.com/OpenGalaxea/GalaxeaVLA)
+- huggingface/LeRobot: Making AI for Robotics more accessible with end-to-end learning, [Github](https://github.com/huggingface/lerobot)
+- Physical-Intelligence/openpi Pi0: [Github](https://github.com/Physical-Intelligence/openpi)
+- 宇树 [unitree_rl_gym](https://github.com/unitreerobotics/unitree_rl_gym)
+- MobileAloha, 2024, [Project](https://mobile-aloha.github.io/)
+- UMI, Starford, [Project](https://umi-gripper.github.io/)
+- DexCap, 2020, [Project](https://dex-cap.github.io/)
+- HumanPlus, [Project](https://humanoid-ai.github.io/)
+
+### Reinforcement Learning
+
+- [Berkeley CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse-fa23/)
+- Spinning Up in Deep RL! [Docs](https://spinningup.openai.com/en/latest/)
+- 南科大 高等机器人控制 [Bilibili](https://space.bilibili.com/474380277)
+- 王树森 深度强化学习DRL [Github](https://github.com/wangshusen/DRL)
 
 ### Video Generation
 
@@ -257,7 +272,6 @@ CS231n
 ## 其他内容
 
 - [Dive into Deep Learning](https://d2l.ai/index.html)
-- [Berkeley CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse-fa23/)
 - [Transformers as a Computational Model (UC Berkeley, Simons Institute)](https://www.youtube.com/playlist?list=PLgKuh-lKre11RuxGM038u0OSxVdCicIMF)
 - [Github Awesome AI](https://github.com/owainlewis/awesome-artificial-intelligence)
 - [Building Effective Agents (Anthropic)](https://www.anthropic.com/engineering/building-effective-agents)
