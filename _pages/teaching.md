@@ -235,6 +235,7 @@ CS231n
   - MIT Diffusion Lab1: working with SDEs
   - MIT Diffusion Lab2: Flow matching and Score matching
   - MIT Diffusion Lab3: conditional image generation
+- 2022 COMP760: Geometry and Generative Models, [Website](https://joeybose.github.io/Blog/GenCourse)
 
 ## 后续
 
