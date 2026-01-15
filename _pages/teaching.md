@@ -132,9 +132,9 @@ Slides:
 - CSE538 sp25 (7) Attention and Transformer LMs 4-2
 - cs231n Lecture 7: RNNs and LSTMs
 - cs231n Lecture 8: Attention and Transformers
-- RWKV, Peng Bo, [Project Website](https://www.rwkv.com/), [知乎-PENG Bo: 推荐几个RWKV的Chat模型...](https://zhuanlan.zhihu.com/p/618011122)
-- Mamba, Albert Gu, Tri Dao, [arxiv](https://arxiv.org/abs/2312.00752)
-- DeltaNet, Songlin Yang's Blog: [DeltaNet Explained Part 1](https://sustcsonglin.github.io/blog/2024/deltanet-1/)
+- cs231n Lecture 9: Detection, Segmentation, Visualization, and Understanding
+- cs231n Lecture 10: Video Understanding
+- Related topics about LLM: CLIP, Chain-of-Thought, Scaling Law, Reinforcement Learning, Test Time Learning, Linear Attention, State Space Model
 
 练习
 
@@ -168,6 +168,9 @@ Slides:
 - ViT: Transformers for Image Recognition [[Blog]](https://research.google/blog/transformers-for-image-recognition-at-scale/?m=1)
 - DINO: Emerging Properties in Self-Supervised Vision Transformers [[Paper]](https://arxiv.org/abs/2104.14294) [[Blog]](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training) [[Video]](https://youtu.be/h3ij3F3cPIk) [[Code]](https://github.com/facebookresearch/detr)
 - Vision Transformer: When Vision Transformers Outperform ResNets without Pre-training or Strong Data Augmentations, [Code](https://github.com/google-research/vision_transformer)
+- RWKV, by Peng Bo, [Project Website](https://www.rwkv.com/), [知乎: 推荐几个RWKV的Chat模型...](https://zhuanlan.zhihu.com/p/618011122)
+- Mamba, by Albert Gu, Tri Dao, [arxiv](https://arxiv.org/abs/2312.00752), [Youtube Video: Efficiently Modeling Long Sequences with Structured State Spaces | Albert Gu](https://www.youtube.com/watch?v=luCBXCErkCs)，第三方解读[CSDN: 一文通透想颠覆Transformer的Mamba：从SSM、HiPPO、S4到Mamba](https://blog.csdn.net/v_JULY_v/article/details/134923301)
+- DeltaNet, Songlin Yang's Blog: [DeltaNet Explained Part 1](https://sustcsonglin.github.io/blog/2024/deltanet-1/)
 - Maarten Grootendorst: [A Visual Guide to Mamba and State Space Models](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state)
 - OpenAI CLIP (Contrastive Language-Image Pre-Training), [[Github]](https://github.com/openai/CLIP), [[Colab]](https://colab.research.google.com/github/openai/clip/blob/master/notebooks/Interacting_with_CLIP.ipynb)
 - open_clip: An open source implementation of CLIP. [Github](https://github.com/mlfoundations/open_clip)
