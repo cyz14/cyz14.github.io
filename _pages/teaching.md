@@ -15,19 +15,19 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 参考课程包括：
 
-- [Microsoft AI System course on Github](https://microsoft.github.io/AI-System/)
-- [Stanford CS231n Spring 2025](https://cs231n.stanford.edu/schedule.html)
+- Microsoft AI System course [[Github]](https://microsoft.github.io/AI-System/)
+- Stanford CS231n [Spring 2025](https://cs231n.stanford.edu/schedule.html)
 - Stony Brook CSE 538 NLP 2025 Spring [slides](https://www3.cs.stonybrook.edu/~has/CSE538/Slides/)
-- [李宏毅 Machine Learning and Having It Deep and Structured, 2018 Spring](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
-- [KAIST 492(D) Diffusion Models and Their Applications,24 Fall](https://mhsung.github.io/kaist-cs492d-fall-2024/)
-- [MIT Diffusion course 2025](https://diffusion.csail.mit.edu/2025/index.html)
-- [MIT EECS 6.7960 Deep Learning Fall 2025](https://deeplearning6-7960.github.io/)
-- [MIT EECS 6.S978 Deep Generative Models Fall 2024](https://mit-6s978.github.io/)
+- 李宏毅 Machine Learning and Having It Deep and Structured, [2018 Spring](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
+- KAIST 492(D) Diffusion Models and Their Applications, [24 Fall](https://mhsung.github.io/kaist-cs492d-fall-2024/)
+- MIT Diffusion course [2025](https://diffusion.csail.mit.edu/2025/index.html)
+- MIT EECS 6.7960 Deep Learning [Fall 2025](https://deeplearning6-7960.github.io/)
+- MIT EECS 6.S978 Deep Generative Models [Fall 2024](https://mit-6s978.github.io/)
 
 其他可参考的资源包括
 
 - pytorch官方样例仓库 [github](https://github.com/pytorch/examples)
-- huggingface/transformers on Github: [notebooks](https://github.com/huggingface/transformers/tree/main/notebooks), [examples](https://github.com/huggingface/transformers/tree/main/examples), [awesome-transformers](https://github.com/huggingface/transformers/blob/main/awesome-transformers.md)
+- huggingface/transformers on Github: [[notebooks]](https://github.com/huggingface/transformers/tree/main/notebooks), [[examples]](https://github.com/huggingface/transformers/tree/main/examples), [[awesome-transformers]](https://github.com/huggingface/transformers/blob/main/awesome-transformers.md)
 - hugginface/diffusers [[Github]](https://github.com/huggingface/diffusers), [Tutorial: Diffusion models from scratch](https://huggingface.co/learn/diffusion-course/unit1/3)
 - KAIST CS492d [Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
 - CMU 10-799 Diffusion & Flow Matching, [[Resources]](https://kellyyutonghe.github.io/10799S26/resources/)
@@ -116,7 +116,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 - cs231n PyTorch Review Session on [[Colab]](https://colab.research.google.com/drive/1Dl_Xs5GKjEOAedQUVOjG_fPMB1eXtLSm)
 - AI system [Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现了一个C++张量运算，profiling
 - AI system [Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： 实现了一个cuda算子，profiling
-- pytorch 使用 tensorboard 降维查看 embedding [tensorboard tutorial](https://docs.pytorch.org/tutorials/intermediate/tensorboard_tutorial.html)
+- pytorch 使用 tensorboard 查看降维算法 embedding [tensorboard tutorial](https://docs.pytorch.org/tutorials/intermediate/tensorboard_tutorial.html)
 - cs231n Assignment 1 on Colab: [Image Classification, kNN, Softmax, Fully-Connected Neural Network, Fully-Connected Nets](https://cs231n.github.io/assignments2025/assignment1/)
 - Microsoft Lab4 (Optional): 使用 horovod 分布式并行训练
 - Microsoft Lab5 (Optional)：使用docker容器部署训练和推理任务
@@ -181,7 +181,7 @@ Slides:
 
 ## 3. Generative Model 生成模型
 
-[MLDS 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
+MLDS [Spring 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
 
 - GAN Introduction
 - Conditional GAN
@@ -190,7 +190,7 @@ Slides:
 - General Framework
 - WGAN & EBGAN
 
-KAIST [CS492D](https://mhsung.github.io/kaist-cs492d-fall-2024/)
+KAIST CS492D [Fall 24](https://mhsung.github.io/kaist-cs492d-fall-2024/)
 
 - lecture 2 GAN-VAE
 - lecture 3 DDPM1
@@ -276,6 +276,11 @@ CS231n
 - TurboDiffusion: 100–200× Acceleration for Video Diffusion Models, [[Paper]](https://github.com/thu-ml/TurboDiffusion)
 - rCM: Score-Regularized Continuous-Time Consistency Model, [[Code]](https://github.com/NVlabs/rcm)
 - SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse–Linear Attention, [[Code]](https://github.com/thu-ml/SLA)
+
+### Mesh Generation
+
+- [Github/topics/3d-mesh-generation](https://github.com/topics/3d-mesh-generation)
+- [Github/topics/image-to-3d](https://github.com/topics/image-to-3d)
 
 ## 其他内容
 
