@@ -200,6 +200,7 @@ exclude:
   - vendor
   - _pages/about.md
   - _pages/cv.md
+  - _pages/repositories.md
 keep_files:
   - CNAME
   - .nojekyll
