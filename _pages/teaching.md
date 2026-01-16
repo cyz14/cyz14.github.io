@@ -276,6 +276,7 @@ CS231n
 - TurboDiffusion: 100–200× Acceleration for Video Diffusion Models, [[Paper]](https://github.com/thu-ml/TurboDiffusion)
 - rCM: Score-Regularized Continuous-Time Consistency Model, [[Code]](https://github.com/NVlabs/rcm)
 - SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse–Linear Attention, [[Code]](https://github.com/thu-ml/SLA)
+- 港科大&快手可灵 UnityVideo, [[arxiv]](https://arviv.org/abs/2512.07831), [[Project]](https://jackailab.github.io/Projects/UnityVideo), Code 后续开源
 
 ### Mesh Generation
 
