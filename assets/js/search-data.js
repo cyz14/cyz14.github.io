@@ -48,6 +48,28 @@ ninja.data = [{
             window.location.href = "/blog/2026/review-of-2025/";
           
         },
+      },{id: "post-how-gauss-predicted-ceres-orbit-part-2",
+        
+          title: "how-gauss-predicted-Ceres-orbit-part-2",
+        
+        description: "a translation of Bachelor Thesis of Daniel Bed’at\check{s}, Gauss’ calculation of Ceres’ orbit",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/how-gauss-predicted-Ceres-orbit-part-2/";
+          
+        },
+      },{id: "post-how-gauss-predicted-ceres-orbit-part-1",
+        
+          title: "how-gauss-predicted-Ceres-orbit-part-1",
+        
+        description: "a translation of Bachelor Thesis of Daniel Bed’at\check{s}, Gauss’ calculation of Ceres’ orbit",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/how-gauss-predicted-Ceres-orbit-part-1/";
+          
+        },
       },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
