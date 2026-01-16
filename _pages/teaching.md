@@ -134,7 +134,7 @@ Slides:
 - cs231n Lecture 8: Attention and Transformers
 - cs231n Lecture 9: Detection, Segmentation, Visualization, and Understanding
 - cs231n Lecture 10: Video Understanding
-- Related topics about LLM: CLIP, Chain-of-Thought, Scaling Law, Reinforcement Learning, Test Time Learning, Linear Attention, State Space Model
+- Related topics about LLM: CLIP, Chain-of-Thought, Reinforcement Learning, Test Time Learning, Linear Attention, State Space Model, Large Language Diffusion Models
 
 练习
 
@@ -172,8 +172,11 @@ Slides:
 - Mamba, by Albert Gu, Tri Dao, [arxiv](https://arxiv.org/abs/2312.00752), [Youtube Video: Efficiently Modeling Long Sequences with Structured State Spaces | Albert Gu](https://www.youtube.com/watch?v=luCBXCErkCs)，第三方解读[CSDN: 一文通透想颠覆Transformer的Mamba：从SSM、HiPPO、S4到Mamba](https://blog.csdn.net/v_JULY_v/article/details/134923301)
 - DeltaNet, Songlin Yang's Blog: [DeltaNet Explained Part 1](https://sustcsonglin.github.io/blog/2024/deltanet-1/)
 - Maarten Grootendorst: [A Visual Guide to Mamba and State Space Models](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state)
-- OpenAI CLIP (Contrastive Language-Image Pre-Training), [[Github]](https://github.com/openai/CLIP), [[Colab]](https://colab.research.google.com/github/openai/clip/blob/master/notebooks/Interacting_with_CLIP.ipynb)
-- open_clip: An open source implementation of CLIP. [Github](https://github.com/mlfoundations/open_clip)
+- OpenAI CLIP (Contrastive Language-Image Pre-Training), [[Github]](https://github.com/openai/CLIP), [[Colab]](https://colab.research.google.com/github/openai/clip/blob/master/notebooks/Interacting_with_CLIP.ipynb). open_clip: An open source implementation of CLIP. [Github](https://github.com/mlfoundations/open_clip)
+- CodeFusion: A Pre-trained Diffusion Model for Code Generation, [arxiv](https://arxiv.org/abs/2310.17680)
+- Large Language Diffusion Models, [arxiv](https://arxiv.org/abs/2502.09992), [LLaDA-demo](https://ml-gsai.github.io/LLaDA-demo/)
+- Mercury: Ultra-Fast Language Models Based on Diffusion, [Inception Labs](https://www.inceptionlabs.ai/), [arxiv](https://arxiv.org/abs/2506.17298)
+- Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference, [arxiv](https://arxiv.org/abs/2508.02193), [demo](https://studio.seed.ai/exp/seed_diffusion/)
 
 ## 3. Generative Model 生成模型
 
