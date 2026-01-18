@@ -209,14 +209,17 @@ CS231n
 
 阅读：
 
+- 从最大似然到EM算法：一致的理解方式, [kexue.fm](https://kexue.fm/archives/5239)
+- 变分自编码器（一）：原来是这么一回事, [kexue.fm](https://kexue.fm/archives/5253)
+- 变分自编码器（二）：从贝叶斯观点出发, [kexue.fm](https://kexue.fm/archives/5343)
 - The Principles of Diffusion Models - From Origins to Advances, Chieh-Hsin Lai, Yang Song, Dongjun Kim, Yuki Mitsufuji, Stefano Ermon. [[Book Page]](https://the-principles-of-diffusion-models.github.io/)
 - Yunfan's Blog: [ELBO — What & Why](https://yunfanj.com/blog/2021/01/11/ELBO.html)
 - 2015 Sohl-Dickstein et al. Deep Unsupervised Learning using Nonequilibrium Thermodynamics [[arxiv]](https://arxiv.org/pdf/1503.03585), [[Code]](https://github.com/Sohl-Dickstein/Diffusion-Probabilistic-Models)
-- 2019 Yang Song, Stefano Ermon, Generative Modeling by Estimating Gradients of the Data Distribution, [[arxiv]](https://arxiv.org/abs/1907.05600)
 - 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , [colab tutorial in pytorch](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
-- 2020 Jonathan Ho, Ajay Jain, Pieter Abbeel, Denoising Diffusion Probabilistic Models, [[arxiv]](https://arxiv.org/abs/2006.11239), [[Code]](https://github.com/hojonathanho/diffusion)
 - Lilian's Blog, [Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
-- MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
+- An Introduction to Flow Matching, [Blog](https://mlg.eng.cam.ac.uk/blog/2024/01/20/flow-matching.html#figure-forward_samples-one-color-1)
+- 2019 Yang Song, Stefano Ermon, Generative Modeling by Estimating Gradients of the Data Distribution, [[arxiv]](https://arxiv.org/abs/1907.05600)
+- 2020 Jonathan Ho, Ajay Jain, Pieter Abbeel, Denoising Diffusion Probabilistic Models, [[arxiv]](https://arxiv.org/abs/2006.11239), [[Code]](https://github.com/hojonathanho/diffusion)
 - 2022 William Peebles and Saining Xie, DiT: Scalable Diffusion Models with Transformers, [[arxiv]](https://arxiv.org/abs/2212.09748), [[Github]](https://github.com/facebookresearch/DiT)
 - Latent-Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models, [[Github]](https://github.com/CompVis/latent-diffusion)
 
@@ -248,6 +251,8 @@ CS231n
 
 ### Robotics
 
+- MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
+- MIT 6s798 Deep Generative Models, [Reading: Application - Robotics](https://mit-6s978.github.io/schedule.html)
 - [CS287 Advanced Robotics at UC Berkeley Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
 - ICML 2025 Benjamin Burchfiel: [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
 - Toyota Research robotics [blogs](https://medium.com/toyotaresearch/subpage/e87b98e0bd5c), [publications](https://www.tri.global/publications)
@@ -280,6 +285,7 @@ CS231n
 
 ### Mesh Generation
 
+- MIT 6s798, [Reading: Application - 3D and Geometry](https://mit-6s978.github.io/schedule.html)
 - [Github/topics/3d-mesh-generation](https://github.com/topics/3d-mesh-generation)
 - [Github/topics/image-to-3d](https://github.com/topics/image-to-3d)
 
