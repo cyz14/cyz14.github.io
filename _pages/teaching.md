@@ -32,6 +32,8 @@ Organize your courses by years, topics, or universities, however you like! -->
 - KAIST CS492d [Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
 - CMU 10-799 Diffusion & Flow Matching, [[Resources]](https://kellyyutonghe.github.io/10799S26/resources/)
 - labml.ai: Annotated Deep Learning Paper Implementation, [[Github]](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
+- Implement state-of-the-art models from scratch [[PaperCode]](https://papercode.vercel.app/papers)
+- Comprehensive toy implementations of the 30 foundational papers recommended by Ilya Sutskever, [[Github]](https://github.com/pageman/sutskever-30-implementations)
 
 ## 1. AI system与图像分类模型
 
