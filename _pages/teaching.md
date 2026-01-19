@@ -181,6 +181,14 @@ Slides:
 
 ## 3. Generative Model 生成模型
 
+KAIST CS492D [Fall 24](https://mhsung.github.io/kaist-cs492d-fall-2024/)
+
+- lecture 2 GAN-VAE
+- lecture 3 DDPM1
+- lecture 4 DDPM2 & DDIM
+- lecture 7 Classifier-Free Guidance，Latent Diffusion，ControlNet，LoRA
+- ODE/DPM solver, score-matching，flow matching
+
 MLDS [Spring 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
 
 - GAN Introduction
@@ -189,14 +197,6 @@ MLDS [Spring 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
 - Theory
 - General Framework
 - WGAN & EBGAN
-
-KAIST CS492D [Fall 24](https://mhsung.github.io/kaist-cs492d-fall-2024/)
-
-- lecture 2 GAN-VAE
-- lecture 3 DDPM1
-- lecture 4 DDPM2
-- lecture 7 Classifier-Free Guidance，Latent Diffusion，ControlNet，LoRA
-- ODE/DPM solver, score-matching，flow matching
 
 CS231n
 
@@ -209,10 +209,9 @@ CS231n
 
 阅读：
 
-- 从最大似然到EM算法：一致的理解方式, [kexue.fm](https://kexue.fm/archives/5239)
-- 变分自编码器（一）：原来是这么一回事, [kexue.fm](https://kexue.fm/archives/5253)
-- 变分自编码器（二）：从贝叶斯观点出发, [kexue.fm](https://kexue.fm/archives/5343)
-- The Principles of Diffusion Models - From Origins to Advances, Chieh-Hsin Lai, Yang Song, Dongjun Kim, Yuki Mitsufuji, Stefano Ermon. [[Book Page]](https://the-principles-of-diffusion-models.github.io/)
+- Diederik P. Kingma, Max Welling, An Introduction to Variational Autoencoders, 2019, [[arvix]](https://arxiv.org/abs/1906.02691)
+- 苏剑林，变分自编码器（一）：原来是这么一回事, [kexue.fm](https://kexue.fm/archives/5253), 变分自编码器（二）：从贝叶斯观点出发, [kexue.fm](https://kexue.fm/archives/5343)
+- Chieh-Hsin Lai, Yang Song, Dongjun Kim, Yuki Mitsufuji, Stefano Ermon. The Principles of Diffusion Models - From Origins to Advances [[Book Page]](https://the-principles-of-diffusion-models.github.io/)
 - Yunfan's Blog: [ELBO — What & Why](https://yunfanj.com/blog/2021/01/11/ELBO.html)
 - 2015 Sohl-Dickstein et al. Deep Unsupervised Learning using Nonequilibrium Thermodynamics [[arxiv]](https://arxiv.org/pdf/1503.03585), [[Code]](https://github.com/Sohl-Dickstein/Diffusion-Probabilistic-Models)
 - 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , [colab tutorial in pytorch](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
@@ -235,13 +234,13 @@ CS231n
 
 作业：
 
-- [MLDS 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php): Assignment 3.1 3.2
 - CS492D: [Assignments 1: ddpm](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment1-DDPM)
 - CS492D: [Assignments 2: ddim/CFG](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment2-DDIM-CFG)
 - CS492D: [Assignments 3: ControlNet and LoRA](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment3-ControlNet-LoRA)
 - CS492D: [2025 Assignment 2 (DPMSolver)](https://github.com/KAIST-Visual-AI-Group/Diffusion-2025-Assignment2-DPMSolver)
 - CS492D: [Assignment7 (Flow)](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment7-Flow)
-- [MIT Diffusion Course](https://diffusion.csail.mit.edu/2025/index.html)
+- MLDS 2018: [Assignment 3.1, 3.2, AnimeGAN](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
+- MIT Diffusion [Course](https://diffusion.csail.mit.edu/2025/index.html)
   - MIT Diffusion Lab1: working with SDEs
   - MIT Diffusion Lab2: Flow matching and Score matching
   - MIT Diffusion Lab3: conditional image generation
