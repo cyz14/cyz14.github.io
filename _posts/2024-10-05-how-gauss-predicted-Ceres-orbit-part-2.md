@@ -3,8 +3,8 @@ layout: post
 title: how-gauss-predicted-Ceres-orbit-part-2
 date: 2023-10-05 22:18:00
 description: a translation of Bachelor Thesis of Daniel Bed’at\check{s}, Gauss’ calculation of Ceres’ orbit
-tags: translation
-categories: personal
+tags: translation math-history Gauss LSM
+categories: math
 chart:
   plotly: true
 ---
