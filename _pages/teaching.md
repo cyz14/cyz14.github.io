@@ -159,7 +159,6 @@ Slides:
 
 阅读
 
-- harvardnlp/seq2seq: [Github](https://github.com/harvardnlp/seq2seq-attn)
 - harvardnlp [The Annotated Transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
 - Jay Alammar: [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - Lilian's blog: [Attention? Attention](https://lilianweng.github.io/posts/2018-06-24-attention/)
