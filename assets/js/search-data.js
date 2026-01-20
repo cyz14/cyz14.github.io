@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "post-review-of-2025",
+        },{id: "post-made-my-day",
+        
+          title: "made my day",
+        
+        description: "teacher said I should learn math at lunch",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/teacher-said-I-should-learn-math/";
+          
+        },
+      },{id: "post-review-of-2025",
         
           title: "review of 2025",
         
