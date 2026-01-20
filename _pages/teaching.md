@@ -295,6 +295,7 @@ CS231n
 - MIT 6s798, [Reading: Application - 3D and Geometry](https://mit-6s978.github.io/schedule.html)
 - [Github/topics/3d-mesh-generation](https://github.com/topics/3d-mesh-generation)
 - [Github/topics/image-to-3d](https://github.com/topics/image-to-3d)
+- TRELLIS [[arxiv]](https://arxiv.org/html/2412.01506) TRELLIS.2, [[arxiv]](https://arxiv.org/html/2512.14692v1)
 
 ## 其他内容
 
