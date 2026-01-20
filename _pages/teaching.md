@@ -282,6 +282,7 @@ CS231n
 ### Video Generation
 
 - Lil's Blog: [Video Generation Modeling from Scratch](https://lilianweng.github.io/posts/2024-04-12-diffusion-video/)
+- open sora, [[Github]](https://github.com/hpcaitech/Open-Sora)
 - 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, Github [Wan2.1](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2), 基于 DiffSynth-Studio 的训练[[Code]](https://github.com/modelscope/DiffSynth-Studio/blob/main/docs/zh/Model_Details/Wan.md)
 - Tencent: Hunyuan [[Project]](https://hunyuan.tencent.com/video/zh?tabIndex=0), [[Github]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5), [[Training Section]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5?tab=readme-ov-file#-training)
 - Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/), Unofficial implementation [[lucidrains/lumiere-pytorch]](https://github.com/lucidrains/lumiere-pytorch), [[kyegomez/LUMIERE]](https://github.com/kyegomez/LUMIERE)
@@ -295,7 +296,7 @@ CS231n
 - MIT 6s798, [Reading: Application - 3D and Geometry](https://mit-6s978.github.io/schedule.html)
 - [Github/topics/3d-mesh-generation](https://github.com/topics/3d-mesh-generation)
 - [Github/topics/image-to-3d](https://github.com/topics/image-to-3d)
-- TRELLIS [[arxiv]](https://arxiv.org/html/2412.01506) TRELLIS.2, [[arxiv]](https://arxiv.org/html/2512.14692v1)
+- TRELLIS: Structured 3D Latents for Scalable and Versatile 3D Generation [[arxiv]](https://arxiv.org/html/2412.01506) TRELLIS.2, [[arxiv]](https://arxiv.org/html/2512.14692v1)
 
 ## 其他内容
 
