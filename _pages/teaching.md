@@ -251,6 +251,13 @@ CS231n
 
 ### Robotics
 
+- https://github.com/AtsushiSakai/PythonRobotics
+- https://github.com/Shunichi09/PythonLinearNonlinearControl
+- https://github.com/zhaohaojie1998/Control-Algorithm
+- https://github.com/zhaohaojie1998/Optimal-Control-of-Lunar-Landing
+- https://github.com/zhaohaojie1998/Deep-Reinforcement-Learning-Algorithms-with-PyTorch
+- https://github.com/DanielMartensson/Adaptive-Control
+- https://github.com/DanielMartensson/Optimal-Control
 - MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
 - MIT 6s798 Deep Generative Models, [Reading: Application - Robotics](https://mit-6s978.github.io/schedule.html)
 - [CS287 Advanced Robotics at UC Berkeley Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
