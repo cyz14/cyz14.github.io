@@ -154,7 +154,7 @@ collections:
   news:
     defaults:
       layout: post
-    output: true
+    output: false
   projects:
     output: true
 
@@ -200,6 +200,7 @@ exclude:
   - vendor
   - _pages/cv.md
   - _pages/repositories.md
+  - _news/
 keep_files:
   - CNAME
   - .nojekyll
