@@ -166,7 +166,7 @@ Slides:
 - Lilian's blog: [Attention? Attention](https://lilianweng.github.io/posts/2018-06-24-attention/)
 - visionbook.mit.edu: [transformers](https://visionbook.mit.edu/transformers.html)
 - Linear Attention Fundamentals, [Blog](https://haileyschoelkopf.github.io/blog/2024/linear-attn/)
-- ViT: Transformers for Image Recognition [[Blog]](https://research.google/blog/transformers-for-image-recognition-at-scale/?m=1)
+- ViT: Transformers for Image Recognition [[Blog]](https://research.google/blog/transformers-for-image-recognition-at-scale/?m=1), Image captioning with ViT [[Github]](https://github.com/inuwamobarak/Image-captioning-ViT)
 - DINO: Emerging Properties in Self-Supervised Vision Transformers [[Paper]](https://arxiv.org/abs/2104.14294) [[Blog]](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training) [[Video]](https://youtu.be/h3ij3F3cPIk) [[Code]](https://github.com/facebookresearch/detr)
 - Vision Transformer: When Vision Transformers Outperform ResNets without Pre-training or Strong Data Augmentations, [Code](https://github.com/google-research/vision_transformer)
 - RWKV, by Peng Bo, [Project Website](https://www.rwkv.com/), [知乎: 推荐几个RWKV的Chat模型...](https://zhuanlan.zhihu.com/p/618011122)
