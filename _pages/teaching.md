@@ -226,7 +226,7 @@ CS231n
 - 2022 William Peebles and Saining Xie, DiT: Scalable Diffusion Models with Transformers, [[arxiv]](https://arxiv.org/abs/2212.09748), [[Github]](https://github.com/facebookresearch/DiT)
 - Latent-Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models, [[Github]](https://github.com/CompVis/latent-diffusion)
 - The GAN [Zoo](https://github.com/hindupuravinash/the-gan-zoo), [happy-jihye.github.io/gan/](https://happy-jihye.github.io/gan/)
-- What's the score? [Score Based Generative Modelings](https://scorebasedgenerativemodeling.github.io/)
+- What's the score? [Score Based Generative Modelings (Until Jan. 2024 )](https://scorebasedgenerativemodeling.github.io/)
 
 练习
 
