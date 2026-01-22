@@ -186,9 +186,12 @@ KAIST CS492D [Fall 24](https://mhsung.github.io/kaist-cs492d-fall-2024/)
 
 - lecture 2 GAN-VAE
 - lecture 3 DDPM1
-- lecture 4 DDPM2 & DDIM
-- lecture 7 Classifier-Free Guidance，Latent Diffusion，ControlNet，LoRA
-- ODE/DPM solver, score-matching，flow matching
+- lecture 4 DDPM2
+- lecture 5 DDIM & score matching
+- lecture 6 DDIM & CFG
+- lecture 7 CFG，Latent Diffusion，ControlNet，LoRA
+- lecture 14: DPM/ODE solver
+- lecture 15 & 16: Flow matching
 
 MLDS [Spring 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
 
