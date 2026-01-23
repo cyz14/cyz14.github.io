@@ -233,7 +233,7 @@ CS231n
 - VAE: Auto-encoding Variational Bayes, [pytorch/examples/vae](https://github.com/pytorch/examples/blob/main/vae/README.md), Kingma's mnist [demo](https://dpkingma.com/sgvb_mnist_demo/demo.html)
 - GAN: [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/main/dcgan)
 - DDPM: The Annotated Diffusion Model, [huggingface blog](https://huggingface.co/blog/annotated-diffusion)
-- labml.ai [Diffusion/DDPM](https://nn.labml.ai/diffusion/ddpm/index.html)
+- labml.ai/Diffusion Models: [[DDPM]](https://nn.labml.ai/diffusion/ddpm/index.html), [[DDIM]](https://nn.labml.ai/diffusion/stable_diffusion/sampler/ddim.html), [[Latent Diffusion Models]](https://nn.labml.ai/diffusion/stable_diffusion/latent_diffusion.html), [[Stable Diffusion]](https://nn.labml.ai/diffusion/stable_diffusion/index.html)
 - UvA DL Tutorial [11: Normalized Flow Image Modeling](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial11/NF_image_modeling.html)
 - UvA DL Tutorial [15: Vision Transformers](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial15/Vision_Transformer.html)
 - UvA DL Tutorial [Dynamic systems Neural ODEs](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/DL2/Dynamical_systems/dynamical_systems_neural_odes.html)
