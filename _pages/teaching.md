@@ -313,3 +313,4 @@ CS231n
 - [谷歌、阿里、微软等10大深度学习CTR模型最全演化图谱【推荐、广告、搜索领域】](https://zhuanlan.zhihu.com/p/63186101)
 - [看Google如何实现Wide & Deep模型(1)~(4)](https://zhuanlan.zhihu.com/p/47293765)
 - [涨点利器：推荐系统中对双塔模型的各种改造升级](https://zhuanlan.zhihu.com/p/468875898)
+- [快手 OpenOneRec](https://github.com/Kuaishou-OneRec/OpenOneRec)
