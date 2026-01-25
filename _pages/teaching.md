@@ -23,17 +23,18 @@ Organize your courses by years, topics, or universities, however you like! -->
 - MIT Diffusion course [2025](https://diffusion.csail.mit.edu/2025/index.html)
 - MIT EECS 6.7960 Deep Learning [Fall 2025](https://deeplearning6-7960.github.io/)
 - MIT EECS 6.S978 Deep Generative Models [Fall 2024](https://mit-6s978.github.io/)
+- CMU 10-799 Diffusion & Flow Matching, [[Resources]](https://kellyyutonghe.github.io/10799S26/resources/)
 
 其他可参考的资源包括
 
 - pytorch官方样例仓库 [github](https://github.com/pytorch/examples)
-- huggingface/transformers on Github: [[notebooks]](https://github.com/huggingface/transformers/tree/main/notebooks), [[examples]](https://github.com/huggingface/transformers/tree/main/examples), [[awesome-transformers]](https://github.com/huggingface/transformers/blob/main/awesome-transformers.md)
+- huggingface/transformers: [[notebooks]](https://github.com/huggingface/transformers/tree/main/notebooks), [[examples]](https://github.com/huggingface/transformers/tree/main/examples), [[awesome-transformers]](https://github.com/huggingface/transformers/blob/main/awesome-transformers.md)
 - hugginface/diffusers [[Github]](https://github.com/huggingface/diffusers), [Tutorial: Diffusion models from scratch](https://huggingface.co/learn/diffusion-course/unit1/3)
 - KAIST CS492d [Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
-- CMU 10-799 Diffusion & Flow Matching, [[Resources]](https://kellyyutonghe.github.io/10799S26/resources/)
 - labml.ai: Annotated Deep Learning Paper Implementation, [[Github]](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
 - Implement state-of-the-art models from scratch [[PaperCode]](https://papercode.vercel.app/papers)
 - Comprehensive toy implementations of the 30 foundational papers recommended by Ilya Sutskever, [[Github]](https://github.com/pageman/sutskever-30-implementations)
+- Dive into Deep Learning, [d2l.ai](https://d2l.ai/index.html)
 
 ## 1. AI system与图像分类模型
 
@@ -144,6 +145,7 @@ Slides:
 - cs231n RNNs & Transformers [[Colab]](https://colab.research.google.com/drive/1mC5CWwekbZ2NrYv6Zfpuv55z8DuOZXVP?usp=sharing), [slides](https://cs231n.stanford.edu/slides/2025/section_5.pdf)
 - Karpathy's build-nanogpt [[Github]](https://github.com/karpathy/build-nanogpt)
 - UvA Tutorial [Transformers and MHAttention](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial6/Transformers_and_MHAttention.html)
+- UvA DL Tutorial [15: Vision Transformers](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial15/Vision_Transformer.html)
 
 作业
 
@@ -176,7 +178,7 @@ Slides:
 - Maarten Grootendorst: [A Visual Guide to Mamba and State Space Models](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state)
 - OpenAI CLIP (Contrastive Language-Image Pre-Training), [[Github]](https://github.com/openai/CLIP), [[Colab]](https://colab.research.google.com/github/openai/clip/blob/master/notebooks/Interacting_with_CLIP.ipynb). open_clip: An open source implementation of CLIP. [Github](https://github.com/mlfoundations/open_clip)
 - CodeFusion: A Pre-trained Diffusion Model for Code Generation, [arxiv](https://arxiv.org/abs/2310.17680)
-- Large Language Diffusion Models, [arxiv](https://arxiv.org/abs/2502.09992), [LLaDA-demo](https://ml-gsai.github.io/LLaDA-demo/)
+- Large Language Diffusion Models, [arxiv](https://arxiv.org/abs/2502.09992), [LLaDA-demo](https://ml-gsai.github.io/LLaDA-demo/), [[LLaDA 2.0]](https://github.com/inclusionAI/LLaDA2.0)
 - Mercury: Ultra-Fast Language Models Based on Diffusion, [Inception Labs](https://www.inceptionlabs.ai/), [arxiv](https://arxiv.org/abs/2506.17298)
 - Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference, [arxiv](https://arxiv.org/abs/2508.02193), [demo](https://studio.seed.ai/exp/seed_diffusion/)
 
@@ -235,7 +237,6 @@ CS231n
 - DDPM: The Annotated Diffusion Model, [huggingface blog](https://huggingface.co/blog/annotated-diffusion)
 - labml.ai/Diffusion Models: [[DDPM]](https://nn.labml.ai/diffusion/ddpm/index.html), [[DDIM]](https://nn.labml.ai/diffusion/stable_diffusion/sampler/ddim.html), [[Latent Diffusion Models]](https://nn.labml.ai/diffusion/stable_diffusion/latent_diffusion.html), [[Stable Diffusion]](https://nn.labml.ai/diffusion/stable_diffusion/index.html)
 - UvA DL Tutorial [11: Normalized Flow Image Modeling](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial11/NF_image_modeling.html)
-- UvA DL Tutorial [15: Vision Transformers](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial15/Vision_Transformer.html)
 - UvA DL Tutorial [Dynamic systems Neural ODEs](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/DL2/Dynamical_systems/dynamical_systems_neural_odes.html)
 
 作业：
@@ -254,35 +255,12 @@ CS231n
 
 ## 后续
 
-### Robotics
+### Mesh Generation
 
-- https://github.com/AtsushiSakai/PythonRobotics
-- https://github.com/Shunichi09/PythonLinearNonlinearControl
-- https://github.com/zhaohaojie1998/Control-Algorithm
-- https://github.com/zhaohaojie1998/Optimal-Control-of-Lunar-Landing
-- https://github.com/zhaohaojie1998/Deep-Reinforcement-Learning-Algorithms-with-PyTorch
-- https://github.com/DanielMartensson/Adaptive-Control
-- https://github.com/DanielMartensson/Optimal-Control
-- MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
-- MIT 6s798 Deep Generative Models, [Reading: Application - Robotics](https://mit-6s978.github.io/schedule.html)
-- [CS287 Advanced Robotics at UC Berkeley Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
-- ICML 2025 Benjamin Burchfiel: [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
-- Toyota Research robotics [blogs](https://medium.com/toyotaresearch/subpage/e87b98e0bd5c), [publications](https://www.tri.global/publications)
-- Galaxea/G0: [GalaxeaVLA](https://github.com/OpenGalaxea/GalaxeaVLA)
-- huggingface/LeRobot: Making AI for Robotics more accessible with end-to-end learning, [Github](https://github.com/huggingface/lerobot)
-- Physical-Intelligence/openpi Pi0: [Github](https://github.com/Physical-Intelligence/openpi)
-- 宇树 [unitree_rl_gym](https://github.com/unitreerobotics/unitree_rl_gym)
-- MobileAloha, 2024, [Project](https://mobile-aloha.github.io/)
-- UMI, Starford, [Project](https://umi-gripper.github.io/)
-- DexCap, 2020, [Project](https://dex-cap.github.io/)
-- HumanPlus, [Project](https://humanoid-ai.github.io/)
-
-### Reinforcement Learning
-
-- [Berkeley CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse-fa23/)
-- Spinning Up in Deep RL! [Docs](https://spinningup.openai.com/en/latest/)
-- 南科大 高等机器人控制 [Bilibili](https://space.bilibili.com/474380277)
-- 王树森 深度强化学习DRL [Github](https://github.com/wangshusen/DRL)
+- MIT 6s798, [Reading: Application - 3D and Geometry](https://mit-6s978.github.io/schedule.html)
+- [Github/topics/3d-mesh-generation](https://github.com/topics/3d-mesh-generation)
+- [Github/topics/image-to-3d](https://github.com/topics/image-to-3d)
+- TRELLIS: Structured 3D Latents for Scalable and Versatile 3D Generation [[arxiv]](https://arxiv.org/html/2412.01506) TRELLIS.2, [[arxiv]](https://arxiv.org/html/2512.14692v1)
 
 ### Video Generation
 
@@ -296,18 +274,30 @@ CS231n
 - SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse–Linear Attention, [[Code]](https://github.com/thu-ml/SLA)
 - 港科大&快手可灵 UnityVideo, [[arxiv]](https://arviv.org/abs/2512.07831), [[Project]](https://jackailab.github.io/Projects/UnityVideo), Code 后续开源
 
-### Mesh Generation
+### Robotics
 
-- MIT 6s798, [Reading: Application - 3D and Geometry](https://mit-6s978.github.io/schedule.html)
-- [Github/topics/3d-mesh-generation](https://github.com/topics/3d-mesh-generation)
-- [Github/topics/image-to-3d](https://github.com/topics/image-to-3d)
-- TRELLIS: Structured 3D Latents for Scalable and Versatile 3D Generation [[arxiv]](https://arxiv.org/html/2412.01506) TRELLIS.2, [[arxiv]](https://arxiv.org/html/2512.14692v1)
+- MIT 6s798 Deep Generative Models, [Reading: Application - Robotics](https://mit-6s978.github.io/schedule.html)
+- MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
+- UC Berkeley, [CS287 Advanced Robotics, Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
+- Benjamin Burchfiel, ICML 2025, [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
+- Galaxea/G0: [GalaxeaVLA](https://github.com/OpenGalaxea/GalaxeaVLA)
+- huggingface/LeRobot: Making AI for Robotics more accessible with end-to-end learning, [Github](https://github.com/huggingface/lerobot)
+- Physical-Intelligence/openpi Pi0: [Github](https://github.com/Physical-Intelligence/openpi)
+- 宇树 [unitree_rl_gym](https://github.com/unitreerobotics/unitree_rl_gym)
+- MobileAloha, 2024, [Project](https://mobile-aloha.github.io/)
+- UMI, Starford, [Project](https://umi-gripper.github.io/)
+- DexCap, 2020, [Project](https://dex-cap.github.io/)
+- HumanPlus, [Project](https://humanoid-ai.github.io/)
+
+### Reinforcement Learning
+
+- Berkeley, [CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse-fa23/)
+- OpenAI, Spinning Up in Deep RL! [Docs](https://spinningup.openai.com/en/latest/)
+- 南科大，高等机器人控制 [Bilibili](https://space.bilibili.com/474380277)
+- 王树森，深度强化学习 [DRL](https://github.com/wangshusen/DRL)
 
 ## 其他内容
 
-- [Dive into Deep Learning](https://d2l.ai/index.html)
-- [Transformers as a Computational Model (UC Berkeley, Simons Institute)](https://www.youtube.com/playlist?list=PLgKuh-lKre11RuxGM038u0OSxVdCicIMF)
-- [Github Awesome AI](https://github.com/owainlewis/awesome-artificial-intelligence)
 - [Building Effective Agents (Anthropic)](https://www.anthropic.com/engineering/building-effective-agents)
 - [推荐系统相关论文汇总](https://github.com/tangxyw/RecSysPapers)
 - [谷歌、阿里、微软等10大深度学习CTR模型最全演化图谱【推荐、广告、搜索领域】](https://zhuanlan.zhihu.com/p/63186101)
