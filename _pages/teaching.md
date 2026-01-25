@@ -236,8 +236,9 @@ CS231n
 - GAN: [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/main/dcgan)
 - DDPM: The Annotated Diffusion Model, [huggingface blog](https://huggingface.co/blog/annotated-diffusion)
 - labml.ai/Diffusion Models: [[DDPM]](https://nn.labml.ai/diffusion/ddpm/index.html), [[DDIM]](https://nn.labml.ai/diffusion/stable_diffusion/sampler/ddim.html), [[Latent Diffusion Models]](https://nn.labml.ai/diffusion/stable_diffusion/latent_diffusion.html), [[Stable Diffusion]](https://nn.labml.ai/diffusion/stable_diffusion/index.html)
+- Facebook, Flow Matching Guide and Code, [[arxiv]](https://arxiv.org/pdf/2412.06264), [[Code]](https://github.com/facebookresearch/flow_matching)
 - UvA DL Tutorial [11: Normalized Flow Image Modeling](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial11/NF_image_modeling.html)
-- UvA DL Tutorial [Dynamic systems Neural ODEs](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/DL2/Dynamical_systems/dynamical_systems_neural_odes.html)
+- UvA DL Tutorial: [Dynamic systems Neural ODEs](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/DL2/Dynamical_systems/dynamical_systems_neural_odes.html)
 
 作业：
 
@@ -261,6 +262,11 @@ CS231n
 - [Github/topics/3d-mesh-generation](https://github.com/topics/3d-mesh-generation)
 - [Github/topics/image-to-3d](https://github.com/topics/image-to-3d)
 - TRELLIS: Structured 3D Latents for Scalable and Versatile 3D Generation [[arxiv]](https://arxiv.org/html/2412.01506) TRELLIS.2, [[arxiv]](https://arxiv.org/html/2512.14692v1)
+- Tencent-Hunyuan-3D, [Page](https://hunyuan.tencent.com/3d)
+- MeshGPT: Generating Triangle Meshes with Decoder-Only Transformers, CVPR 24, [[Project]](https://nihalsid.github.io/mesh-gpt/)
+- DreamFusion: Text-to-3D using 2D Diffusion, [[arxiv]](https://arxiv.org/abs/2209.14988)
+- Flexible Isosurface Extraction for Gradient-Based
+  Mesh Optimization, [[Project]](https://research.nvidia.com/labs/toronto-ai/flexicubes/)
 
 ### Video Generation
 
@@ -268,6 +274,7 @@ CS231n
 - open sora, [[Github]](https://github.com/hpcaitech/Open-Sora)
 - 阿里 Wan2.1: Open and Advanced Large-Scale Video Generative Models, Github [Wan2.1](https://github.com/Wan-Video/Wan2.1)，[Wan2.2](https://github.com/Wan-Video/Wan2.2), 基于 DiffSynth-Studio 的训练[[Code]](https://github.com/modelscope/DiffSynth-Studio/blob/main/docs/zh/Model_Details/Wan.md)
 - Tencent: Hunyuan [[Project]](https://hunyuan.tencent.com/video/zh?tabIndex=0), [[Github]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5), [[Training Section]](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5?tab=readme-ov-file#-training)
+- Meta, Movie Gen: A Cast of Media Foundation Models, [[Paper]](https://ai.meta.com/static-resource/movie-gen-research-paper)
 - Google: Lumiere - A Space-Time Diffusion Model for Video Generation, [Project](https://lumiere-video.github.io/), Unofficial implementation [[lucidrains/lumiere-pytorch]](https://github.com/lucidrains/lumiere-pytorch), [[kyegomez/LUMIERE]](https://github.com/kyegomez/LUMIERE)
 - TurboDiffusion: 100–200× Acceleration for Video Diffusion Models, [[Paper]](https://github.com/thu-ml/TurboDiffusion)
 - rCM: Score-Regularized Continuous-Time Consistency Model, [[Code]](https://github.com/NVlabs/rcm)
@@ -280,6 +287,7 @@ CS231n
 - MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
 - UC Berkeley, [CS287 Advanced Robotics, Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
 - Benjamin Burchfiel, ICML 2025, [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
+- Tencent-Hunyuan/HY-Motion-1.0: Scaling Flow Matching Models for 3D Motion Generation, [[Code]](https://github.com/Tencent-Hunyuan/HY-Motion-1.0)
 - Galaxea/G0: [GalaxeaVLA](https://github.com/OpenGalaxea/GalaxeaVLA)
 - huggingface/LeRobot: Making AI for Robotics more accessible with end-to-end learning, [Github](https://github.com/huggingface/lerobot)
 - Physical-Intelligence/openpi Pi0: [Github](https://github.com/Physical-Intelligence/openpi)
