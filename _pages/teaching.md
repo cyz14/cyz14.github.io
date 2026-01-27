@@ -11,7 +11,8 @@ nav_order: 6
 
 Organize your courses by years, topics, or universities, however you like! -->
 
-让大家入门如何上手做AI项目。主题包括AI system，图像分类模型，语言模型，生成模型。
+让大家入门如何上手做AI项目。主题包括AI system，图像分类模型，语言模型，生成模型。  
+第一遍分享，从2026年1月5号开始，至1月26号正式完结。
 
 参考课程包括：
 
