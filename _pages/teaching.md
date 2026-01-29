@@ -25,6 +25,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 - MIT EECS 6.7960 Deep Learning [Fall 2025](https://deeplearning6-7960.github.io/)
 - MIT EECS 6.S978 Deep Generative Models [Fall 2024](https://mit-6s978.github.io/)
 - CMU 10-799 Diffusion & Flow Matching, [[Resources]](https://kellyyutonghe.github.io/10799S26/resources/)
+- 2022 COMP760: Geometry and Generative Models, [Website](https://joeybose.github.io/Blog/GenCourse)
 
 其他可参考的资源包括
 
@@ -74,14 +75,13 @@ Organize your courses by years, topics, or universities, however you like! -->
 第二讲：
 
 - cs231n Lecture 1: Deep Learning for Computer Vision
-- CSE 538 maximum entropy classifier (Logistic regression)
+- CSE 538 Topic 2: maximum entropy classifier (Logistic regression), [[slides]](https://www3.cs.stonybrook.edu/~has/CSE538/Slides/)
 - pytorch.org tutorial with examples [tensor, function, auto grad, module](https://docs.pytorch.org/tutorials/beginner/pytorch_with_examples.html)
 
 练习
 
-- CSE538 Spring 2025: [Demo of Logistic Regression with Gradient Descent](https://adithya8.github.io/assets/cse538-sp25/intro_numpy_LogisticRegression.txt)
 - MIT EECS 6.7960 Deep Learning Fall 2025, pytorch tutorial [[colab]](https://colab.research.google.com/drive/1nZg9_wYpVYWS9xZAiSft5_gyluuQpBWY?usp=sharing)
-- CSE538 Spring 2025 Assignment 1: Multi-Class Logistic Regression [[Google Drive Download]](https://drive.google.com/drive/folders/1Uj1li3QE-EEl3SVNipbaMqsc6mGWp9_F?usp=drive_link)
+- CSE538 Spring 2025 Assignment 1: Multi-Class Logistic Regression [[Google Drive Download]](https://drive.google.com/drive/folders/1Uj1li3QE-EEl3SVNipbaMqsc6mGWp9_F?usp=drive_link), 参考 [Demo of Logistic Regression with Gradient Descent](https://adithya8.github.io/assets/cse538-sp25/intro_numpy_LogisticRegression.txt)
 
 第三讲：
 
@@ -90,9 +90,8 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 练习
 
-- AI system [Lab1](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab1/README.md)： mnist，模型可视化，逐layer性能profiling
 - pytorch nn tutorial [What is torch.nn really?](https://docs.pytorch.org/tutorials/beginner/nn_tutorial.html): mnist 图片识别
-- UvA DL Notebooks [Tutorial 2: Introduction to PyTorch](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial2/Introduction_to_PyTorch.html)
+- AI system [Lab1](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab1/README.md)： mnist，模型可视化，逐layer性能profiling
 
 第四讲：
 
@@ -105,13 +104,9 @@ Organize your courses by years, topics, or universities, however you like! -->
 - Kaiming He CVPR25 talk: [Workshop: What's After Diffusion?](https://people.csail.mit.edu/kaiming/cvpr25talk/cvpr2025_meanflow_kaiming.pdf)
 - cs231n [Convolutional Networks](https://cs231n.github.io/convolutional-networks/)
 - AlexNet [paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
-- VGGNet [arxiv](https://arxiv.org/abs/1409.1556)
 - GoogLeNet [arxiv](https://arxiv.org/abs/1409.4842)
 - ResNet [arxiv](https://arxiv.org/abs/1512.03385)
-- EthanYuan/Tensorflow从0到N [反向传播的推导](https://github.com/EthanYuan/TensorFlow-Zero-to-N/blob/master/TensorFlow%E4%BB%8E0%E5%88%B0N/TensorFlow%E4%BB%8E0%E5%88%B01/10-NN%E5%9F%BA%E6%9C%AC%E5%8A%9F%EF%BC%9A%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%9A%84%E6%8E%A8%E5%AF%BC.md)
 - shervine blog: [Cheatsheet CNN](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
-- shervine blog: [图片识别模型的演化](https://stanford.edu/~shervine/blog/evolution-image-classification-explained)
-- UvA Tutorial 5: [Inception, ResNet, DenseNet](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial5/Inception_ResNet_DenseNet.html)
 - Mircosoft AI system Lecutures 5~6 分布式训练算法、系统
 
 练习
@@ -121,9 +116,12 @@ Organize your courses by years, topics, or universities, however you like! -->
 - AI system [Lab2](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab2/README.md)： 实现了一个C++张量运算，profiling
 - AI system [Lab3](https://github.com/microsoft/AI-System/blob/main/Labs/BasicLabs/Lab3/README.md)： 实现了一个cuda算子，profiling
 - pytorch 使用 tensorboard 查看降维算法 embedding [tensorboard tutorial](https://docs.pytorch.org/tutorials/intermediate/tensorboard_tutorial.html)
-- cs231n Assignment 1 on Colab: [Image Classification, kNN, Softmax, Fully-Connected Neural Network, Fully-Connected Nets](https://cs231n.github.io/assignments2025/assignment1/)
 - Microsoft Lab4 (Optional): 使用 horovod 分布式并行训练
-- Microsoft Lab5 (Optional)：使用docker容器部署训练和推理任务
+- Microsoft Lab5 (Optional)：使用 docker 容器部署训练和推理任务
+
+作业
+
+- cs231n Assignment 1 on Colab: [Image Classification, kNN, Softmax, Fully-Connected Neural Network, Fully-Connected Nets](https://cs231n.github.io/assignments2025/assignment1/)
 
 ## 2. Language Model
 
@@ -145,30 +143,32 @@ Slides:
 - Karpathy's char-rnn of Shakespear [[Github]](https://github.com/karpathy/char-rnn)
 - cs231n RNNs & Transformers [[Colab]](https://colab.research.google.com/drive/1mC5CWwekbZ2NrYv6Zfpuv55z8DuOZXVP?usp=sharing), [slides](https://cs231n.stanford.edu/slides/2025/section_5.pdf)
 - Karpathy's build-nanogpt [[Github]](https://github.com/karpathy/build-nanogpt)
-- UvA Tutorial [Transformers and MHAttention](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial6/Transformers_and_MHAttention.html)
-- UvA DL Tutorial [15: Vision Transformers](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial15/Vision_Transformer.html)
 
 作业
 
-- RNN 二选一
+- RNN
 
-  - cs231n Assignment 2 on Colab: [Batch Normalization, Dropout, Convolutional Nets, Network Visualization, Image Captioning with RNNs](https://cs231n.github.io/assignments2025/assignment2/)
   - CSE538 Assignment 2: RNN LM. Instructions [Google Drive](https://drive.google.com/drive/folders/1snFSimiWyiKAxPYXMfB-mykTIVaYJPPu?usp=sharing)
+  - cs231n Assignment 2 on Colab: [Batch Normalization, Dropout, Convolutional Nets, Network Visualization, Image Captioning with RNNs](https://cs231n.github.io/assignments2025/assignment2/)
 
-- Transformer 二选一
+- Transformer
 
-  - cs231n Assignment 3 on Colab or Locally: [Image Captioning with Transformers, Self-Supervised Learning, Diffusion Models, CLIP and DINO Models](https://cs231n.github.io/assignments2025/assignment3/)
   - CSE538 Assignment 3: Transformer LM. Instructions [Google Drive](https://drive.google.com/drive/folders/1jhslUZkQ9hFWPoGrv6OqDwih0DYLMluV?usp=sharing)
+  - cs231n Assignment 3 on Colab or Locally: [Image Captioning with Transformers, Self-Supervised Learning, Diffusion Models, CLIP and DINO Models](https://cs231n.github.io/assignments2025/assignment3/)
 
-- CS336: Language Modeling from Scratch, Stanford / Spring 2025, [5 Assignments](https://stanford-cs336.github.io/spring2025/)
+- 进阶 CS336: Language Modeling from Scratch, Stanford / Spring 2025, [5 Assignments](https://stanford-cs336.github.io/spring2025/)
+  - Implement tokenizer, model architecture, optimizer
+  - Profile and benchmark the model and layers, optimize Attention with your own Triton implementation of FlashAttention2.
+  - Build a memory-efficient, distributed version of the Assignment 1 model training
+  - Scaling
+  - Data: clean, filtering and deduplication
+  - supervised finetuning and reinforcement learning
 
 阅读
 
 - harvardnlp [The Annotated Transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
 - Jay Alammar: [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - Lilian's blog: [Attention? Attention](https://lilianweng.github.io/posts/2018-06-24-attention/)
-- visionbook.mit.edu: [transformers](https://visionbook.mit.edu/transformers.html)
-- Linear Attention Fundamentals, [Blog](https://haileyschoelkopf.github.io/blog/2024/linear-attn/)
 - ViT: Transformers for Image Recognition [[Blog]](https://research.google/blog/transformers-for-image-recognition-at-scale/?m=1), Image captioning with ViT [[Github]](https://github.com/inuwamobarak/Image-captioning-ViT)
 - DINO: Emerging Properties in Self-Supervised Vision Transformers [[Paper]](https://arxiv.org/abs/2104.14294) [[Blog]](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training) [[Video]](https://youtu.be/h3ij3F3cPIk) [[Code]](https://github.com/facebookresearch/detr)
 - Vision Transformer: When Vision Transformers Outperform ResNets without Pre-training or Strong Data Augmentations, [Code](https://github.com/google-research/vision_transformer)
@@ -181,9 +181,10 @@ Slides:
 - CodeFusion: A Pre-trained Diffusion Model for Code Generation, [arxiv](https://arxiv.org/abs/2310.17680)
 - Large Language Diffusion Models, [arxiv](https://arxiv.org/abs/2502.09992), [LLaDA-demo](https://ml-gsai.github.io/LLaDA-demo/), [[LLaDA 2.0]](https://github.com/inclusionAI/LLaDA2.0)
 - Mercury: Ultra-Fast Language Models Based on Diffusion, [Inception Labs](https://www.inceptionlabs.ai/), [arxiv](https://arxiv.org/abs/2506.17298)
-- Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference, [arxiv](https://arxiv.org/abs/2508.02193), [demo](https://studio.seed.ai/exp/seed_diffusion/)
 
 ## 3. Generative Model 生成模型
+
+参考教材：Chieh-Hsin Lai, Yang Song, Dongjun Kim, Yuki Mitsufuji, Stefano Ermon. The Principles of Diffusion Models - From Origins to Advances [[Book Page]](https://the-principles-of-diffusion-models.github.io/)
 
 KAIST CS492D [Fall 24](https://mhsung.github.io/kaist-cs492d-fall-2024/)
 
@@ -218,19 +219,16 @@ CS231n
 
 - Diederik P. Kingma, Max Welling, An Introduction to Variational Autoencoders, 2019, [[arvix]](https://arxiv.org/abs/1906.02691)
 - 苏剑林，变分自编码器（一）：原来是这么一回事, [kexue.fm](https://kexue.fm/archives/5253), 变分自编码器（二）：从贝叶斯观点出发, [kexue.fm](https://kexue.fm/archives/5343)
-- Chieh-Hsin Lai, Yang Song, Dongjun Kim, Yuki Mitsufuji, Stefano Ermon. The Principles of Diffusion Models - From Origins to Advances [[Book Page]](https://the-principles-of-diffusion-models.github.io/)
 - Yunfan's Blog: [ELBO — What & Why](https://yunfanj.com/blog/2021/01/11/ELBO.html)
 - 2015 Sohl-Dickstein et al. Deep Unsupervised Learning using Nonequilibrium Thermodynamics [[arxiv]](https://arxiv.org/pdf/1503.03585), [[Code]](https://github.com/Sohl-Dickstein/Diffusion-Probabilistic-Models)
 - 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , [colab tutorial in pytorch](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
-- Lilian's Blog, [Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
-- An Introduction to Flow Matching, [Blog](https://mlg.eng.cam.ac.uk/blog/2024/01/20/flow-matching.html#figure-forward_samples-one-color-1)
-- The Fokker-Planck Equation and Diffusion Models, [Blog](https://www.peterholderrieth.com/blog/2023/The-Fokker-Planck-Equation-and-Diffusion-Models/)
+- 2021 Lilian's Blog, [Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
+- 2023 The Fokker-Planck Equation and Diffusion Models, [Blog](https://www.peterholderrieth.com/blog/2023/The-Fokker-Planck-Equation-and-Diffusion-Models/)
+- 2024 An Introduction to Flow Matching, [Blog](https://mlg.eng.cam.ac.uk/blog/2024/01/20/flow-matching.html)
 - 2019 Yang Song, Stefano Ermon, Generative Modeling by Estimating Gradients of the Data Distribution, [[arxiv]](https://arxiv.org/abs/1907.05600)
 - 2020 Jonathan Ho, Ajay Jain, Pieter Abbeel, Denoising Diffusion Probabilistic Models, [[arxiv]](https://arxiv.org/abs/2006.11239), [[Code]](https://github.com/hojonathanho/diffusion)
 - 2022 William Peebles and Saining Xie, DiT: Scalable Diffusion Models with Transformers, [[arxiv]](https://arxiv.org/abs/2212.09748), [[Github]](https://github.com/facebookresearch/DiT)
 - Latent-Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models, [[Github]](https://github.com/CompVis/latent-diffusion)
-- The GAN [Zoo](https://github.com/hindupuravinash/the-gan-zoo), [happy-jihye.github.io/gan/](https://happy-jihye.github.io/gan/)
-- What's the score? [Score Based Generative Modelings (Until Jan. 2024 )](https://scorebasedgenerativemodeling.github.io/)
 
 练习
 
@@ -239,8 +237,6 @@ CS231n
 - DDPM: The Annotated Diffusion Model, [huggingface blog](https://huggingface.co/blog/annotated-diffusion)
 - labml.ai/Diffusion Models: [[DDPM]](https://nn.labml.ai/diffusion/ddpm/index.html), [[DDIM]](https://nn.labml.ai/diffusion/stable_diffusion/sampler/ddim.html), [[Latent Diffusion Models]](https://nn.labml.ai/diffusion/stable_diffusion/latent_diffusion.html), [[Stable Diffusion]](https://nn.labml.ai/diffusion/stable_diffusion/index.html)
 - Facebook, Flow Matching Guide and Code, [[arxiv]](https://arxiv.org/pdf/2412.06264), [[Code]](https://github.com/facebookresearch/flow_matching)
-- UvA DL Tutorial [11: Normalized Flow Image Modeling](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial11/NF_image_modeling.html)
-- UvA DL Tutorial: [Dynamic systems Neural ODEs](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/DL2/Dynamical_systems/dynamical_systems_neural_odes.html)
 
 作业：
 
@@ -249,12 +245,10 @@ CS231n
 - CS492D: [Assignments 3: ControlNet and LoRA](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment3-ControlNet-LoRA)
 - CS492D: [2025 Assignment 2 (DPMSolver)](https://github.com/KAIST-Visual-AI-Group/Diffusion-2025-Assignment2-DPMSolver)
 - CS492D: [Assignment7 (Flow)](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment7-Flow)
-- MLDS 2018: [Assignment 3.1, 3.2, AnimeGAN](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
 - MIT Diffusion [Course](https://diffusion.csail.mit.edu/2025/index.html)
   - MIT Diffusion Lab1: working with SDEs
   - MIT Diffusion Lab2: Flow matching and Score matching
   - MIT Diffusion Lab3: conditional image generation
-- 2022 COMP760: Geometry and Generative Models, [Website](https://joeybose.github.io/Blog/GenCourse)
 
 ## 后续
 
@@ -270,6 +264,18 @@ CS231n
 - Flexible Isosurface Extraction for Gradient-Based
   Mesh Optimization, [[Project]](https://research.nvidia.com/labs/toronto-ai/flexicubes/)
 
+### Robotics
+
+- MIT 6s798 Deep Generative Models, [Reading: Application - Robotics](https://mit-6s978.github.io/schedule.html)
+- MIT diffusion 2025: [Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
+- 南科大，高等机器人控制 [Bilibili](https://space.bilibili.com/474380277)
+- UC Berkeley, [CS287 Advanced Robotics, Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
+- Benjamin Burchfiel, ICML 2025, [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
+- Tencent-Hunyuan/HY-Motion-1.0: Scaling Flow Matching Models for 3D Motion Generation, [[Code]](https://github.com/Tencent-Hunyuan/HY-Motion-1.0)
+- Galaxea/G0: [GalaxeaVLA](https://github.com/OpenGalaxea/GalaxeaVLA)
+- huggingface/LeRobot: Making AI for Robotics more accessible with end-to-end learning, [Github](https://github.com/huggingface/lerobot)
+- Physical-Intelligence/openpi Pi0: [Github](https://github.com/Physical-Intelligence/openpi)
+
 ### Video Generation
 
 - Lil's Blog: [Video Generation Modeling from Scratch](https://lilianweng.github.io/posts/2024-04-12-diffusion-video/)
@@ -283,27 +289,10 @@ CS231n
 - SLA: Beyond Sparsity in Diffusion Transformers via Fine-Tunable Sparse–Linear Attention, [[Code]](https://github.com/thu-ml/SLA)
 - 港科大&快手可灵 UnityVideo, [[arxiv]](https://arviv.org/abs/2512.07831), [[Project]](https://jackailab.github.io/Projects/UnityVideo), Code 后续开源
 
-### Robotics
-
-- MIT 6s798 Deep Generative Models, [Reading: Application - Robotics](https://mit-6s978.github.io/schedule.html)
-- MIT diffusion 2025:[ Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
-- UC Berkeley, [CS287 Advanced Robotics, Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
-- Benjamin Burchfiel, ICML 2025, [Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets](https://weirdlabuw.github.io/uwm/)
-- Tencent-Hunyuan/HY-Motion-1.0: Scaling Flow Matching Models for 3D Motion Generation, [[Code]](https://github.com/Tencent-Hunyuan/HY-Motion-1.0)
-- Galaxea/G0: [GalaxeaVLA](https://github.com/OpenGalaxea/GalaxeaVLA)
-- huggingface/LeRobot: Making AI for Robotics more accessible with end-to-end learning, [Github](https://github.com/huggingface/lerobot)
-- Physical-Intelligence/openpi Pi0: [Github](https://github.com/Physical-Intelligence/openpi)
-- 宇树 [unitree_rl_gym](https://github.com/unitreerobotics/unitree_rl_gym)
-- MobileAloha, 2024, [Project](https://mobile-aloha.github.io/)
-- UMI, Starford, [Project](https://umi-gripper.github.io/)
-- DexCap, 2020, [Project](https://dex-cap.github.io/)
-- HumanPlus, [Project](https://humanoid-ai.github.io/)
-
 ### Reinforcement Learning
 
 - Berkeley, [CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse-fa23/)
 - OpenAI, Spinning Up in Deep RL! [Docs](https://spinningup.openai.com/en/latest/)
-- 南科大，高等机器人控制 [Bilibili](https://space.bilibili.com/474380277)
 - 王树森，深度强化学习 [DRL](https://github.com/wangshusen/DRL)
 
 ## 其他内容
