@@ -242,6 +242,7 @@ The coefficients $A_t $ and $B_t$ depend on both the chosen prediction type and 
 - DDPM: The Annotated Diffusion Model, [huggingface blog](https://huggingface.co/blog/annotated-diffusion)
 - labml.ai/Diffusion Models: [[DDPM]](https://nn.labml.ai/diffusion/ddpm/index.html), [[DDIM]](https://nn.labml.ai/diffusion/stable_diffusion/sampler/ddim.html), [[Latent Diffusion Models]](https://nn.labml.ai/diffusion/stable_diffusion/latent_diffusion.html), [[Stable Diffusion]](https://nn.labml.ai/diffusion/stable_diffusion/index.html)
 - Facebook, Flow Matching Guide and Code, [[arxiv]](https://arxiv.org/pdf/2412.06264), [[Code]](https://github.com/facebookresearch/flow_matching)
+- Visualize the Coefficient Matrix of Various Samplers 可视化各种采样模型的矩阵系数, Zhenxin Zheng's [[Demo]](https://blairstar.github.io/CoeffMatrix/)
 
 作业：
 
