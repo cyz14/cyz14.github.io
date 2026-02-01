@@ -21,11 +21,11 @@ Organize your courses by years, topics, or universities, however you like! -->
 - Stony Brook CSE 538 NLP 2025 Spring [slides](https://www3.cs.stonybrook.edu/~has/CSE538/Slides/)
 - 李宏毅 Machine Learning and Having It Deep and Structured, [2018 Spring](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
 - KAIST 492(D) Diffusion Models and Their Applications, [24 Fall](https://mhsung.github.io/kaist-cs492d-fall-2024/)
+- MIT EECS 6.S978 Deep Generative Models [Fall 2024](https://mit-6s978.github.io/)
 - MIT Diffusion course [2025](https://diffusion.csail.mit.edu/2025/index.html)
 - MIT EECS 6.7960 Deep Learning [Fall 2025](https://deeplearning6-7960.github.io/)
-- MIT EECS 6.S978 Deep Generative Models [Fall 2024](https://mit-6s978.github.io/)
-- CMU 10-799 Diffusion & Flow Matching, [[Resources]](https://kellyyutonghe.github.io/10799S26/resources/)
-- 2022 COMP760: Geometry and Generative Models, [Website](https://joeybose.github.io/Blog/GenCourse)
+- CMU 10-799 Diffusion & Flow Matching, [Spring 2026](https://kellyyutonghe.github.io/10799S26/)
+- COMP760 2022: Geometry and Generative Models, [Website](https://joeybose.github.io/Blog/GenCourse)
 
 其他可参考的资源包括
 
@@ -156,7 +156,7 @@ Slides:
   - CSE538 Assignment 3: Transformer LM. Instructions [Google Drive](https://drive.google.com/drive/folders/1jhslUZkQ9hFWPoGrv6OqDwih0DYLMluV?usp=sharing)
   - cs231n Assignment 3 on Colab or Locally: [Image Captioning with Transformers, Self-Supervised Learning, Diffusion Models, CLIP and DINO Models](https://cs231n.github.io/assignments2025/assignment3/)
 
-- 进阶 CS336: Language Modeling from Scratch, Stanford / Spring 2025, [5 Assignments](https://stanford-cs336.github.io/spring2025/)
+- 从零实现语言模型 Stanford CS336: Language Modeling from Scratch, Spring 2025, [5 Assignments](https://stanford-cs336.github.io/spring2025/)
   - Implement tokenizer, model architecture, optimizer
   - Profile and benchmark the model and layers, optimize Attention with your own Triton implementation of FlashAttention2.
   - Build a memory-efficient, distributed version of the Assignment 1 model training
@@ -197,38 +197,47 @@ KAIST CS492D [Fall 24](https://mhsung.github.io/kaist-cs492d-fall-2024/)
 - lecture 14: DPM/ODE solver
 - lecture 15 & 16: Flow matching
 
-MLDS [Spring 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php)
+Chapter 6 of [The Principles of Diffusion Models](https://the-principles-of-diffusion-models.github.io/) gives a unified and systematic lens on diffusion models. The training objective of diffusion models commonly share the following template form:
 
-- GAN Introduction
-- Conditional GAN
-- Unsupervised Conditioned GAN
-- Theory
-- General Framework
-- WGAN & EBGAN
+$\mathcal{L} (\phi) := \mathbb{E}_{x_0, \epsilon} 
+\underbrace{\mathbb{E}_{p_{\text{time}} (t)}}_{{\begin{array}{l}
+  \text{time}\\
+  \text{distribution}
+\end{array} }}  \left[ \underbrace{\omega (t)}_{{\begin{array}{l}
+  \text{time}\\
+  \text{weighting}
+\end{array}}}  \underbrace{\| \text{NN}_{\phi} (x_t, t) - (A_t x_0 + B_t
+\epsilon) \|^2_2}_{\text{MSE} \quad \text{part}}  \right]$
 
-CS231n
+All prediction types share a common regression target of the form
 
-- Lecture 13: Generative Models 1 VAE
-- Lecture 14: Generative Models 2 GAN, AR, Diffusion
-- Lecture 17: Robot Learning
-  - Deep Reinforcement Learning
-  - Model Learning
-  - Robotic Manipulation
+$$ \text{Regression Target}= A_t x_0 + B_t \epsilon $$
+
+The coefficients $A_t $ and $B_t$ depend on both the chosen prediction type and the schedule $(\alpha_t, \sigma_t)$. The relationships are summarize in the book's Table 6.1.
+
+| Regression Target=   | $A_t x_0 + B_t \epsilon$ |                        |
+| -------------------- | ------------------------ | ---------------------- |
+|                      | $A_t$                    | $B_t$                  |
+| Clean                | 1                        | 0                      |
+| Noise                | 0                        | 1                      |
+| Conditional Score    | 0                        | $- \frac{1}{\sigma_t}$ |
+| Conditional Velocity | $\alpha_t'$              | $\sigma_t'$            |
 
 阅读：
 
+- MLDS [Spring 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php): GAN Introduction, Conditional GAN, Unsupervised Conditioned GAN, Theory, General Framework, WGAN & EBGAN
 - Diederik P. Kingma, Max Welling, An Introduction to Variational Autoencoders, 2019, [[arvix]](https://arxiv.org/abs/1906.02691)
 - 苏剑林，变分自编码器（一）：原来是这么一回事, [kexue.fm](https://kexue.fm/archives/5253), 变分自编码器（二）：从贝叶斯观点出发, [kexue.fm](https://kexue.fm/archives/5343)
 - Yunfan's Blog: [ELBO — What & Why](https://yunfanj.com/blog/2021/01/11/ELBO.html)
-- 2015 Sohl-Dickstein et al. Deep Unsupervised Learning using Nonequilibrium Thermodynamics [[arxiv]](https://arxiv.org/pdf/1503.03585), [[Code]](https://github.com/Sohl-Dickstein/Diffusion-Probabilistic-Models)
 - 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , [colab tutorial in pytorch](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
 - 2021 Lilian's Blog, [Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
 - 2023 The Fokker-Planck Equation and Diffusion Models, [Blog](https://www.peterholderrieth.com/blog/2023/The-Fokker-Planck-Equation-and-Diffusion-Models/)
 - 2024 An Introduction to Flow Matching, [Blog](https://mlg.eng.cam.ac.uk/blog/2024/01/20/flow-matching.html)
+- 2015 Sohl-Dickstein et al. Deep Unsupervised Learning using Nonequilibrium Thermodynamics [[arxiv]](https://arxiv.org/pdf/1503.03585), [[Code]](https://github.com/Sohl-Dickstein/Diffusion-Probabilistic-Models)
 - 2019 Yang Song, Stefano Ermon, Generative Modeling by Estimating Gradients of the Data Distribution, [[arxiv]](https://arxiv.org/abs/1907.05600)
 - 2020 Jonathan Ho, Ajay Jain, Pieter Abbeel, Denoising Diffusion Probabilistic Models, [[arxiv]](https://arxiv.org/abs/2006.11239), [[Code]](https://github.com/hojonathanho/diffusion)
+- 2021, Latent-Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models, [[Github]](https://github.com/CompVis/latent-diffusion)
 - 2022 William Peebles and Saining Xie, DiT: Scalable Diffusion Models with Transformers, [[arxiv]](https://arxiv.org/abs/2212.09748), [[Github]](https://github.com/facebookresearch/DiT)
-- Latent-Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models, [[Github]](https://github.com/CompVis/latent-diffusion)
 
 练习
 
@@ -266,6 +275,7 @@ CS231n
 
 ### Robotics
 
+- CS231n Lecture 17: Robot Learning: Deep Reinforcement Learning, Model Learning, Robotic Manipulation
 - MIT 6s798 Deep Generative Models, [Reading: Application - Robotics](https://mit-6s978.github.io/schedule.html)
 - MIT diffusion 2025: [Generative Robotics - Guest lecture by Benjamin Burchfiel (Toyota Research)](https://youtu.be/7tsCN2hRBMg)
 - 南科大，高等机器人控制 [Bilibili](https://space.bilibili.com/474380277)
