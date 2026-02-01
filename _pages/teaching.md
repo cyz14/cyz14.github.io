@@ -200,13 +200,7 @@ KAIST CS492D [Fall 24](https://mhsung.github.io/kaist-cs492d-fall-2024/)
 Chapter 6 of [The Principles of Diffusion Models](https://the-principles-of-diffusion-models.github.io/) gives a unified and systematic lens on diffusion models. The training objective of diffusion models commonly share the following template form:
 
 $\mathcal{L} (\phi) := \mathbb{E}_{x_0, \epsilon} 
-\underbrace{\mathbb{E}_{p_{\text{time}} (t)}}_{{\begin{array}{l}
-  \text{time}\\
-  \text{distribution}
-\end{array} }}  \left[ \underbrace{\omega (t)}_{{\begin{array}{l}
-  \text{time}\\
-  \text{weighting}
-\end{array}}}  \underbrace{\| \text{NN}_{\phi} (x_t, t) - (A_t x_0 + B_t
+\underbrace{\mathbb{E}_{p_{\text{time}} (t)}}_{\text{time}\\ \text{distribution}}  \left[ \underbrace{\omega (t)}_{\text{time}\\ \text{weighting}}  \underbrace{\| \text{NN}_{\phi} (x_t, t) - (A_t x_0 + B_t
 \epsilon) \|^2_2}_{\text{MSE} \quad \text{part}}  \right]$
 
 All prediction types share a common regression target of the form
