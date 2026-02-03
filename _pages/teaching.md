@@ -261,17 +261,16 @@ The coefficients $A_t $ and $B_t$ depend on both the chosen prediction type and 
 ### Image Generation
 
 - 2021, OpenAI/DALL-E, Zero-Shot Text-to-Image Generation, [[arxiv]](https://arxiv.org/abs/2102.12092), [[Github]](https://github.com/openai/DALL-E)
-- 2025, OpenAI: Addendum to GPT-4o System Card: Native image generation, [[System Card pdf]](https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf)
-- 2025, Multimodal Tokenization Overview, [emergentmind](https://www.emergentmind.com/topics/multimodal-tokenization)
-- 2025, Discrete Tokenization for Multimodal LLMs: A Comprehensive Survey, [[arxiv]](https://arxiv.org/abs/2507.22920)
-- 2024, TokenFlow: Unified Image Tokenizer for Multimodal Understanding and Generation, [[arxiv]](https://arxiv.org/html/2412.03069v2)
-- 2025, V2Flow: Unifying Visual Tokenization and Large Language Model Vocabularies for Autoregressive Image Generation, [[arxiv]](https://arxiv.org/abs/2503.07493)
-- OpenAI [Introducing 4o Image Generation](https://openai.com/index/introducing-4o-image-generation/)
-- GLM-Image, [[huggingface]](https://huggingface.co/zai-org/GLM-Image)
+- 2025, OpenAI: Addendum to [GPT-4o](https://openai.com/index/introducing-4o-image-generation/) System Card: Native image generation, [[System Card pdf]](https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf)
+- 2025, GLM-Image, [[huggingface]](https://huggingface.co/zai-org/GLM-Image)
 - 2025, Qwen-Image Technical Report, [[arxiv]](https://arxiv.org/abs/2508.02324)
 - 2025, HunyuanImage 3.0 Technical Report, [[arxiv]](https://arxiv.org/abs/2509.23951) 自回归/统一多模态
 - Tongyi-MAI/Z-Image-Turbo, [[huggingface]](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo)
 - Black Forest Labs, FLUX.2: Analyzing and Enhancing the Latent Space of FLUX – [Representation Comparison](https://bfl.ai/research/representation-comparison)
+- 2025, Multimodal Tokenization Overview, [emergentmind blog](https://www.emergentmind.com/topics/multimodal-tokenization)
+- 2025, Discrete Tokenization for Multimodal LLMs: A Comprehensive Survey, [[arxiv]](https://arxiv.org/abs/2507.22920)
+- 2024, TokenFlow: Unified Image Tokenizer for Multimodal Understanding and Generation, [[arxiv]](https://arxiv.org/html/2412.03069v2)
+- 2025, V2Flow: Unifying Visual Tokenization and Large Language Model Vocabularies for Autoregressive Image Generation, [[arxiv]](https://arxiv.org/abs/2503.07493)
 
 ### Mesh Generation
 
