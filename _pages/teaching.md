@@ -258,6 +258,16 @@ The coefficients $A_t $ and $B_t$ depend on both the chosen prediction type and 
 
 ## 后续
 
+### Image Generation
+
+- BentoML, The Best Open-Source Image Generation Models in 2026, [blog](https://www.bentoml.com/blog/a-guide-to-open-source-image-generation-models)
+- OpenAI [Introducing 4o Image Generation](https://openai.com/index/introducing-4o-image-generation/)
+- GLM-Image, [[huggingface]](https://huggingface.co/zai-org/GLM-Image)
+- Qwen-Image Technical Report, [[arxiv]](https://arxiv.org/abs/2508.02324)
+- HunyuanImage 3.0 Technical Report, [[arxiv]](https://arxiv.org/abs/2509.23951) 自回归/统一多模态
+- Tongyi-MAI/Z-Image-Turbo, [[huggingface]](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo)
+- Black Forest Labs, FLUX.2: Analyzing and Enhancing the Latent Space of FLUX – [Representation Comparison](https://bfl.ai/research/representation-comparison)
+
 ### Mesh Generation
 
 - MIT 6s798, [Reading: Application - 3D and Geometry](https://mit-6s978.github.io/schedule.html)
