@@ -231,6 +231,7 @@ The coefficients $A_t $ and $B_t$ depend on both the chosen prediction type and 
   - 2023, 简单得令人尴尬的FSQ：“四舍五入”超越了VQ-VAE, [kexue.fm/archives/9826](https://kexue.fm/archives/9826)
   - 2024, VQ的旋转技巧：梯度直通估计的一般推广, [kexue.fm/archives/10489](https://kexue.fm/archives/10489)
   - 2024, VQ的又一技巧：给编码表加一个线性变换, [kexue.fm/archives/10519](https://kexue.fm/archives/10519)
+  - 2025, DiVeQ：一种非常简洁的VQ训练方案, [kexue.fm/archives/11328](https://kexue.fm/archives/11328)
 - 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , pytorch [[Colab tutorial]](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
 - 2021 Lilian's Blog, [Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
 - 2023 The Fokker-Planck Equation and Diffusion Models, [Blog](https://www.peterholderrieth.com/blog/2023/The-Fokker-Planck-Equation-and-Diffusion-Models/)
