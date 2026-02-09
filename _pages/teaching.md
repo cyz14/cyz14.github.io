@@ -224,14 +224,17 @@ The coefficients $A_t $ and $B_t$ depend on both the chosen prediction type and 
 - MLDS [Spring 2018](https://speech.ee.ntu.edu.tw/~hylee/mlds/2018-spring.php): GAN Introduction, Conditional GAN, Unsupervised Conditioned GAN, Theory, General Framework, WGAN & EBGAN
 - 2019, Diederik P. Kingma, Max Welling, An Introduction to Variational Autoencoders, [[arvix]](https://arxiv.org/abs/1906.02691)
 - 2021, Yunfan's Blog: [ELBO — What & Why](https://yunfanj.com/blog/2021/01/11/ELBO.html)
-- 苏剑林
+- 苏剑林, VAE
   - 2018, 变分自编码器（一）：原来是这么一回事, [kexue.fm/archives/5253](https://kexue.fm/archives/5253)
   - 2018, 变分自编码器（二）：从贝叶斯观点出发, [kexue.fm/archives/5343](https://kexue.fm/archives/5343)
+- 苏剑林, VQ-VAE
   - 2019, VQ-VAE的简明介绍：量子化自编码器, [kexue.fm/archives/6760](https://kexue.fm/archives/6760)
   - 2023, 简单得令人尴尬的FSQ：“四舍五入”超越了VQ-VAE, [kexue.fm/archives/9826](https://kexue.fm/archives/9826)
   - 2024, VQ的旋转技巧：梯度直通估计的一般推广, [kexue.fm/archives/10489](https://kexue.fm/archives/10489)
   - 2024, VQ的又一技巧：给编码表加一个线性变换, [kexue.fm/archives/10519](https://kexue.fm/archives/10519)
   - 2025, DiVeQ：一种非常简洁的VQ训练方案, [kexue.fm/archives/11328](https://kexue.fm/archives/11328)
+- VQ-VAE: Aäron van den Oord's [homepage/vqvae](https://avdnoord.github.io/homepage/vqvae/)
+- Yadav, Understanding VQ-VAE, [medium](https://shashank7-iitd.medium.com/understanding-vector-quantized-variational-autoencoders-vq-vae-323d710a888a), [[Colab]](https://colab.research.google.com/github/zalandoresearch/pytorch-vq-vae/blob/master/vq-vae.ipynb)
 - 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , pytorch [[Colab tutorial]](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
 - 2021 Lilian's Blog, [Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
 - 2023 The Fokker-Planck Equation and Diffusion Models, [Blog](https://www.peterholderrieth.com/blog/2023/The-Fokker-Planck-Equation-and-Diffusion-Models/)
