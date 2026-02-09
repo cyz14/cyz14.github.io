@@ -235,6 +235,7 @@ The coefficients $A_t $ and $B_t$ depend on both the chosen prediction type and 
   - 2025, DiVeQ：一种非常简洁的VQ训练方案, [kexue.fm/archives/11328](https://kexue.fm/archives/11328)
 - VQ-VAE: Aäron van den Oord's [homepage/vqvae](https://avdnoord.github.io/homepage/vqvae/)
 - Yadav, Understanding VQ-VAE, [medium](https://shashank7-iitd.medium.com/understanding-vector-quantized-variational-autoencoders-vq-vae-323d710a888a), [[Colab]](https://colab.research.google.com/github/zalandoresearch/pytorch-vq-vae/blob/master/vq-vae.ipynb)
+- pytorch-vqvae: Course Project for IFT 6135 - Representation Learning, [[Github]](https://github.com/ritheshkumar95/pytorch-vqvae), Datasets Tested: MNIST, FashionMNIST, CIFAR10, Mini-ImageNet
 - 2021 Song Yang's blog [score-matching](https://yang-song.net/blog/2021/score/) , pytorch [[Colab tutorial]](https://colab.research.google.com/drive/120kYYBOVa1i0TD85RjlEkFjaWDxSFUx3?usp=sharing)
 - 2021 Lilian's Blog, [Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
 - 2023 The Fokker-Planck Equation and Diffusion Models, [Blog](https://www.peterholderrieth.com/blog/2023/The-Fokker-Planck-Equation-and-Diffusion-Models/)
