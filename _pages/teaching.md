@@ -32,7 +32,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 - pytorch官方样例仓库 [github](https://github.com/pytorch/examples)
 - huggingface/transformers: [[notebooks]](https://github.com/huggingface/transformers/tree/main/notebooks), [[examples]](https://github.com/huggingface/transformers/tree/main/examples), [[awesome-transformers]](https://github.com/huggingface/transformers/blob/main/awesome-transformers.md)
 - hugginface/diffusers [[Github]](https://github.com/huggingface/diffusers), [Tutorial: Diffusion models from scratch](https://huggingface.co/learn/diffusion-course/unit1/3)
-- Lucidrains' Gitlab projects: [[Gitlab]](https://gitlab.com/users/lucidrains/projects)
+- Lucidrains' projects: [[lucidrains codeberg]](https://codeberg.org/lucidrains), and [[Gitlab]](https://gitlab.com/users/lucidrains/projects)
 - KAIST CS492d [Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
 - labml.ai: Annotated Deep Learning Paper Implementation, [[Github]](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
 - Implement state-of-the-art models from scratch [[PaperCode]](https://papercode.vercel.app/papers)
