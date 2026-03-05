@@ -32,6 +32,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 - pytorch官方样例仓库 [github](https://github.com/pytorch/examples)
 - huggingface/transformers: [[notebooks]](https://github.com/huggingface/transformers/tree/main/notebooks), [[examples]](https://github.com/huggingface/transformers/tree/main/examples), [[awesome-transformers]](https://github.com/huggingface/transformers/blob/main/awesome-transformers.md)
 - hugginface/diffusers [[Github]](https://github.com/huggingface/diffusers), [Tutorial: Diffusion models from scratch](https://huggingface.co/learn/diffusion-course/unit1/3)
+- Lucidrains' Gitlab projects: [[Gitlab]](https://gitlab.com/users/lucidrains/projects)
 - KAIST CS492d [Diffusion useful resources](https://mhsung.github.io/kaist-cs492d-fall-2024/#useful-resources)
 - labml.ai: Annotated Deep Learning Paper Implementation, [[Github]](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
 - Implement state-of-the-art models from scratch [[PaperCode]](https://papercode.vercel.app/papers)
@@ -249,7 +250,7 @@ The coefficients $A_t $ and $B_t$ depend on both the chosen prediction type and 
 练习
 
 - VAE: Auto-encoding Variational Bayes, [pytorch/examples/vae](https://github.com/pytorch/examples/blob/main/vae/README.md), Kingma's mnist [demo](https://dpkingma.com/sgvb_mnist_demo/demo.html)
-- lucidrains/vector-quantize-pytorch, [[Github]](https://github.com/lucidrains/vector-quantize-pytorch): VQ, Residual VQ, Multi-headed VQ, Sim VQ, Latent Quantization, etc.
+- lucidrains/vector-quantize-pytorch, [[Gitlab]](https://gitlab.com/lucidrains/vector-quantize-pytorch): VQ, Residual VQ, Multi-headed VQ, Sim VQ, Latent Quantization, etc. (Github suspended his account without warning or reason.)
 - GAN: [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/main/dcgan)
 - DDPM: The Annotated Diffusion Model, [huggingface blog](https://huggingface.co/blog/annotated-diffusion)
 - labml.ai/Diffusion Models: [[DDPM]](https://nn.labml.ai/diffusion/ddpm/index.html), [[DDIM]](https://nn.labml.ai/diffusion/stable_diffusion/sampler/ddim.html), [[Latent Diffusion Models]](https://nn.labml.ai/diffusion/stable_diffusion/latent_diffusion.html), [[Stable Diffusion]](https://nn.labml.ai/diffusion/stable_diffusion/index.html)
