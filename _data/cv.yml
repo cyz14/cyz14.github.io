@@ -15,12 +15,12 @@
       institution: Stony Brook University, New York
       year: 2025-Now
       description:
-        - Still working
+        -
     - title: Master
       institution: Institute for Network Sciences and Cyberspace, Tsinghua University, Beijing, China
       year: 2021
       description:
-        - Network Addressing protocols for LEO constellation
+        - Simulation of Network Addressing protocols
     - title: Bachelor
       institution: Tsinghua University, Beijing, China
       year: 2018
@@ -30,15 +30,12 @@
 - title: Experience
   type: time_table
   contents:
-    - title: AI Platform Engineer
+    - title: ML Platform Engineer
       institution: RealAI Inc, Beijing, China
       year: 2021 - 2024
       description:
         - Federated-learning platform development
         - Federated-learning algorithms
-        - title: LLM finetuing
-          contents:
-            - Finetuning of LLM with deepspeed
 
 - title: Open Source Projects
   type: time_table
@@ -57,17 +54,17 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Geometry and Topology
+    - title: Geometry, PDE
       items:
-        - Conformal mapping and Parameterization
-        - Optimal Transport and Monge-Ampere Equation
+        - Monge–Ampère Equation, Optimal Transport
+        - Riemann Surface, Conformal mapping
         - Ricci Flow
-    - title: Deep Learning
+    - title: math for deep learning
       items:
         - Transformers
-        - Diffusion Models
+        - Diffusion Models, Flow Matching
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Taekwondo, etc.
+    - <u>Hobbies:</u> Taekwondo
