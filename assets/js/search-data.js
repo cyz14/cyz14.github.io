@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "post-made-my-day",
+        },{id: "post-some-sentences-from-the-book",
+        
+          title: "some sentences from the book",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/daily-whisper/";
+          
+        },
+      },{id: "post-made-my-day",
         
           title: "made my day",
         
