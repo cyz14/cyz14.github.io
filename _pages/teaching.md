@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /teaching/
-title: AI Courses
-description: AI From Scratch, Image Classification, Language Models, and Generative Models
+title: Courses for Beginners
+description: ML From Scratch, Image Classification, Language Models, and Generative Models
 nav: true
 nav_order: 6
 ---
@@ -11,7 +11,7 @@ nav_order: 6
 
 Organize your courses by years, topics, or universities, however you like! -->
 
-让大家入门如何上手做AI项目。主题包括AI system，图像分类模型，语言模型，生成模型。  
+让大家入门如何上手。主题包括systems，图像分类模型，语言模型，生成模型。  
 第一遍分享，从2026年1月5号开始，至1月26号正式完结。
 
 参考课程包括：
@@ -39,7 +39,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 - Comprehensive toy implementations of the 30 foundational papers recommended by Ilya Sutskever, [[Github]](https://github.com/pageman/sutskever-30-implementations)
 - Dive into Deep Learning, [d2l.ai](https://d2l.ai/index.html)
 
-## 1. AI system与图像分类模型
+## 1. 开发环境与图像分类模型
 
 运行环境：本地nvidia gpu，或colab
 
@@ -325,9 +325,9 @@ The coefficients $A_t $ and $B_t$ depend on both the chosen prediction type and 
 
 ### Reinforcement Learning
 
+- 王树森，深度强化学习 [DRL](https://github.com/wangshusen/DRL)
 - Berkeley, [CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse-fa23/)
 - OpenAI, Spinning Up in Deep RL! [Docs](https://spinningup.openai.com/en/latest/)
-- 王树森，深度强化学习 [DRL](https://github.com/wangshusen/DRL)
 
 ## 其他内容
 
