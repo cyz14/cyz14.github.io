@@ -157,13 +157,7 @@ Slides:
   - CSE538 Assignment 3: Transformer LM. Instructions [Google Drive](https://drive.google.com/drive/folders/1jhslUZkQ9hFWPoGrv6OqDwih0DYLMluV?usp=sharing)
   - cs231n Assignment 3 on Colab or Locally: [Image Captioning with Transformers, Self-Supervised Learning, Diffusion Models, CLIP and DINO Models](https://cs231n.github.io/assignments2025/assignment3/)
 
-- 从零实现语言模型 Stanford CS336: Language Modeling from Scratch, Spring 2025, [5 Assignments](https://stanford-cs336.github.io/spring2025/)
-  - Implement tokenizer, model architecture, optimizer
-  - Profile and benchmark the model and layers, optimize Attention with your own Triton implementation of FlashAttention2.
-  - Build a memory-efficient, distributed version of the Assignment 1 model training
-  - Scaling
-  - Data: clean, filtering and deduplication
-  - supervised finetuning and reinforcement learning
+- 从零实现语言模型 Stanford CS336: Language Modeling from Scratch, 2026, [5 Assignments](https://cs336.stanford.edu/)
 
 阅读
 
