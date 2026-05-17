@@ -6,7 +6,7 @@
     "email": "yazchen [at] cs [dot] stonybrook [dot] edu",
     "phone": "",
     "url": "https://cyz14.github.io/cv/",
-    "summary": "A computer science and applied math PhD student",
+    "summary": "A computer science PhD student at SBU",
     "location": {
       "address": "",
       "postalCode": "",
@@ -24,8 +24,8 @@
   },
   "work": [
     {
-      "name": "RealAI Inc, Beijing",
-      "position": "ML Platform Development Engineer",
+      "name": "北京瑞莱智慧",
+      "position": "Engineer",
       "url": "",
       "startDate": "2021-07-01",
       "endDate": "2024-12-01",
@@ -49,17 +49,17 @@
       "institution": "Tsinghua University, Beijing, China",
       "location": "Beijing, USA",
       "url": "",
-      "area": "Network Sciences",
+      "area": "Network Science",
       "studyType": "master",
       "startDate": "2018-07",
       "endDate": "2021-06",
-      "courses": ["architecture of the Internet"]
+      "courses": []
     },
     {
       "institution": "Tsinghua University, Beijing, China",
       "location": "Beijing, USA",
       "url": "",
-      "area": "Computer Sciences and Technology",
+      "area": "Computer Science and Technology",
       "studyType": "bachelor",
       "startDate": "2014-08",
       "endDate": "2018-06",
@@ -74,7 +74,7 @@
       "name": "Network",
       "level": "graduate",
       "icon": "fa-solid fa-hashtag",
-      "keywords": ["network architecture", "routing protocols", "addressing protocols"]
+      "keywords": ["OSPF", "BGP"]
     },
     {
       "name": "Computer Graphics",
@@ -105,7 +105,12 @@
     {
       "name": "Geometric Analysis",
       "icon": "fa-solid fa-tag",
-      "keywords": ["Computational Conformal Geometry", "Optimal Transport", "Ricci Flow", "Monge-Ampère Equation"]
+      "keywords": ["Computational Conformal Geometry", "Ricci Flow", "Optimal Transport", "Monge-Ampère Equation"]
+    },
+    {
+      "name": "Statistical Physics",
+      "icon": "fa-solid fa-tag",
+      "keywords": ["spin glass", "Ising model"]
     }
   ],
   "references": [],
