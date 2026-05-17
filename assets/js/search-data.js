@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "This is a description.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
         },{id: "nav-courses-for-beginners",
           title: "Courses for Beginners",
           description: "ML From Scratch, Image Classification, Language Models, and Generative Models",
