@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "post-some-sentences-from-the-book",
+        },{id: "post-introduction-of-alexandrov-39-s-convex-polyhedra",
+        
+          title: "Introduction of Alexandrov&#39;s Convex Polyhedra",
+        
+        description: "note of this book",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Convex-Polyhedra-Alexandrov/";
+          
+        },
+      },{id: "post-some-sentences-from-the-book",
         
           title: "some sentences from the book",
         
@@ -59,7 +70,7 @@ ninja.data = [{
         
           title: "made my day",
         
-        description: "teacher said I should learn math at lunch",
+        description: "At lunch, Gu said I should learn math.",
         section: "Posts",
         handler: () => {
           
