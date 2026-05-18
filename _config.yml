@@ -89,7 +89,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 blog_name: Yazheng's Blog # blog_name will be displayed in your blog page
 blog_description: academic and personal blogs
 permalink: /blog/:year/:title/
-lsi: false # produce an index for related posts
+lsi: true # produce an index for related posts
 
 # Pagination
 pagination:
@@ -176,7 +176,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include: ["_pages", "_posts", "_scripts"]
 exclude:
   - bin/
   - CONTRIBUTING.md
