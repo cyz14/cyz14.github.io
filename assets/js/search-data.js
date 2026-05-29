@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "post-introduction-of-alexandrov-39-s-convex-polyhedra",
+        },{id: "post-polar-factorization-and-monotone-rearrangement-of-vector-valued-functions-yann-brenier",
+        
+          title: "Polar Factorization and Monotone Rearrangement of Vector-Valued Functions, Yann Brenier",
+        
+        description: "notes of this famous paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Brenier91/";
+          
+        },
+      },{id: "post-introduction-of-alexandrov-39-s-convex-polyhedra",
         
           title: "Introduction of Alexandrov&#39;s Convex Polyhedra",
         
@@ -53,6 +64,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/Convex-Polyhedra-Alexandrov/";
+          
+        },
+      },{id: "post-polar-factorization-and-monotone-rearrangement-of-vector-valued-functions-yann-brenier",
+        
+          title: "Polar Factorization and Monotone Rearrangement of Vector-Valued Functions, Yann Brenier",
+        
+        description: "notes of this famous paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Brenier91/";
           
         },
       },{id: "post-some-sentences-from-the-book",
