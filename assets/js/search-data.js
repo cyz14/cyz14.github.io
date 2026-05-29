@@ -66,17 +66,6 @@ ninja.data = [{
             window.location.href = "/blog/2026/Convex-Polyhedra-Alexandrov/";
           
         },
-      },{id: "post-polar-factorization-and-monotone-rearrangement-of-vector-valued-functions-yann-brenier",
-        
-          title: "Polar Factorization and Monotone Rearrangement of Vector-Valued Functions, Yann Brenier",
-        
-        description: "notes of this famous paper",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/Brenier91/";
-          
-        },
       },{id: "post-some-sentences-from-the-book",
         
           title: "some sentences from the book",
