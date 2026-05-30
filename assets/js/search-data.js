@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "post-polar-factorization-and-monotone-rearrangement-of-vector-valued-functions-yann-brenier",
+        },{id: "post-recognized-by-the-teacher-as-a-disciple-of-chern",
+        
+          title: "Recognized by the Teacher as a Disciple of Chern",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Chern-class/";
+          
+        },
+      },{id: "post-polar-factorization-and-monotone-rearrangement-of-vector-valued-functions-yann-brenier",
         
           title: "Polar Factorization and Monotone Rearrangement of Vector-Valued Functions, Yann Brenier",
         
