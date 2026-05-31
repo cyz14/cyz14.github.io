@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Recognized by the Teacher as a Disciple of Chern
+title: Chern class
 date: 2026-05-29 01:55:00
 description:
 tags: Chern
