@@ -8,7 +8,7 @@ categories: math
 tikzjax: true
 ---
 
-这两天读 Loring W. Tu 老师的 The Introduction to Manifolds. 
+这两天读 Loring W. Tu 老师的 The Introduction to Manifolds.
 
 第3章 The Exterior Algebra of Multicovectors，直接从这里开始，记录一些重要概念。
 
@@ -32,8 +32,8 @@ $$V^{\vee}=Hom(V,\mathbb{R})$$
 $$\alpha^i(e_j)=\delta_j^i.$$
 
 $\alpha^1,..,\alpha^n$ 构成了 $V^{\vee}$ 的一组基底。对偶空间和 $V$ 有相同的维度。
-</div>
 
+</div>
 
 ## Symmetrizing and Alternating Operators
 
@@ -55,6 +55,7 @@ $Sf$ 是对称的，$Af$ 是交错（反对称）的。
 $$\tau(Sf) = \sum_{\sigma \in S_k} \tau(\sigma f) = \sum_{\sigma \in S_k} (\tau\sigma) f = Sf,$$
 
 而 $\tau(Af) = \sum (\text{sgn } \sigma)(\tau\sigma) f = (\text{sgn } \tau) Af$。
+
 </div>
 
 ## Tensor Product
@@ -67,14 +68,16 @@ $\langle, \rangle : V \times V \rightarrow \mathbb{R}$ a bilinear map on $V$.
 Set $g_{i j} = \langle e_i, e_j \rangle \in \mathbb{R}$. By bilinearity, we can
 express $\langle, \rangle$ in terms of the tensor product
 
-$$\langle v, w \rangle = \sum v^i w^j \langle e_i, e_j \rangle = \sum
+$$
+\langle v, w \rangle = \sum v^i w^j \langle e_i, e_j \rangle = \sum
   \alpha^i (v) \alpha^j (w) g_{i j} = \sum g_{i j} (\alpha^i \otimes
-  \alpha^j) (v, w) .$$
+  \alpha^j) (v, w) .
+$$
+
 </div>
 
 切向量基底 $\frac{\partial }{\partial x^i}$,  
 对偶空间基底 $dx^i$
-
 
 $\langle X_p, f \rangle$
 
@@ -103,12 +106,12 @@ $$df=\sum \frac{\partial f}{\partial x^i}d x^i$$
 $$d \omega=\sum_I da_I \wedge dx^I=\sum_I (\sum_j \frac{\partial a^I}{\partial x^j}dx^j)\wedge dx^I\in\Omega^{k+1}(U)$$
 
 $A$ be a graded algebra over field $K$.
-Antiderivation of the graded algebra $A$ is a $K$-linear map $D:A->A$  such that for $a\in A^k$ and $b\in A^l$
+Antiderivation of the graded algebra $A$ is a $K$-linear map $D:A->A$ such that for $a\in A^k$ and $b\in A^l$
 $$D(ab)=(Da)b+(-1)^k aDb$$
 
 满足三条性质
 
-(i)  exterior differentiation $d:\Omega^{\ast}(U)->\Omega^{\ast}(U)$ is antiderivation of degree 1:  
+(i) exterior differentiation $d:\Omega^{\ast}(U)->\Omega^{\ast}(U)$ is antiderivation of degree 1:
 
 $$d(\omega \wedge \tau)=(d\omega)\wedge \tau+(-1)^{deg\space \omega}\omega\wedge d \tau$$
 
@@ -123,7 +126,6 @@ $$d(\omega \wedge \tau)=(d\omega)\wedge \tau+(-1)^{deg\space \omega}\omega\wedge
 
 $F_p\in \mathbb{R}^3\simeq T_p\mathbb{R}^3$
 
-
 $$
 \text{grad} f = \left[\begin{array}{c}
      \partial / \partial x\\
@@ -136,7 +138,8 @@ $$
    \end{array}\right]
 $$
 
-$$ \text{curl} \left[\begin{array}{c}
+$$
+\text{curl} \left[\begin{array}{c}
      P\\
      Q\\
      R
@@ -152,9 +155,11 @@ $$ \text{curl} \left[\begin{array}{c}
      R_y - Q_z\\
      - (R_x - P_z)\\
      Q_x - P_y
-   \end{array}\right] $$
+   \end{array}\right]
+$$
 
-$$ \text{div} \left[\begin{array}{c}
+$$
+\text{div} \left[\begin{array}{c}
      P\\
      Q\\
      R
@@ -166,9 +171,8 @@ $$ \text{div} \left[\begin{array}{c}
      P\\
      Q\\
      R
-   \end{array}\right] = P_x + Q_y + R_z $$
-
-
+   \end{array}\right] = P_x + Q_y + R_z
+$$
 
 <div style="text-align:center">
 <script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "amsfonts": "", "tikz-cd": "" }'>
