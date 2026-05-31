@@ -75,45 +75,109 @@ html[data-theme="dark"] {
 }
 
 // ---------- label & color per class, with optional [title] ----------
-.theorem::before { content: "Theorem."; }
-.theorem[title]::before { content: "Theorem. (" attr(title) ")"; }
-.theorem { border-left-color: var(--global-theorem-color); }
-.theorem::before { color: var(--global-theorem-color); }
+.theorem::before {
+  content: "Theorem.";
+}
+.theorem[title]::before {
+  content: "Theorem. (" attr(title) ")";
+}
+.theorem {
+  border-left-color: var(--global-theorem-color);
+}
+.theorem::before {
+  color: var(--global-theorem-color);
+}
 
-.definition::before { content: "Definition."; }
-.definition[title]::before { content: "Definition. (" attr(title) ")"; }
-.definition { border-left-color: var(--global-definition-color); }
-.definition::before { color: var(--global-definition-color); }
+.definition::before {
+  content: "Definition.";
+}
+.definition[title]::before {
+  content: "Definition. (" attr(title) ")";
+}
+.definition {
+  border-left-color: var(--global-definition-color);
+}
+.definition::before {
+  color: var(--global-definition-color);
+}
 
-.example::before { content: "Example."; }
-.example[title]::before { content: "Example. (" attr(title) ")"; }
-.example { border-left-color: var(--global-example-color); }
-.example::before { color: var(--global-example-color); }
+.example::before {
+  content: "Example.";
+}
+.example[title]::before {
+  content: "Example. (" attr(title) ")";
+}
+.example {
+  border-left-color: var(--global-example-color);
+}
+.example::before {
+  color: var(--global-example-color);
+}
 
-.lemma::before { content: "Lemma."; }
-.lemma[title]::before { content: "Lemma. (" attr(title) ")"; }
-.lemma { border-left-color: var(--global-lemma-color); }
-.lemma::before { color: var(--global-lemma-color); }
+.lemma::before {
+  content: "Lemma.";
+}
+.lemma[title]::before {
+  content: "Lemma. (" attr(title) ")";
+}
+.lemma {
+  border-left-color: var(--global-lemma-color);
+}
+.lemma::before {
+  color: var(--global-lemma-color);
+}
 
-.proposition::before { content: "Proposition."; }
-.proposition[title]::before { content: "Proposition. (" attr(title) ")"; }
-.proposition { border-left-color: var(--global-proposition-color); }
-.proposition::before { color: var(--global-proposition-color); }
+.proposition::before {
+  content: "Proposition.";
+}
+.proposition[title]::before {
+  content: "Proposition. (" attr(title) ")";
+}
+.proposition {
+  border-left-color: var(--global-proposition-color);
+}
+.proposition::before {
+  color: var(--global-proposition-color);
+}
 
-.corollary::before { content: "Corollary."; }
-.corollary[title]::before { content: "Corollary. (" attr(title) ")"; }
-.corollary { border-left-color: var(--global-corollary-color); }
-.corollary::before { color: var(--global-corollary-color); }
+.corollary::before {
+  content: "Corollary.";
+}
+.corollary[title]::before {
+  content: "Corollary. (" attr(title) ")";
+}
+.corollary {
+  border-left-color: var(--global-corollary-color);
+}
+.corollary::before {
+  color: var(--global-corollary-color);
+}
 
-.conjecture::before { content: "Conjecture."; }
-.conjecture[title]::before { content: "Conjecture. (" attr(title) ")"; }
-.conjecture { border-left-color: var(--global-conjecture-color); }
-.conjecture::before { color: var(--global-conjecture-color); }
+.conjecture::before {
+  content: "Conjecture.";
+}
+.conjecture[title]::before {
+  content: "Conjecture. (" attr(title) ")";
+}
+.conjecture {
+  border-left-color: var(--global-conjecture-color);
+}
+.conjecture::before {
+  color: var(--global-conjecture-color);
+}
 
-.claim::before { content: "Claim."; }
-.claim[title]::before { content: "Claim. (" attr(title) ")"; }
-.claim { border-left-color: var(--global-claim-color); }
-.claim::before { color: var(--global-claim-color); }
+.claim::before {
+  content: "Claim.";
+}
+.claim[title]::before {
+  content: "Claim. (" attr(title) ")";
+}
+.claim {
+  border-left-color: var(--global-claim-color);
+}
+.claim::before {
+  color: var(--global-claim-color);
+}
 
 // ---------- Proof (special: ends with QED symbol) ----------
 .proof {
@@ -136,7 +200,7 @@ html[data-theme="dark"] {
 
   // QED at the end
   &::after {
-    content: " \25A0";  // ∎
+    content: " \25A0"; // ∎
     float: right;
     font-size: 1.1rem;
     color: var(--global-proof-color);
