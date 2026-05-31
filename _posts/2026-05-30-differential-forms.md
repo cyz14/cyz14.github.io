@@ -10,7 +10,7 @@ tikzjax: true
 
 这两天读 Loring W. Tu 老师的 The Introduction to Manifolds.
 
-第3章 The Exterior Algebra of Multicovectors，直接从这里开始，记录一些重要概念。
+第3章 The Exterior Algebra of Multicovectors，第4章 Differential Forms on $\mathbb{R}^n$。直接从这里开始，记录一些重要概念。
 
 ## 一些历史
 
@@ -37,7 +37,7 @@ $\alpha^1,..,\alpha^n$ 构成了 $V^{\vee}$ 的一组基底。对偶空间和 $V
 
 ## Symmetrizing and Alternating Operators
 
-给一个任意 $k$-linear function f on a vector space $V$，there is a way to make a symmetric $k$-linear function $Sf$ from it
+给一个任意 $k$-linear function $f$ on a vector space $V$，there is a way to make a symmetric $k$-linear function $Sf$ from it
 $$(Sf)(v_1,..,v_k)=\sum_{\sigma\in S_k}f(v_{\sigma(1))},\cdots,v_{\sigma(k)})$$
 简写为
 $$Sf=\sum_{\sigma\in S_k}\sigma f.$$
@@ -76,8 +76,35 @@ $$
 
 </div>
 
+## The Wedge Product
+
+$f\in A_k(V)$ and $g \in A_l(V)$,
+
+$$f\wedge g=\frac{1}{k!l!}A(f \otimes g).$$
+
+$$f\wedge g=(-1)^{kl}g \wedge f.$$
+
+$$f\wedge g=\frac{1}{k!l!}A(f \otimes g).$$
+
+<div class="proposition" title="Associativity of the wedge product">
+
+$$(f\wedge g)\wedge h=f\wedge (g \wedge h).$$
+
+</div>
+
+<div class="corollary">
+$$f\wedge g\wedge h=\frac{1}{k!l!m!}A(f\otimes g \otimes h)$$
+</div>
+
+<div class="proposition" title="Wedge product of 1-covectors">
+If $\alpha^1,\cdots,\alpha^k$ are linear functions on a vector space $V$ and $v_1,\cdots, v_k \in V$, then
+$$(\alpha^1 \wedge \cdots \wedge \alpha^k)(v_1, \cdots, v_k)= \det [\alpha^i(v_j)].$$
+</div>
+
+## Differentail 1-Forms and Differential as a Function
+
 切向量基底 $\frac{\partial }{\partial x^i}$,  
-对偶空间基底 $dx^i$
+对偶空间基底 $dx^i$.
 
 $\langle X_p, f \rangle$
 
@@ -174,6 +201,8 @@ $$
    \end{array}\right] = P_x + Q_y + R_z
 $$
 
+在 $\mathbb{R}^3$ 的开子集 $U$ 上，有以下关系
+
 <div style="text-align:center">
 <script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "amsfonts": "", "tikz-cd": "" }'>
   \begin{tikzcd}
@@ -188,6 +217,8 @@ $$
   \end{tikzcd}
 </script>
 </div>
+
+tikz-cd 适合绘制这种 commutative diagram，但是 mathjax 对这个的支持不是很好，最近ai-folio模板更新了 v1.0 版本，有人修复了 tikzjax 的问题，更新到了 v1.0 版本后又费了挺多token终于跑通了。
 
 <!-- ![deRham complex](/assets/img/posts/diagram.svg) -->
 
