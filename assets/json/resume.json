@@ -63,7 +63,7 @@
       "studyType": "bachelor",
       "startDate": "2014-08",
       "endDate": "2018-06",
-      "courses": [""]
+      "courses": []
     }
   ],
   "awards": [],
@@ -108,9 +108,9 @@
       "keywords": ["Computational Conformal Geometry", "Ricci Flow", "Optimal Transport", "Monge-Ampère Equation"]
     },
     {
-      "name": "Statistical Physics",
+      "name": "Physics",
       "icon": "fa-solid fa-tag",
-      "keywords": ["spin glass", "Ising model"]
+      "keywords": ["statistical", "relativity theory", "quantum mechanics"]
     }
   ],
   "references": [],
