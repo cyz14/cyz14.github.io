@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chern class
+title: The Deleted Product of Wen-Tsun Wu and Chern class
 date: 2026-05-29 01:55:00
 description:
 tags: Chern
