@@ -101,7 +101,19 @@ If $\alpha^1,\cdots,\alpha^k$ are linear functions on a vector space $V$ and $v_
 $$(\alpha^1 \wedge \cdots \wedge \alpha^k)(v_1, \cdots, v_k)= \det [\alpha^i(v_j)].$$
 </div>
 
+# 4. Differential Forms on $\mathbb{R}^n$
+
+向量场给欧氏空间开集$U$的每个点分配一个切向量，对偶地，一个微分$k$形式给每个点的切空间分配一个 $k$-covector。外积 (Wedge product) 被定义为 multicovectors 的逐点外积。微分形式在开集上定义，所以有微分形式的微分的定义，由三条性质唯一确定，叫做 exterior derivative。尽管我们在 $\mathbb{R}^n$ 上定义的，但外微分可以证明是与坐标无关的，我们稍后会看到，因此是对流形而言内蕴的。微分形式将 Grassmann 的外代数从一点的切空间扩展到整个流形。自从20世纪 Cartan 和 Poincaré 发明出来后，微分形式的微积分已经在几何、拓扑和物理中带来了深远影响。物理概念比如电和磁最适合用微分形式来描述。
+
 ## Differentail 1-Forms and Differential as a Function
+
+cotangent space to $\mathbb{R}^n$ at $p$, denoted by $T_p^{\ast}(\mathbb{R}^n)$ or $T_p^{\ast}\mathbb{R}^n$, 定义为 dual space $(T_p\mathbb{R}^n)^\vee$ of the tanget space $T_p(\mathbb{R}^n)$.
+
+$$\omega : U \rightarrow \bigcup_{p \in U} T_p^{\ast} (\mathbb{R}^n)$$
+
+$$p \mapsto \omega_p \in T_p^{\ast} (\mathbb{R}^n)$$
+
+$$(d f)_p (X_p) = X_p f$$
 
 切向量基底 $\frac{\partial }{\partial x^i}$,  
 对偶空间基底 $dx^i$.
@@ -109,6 +121,8 @@ $$(\alpha^1 \wedge \cdots \wedge \alpha^k)(v_1, \cdots, v_k)= \det [\alpha^i(v_j
 $\langle X_p, f \rangle$
 
 $df = \sum \frac{\partial f}{\partial x^i} dx^i$
+
+## Differential $k$-Forms
 
 a differentail form $\omega$ of degree $k$ or a $k$-form on an open subset $U$ of $\mathbb{R}^n$
 
@@ -124,7 +138,7 @@ $$\omega_p=\sum a_I(p)dx_p^I,\quad 1\leq i_1 \lt ..\lt i_k \leq n$$
 and a $k$-form $\omega$ on $U$ is a linear combination
 $$\omega=\sum a_I dx^I$$
 
-Exterior derivative
+## The Exterior Derivative
 
 $f \in C^{\infty}(U)$, $df\in \Omega^1(U)$
 
@@ -146,6 +160,24 @@ $$d(\omega \wedge \tau)=(d\omega)\wedge \tau+(-1)^{deg\space \omega}\omega\wedge
 (iii) If $f\in C^{\infty}(U)$ and $X\in \mathfrak{X}(U)$, then $(df)(X)=Xf.$
 
 这三条性质唯一确定了外微分。
+
+## Closed Forms and Exact Forms
+
+Closed: $d \omega=0$.
+
+Exact: if there is a $(k-1)$-form $\tau$ such that $\omega = d \tau$.
+
+<div style="text-align:center">
+<script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "amsfonts": "", "tikz-cd": "" }'>
+\begin{tikzcd}
+  0 \arrow[r] &
+  \Omega^0(U) \arrow[r,"d"] &
+  \Omega^1(U) \arrow[r,"d"] &
+  \Omega^2(U) \arrow[r,"d"] &
+  \cdots
+\end{tikzcd}
+</script>
+</div>
 
 ## Applications to Vector Calculus
 
@@ -218,8 +250,15 @@ $$
 </script>
 </div>
 
-tikz-cd 适合绘制这种 commutative diagram，但是 mathjax 对这个的支持不是很好，最近ai-folio模板更新了 v1.0 版本，有人修复了 tikzjax 的问题，更新到了 v1.0 版本后又费了挺多token终于跑通了。
+One measure of the failure of a closed $k$-form to be exact is the quotient vector space
+
+$$
+H^k (U) := \frac{\{ \text{closed} k - \text{forms} \text{on} U \}}{\{
+   \text{exact} k - \text{forms} \text{on} U \}}
+$$
+
+tikz-cd 适合绘制这种 commutative diagram，但是 mathjax 对这个的支持不是很好，导出SVG再嵌入的话字体跟正文公式完全不匹配。我看最近ai-folio模板更新了 v1.0 版本，有人修复了 tikzjax 的问题，所以我更新到了 v1.0 版本，然后又费了挺多token终于跑通了。虽然字体现在还是不一样，而且 tikzjax 不支持一些字体，比如 "\mathfrak{X}" 的 $\mathfrak{X}$，只能算是一定程度上支持 commutative diagram。下面是 tikz editor 导出 pdf 再用 Inkscape 转成 SVG 图片的效果。
 
 <!-- ![deRham complex](/assets/img/posts/diagram.svg) -->
 
-<!-- ![deRham complex](/assets/img/posts/diagram_from_pdf.svg){: style="width:30%; display:block; margin:auto"} -->
+![deRham complex](/assets/img/posts/diagram_from_pdf.svg){: style="width:30%; display:block; margin:auto"}
