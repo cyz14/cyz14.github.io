@@ -45,13 +45,9 @@ $$\mathbf{M}' -\mathbf{M}= d\mathbf{M},$$
 
 以及轴的单位向量，
 
-$$ \mathbf{M}' -\mathbf{M}= d\mathbf{M},$$
-
-$Μ'$ and $Ι'_k$
-
 $$\mathbf{I}'_k -\mathbf{I}_k = d\mathbf{I}_k, \quad k = 1, 2, 3.$$
 
-无穷小邻域的三棱锥表示为 $M'$ and $I'_k$。
+其中无穷小邻域的三棱锥表示为 $M'$ and $I'_k$。
 
 $d M$ and $d I_k$ 投影到 $I_k$ of the trihedron $\mathcal{T}$，然后我们得到 $\mathcal{T}$ 的位移的无穷小表示
 
@@ -70,7 +66,7 @@ $$
 
 $$\text{dM} = \omega^i I_i, \quad d I_i = \omega_i^j I_j, \quad i, j = 1, 2, 3$$
 
-$\omega^i$ projections of the differential $\text{dM}$ on the axes $I_k$
+$\omega^i$ are projections of the differential $\text{dM}$ on the axes $I_k$.
 
 他们是线性微分形式，对 $\omega_i^j$ 来说也对：
 
