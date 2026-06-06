@@ -2,7 +2,7 @@
 layout: post
 title: Differential Forms, Symmetrizing and Alternating Operators
 date: 2026-05-30 01:55:00
-description:
+description: notes of Chap 1 of The Introduction to Manifolds, Loring W. Tu
 tags: differential forms
 categories: math
 tikzjax: true
