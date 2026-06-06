@@ -118,8 +118,7 @@ categories: math
       中的没有互相平行的向量。存在一个 <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>𝔼</mi><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow></msup></math>
       中的凸多面体有 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math>个面，每个面垂直于对应的法向量且其
       <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi></math>维体积等于其长度。<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>𝔼</mi><mi>d</mi></msup></math>中的power
-      diagram 恰是<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>𝔼</mi><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow></msup></math>中无界凸多面体的投影[cite
-      4]，可以被看成第<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo
+      diagram 恰是<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>𝔼</mi><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow></msup></math>中无界凸多面体的投影 {% cite Aurenhammer-1987 %}，可以被看成第<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo
       form="postfix">)</mo></mrow></math>个面位于投影方向的无穷远处，Corollary
       <a href="#cor:power-diagram">1</a> 其实是无界多面体的Minkowski定理的推广。
     </p>
