@@ -54,9 +54,7 @@ categories: math
       diagram</em>&#x3002; 
     </p>
     <p>
-      感兴趣的读者可以看综述 {% cite
-      Aurenhammer-voronoi-survey-1991 %} 了解 Voronoi-type diagrams 和
-      power diagrams
+      感兴趣的读者可以看综述 {% cite Aurenhammer-voronoi-survey-1991 %} 了解 Voronoi-type diagrams 和 power diagrams
       的一般性质。每个区域仍然是凸的，且随着权重减少（扩大）面积缩小（变大）。我们获得了一个分配函数:
       <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>A</mi><mi>W</mi></msub><mo>:</mo><mi>X</mi><mo>→</mo><mi>S</mi></mrow></math>
       现在很明显依赖特定的权重选取。 
@@ -112,7 +110,7 @@ categories: math
     </p>
     <p>
       这看起来很惊喜，因为站点的位置决定了划分区域的面的法向。推论
-      <a href="#cor:power-diagram">1</a> 跟凸多面体的Minkowski problem有关（见
+      <a href="#cor:power-diagram">1</a> 跟凸多面体的Minkowski problem有关（见 {% cite grunbaum_convex_2003 %}
       ），根据我们的需要，可以被描述为：选任意 <math
       xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math> 个欧氏空间 <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>𝔼</mi><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow></msup></math>
       中的没有互相平行的向量。存在一个 <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>𝔼</mi><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow></msup></math>
