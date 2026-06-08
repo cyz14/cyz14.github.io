@@ -1,0 +1,243 @@
+/*
+ * TeXmacs web-article.css — 作用域版本
+ * 原始来源: https://www.texmacs.org/css/web-article.css
+ * 所有选择器已限制在 .post-content .texmacs-article 内，不影响页面布局
+ * @font-face 已移除（原始字体 URL 404），改用可靠字体栈
+ *
+ * 用法: 在 post 中加载此 CSS 并用 <div class="texmacs-article"> 包裹内容
+ */
+
+/******************************************************************************
+* MODULE     : web-article.css
+* DESCRIPTION: CSS style sheet for TeXmacs articles
+* COPYRIGHT  : (C) 2020  Joris van der Hoeven
+*******************************************************************************
+* This software falls under the GNU general public license version 3 or later.
+* It comes WITHOUT ANY WARRANTY WHATSOEVER. For details, see the file LICENSE
+* in the root directory or <http://www.gnu.org/licenses/gpl-3.0.html>.
+******************************************************************************/
+
+/******************************************************************************
+* Font setup
+******************************************************************************/
+
+/******************************************************************************
+* Main text properties
+******************************************************************************/
+
+.post-content .texmacs-article {
+background-color: white;
+    color: black;
+    font-size: 28px;
+    font-family: 'Crimson Pro', 'Georgia', 'Times New Roman', 'STIX Two Text', serif;
+    /* font-family: Optima; */
+    /* font-family: Barlow; */
+    /* font-family: 'PT Sans', sans-serif; */
+    text-align: justify;
+    border: 0px;
+    padding: 0em;
+    margin: 0px;
+}
+
+.post-content .texmacs-article h1 {
+font-weight: bold;
+    font-size: 1.4em;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.post-content .texmacs-article h2 {
+font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+
+.post-content .texmacs-article h3 {
+font-weight: bold;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.post-content .texmacs-article h4,
+.post-content .texmacs-article h5,
+.post-content .texmacs-article h6 {
+font-weight: bold;
+    font-size: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+}
+
+.post-content .texmacs-article div {
+margin: 0px;
+    padding: 0px;
+}
+
+.post-content .texmacs-article p,
+.post-content .texmacs-article center {
+margin: 0px;
+    padding: 0px;
+    padding-bottom: 0.35em;
+    padding-top: 0.35em;
+}
+
+.post-content .texmacs-article ul,
+.post-content .texmacs-article ol,
+.post-content .texmacs-article dl,
+.post-content .texmacs-article di {
+margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+}
+
+.post-content .texmacs-article ul > p,
+.post-content .texmacs-article ol > p,
+.post-content .texmacs-article dl > p,
+.post-content .texmacs-article di > p {
+padding-bottom: 0.1em;
+    padding-top: 0.1em;
+}
+
+.post-content .texmacs-article table {
+border-collapse: collapse;
+}
+
+.post-content .texmacs-article tbody p {
+margin: 0px;
+    padding: 0px;
+    padding-bottom: 0.1em;
+    padding-top: 0.1em;
+}
+
+.post-content .texmacs-article td {
+padding: 0.2em;
+    vertical-align: baseline;
+}
+
+.post-content .texmacs-article dd {
+margin-left: 2.75em;
+    padding-bottom: 0.25em;
+}
+
+.post-content .texmacs-article dd p {
+padding-top: 0em;
+}
+
+.post-content .texmacs-article a:link,
+.post-content .texmacs-article a:visited {
+color: #805020;
+    text-decoration: none;
+}
+
+.post-content .texmacs-article a:active,
+.post-content .texmacs-article a:focus,
+.post-content .texmacs-article a:hover {
+color: #D0343F;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1199px) {
+.post-content .texmacs-article {
+font-size: 24px;
+        padding: 3em;
+}
+}
+
+@media screen and (max-width: 799px) {
+.post-content .texmacs-article {
+font-size: 18px;
+        padding: 1.5em;
+}
+}
+
+/******************************************************************************
+* Special markup
+******************************************************************************/
+
+.post-content .texmacs-article .subsup {
+display: inline;
+    vertical-align: -0.2em;
+}
+
+.post-content .texmacs-article .subsup td {
+padding: 0px;
+    text-align: left;
+}
+
+.post-content .texmacs-article .fraction {
+display: inline;
+    vertical-align: -0.8em;
+}
+
+.post-content .texmacs-article .fraction td {
+padding: 0px;
+    text-align: center;
+}
+
+.post-content .texmacs-article .wide {
+position: relative;
+    margin-left: -0.4em;
+}
+
+.post-content .texmacs-article .accent {
+position: relative;
+    margin-left: -0.4em;
+    top: -0.1em;
+}
+
+.post-content .texmacs-article .compact-block p,
+.post-content .texmacs-article .compact-block center {
+margin: 0px;
+    padding: 0px;
+}
+
+.post-content .texmacs-article .left-tab {
+text-align: left;
+}
+
+.post-content .texmacs-article .center-tab {
+text-align: center;
+}
+
+.post-content .texmacs-article .center-tab p {
+text-align: justify;
+}
+
+.post-content .texmacs-article .right-tab {
+text-align: right;
+    margin-top: -1.2em;
+}
+
+.post-content .texmacs-article tt,
+.post-content .texmacs-article .verbatim {
+font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Courier New', monospace;
+    font-size: 90%;
+}
+
+.post-content .texmacs-article .footnote > p {
+padding-bottom: 0em;
+    padding-top: 0em;
+}
+
+.post-content .texmacs-article .title-block {
+margin-bottom: 0.5em;
+}
+
+.post-content .texmacs-article .float {
+margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.post-content .texmacs-article .caption {
+text-align: justify;
+}
+
+.post-content .texmacs-article .no-breaks {
+white-space: nowrap;
+}
+
+.post-content .text/tikz {
+    font-size: 28px;
+}
