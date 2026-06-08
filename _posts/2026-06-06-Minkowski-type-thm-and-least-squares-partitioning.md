@@ -7,8 +7,7 @@ tags: least-squares, Minkowski
 categories: math
 ---
 
-<link rel="stylesheet" href="/assets/css/texmacs-article-scoped.css" type="text/css">
-<div class="texmacs-article">
+<body>
     <h3 id="auto-1">1<span style="margin-left: 1em"></span>Introduction and Statement of Results<span
     style="margin-left: 1em"></span></h3>
     <p>
@@ -306,4 +305,4 @@ categories: math
 
 {% bibliography --cited %}
 
-  </div>
+</body>

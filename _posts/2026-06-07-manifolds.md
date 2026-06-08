@@ -8,8 +8,7 @@ categories: math
 tikzjax: true
 ---
 
-<link rel="stylesheet" href="/assets/css/texmacs-article-scoped.css" type="text/css">
-<div class="texmacs-article">
+<body>
     <h2 id="auto-1">1<span style="margin-left: 1em"></span>Manifolds<span style="margin-left: 1em"></span></h2>
     <p>
       流形的概念是曲线和曲面的高维推广。它在每个点的局部有一个欧氏的邻域，叫图册
@@ -1103,4 +1102,4 @@ g.\)
     <p>
       Notes taken and exported by TeXmacs.
     </p>
-  </div>
+</body>
