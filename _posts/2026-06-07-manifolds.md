@@ -196,7 +196,6 @@ tikzjax: true
     <center>
       \(\displaystyle (f \times g) (x, y) = (f (x), g (y)) .\)
     </center>
-    </p>
     <p style="margin-top: 1em">
       <strong>命题 <class style="font-style: normal">1.18</class>. </strong><i>(An
       atlas for a product manifold). If \(\{ (U_{\alpha}, \phi_{\alpha}) \}\)
