@@ -62,9 +62,13 @@ tikzjax: true
     <p>
       <i><center>
         \(\displaystyle \phi \circ \psi^{- 1} : \psi (U \cap V) \rightarrow
-        \phi (U \cap V), \quad
-\psi \circ \phi^{- 1} : \phi (U \cap V)
-        \rightarrow \psi (U \cap V)\)
+        \phi (U \cap V),\)
+      </center></i>
+    </p>
+    <p>
+      <i><center>
+        \(\displaystyle \psi \circ \phi^{- 1} : \phi (U \cap V) \rightarrow
+        \psi (U \cap V)\)
       </center></i>
     </p>
     <p style="margin-bottom: 1em">
@@ -151,10 +155,13 @@ tikzjax: true
       definition
     </p>
     <center>
-      \(\displaystyle \operatorname{GL} (n, \mathbb{R}) := \{ A \in
-      \mathbb{R}^{n \times n} | \det A
-\neq 0 \} = \det^{- 1} (\mathbb{R}- \{
-      0 \}) .\)
+      \(\displaystyle \begin{array}{rl}
+  \operatorname{GL} (n, \mathbb{R}) &
+      := \{ A \in \mathbb{R}^{n \times n} |
+  \det A \neq 0 \}\\
+  & = \det^{-
+      1} (\mathbb{R}- \{ 0 \}) .
+\end{array}\)
     </center>
     <p style="margin-bottom: 1em">
       Since the determinant function is continuous, \(\operatorname{GL} (n,
@@ -183,12 +190,12 @@ tikzjax: true
       that the product of two set maps \(f : X \rightarrow X'\) and \(g : Y
       \rightarrow Y'\) is
     </p>
-    <p style="margin-bottom: 1em">
-      <center>
-        \(\displaystyle f \times g : X \times Y \rightarrow X' \times Y',
-        \quad (f \times g) (x, y) =
-(f (x), g (y)) .\)
-      </center>
+    <center>
+      \(\displaystyle f \times g : X \times Y \rightarrow X' \times Y',\)
+    </center>
+    <center>
+      \(\displaystyle (f \times g) (x, y) = (f (x), g (y)) .\)
+    </center>
     </p>
     <p style="margin-top: 1em">
       <strong>命题 <class style="font-style: normal">1.18</class>. </strong><i>(An
@@ -583,13 +590,17 @@ n} | \det A \neq 0 \} .\)
       
     </p>
     <center>
-      \(\displaystyle \left. \frac{\partial f}{\partial x^i} \right|_p :=
-      \frac{\partial f}{\partial
-x^i} (p) := \frac{\partial (f \circ \phi^{-
-      1})}{\partial r^i} (\phi (p)) :=
-\left. \frac{\partial}{\partial r^i}
-      \right|_{\phi (p)}  (f \circ \phi^{- 1})
-.\)
+      \(\displaystyle \begin{array}{rl}
+  \left. \frac{\partial f}{\partial
+      x^i} \right|_p & := \frac{\partial
+  f}{\partial x^i} (p) :=
+      \frac{\partial (f \circ \phi^{- 1})}{\partial r^i}
+  (\phi (p))\\
+  & :=
+      \left. \frac{\partial}{\partial r^i} \right|_{\phi (p)}  (f \circ
+ 
+      \phi^{- 1}) .
+\end{array}\)
     </center>
     <p>
       
