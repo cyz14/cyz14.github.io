@@ -688,8 +688,8 @@ a\operatorname{coordinate}\operatorname{open}\operatorname{set}\operatorname{in}
     <center>
       <script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "amsfonts": "", "tikz-cd": "" }'>
       \begin{tikzcd}
-        E \arrow[rd, "\pi"'] \arrow[rr, "\phi"] &   & E' \arrow[ld, "\pi'"] \\
-                                        & M &                      
+        E \arrow[r, "\phi"] \arrow[d, "\pi"'] &  E^{\prime} \arrow[ld, "\pi^{\prime}"] \\
+        M &
       \end{tikzcd}
       </script>
     </center>
@@ -787,9 +787,6 @@ E|_U \xrightarrow{\sim} U \times \mathbb{R}^n
       \mathbb{1}) \circ \phi)\) on \(E\).
     </p>
     <p>
-      
-    </p>
-    <p>
       Let \(\pi_E : E \rightarrow M\), \(\pi_F : F \rightarrow M\) be two
       vector bundles, possibly of different ranks. A bundle map from \(E\) to
       \(F\) is a pair of maps \((f, \tilde{f}), f : M \rightarrow N\) and
@@ -803,8 +800,8 @@ E|_U \xrightarrow{\sim} U \times \mathbb{R}^n
         <center>
         <script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "amsfonts": "", "tikz-cd": "" }'>
         \begin{tikzcd}
-        E \arrow[r, "\tilde{f}"] \arrow[d, "\pi_E"'] & F \arrow[d, "\pi_F"] \\
-        M \arrow[r, "f"]                             & N                   
+          E \arrow[r, "\tilde{f}"] \arrow[d, "\pi_E"'] & F \arrow[d, "\pi_F"] \\
+          M \arrow[r, "f"]                             & N                   
         \end{tikzcd}
         </script>
       </center>
@@ -833,9 +830,7 @@ E|_U \xrightarrow{\sim} U \times \mathbb{R}^n
       N \rightarrow T M\) is given by
     </p>
     <center>
-      \(\displaystyle \tilde{f} (p, v) = (f (p), f_{\ast} (v)) \in \{ f (p) \}
-      \times T_{f (p)} M
-\subset T M\)
+      \(\displaystyle \tilde{f} (p, v) = (f (p), f_{\ast} (v)) \in \{ f (p) \} \times T_{f (p)} M \subset T M\)
     </center>
     <p style="margin-bottom: 1em">
       for all \(v \in T_p N\). This gives rise to a covariant functor \(T\)
