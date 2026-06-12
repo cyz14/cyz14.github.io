@@ -805,6 +805,7 @@ q) = X_{F (0, q)} = X_q .\)
       & = (X Y f) g + (Y f) (X g) + (X f) (Y g) + f (X Y g) .
 
 \end{array}\)
+
 </center>
 <p>
 We see that the two extra terms \((Y f) (X g)\) and \((X f) (Y g)\) that
@@ -835,11 +836,11 @@ for any germ \(f\) of a \(C^{\infty}\) function at \(p\).
 identity). Check the Jacobian identity:
 </p>
 <center>
-\(\displaystyle \sum_{\operatorname{cyclic}} [X, [Y, Z]] = 0.\)
+\(\displaystyle \sum_{\text{cyclic}} [X, [Y, Z]] = 0.\)
 </center>
 <p style="margin-bottom: 1em">
 <center>
-\(\displaystyle \sum*{\operatorname{cyclic}} [X, [Y, Z]] = [X, [Y, Z]] + [Y, [Z, X]] + [Z, [X,
+\(\displaystyle \sum_{\text{cyclic}} [X, [Y, Z]] = [X, [Y, Z]] + [Y, [Z, X]] + [Z, [X,
 Y]] .\)
 </center>
 </p>
@@ -854,7 +855,7 @@ and \(X, Y, Z \in V\),</i>
 <i><ol>
 <li>
 <p>
-(bilinearity) \([a X +\operatorname{bY}, Z] = a [X, Z] + b [Y,
+(bilinearity) \([a X + b Y, Z] = a [X, Z] + b [Y,
 Z],\)
 </p>
 <p>
@@ -868,7 +869,7 @@ Z],\)
 </li>
 <li>
 <p>
-(Jacobi identity) \(\sum*{\operatorname{cyclic}} [X, [Y, Z]] =
+(Jacobi identity) \(\sum_{\text{cyclic}} [X, [Y, Z]] =
 0\).
 </p>
 </li>
@@ -926,11 +927,11 @@ map \(D : V \rightarrow V\) satisfying the product rule</i>
 </p>
 <p style="margin-top: 1em">
 <strong>例. </strong>Let \(V\) be a Lie algebra over a field
-\(K\). For each \(X\) in \(V\), define \(\operatorname{ad}_X : V
+\(K\). For each \(X\) in \(V\), define \(\text{ad}_X : V
 \rightarrow V\) by
 </p>
 <center>
-\(\displaystyle \operatorname{ad}\_X (Y) = [X, Y] .\)
+\(\displaystyle \text{ad}_X (Y) = [X, Y] .\)
 </center>
 <p>
 We may rewrite the Jacobi identity in the form
@@ -942,29 +943,28 @@ We may rewrite the Jacobi identity in the form
 or
 </p>
 <center>
-\(\displaystyle \operatorname{ad}\_X [Y, Z] = [\operatorname{ad}_X Y, Z] + [Y,
-\operatorname{ad}_X Z],\)
+\(\displaystyle \text{ad}_X [Y, Z] = [\text{ad}_X Y, Z] + [Y, \text{ad}_X Z],\)
 </center>
 <p style="margin-bottom: 1em">
-which shows that \(\operatorname{ad}\_X : V \rightarrow V\) is a
+which shows that \(\text{ad}_X : V \rightarrow V\) is a
 derivation of \(V\).
 </p>
 <h3 id="auto-10">2.5<span style="margin-left: 1em"></span>The Pushforward of Vector Fields<span
     style="margin-left: 1em"></span></h3>
 <p>
 Let \(F : N \rightarrow M\) be a smooth map of manifolds and let
-\(F_{\ast} : T*p N \rightarrow T*{F (p)} M\) be its differential at a
-point \(p\) in \(N\). If \(X*p \in T_p N\), we call \(F*{\ast} (X*p)\)
+\(F_{\ast} : T_p N \rightarrow T_{F (p)} M\) be its differential at a
+point \(p\) in \(N\). If \(X_p \in T_p N\), we call \(F_{\ast} (X_p)\)
 the pushforward of the vector \(X_p\) at \(p\). This notion does not
 extend in general to vector fields, since if \(X\) is a vector field on
 \(N\) and \(z = F (p) = F (q)\) for two distinct points \(p, q \in N\),
 then \(X_p\) and \(X_q\) are both push forward to tangent vectors at \(z
-\in M\), but there is no reason why \(F*{\ast} (X*p)\) and \(F*{\ast}
-(X*q)\) should be equal.
+\in M\), but there is no reason why \(F_{\ast} (X_p)\) and \(F_{\ast}
+(X_q)\) should be equal.
 </p>
 <p>
-When \(F : N \rightarrow M\) is a diffeomorphism, \((F*{\ast} X)_{F (p)}
-= F_{\ast, p} (X*p)\), \(F*{\ast} X\) is defined everywhere on \(M\).
+When \(F : N \rightarrow M\) is a diffeomorphism, \((F_{\ast} X)_{F (p)}
+= F_{\ast, p} (X_p)\), \(F_{\ast} X\) is defined everywhere on \(M\).
 </p>
 <h3 id="auto-11">2.6<span style="margin-left: 1em"></span>Related Vector Fields<span style="margin-left: 1em"></span></h3>
 <p style="margin-top: 1em">
@@ -976,7 +976,7 @@ all \(p \in N\),</i>
 <div style="margin-bottom: 1em">
 <i><table width="100%">
 <tr>
-<td width="100%" align="center">\(\displaystyle F*{\ast, p} (X_p) = \bar{X}*{F
+<td width="100%" align="center">\( F_{\ast, p} (X_p) = \bar{X}_{F
 (p)} .\)</td>
 <td align="right">(2.11)</td>
 </tr>
@@ -985,9 +985,9 @@ all \(p \in N\),</i>
 <p style="margin-top: 1em; margin-bottom: 1em">
 <strong>例 <class style="font-style: normal">2.15</class>. </strong>(Pushforward by a
 diffeomorphism). If \(F : N \rightarrow M\) is a diffeomorphism and
-\(X\) is a vector field on \(N\), then the pushforward \(F*{\ast} X\) is
+\(X\) is a vector field on \(N\), then the pushforward \(F_{\ast} X\) is
 defined. By definition, the vector field \(X\) on \(N\) is \(F\)-related
-to the vector field \(F*{\ast} X\) on \(M\). In subsection later, we
+to the vector field \(F_{\ast} X\) on \(M\). In subsection later, we
 will see examples of vector fields related by a map \(F\) that is not a
 diffeomorphism.
 </p>
@@ -1033,7 +1033,7 @@ should play a key role.
 <p>
 The tangent space at the identity of a Lie group \(G\) turns out to have
 a canonical bracket operation \([,]\) that makes it into a Lie algebra.
-The tangent space \(T*e G\) with the bracket is called the Lie algebra
+The tangent space \(T_e G\) with the bracket is called the Lie algebra
 of the Lie group \(G\). The Lie algebra of a Lie group encodes within it
 much information about the group.
 向量空间加一个括号积得到一个李代数。
@@ -1119,14 +1119,14 @@ This may be rewritten in functional notation as
 </p>
 <table width="100%">
 <tr>
-<td width="100%" align="center">\(\displaystyle F \circ \ell_h = \ell*{F (h)} \circ
+<td width="100%" align="center">\(\displaystyle F \circ \ell_h = \ell_{F (h)} \circ
 F \quad
 \operatorname{for}\operatorname{all}h \in H.\)</td>
 <td align="right">(1.2)</td>
 </tr>
 </table>
 <p>
-Let \(e*H, e_G\) be the identity elements of \(H\) and \(G\),
+Let \(e_H, e_G\) be the identity elements of \(H\) and \(G\),
 respectively. Taking \(h\) and \(x\) in (1.1) to be the identity
 \(e_H\), it follows that \(F (e_H) = e_G\).
 </p>
@@ -1228,16 +1228,16 @@ canonically isomorphic to \(S_n\) itself, because \(S_n\) is a vector
 space. Thus, the image of the differential
 </p>
 <center>
-\(\displaystyle f*{\ast, A} : T*A (\operatorname{GL} (n, \mathbb{R}))
-\rightarrow T*{f (A)}
-(S*n) \simeq S_n\)
+\(\displaystyle F_{\ast, A} : T_A (\operatorname{GL} (n, \mathbb{R}))
+\rightarrow T_{f (A)}
+(S_n) \simeq S_n\)
 </center>
 <p>
-lies in \(S_n\). For the differential \(f*{\ast, A}\) to be surjective,
+lies in \(S_n\). For the differential \(F_{\ast, A}\) to be surjective,
 the target space of \(f\) should be as small as possible.
 </p>
 <p>
-We compute explicitly the differential \(f*{\ast, A}\). Since
+We compute explicitly the differential \(F_{\ast, A}\). Since
 \(\operatorname{GL} (n, \mathbb{R})\) is an open subset of
 \(\mathbb{R}^{n \times n}\), its tangent space at any \(A \in
 \operatorname{GL} (n, \mathbb{R})\) is
@@ -1254,7 +1254,7 @@ For any matrix \(X \in \mathbb{R}^{n \times n}\), there is a curve \(c
 </p>
 <center>
 \(\displaystyle \begin{array}{rl}
-f*{\ast, A} (X) & = \frac{d}{d x} f
+F_{\ast, A} (X) & = \frac{d}{d x} f
 (c (t)) |_{t = 0}\\
 & = \frac{d}{d t} c (t)^T c (t) |_{t = 0}\\
 & =
@@ -1265,7 +1265,7 @@ X.
 </center>
 <p>
 The surjectivity of \(f_{\ast, A}\) becomes the following question: if
-\(A \in O (n)\) and \(B\) is any symmetric matrix in \(S*n\), does there
+\(A \in O (n)\) and \(B\) is any symmetric matrix in \(S_n\), does there
 exist an \(n \times n\) matrix \(X\) such that
 </p>
 <center>
@@ -1288,7 +1288,7 @@ for then
 </center>
 <p>
 Equation (1.3) clearly has a solution: \(X = \frac{1}{2} (A^T)^{- 1}
-B\). So \(f*{\ast, A} : T_A (\operatorname{GL} (n, \mathbb{R}))
+B\). So \(F_{\ast, A} : T_A (\operatorname{GL} (n, \mathbb{R}))
 \rightarrow S_n\) is surjective for all \(A \in O (n)\), and \(O (n)\)
 is a regular level set of \(f\). By the regular level set theorem, \(O
 (n)\) is a regular submanifold of \(\operatorname{GL} (n, \mathbb{R})\)
@@ -1520,6 +1520,7 @@ of dimension
       A^{- 1}) = \det
 
 (\lambda I - X) .\)
+
 </center>
 <center>
 \(\displaystyle \det \left( \lambda I - \left[ \begin{array}{ccc}
@@ -1527,9 +1528,10 @@ of dimension
       \lambda_1 &  & \ast\\
 
 & \ddots & \\
-0 & & \lambda*n
+0 & & \lambda_{n}
 \end{array}
-\right] \right) = \prod*{i = 1}^n (\lambda - \lambda*i) .\)
+\right] \right) = \prod_{i = 1}^n (\lambda - \lambda_i) .\)
+
 </center>
 <p style="margin-top: 1em; margin-bottom: 1em">
 <strong>命题 <class style="font-style: normal">1.19</class>. </strong><i>The
@@ -1551,7 +1553,7 @@ allows us to write down explicitly a curve in \(\operatorname{GL} (n,
 </center>
 <table width="100%">
 <tr>
-<td width="100%" align="center">\(\displaystyle c' (0) = \frac{d}{d t} e^{t X} |*{t
+<td width="100%" align="center">\(\displaystyle c' (0) = \left.\frac{d}{d t} e^{t X} \right|_{t
 = 0} = X e^{t X} |_{t = 0} = X.\)</td>
 <td align="right">(1.6)</td>
 </tr>
@@ -1567,13 +1569,12 @@ tangent space \(T_1 \mathbb{R}\) to \(\mathbb{R}\) at 1 is
 \(\mathbb{R}\). So
 </p>
 <center>
-\(\displaystyle \det_{\ast, I} : \mathbb{R}^{n \times n} \rightarrow
+\(\displaystyle \text{det}_{\ast, I} : \mathbb{R}^{n \times n} \rightarrow
 \mathbb{R}.\)
 </center>
 <p style="margin-top: 1em; margin-bottom: 1em">
 <strong>命题 <class style="font-style: normal">1.21</class>. </strong><i>For any
-\(X \in \mathbb{R}^{n \times n}\), \(\det*{\ast, I} (X)
-=\operatorname{tr}X\).</i>
+\(X \in \mathbb{R}^{n \times n}\), \(\det_{\ast, I} (X) =\operatorname{tr}X\).</i>
 </p>
 <p style="margin-top: 1em">
 <strong>例 <class style="font-style: normal">1.22</class>. </strong>Special orthogonal
@@ -1612,8 +1613,8 @@ The unitary group \(U (n)\) is defined to be
 </center>
 <p style="margin-bottom: 1em">
 where \(\bar{A} \) denotes the complex conjugate of \(A\), the matrix
-obtained from \(A\) by conjugating every entry of \(A\): \((\bar{A})*{i
-j} = \bar{a}\_{i j}\). Show that \(U (n)\) is a regular submanifold of
+obtained from \(A\) by conjugating every entry of \(A\): \((\bar{A})_{i
+j} = \bar{a}_{i j}\). Show that \(U (n)\) is a regular submanifold of
 \(\operatorname{GL} (n, \mathbb{C})\) and that \(\dim U (n) = n^2\).
 </p>
 <p style="margin-top: 1em">
@@ -1640,6 +1641,7 @@ b & \bar{a}
 \right] \in \mathbb{C}^{2 \times 2} |a \bar{a} + b \bar{b} =
 1
 \right\} .\)
+
 </center>
 <p>
 Hint: write out the condition \(A^{- 1} = \bar{A}^T\) in terms of
@@ -1669,7 +1671,7 @@ Let \(J\) be a \(2 n \times 2 n\) matrix
 \(\displaystyle J = \left[ \begin{array}{cc}
 0 & I_n\\
 
-- I*n &
+- I_n &
 0
 \end{array} \right],\)
 </center>
@@ -1718,12 +1720,12 @@ The diffeomorphism \(\ell_g\) takes the identity element \(e\) to the
 element \(g\) and induces an isomorphism of tangent spaces
 </p>
 <center>
-\(\displaystyle \ell*{g \ast} = (\ell*g)*{\ast, e} : T*e (G) \rightarrow
+\(\displaystyle \ell_{g \ast} = (\ell_g)_{\ast, e} : T_e (G) \rightarrow
 T_g (G) .\)
 </center>
 <p>
 Thus, if we can describe the tangent space \(T_e (G)\) at the identity,
-then \(\ell*{g \ast} T*e (G)\) will give a description of the tangent
+then \(\ell_{g \ast} T_e (G)\) will give a description of the tangent
 space \(T_g (G)\) at any point \(g \in G\).
 </p>
 <p style="margin-top: 1em">
@@ -1734,7 +1736,7 @@ to \(\operatorname{GL} (n, \mathbb{R}) \operatorname{at}I\)).
 We identified the tangent space of \(\operatorname{GL} (n, \mathbb{R})\)
 at any point \(g \in \operatorname{GL} (n, \mathbb{R})\) as
 \(\mathbb{R}^{n \times n}\), the vector space of all \(n \times n\) real
-matrices.We also identified the isomorphism \(\ell*{g \ast} : T*I
+matrices.We also identified the isomorphism \(\ell_{g \ast} : T_I
 (\operatorname{GL} (n, \mathbb{R})) \rightarrow T_g
 (\operatorname{GL}
 (n, \mathbb{R}))\) as left multiplication by \(g : X \mapsto g X\).
@@ -1758,14 +1760,14 @@ differentiate both sides with respect to \(t\) and evaluate at \(t =
 </p>
 <center>
 \(\displaystyle \begin{array}{rl}
-\frac{d}{d t} \det (c (t)) |*{t = 0}
-& = (\det \circ c)_{\ast} \left(
-\frac{d}{d t} |\_0 \right)\\
+\left. \frac{d}{d t} \det (c (t)) \right|_{t = 0}
+& = (\text{det} \circ c)_{\ast} \left(
+\frac{d}{d t} |_0 \right)\\
 & =
-\det_{\ast, I} \left( c*{\ast} \frac{d}{d t} |\_0 \right)\\
+\text{det}_{\ast, I} \left( c_{\ast} \frac{d}{d t} |_0 \right)\\
 & =
-\det*{\ast, I} (c' (0))\\
-& = \det*{\ast, I} (X)\\
+\text{det}_{\ast, I} (c' (0))\\
+& = \text{det}_{\ast, I} (X)\\
 &
 =\operatorname{tr} (X)
 \end{array}\)
@@ -1774,10 +1776,10 @@ differentiate both sides with respect to \(t\) and evaluate at \(t =
 Thus,
 </p>
 <center>
-\(\displaystyle \operatorname{tr} (X) = \frac{d}{d t} 1|*{t = 0} = 0.\)
+\(\displaystyle \operatorname{tr} (X) = \frac{d}{d t} 1|_{t = 0} = 0.\)
 </center>
 <p>
-So the tangent space \(T*I (\operatorname{SL} (n, \mathbb{R}))\) is
+So the tangent space \(T_I (\operatorname{SL} (n, \mathbb{R}))\) is
 contained in the subspace \(V\) of \(\mathbb{R}^{n \times n}\) defined
 by
 </p>
@@ -1856,16 +1858,16 @@ value \(X_e\) at the identity, since
 </p>
 <table width="100%">
 <tr>
-<td width="100%" align="center">\(\displaystyle X_g = \ell*{g \ast} (X*e) .\)</td>
+<td width="100%" align="center">\(\displaystyle X_g = \ell_{g \ast} (X_e) .\)</td>
 <td align="right">(2.2)</td>
 </tr>
 </table>
 <p>
 Conversely, given a tangent vector \(A \in T_e (G)\), we can define a
-vector field \(\tilde{A}\) on \(G\) by (2.2):\((\tilde{A})\_g = \ell*{g
+vector field \(\tilde{A}\) on \(G\) by (2.2):\((\tilde{A})_g = \ell_{g
 \ast} A\). So defined, the vector field \(\tilde{A}\) is left-invariant.
 We call \(\tilde{A}\) the left-invariant vector field on \(G\) generated
-by \(A \in T*e G\). Let \(L (G)\) be the vector space of all
+by \(A \in T_e G\). Let \(L (G)\) be the vector space of all
 left-invariant vector fields on \(G\). Then there is a one-to-one
 correspondence
 </p>
@@ -1892,12 +1894,11 @@ vector fields on \(\mathbb{R}\)).
 \(\displaystyle \ell_g (x) = g + x.\)
 </center>
 <p>
-Let us compute \(\ell*{g \ast} (d / d x|_0)\).
+Let us compute \(\ell_{g \ast} (d / d x|_0)\).
 </p>
 <table width="100%">
 <tr>
-<td width="100%" align="center">\(\displaystyle \ell_{g \ast} \left( \frac{d}{d x}
-|_0 \right) = a \frac{d}{d x} |\_g .\)</td>
+<td width="100%" align="center">\(\displaystyle \ell_{g \ast} \left( \frac{d}{d x}|_0 \right) = a \frac{d}{d x} |_g .\)</td>
 <td align="right">(2.4)</td>
 </tr>
 </table>
@@ -1909,8 +1910,7 @@ Thus,
 </p>
 <p style="margin-bottom: 1em">
 <center>
-\(\displaystyle \ell_{g \ast} \left( \frac{d}{d x} |_0 \right) =
-\frac{d}{d x} |\_g .\)
+\(\displaystyle \ell_{g \ast} \left( \frac{d}{d x} |_0 \right) = \frac{d}{d x} |_g .\)
 </center>
 </p>
 <p style="margin-top: 1em">
@@ -1920,7 +1920,7 @@ vector fields on \(\operatorname{GL} (n, \mathbb{R})\)).
 <table style="margin-bottom: 1em" width="100%">
 <tr>
 <td width="100%" align="center">\(\displaystyle \sum a_{i j}
-\frac{\partial}{\partial x*{i j}} |\_g \leftrightarrow [a*{i j}]
+\frac{\partial}{\partial x_{i j}} |_g \leftrightarrow [a_{i j}]
 .\)</td>
 <td align="right">(2.5)</td>
 </tr>
@@ -1949,7 +1949,7 @@ all \(C^{\infty}\) vector fields on \(G\).
 </p>
 <table width="100%">
 <tr>
-<td width="100%" align="center">\(\displaystyle [A, B] = [\tilde{A}, \tilde{B}]_e
+<td width="100%" align="center">\( [A, B] = [\tilde{A}, \tilde{B}]_e
 .\)</td>
 <td align="right">(2.6)</td>
 </tr>
@@ -1973,13 +1973,13 @@ We identified a tangent vector in \(T_I (\operatorname{GL} (n,
 <table width="100%">
 <tr>
 <td width="100%" align="center">\(\displaystyle \sum a_{i j}
-\frac{\partial}{\partial x*{i j}} |\_I \leftrightarrow [a*{i j}]
+\frac{\partial}{\partial x_{i j}} |_I \leftrightarrow [a_{i j}]
 .\)</td>
 <td align="right">(2.7)</td>
 </tr>
 </table>
 <p>
-The tangent space \(T*I \operatorname{GL} (n, \mathbb{R})\) with its Lie
+The tangent space \(T_I \operatorname{GL} (n, \mathbb{R})\) with its Lie
 algebra structure is denoted by \(\mathfrak{g \mathfrak{l}} (n,
 \mathbb{R})\).
 </p>
@@ -1989,10 +1989,10 @@ algebra structure is denoted by \(\mathfrak{g \mathfrak{l}} (n,
 </p>
 <p>
 <i><center>
-\(\displaystyle A = \sum a*{i j} \frac{\partial}{\partial x*{i j}}
-\mathrel{|}\_I, \quad B =
-\sum b*{i j} \frac{\partial}{\partial x*{i
-j}} |\_I \in T_I (\operatorname{GL}
+\(\displaystyle A = \sum a_{i j} \frac{\partial}{\partial x_{i j}}
+\mathrel{|}_I, \quad B =
+\sum b_{i j} \frac{\partial}{\partial x_{i
+j}} |_I \in T_I (\operatorname{GL}
 (n, \mathbb{R}))\)
 </center></i>
 </p>
@@ -2001,9 +2001,9 @@ j}} |\_I \in T_I (\operatorname{GL}
 </p>
 <i><table width="100%">
 <tr>
-<td width="100%" align="center">\(\displaystyle [A, B] = [\tilde{A}, \tilde{B}]\_I =
-\sum c*{i j} \frac{\partial}{\partial x*{i
-j}} |\_I,\)</td>
+<td width="100%" align="center">\(\displaystyle [A, B] = [\tilde{A}, \tilde{B}]_I =
+\sum c_{i j} \frac{\partial}{\partial x_{i
+j}} |_I,\)</td>
 <td align="right">(2.8)</td>
 </tr>
 </table></i>
@@ -2012,7 +2012,7 @@ j}} |\_I,\)</td>
 </p>
 <p>
 <i><center>
-\(\displaystyle c*{i j} = \sum*k a*{i k} b*{k j} - b*{i k} a*{k j} .\)
+\(\displaystyle c_{i j} = \sum_k a_{i k} b_{k j} - b_{i k} a_{k j} .\)
 </center></i>
 </p>
 <p>
@@ -2030,35 +2030,35 @@ Fields<span style="margin-left: 1em"></span></h3>
 <center>
 <script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "amsfonts": "", "tikz-cd": "" }'>
 \begin{tikzcd}
-T_eH \arrow[r, "{F*{_,e}}"] \arrow[d, "\simeq"] & T*eG \arrow[d, "\simeq"] & {} & A \arrow[r, maps to] \arrow[d, maps to] & {F*{_,e}A} \arrow[d, maps to] \\
-L(H) \arrow[r, dashed] & L(G) & {} & \tilde{A} \arrow[r, dashed, maps to] & {(F*{\*,e}A)\tilde{}}  
+T_eH \arrow[r, "{F_{_,e}}"] \arrow[d, "\simeq"] & T_eG \arrow[d, "\simeq"] & {} & A \arrow[r, maps to] \arrow[d, maps to] & {F_{_,e}A} \arrow[d, maps to] \\
+L(H) \arrow[r, dashed] & L(G) & {} & \tilde{A} \arrow[r, dashed, maps to] & {(F_{\*,e}A)\tilde{}}  
  \end{tikzcd}
 </script>
 </center>
 </p>
 <p style="margin-top: 1em">
 <strong>定义 <class style="font-style: normal">2.12</class>. </strong><i>Let \(F
-: H \rightarrow G\) be a Lie group homomorphism. Define \(F*{\ast} : L
+: H \rightarrow G\) be a Lie group homomorphism. Define \(F_{\ast} : L
 (H) \rightarrow L (G)\) by</i>
 </p>
 <p>
 <i><center>
-\(\displaystyle F*{\ast} (\tilde{A}) = (F*{\ast, e} A) \widetilde{}\)
+\(\displaystyle F_{\ast} (\tilde{A}) = (F_{\ast, e} A) \widetilde{}\)
 </center></i>
 </p>
 <p style="margin-bottom: 1em">
-<i>for all \(A \in T*e H\).</i>
+<i>for all \(A \in T_e H\).</i>
 </p>
 <p style="margin-top: 1em; margin-bottom: 1em">
 <strong>命题 <class style="font-style: normal">2.13</class>. </strong><i>If \(F
 : H \rightarrow G\) is a Lie group homomorphism and \(X\) is a
 left-invariant vector field on \(H\), then the left-invariant vector
-field \(F*{\ast} X\) on \(G\) is \(F\)-related to the left-invariant
+field \(F_{\ast} X\) on \(G\) is \(F\)-related to the left-invariant
 vector field \(X\).</i>
 </p>
 <table width="100%">
 <tr>
-<td width="100%" align="center">\(\displaystyle F*{\ast, h} (X_h) = (F*{\ast} X)_{F
+<td width="100%" align="center">\(\displaystyle F_{\ast, h} (X_h) = (F_{\ast} X)_{F
 (h)} .\)</td>
 <td align="right">(2.9)</td>
 </tr>
@@ -2072,7 +2072,7 @@ at the identity:</i>
 </p>
 <p>
 <i><center>
-\(\displaystyle F_{\ast} = F*{\ast, e} : T_e H \rightarrow T_e G,\)
+\(\displaystyle F_{\ast} = F_{\ast, e} : T_e H \rightarrow T_e G,\)
 </center></i>
 </p>
 <p>
@@ -2081,7 +2081,7 @@ at the identity:</i>
 </p>
 <p style="margin-bottom: 1em">
 <i><center>
-\(\displaystyle F*{\ast} [A, B] = [F_{\ast} A, F_{\ast} B] .\)
+\(\displaystyle F_{\ast} [A, B] = [F_{\ast} A, F_{\ast} B] .\)
 </center></i>
 </p>
 <p>
@@ -2089,21 +2089,21 @@ Suppose \(H\) is a Lie subgroup of a Lie group \(G\), with inclusion map
 \(i : H \rightarrow G\). Since \(i\) is an immersion, its differential
 </p>
 <center>
-\(\displaystyle i*{\ast} : T_e H \rightarrow T_e G\)
+\(\displaystyle i_{\ast} : T_e H \rightarrow T_e G\)
 </center>
 <p>
 is injective.
 </p>
 <table width="100%">
 <tr>
-<td width="100%" align="center">\(\displaystyle i*{\ast} ([X, Y]_{T_e H}) =
-[i_{\ast} X, i*{\ast} Y]*{T*e G} .\)</td>
+<td width="100%" align="center">\( i_{\ast} ([X, Y]_{T_e H}) =
+[i_{\ast} X, i_{\ast} Y]_{T_e G} .\)</td>
 <td align="right">(2.10)</td>
 </tr>
 </table>
 <p>
 This shows that if \(T_e H\) is identified with a subspace of \(T_e G\)
-via \(i*{\ast}\), then the bracket on \(T_e H\) is the restriction of
+via \(i_{\ast}\), then the bracket on \(T_e H\) is the restriction of
 the bracket on \(T_e G\) to \(T_e H\).
 </p>
 <p>
