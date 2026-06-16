@@ -220,7 +220,7 @@ categories: math
     <ol>
       <li>
         <p>
-          考虑Kantorovich的对偶问题，最大化这个泛函
+          1. 考虑Kantorovich的对偶问题，最大化这个泛函
         </p>
         <table width="100%">
           <tr>
@@ -312,7 +312,7 @@ categories: math
       </li>
       <li>
         <p>
-          从这个构造过程我们有
+          2. 从这个构造过程我们有
         </p>
         <table width="100%">
           <tr>
@@ -387,7 +387,7 @@ categories: math
       </li>
       <li>
         <p>
-          下面我们证明映射 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mo>=</mo><msub><mi>s</mi><mi>c</mi></msub></mrow></math>
+          3. 下面我们证明映射 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mo>=</mo><msub><mi>s</mi><mi>c</mi></msub></mrow></math>
           (2.11) 满足保测度条件
           (1.3)。实际上，对任意连续函数 <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math>
           和小常数 <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ε</mi></math>，令
@@ -428,8 +428,7 @@ categories: math
         <p>
           因为 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo form="prefix">(</mo><mi>φ</mi><mo>,</mo><mi>ψ</mi><mo
           form="postfix">)</mo></mrow></math> 最大化泛函 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>I</mi><mrow><mo
-          form="prefix">(</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo form="postfix">)</mo></mrow></mrow></math>，我们可知
-          
+          form="prefix">(</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo form="postfix">)</mo></mrow></mrow></math>，我们可知 
         </p>
         <center>
           <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mtable columnalign="right left">
@@ -457,7 +456,7 @@ categories: math
       </li>
       <li>
         <p>
-          我们有，对任意 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mo>∈</mo><mi>𝒮</mi><mo>,</mo><mrow><mo
+          4. 我们有，对任意 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mo>∈</mo><mi>𝒮</mi><mo>,</mo><mrow><mo
           form="prefix">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo form="postfix">)</mo></mrow><mo>∈</mo><mi>𝒦</mi></mrow></math>，
         </p>
         <center>
@@ -537,11 +536,7 @@ categories: math
       对几乎任意 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo>∈</mo><mi>supp</mi><mo>&ApplyFunction;</mo><mi>f</mi></mrow></math>。因此
       <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>t</mi><mrow><mo form="prefix">(</mo><mi>x</mi><mo form="postfix">)</mo></mrow><mo>=</mo><msub><mi>s</mi><mi>c</mi></msub><mrow><mo
       form="prefix">(</mo><mi>x</mi><mo form="postfix">)</mo></mrow></mrow></math>对几乎任意
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo>∈</mo><mi>supp</mi><mo>&ApplyFunction;</mo><mi>f</mi></mrow></math>，根据step
-      2.
-    </p>
-    <p>
-      
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo>∈</mo><mi>supp</mi><mo>&ApplyFunction;</mo><mi>f</mi></mrow></math>，根据step 2.
     </p>
     <p>
       <div style="display: inline">
