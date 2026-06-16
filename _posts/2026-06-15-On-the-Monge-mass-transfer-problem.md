@@ -373,7 +373,7 @@ categories: math
         <table width="100%">
           <tr>
             <td align="center" width="100%"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mrow><msub><mi>s</mi><mi>c</mi></msub><mrow><mo
-            form="prefix">(</mo><mi>x</mi><mo form="postfix">)</mo></mrow><mo>?</mo><mi>s</mi><mrow><mo
+            form="prefix">(</mo><mi>x</mi><mo form="postfix">)</mo></mrow><mo>=:</mo><mi>s</mi><mrow><mo
             form="prefix">(</mo><mi>x</mi><mo form="postfix">)</mo></mrow><mo>=</mo><mi>x</mi><mo>-</mo><msup><mrow><mo
             form="prefix">(</mo><mi>D</mi><mo>&ApplyFunction;</mo><mi>c</mi><mo form="postfix">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mrow><mo
             form="prefix">(</mo><mi>D</mi><mo>&ApplyFunction;</mo><mi>φ</mi><mrow><mo
