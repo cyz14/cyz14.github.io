@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Yazheng's Page # the website title (if blank, full name will be used instead)
+title: Yazheng's Notes # the website title (if blank, full name will be used instead)
 first_name: Yazheng
 middle_name:
 last_name: Chen
@@ -122,8 +122,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Yazheng's Website # blog_name will be displayed in your blog page
-blog_description: notes mainly for academics
+blog_name: A Geometry Site # blog_name will be displayed in your blog page
+blog_description: my notes
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
