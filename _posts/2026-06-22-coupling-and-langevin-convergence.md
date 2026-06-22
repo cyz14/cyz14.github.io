@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Three example of coupling techniques, Cédric Villani
-date: 2026-06-222 00:25:00
+date: 2026-06-22 00:25:00
 description: part of chapter 2 of Optimal Transport, Old and New
 tags: OT
 categories: math
