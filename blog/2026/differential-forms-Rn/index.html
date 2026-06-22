@@ -1,0 +1,405 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Differential Forms, Symmetrizing and Alternating Operators | Yazheng's Notes </title> <meta name="author" content="Yazheng Chen"> <meta name="description" content="notes of Chap 1 of The Introduction to Manifolds, Loring W. Tu"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://cyz14.github.io/blog/2026/differential-forms-Rn/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link defer rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@1.0.63/dist/fonts.css" crossorigin="anonymous"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Yazheng's Notes </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">courses </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/teaching/">beginners</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/ot_course/">OT</a> </div> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Differential Forms, Symmetrizing and Alternating Operators</h1> <p class="post-meta"> Created on May 30, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>   ·   <a href="/blog/tag/differential"> <i class="fa-solid fa-hashtag fa-sm"></i> differential</a>   <a href="/blog/tag/forms"> <i class="fa-solid fa-hashtag fa-sm"></i> forms</a>   ·   <a href="/blog/category/math"> <i class="fa-solid fa-tag fa-sm"></i> math</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <p>这两天读 Loring W. Tu 老师的 The Introduction to Manifolds.</p> <p>第3章 The Exterior Algebra of Multicovectors，第4章 Differential Forms on $\mathbb{R}^n$。直接从这里开始，记录一些重要概念。</p> <h2 id="一些历史">一些历史</h2> <p>外代数最早是 Hermann Grassmann，一个中学老师发明的。但是他活着的时候没有受到足够的重视，因为当时领头的数学家们比如莫比乌斯和库默尔等人没有理解他的工作。直到20世纪，嘉当意识到微分形式的代数基础就是外代数。从这个意义上讲，我们也是继承了 Grassmann 的学术。</p> <h2 id="对偶空间-dual-space">对偶空间 Dual Space</h2> <p>$Hom(V,W)$ 表示所有线性映射 $f:V\rightarrow W$的向量空间。</p> <div class="definition" title="Dual Space"> $V$ 的对偶空间 $V^{\vee}$ 定义为 $V$ 上的实值线性函数: $$V^{\vee}=Hom(V,\mathbb{R})$$ 假设 $V$ 为有限维向量空间。令 $e_1,..,e_n$ 为 $V$ 的一组基底。 每个 $v \in V$ 可以表示为 $v=\sum v^ie_i, v_i\in \mathbb{R}$. 令 $\alpha^i:V\rightarrow \mathbb{R}$ 表示取第 $i$ 个坐标的线性函数， $\alpha^i(v)=v^i$，则 $$\alpha^i(e_j)=\delta_j^i.$$ $\alpha^1,..,\alpha^n$ 构成了 $V^{\vee}$ 的一组基底。对偶空间和 $V$ 有相同的维度。 </div> <h2 id="symmetrizing-and-alternating-operators">Symmetrizing and Alternating Operators</h2> <p>给一个任意 $k$-linear function $f$ on a vector space $V$，there is a way to make a symmetric $k$-linear function $Sf$ from it \((Sf)(v_1,..,v_k)=\sum_{\sigma\in S_k}f(v_{\sigma(1))},\cdots,v_{\sigma(k)})\) 简写为 \(Sf=\sum_{\sigma\in S_k}\sigma f.\)</p> <p>类似地，有一个办法得到一个反对称的 $k$-linear 函数。定义 \(Af=\sum_{\sigma\in S_k}(\text{sgn } \sigma)\sigma f.\)</p> <div class="proposition"> $Sf$ 是对称的，$Af$ 是交错（反对称）的。 </div> <div class="proof"> 这是直接验证定义的结果。对任意 $\tau \in S_k$， $$\tau(Sf) = \sum_{\sigma \in S_k} \tau(\sigma f) = \sum_{\sigma \in S_k} (\tau\sigma) f = Sf,$$ 而 $\tau(Af) = \sum (\text{sgn } \sigma)(\tau\sigma) f = (\text{sgn } \tau) Af$。 </div> <h2 id="tensor-product">Tensor Product</h2> <p>$f$ be a $k$-linear function and $g$ an $l$-linear function on $V$. Their tensor product is the $(k+l)$-linear function $f \otimes g$ defined by \((f \otimes g)(v_1,\cdots,v_{k+l})=f(v_1,\cdots,v_k)g(v_{k+1},\cdots,v_{k+l}).\)</p> <div class="example" title="Bilinear maps"> $\langle, \rangle : V \times V \rightarrow \mathbb{R}$ a bilinear map on $V$. Set $g_{i j} = \langle e_i, e_j \rangle \in \mathbb{R}$. By bilinearity, we can express $\langle, \rangle$ in terms of the tensor product $$ \langle v, w \rangle = \sum v^i w^j \langle e_i, e_j \rangle = \sum \alpha^i (v) \alpha^j (w) g_{i j} = \sum g_{i j} (\alpha^i \otimes \alpha^j) (v, w) . $$ </div> <h2 id="the-wedge-product">The Wedge Product</h2> <p>$f\in A_k(V)$ and $g \in A_l(V)$,</p> \[f\wedge g=\frac{1}{k!l!}A(f \otimes g).\] \[f\wedge g=(-1)^{kl}g \wedge f.\] \[f\wedge g=\frac{1}{k!l!}A(f \otimes g).\] <div class="proposition" title="Associativity of the wedge product"> $$(f\wedge g)\wedge h=f\wedge (g \wedge h).$$ </div> <div class="corollary"> $$f\wedge g\wedge h=\frac{1}{k!l!m!}A(f\otimes g \otimes h)$$ </div> <div class="proposition" title="Wedge product of 1-covectors"> If $\alpha^1,\cdots,\alpha^k$ are linear functions on a vector space $V$ and $v_1,\cdots, v_k \in V$, then $$(\alpha^1 \wedge \cdots \wedge \alpha^k)(v_1, \cdots, v_k)= \det [\alpha^i(v_j)].$$ </div> <h1 id="4-differential-forms-on-mathbbrn">4. Differential Forms on $\mathbb{R}^n$</h1> <p>向量场给欧氏空间开集$U$的每个点分配一个切向量，对偶地，一个微分$k$形式给每个点的切空间分配一个 $k$-covector。外积 (Wedge product) 被定义为 multicovectors 的逐点外积。微分形式在开集上定义，所以有微分形式的微分的定义，由三条性质唯一确定，叫做 exterior derivative。尽管我们在 $\mathbb{R}^n$ 上定义的，但外微分可以证明是与坐标无关的，我们稍后会看到，因此是对流形而言内蕴的。微分形式将 Grassmann 的外代数从一点的切空间扩展到整个流形。自从20世纪 Cartan 和 Poincaré 发明出来后，微分形式的微积分已经在几何、拓扑和物理中带来了深远影响。物理概念比如电和磁最适合用微分形式来描述。</p> <h2 id="differentail-1-forms-and-differential-as-a-function">Differentail 1-Forms and Differential as a Function</h2> <p>cotangent space to $\mathbb{R}^n$ at $p$, denoted by $T_p^{\ast}(\mathbb{R}^n)$ or $T_p^{\ast}\mathbb{R}^n$, 定义为 dual space $(T_p\mathbb{R}^n)^\vee$ of the tanget space $T_p(\mathbb{R}^n)$.</p> \[\omega : U \rightarrow \bigcup_{p \in U} T_p^{\ast} (\mathbb{R}^n)\] \[p \mapsto \omega_p \in T_p^{\ast} (\mathbb{R}^n)\] \[(d f)_p (X_p) = X_p f\] <p>切向量基底 $\frac{\partial }{\partial x^i}$,<br> 对偶空间基底 $dx^i$.</p> <p>$\langle X_p, f \rangle$</p> <p>$df = \sum \frac{\partial f}{\partial x^i} dx^i$</p> <h2 id="differential-k-forms">Differential $k$-Forms</h2> <p>a differentail form $\omega$ of degree $k$ or a $k$-form on an open subset $U$ of $\mathbb{R}^n$</p> <p>an alternating $k$-linear function on the tanget space $T_p(\mathbb{R}^n)$</p> <p>$\omega_p \in A_k(T_p\mathbb{R}^n)$</p> \[dx_p^I=dx_p^{i_1}\wedge ... \wedge dx_p^{i_k}, \quad 1\leq i_1 \lt ..\lt i_k \leq n\] <p>at each point $p$ in $U$, $\omega_p$ is a linear combination \(\omega_p=\sum a_I(p)dx_p^I,\quad 1\leq i_1 \lt ..\lt i_k \leq n\)</p> <p>and a $k$-form $\omega$ on $U$ is a linear combination \(\omega=\sum a_I dx^I\)</p> <h2 id="the-exterior-derivative">The Exterior Derivative</h2> <p>$f \in C^{\infty}(U)$, $df\in \Omega^1(U)$</p> \[df=\sum \frac{\partial f}{\partial x^i}d x^i\] \[d \omega=\sum_I da_I \wedge dx^I=\sum_I (\sum_j \frac{\partial a^I}{\partial x^j}dx^j)\wedge dx^I\in\Omega^{k+1}(U)\] <p>$A$ be a graded algebra over field $K$. Antiderivation of the graded algebra $A$ is a $K$-linear map $D:A-&gt;A$ such that for $a\in A^k$ and $b\in A^l$ \(D(ab)=(Da)b+(-1)^k aDb\)</p> <p>满足三条性质</p> <p>(i) exterior differentiation $d:\Omega^{\ast}(U)-&gt;\Omega^{\ast}(U)$ is antiderivation of degree 1:</p> \[d(\omega \wedge \tau)=(d\omega)\wedge \tau+(-1)^{deg\space \omega}\omega\wedge d \tau\] <p>(ii) $d^2=0$ ;<br> (iii) If $f\in C^{\infty}(U)$ and $X\in \mathfrak{X}(U)$, then $(df)(X)=Xf.$</p> <p>这三条性质唯一确定了外微分。</p> <h2 id="closed-forms-and-exact-forms">Closed Forms and Exact Forms</h2> <p>Closed: $d \omega=0$.</p> <p>Exact: if there is a $(k-1)$-form $\tau$ such that $\omega = d \tau$.</p> <div style="text-align:center"> <script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "amsfonts": "", "tikz-cd": "" }'>
+\begin{tikzcd}
+  0 \arrow[r] &
+  \Omega^0(U) \arrow[r,"d"] &
+  \Omega^1(U) \arrow[r,"d"] &
+  \Omega^2(U) \arrow[r,"d"] &
+  \cdots
+\end{tikzcd}
+</script> </div> <h2 id="applications-to-vector-calculus">Applications to Vector Calculus</h2> <p>函数 $F=\langle P,Q,R \rangle:U\rightarrow \mathbb{R}^3$</p> <p>$F_p\in \mathbb{R}^3\simeq T_p\mathbb{R}^3$</p> \[\text{grad} f = \left[\begin{array}{c} \partial / \partial x\\ \partial / \partial y\\ \partial / \partial z \end{array}\right] f = \left[\begin{array}{c} f_x\\ f_y\\ f_z \end{array}\right]\] \[\text{curl} \left[\begin{array}{c} P\\ Q\\ R \end{array}\right] = \left[\begin{array}{c} \partial / \partial x\\ \partial / \partial y\\ \partial / \partial z \end{array}\right] \times \left[\begin{array}{c} P\\ Q\\ R \end{array}\right] = \left[\begin{array}{c} R_y - Q_z\\ - (R_x - P_z)\\ Q_x - P_y \end{array}\right]\] \[\text{div} \left[\begin{array}{c} P\\ Q\\ R \end{array}\right] = \left[\begin{array}{c} \partial / \partial x\\ \partial / \partial y\\ \partial / \partial z \end{array}\right] \cdot \left[\begin{array}{c} P\\ Q\\ R \end{array}\right] = P_x + Q_y + R_z\] <p>在 $\mathbb{R}^3$ 的开子集 $U$ 上，有以下关系</p> <div style="text-align:center"> <script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "amsfonts": "", "tikz-cd": "" }'>
+  \begin{tikzcd}
+    \Omega^0(U) \arrow[r, "d"] \arrow[d, "\simeq"] &
+    \Omega^1(U) \arrow[r, "d"] \arrow[d, "\simeq"] &
+    \Omega^2(U) \arrow[r, "d"] \arrow[d, "\simeq"] &
+    \Omega^3(U) \arrow[d, "\simeq"] \\
+    C^{\infty}(U) \arrow[r, "\operatorname{grad}"] &
+    \mathcal{X}(U) \arrow[r, "\operatorname{curl}"] &
+    \mathcal{X}(U) \arrow[r, "\operatorname{div}"] &
+    C^{\infty}(U)
+  \end{tikzcd}
+</script> </div> <p>One measure of the failure of a closed $k$-form to be exact is the quotient vector space</p> \[H^k (U) := \frac{\{ \text{closed} k - \text{forms} \text{on} U \}}{\{ \text{exact} k - \text{forms} \text{on} U \}}\] <p>tikz-cd 适合绘制这种 commutative diagram，但是 mathjax 对这个的支持不是很好，导出SVG再嵌入的话字体跟正文公式完全不匹配。我看最近ai-folio模板更新了 v1.0 版本，有人修复了 tikzjax 的问题，所以我更新到了 v1.0 版本，然后又费了挺多token终于跑通了。虽然字体现在还是不一样，而且 tikzjax 不支持一些字体，比如 “\mathfrak{X}” 的 $\mathfrak{X}$，只能算是一定程度上支持 commutative diagram。下面是 tikz editor 导出 pdf 再用 Inkscape 转成 SVG 图片的效果。</p> <p><img src="/assets/img/posts/diagram_from_pdf.svg" alt="deRham complex" style="width:30%; display:block; margin:auto"></p> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yazheng Chen. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@1.0.63/dist/tikzjax.js" type="text/javascript" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "publications by categories in reversed chronological order. generated by jekyll-scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "This is a description.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "dropdown-beginners",
+              title: "beginners",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/";
+              },
+            },{id: "dropdown-ot",
+              title: "OT",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/ot_course/";
+              },
+            },{id: "post-three-example-of-coupling-techniques-cédric-villani",
+        
+          title: "Three example of coupling techniques, Cédric Villani",
+        
+        description: "part of chapter 2 of Optimal Transport, Old and New",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/coupling-and-langevin-convergence/";
+          
+        },
+      },{id: "post-the-monge-ampère-equation-connor-mooney",
+        
+          title: "The Monge-Ampère Equation, Connor Mooney",
+        
+        description: "this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/survey-Monge-Ampere-equation-Connor/";
+          
+        },
+      },{id: "post-chap-2-the-theory-of-pfaffian-forms-cartan",
+        
+          title: "Chap 2 The Theory of Pfaffian Forms, Cartan",
+        
+        description: "note of this chapter",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Pfaffian-Forms/";
+          
+        },
+      },{id: "post-on-the-monge-mass-transfer-problem-trudinger-amp-xu-jia-wang",
+        
+          title: "On the Monge mass transfer problem, Trudinger & Xu-Jia Wang",
+        
+        description: "note of this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/On-the-Monge-mass-transfer-problem/";
+          
+        },
+      },{id: "post-differential-forms",
+        
+          title: "Differential Forms",
+        
+        description: "notes of Chap 5 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/differential-forms/";
+          
+        },
+      },{id: "post-notes-of-lie-group-and-lie-algebra",
+        
+          title: "notes of Lie Group and Lie Algebra",
+        
+        description: "notes of Chap 4 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Lie-group-Lie-algebra/";
+          
+        },
+      },{id: "post-the-rank-of-a-smooth-map-and-the-tangent-bundle",
+        
+          title: "The Rank of a Smooth Map and The Tangent Bundle",
+        
+        description: "notes of Chap 3 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/tangent-bundle/";
+          
+        },
+      },{id: "post-the-tangent-space-submanifolds-categories-and-functors",
+        
+          title: "The Tangent Space, Submanifolds, Categories and Functors",
+        
+        description: "notes of Chap 3 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the-tangent-space/";
+          
+        },
+      },{id: "post-manifolds-smooth-maps-on-a-manifold-and-quotients",
+        
+          title: "Manifolds, Smooth Maps on a Manifold and Quotients",
+        
+        description: "notes of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/manifolds/";
+          
+        },
+      },{id: "post-minkowski-type-theorems-and-least-squares-partitioning-aurenhammer-hoffmann-and-aronov",
+        
+          title: "Minkowski-Type Theorems and Least-Squares Partitioning, Aurenhammer, Hoffmann and Aronov",
+        
+        description: "notes of this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Minkowski-type-thm-and-least-squares-partitioning/";
+          
+        },
+      },{id: "post-moving-frames",
+        
+          title: "Moving Frames",
+        
+        description: "notes of Riemannian Geometry in an Orthonormal Frame",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/moving-frames/";
+          
+        },
+      },{id: "post-differential-forms-symmetrizing-and-alternating-operators",
+        
+          title: "Differential Forms, Symmetrizing and Alternating Operators",
+        
+        description: "notes of Chap 1 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/differential-forms-Rn/";
+          
+        },
+      },{id: "post-the-deleted-product-of-wen-tsun-wu-and-chern-class",
+        
+          title: "The Deleted Product of Wen-Tsun Wu and Chern class",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Wen-Tsun-Wu-and-Chern/";
+          
+        },
+      },{id: "post-polar-factorization-and-monotone-rearrangement-of-vector-valued-functions-yann-brenier",
+        
+          title: "Polar Factorization and Monotone Rearrangement of Vector-Valued Functions, Yann Brenier",
+        
+        description: "notes of this famous paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Brenier91/";
+          
+        },
+      },{id: "post-introduction-of-alexandrov-39-s-convex-polyhedra",
+        
+          title: "Introduction of Alexandrov's Convex Polyhedra",
+        
+        description: "note of this book",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Convex-Polyhedra-Alexandrov/";
+          
+        },
+      },{id: "post-on-the-regularity-of-the-monge-ampere-equation-shiu-yuen-cheng-and-shing-tung-yau",
+        
+          title: "On the Regularity of the Monge-Ampere Equation, Shiu-Yuen Cheng and Shing-Tung Yau",
+        
+        description: "note of this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/On-the-regularity-of-the-Monge-Ampere-equation/";
+          
+        },
+      },{id: "post-a-visual-introduction-to-riemannian-curvatures-and-some-discrete-generalizations",
+        
+          title: "A visual introduction to Riemannian curvatures and some discrete generalizations",
+        
+        description: "note of this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Yann-Ollivier-visual-intro-to-Riemannian-curvatures/";
+          
+        },
+      },{id: "post-some-sentences-from-the-book",
+        
+          title: "some sentences from the book",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/daily-whisper/";
+          
+        },
+      },{id: "post-made-my-day",
+        
+          title: "made my day",
+        
+        description: "At lunch, Gu said I should learn math.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/teacher-said-I-should-learn-math/";
+          
+        },
+      },{id: "post-review-of-2025",
+        
+          title: "review of 2025",
+        
+        description: "simple review",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/review-of-2025/";
+          
+        },
+      },{id: "post-how-gauss-predicted-ceres-orbit-part-2",
+        
+          title: "how-gauss-predicted-Ceres-orbit-part-2",
+        
+        description: "a translation of Bachelor Thesis of Daniel Bed’at\check{s}, Gauss’ calculation of Ceres’ orbit",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/how-gauss-predicted-Ceres-orbit-part-2/";
+          
+        },
+      },{id: "post-how-gauss-predicted-ceres-orbit-part-1",
+        
+          title: "how-gauss-predicted-Ceres-orbit-part-1",
+        
+        description: "a translation of Bachelor Thesis of Daniel Bed’at\check{s}, Gauss’ calculation of Ceres’ orbit",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/how-gauss-predicted-Ceres-orbit-part-1/";
+          
+        },
+      },{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+        },
+      },{
+        id: 'social-inspire',
+        title: 'Inspire HEP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://inspirehep.net/authors/1010907", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://cyz14.github.io/", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
