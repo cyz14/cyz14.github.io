@@ -1,0 +1,3390 @@
+---
+layout: post
+title: Curvature and Vector Fields
+date: 2026-06-25 16:50:00
+description: chapter 1 of Differential Geometry, Connection, Curvature and Characteristic Classes
+tags: connection
+categories: math
+tikzjax: true
+---
+
+<body>
+    <h1 id="auto-1">1<span style="margin-left: 1em"></span>Curvature and Vector Fields<span style="margin-left: 1em"></span></h1>
+    <p>
+      流形上的光滑映射，微分，向量场和微分形式，是流形的微分拓扑。这本书注重在微分几何。现在流形会被赋予一个黎曼度量，提供一种测量长度的方式。
+    </p>
+    <p>
+      1827年高斯在 General investigation of curved
+      surfaces
+      中打下了微分几何的基础。他的伟大成就之一是证明了保距离映射下高斯曲率的不变性。这一结果被成为Gauss's
+      Theorema
+      Egregium，在拉丁文中是
+      &ldquo;remarkable
+      theorem&rdquo;。用绝妙定理，我们可以用高斯曲率判断非等距曲面。这本书的前八章的目标是介绍足够的微分几何的基本构造来证明绝妙定理。
+    </p>
+    <h2 id="auto-2">1<span style="margin-left: 1em"></span>Riemannian Manifolds<span style="margin-left: 1em"></span></h2>
+    <p>
+      这章回忆一些向量空间内积的概念，用单位分解的方法证明流形上黎曼度量的存在性。
+    </p>
+    <h3 id="auto-3">1.1<span style="margin-left: 1em"></span>Inner Product on a Vector Space<span style="margin-left: 1em"></span></h3>
+    <p>
+      A point \(u\) in \(\mathbb{R}^3\) \((u^1, u^2, u^3)\) or 
+    </p>
+    <center>
+      \(\displaystyle \left[ \begin{array}{c}
+  u^1 \\
+  u^2\\
+ 
+      u^3
+\end{array} \right] .\)
+    </center>
+    <p>
+      The Euclidean inner product, or the dot product, is defined by
+    </p>
+    <center>
+      \(\displaystyle \langle u, v \rangle = \sum_{i = 1}^3 u^i v^i .\)
+    </center>
+    <p>
+      The length of a vector
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \| v \| = \sqrt{\langle v, v
+        \rangle},\)</td>
+        <td align="right">(1.1)</td>
+      </tr>
+    </table>
+    <p>
+      the angle \(\theta\) between two nonzero vectors
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \cos \theta = \frac{\langle u, v
+        \rangle}{\| u \|  \| v \|}, \quad 0 \leqslant
+\theta \leqslant
+        \pi,\)</td>
+        <td align="right">(1.2)</td>
+      </tr>
+    </table>
+    <p>
+      the arc length of a parametrized curve \(c (t)\) in \(\mathbb{R}^3\),
+      \(a \leqslant t \leqslant b\),
+    </p>
+    <center>
+      \(\displaystyle s = \int_a^b \| c' (t) \| d t.\)
+    </center>
+    <p style="margin-top: 1em">
+      <strong>定义 <class style="font-style: normal">1.1</class>. </strong><i>An inner
+      product on a real vector space \(V\) is a positive-definite, symmetric,
+      bilinear form \(\langle, \rangle : V \times V \rightarrow \mathbb{R}\).
+      </i>
+    </p>
+    <div style="margin-bottom: 1em">
+      <i><ol>
+        <li>
+          <p>
+            (positive-definiteness) \(\langle v, v \rangle \geqslant 0\); the
+            equality holds if and only if \(v = 0\).
+          </p>
+        </li>
+        <li>
+          <p>
+            (symmetry) \(\langle u, v \rangle = \langle v, u \rangle\)
+          </p>
+        </li>
+        <li>
+          <p>
+            (bilinearity) \(\langle a u + b v, w \rangle = a \langle u, w
+            \rangle + b \langle v, w \rangle\)
+          </p>
+        </li>
+      </ol></i>
+    </div>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">1.2</class>.
+      </strong><i>(Restriction of an inner product to a subspace). Let
+      \(\langle, \rangle\) be an inner product on a vector space \(V\). If
+      \(W\) is a subspace of \(V\), then the restriction</i>
+    </p>
+    <p>
+      <i><center>
+        \(\displaystyle \langle, \rangle_W := \langle, \rangle |_{W \times W}
+        : W \times W \rightarrow
+\mathbb{R}\)
+      </center></i>
+    </p>
+    <p style="margin-bottom: 1em">
+      <i>is an inner product on \(W\).</i>
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>命题 <class style="font-style: normal">1.3</class>.
+      </strong><i>(Nonnegative linear combination of inner products). Let
+      \(a_1, \ldots, a_r\) be nonnegative real numbers with at least one \(a_i
+      > 0\). The linear combination \(\langle, \rangle := \sum a_i \langle,
+      \rangle_i\) is again an inner product.</i>
+    </p>
+    <h3 id="auto-4">1.2<span style="margin-left: 1em"></span>Representation of Inner Products by
+    Symmetric Matrices<span style="margin-left: 1em"></span></h3>
+    <p>
+      Let \(e_1, \ldots, e_n\) be a basis of a vector space \(V\).
+    </p>
+    <center>
+      \(\displaystyle \sum x^i e_i \longleftrightarrow \mathbf{x}= \left[
+      \begin{array}{c}
+  x^1\\
+  \vdots\\
+  x^n
+\end{array} \right], \quad
+      \sum y^i e_i \longleftrightarrow \mathbf{y}= \left[
+\begin{array}{c}
+ 
+      y^1\\
+  \vdots\\
+  y^n
+\end{array} \right] .\)
+    </center>
+    <p>
+      Let \(A\) be an \(n \times n\) matrix whose entries are
+    </p>
+    <center>
+      \(\displaystyle a_{i j} = \langle e_i, e_j \rangle .\)
+    </center>
+    <center>
+      \(\displaystyle \left\langle \sum x^i e_i, \sum y^j e_j \right\rangle =
+      \sum a_{i j} x^i y^j
+=\mathbf{x}^T A\mathbf{y}.\)
+    </center>
+    <p style="margin-top: 1em">
+      <strong>定义 <class style="font-style: normal">1.4</class>. </strong><i>An \(n
+      \times n\) symmetric matrix \(A\) is said to be positive-definite if</i>
+    </p>
+    <div style="margin-bottom: 1em">
+      <i><ol>
+        <li>
+          <p>
+            \(\mathbf{x}^T A\mathbf{x} \geqslant 0\) for all \(x\) in
+            \(\mathbb{R}^n\),
+          </p>
+        </li>
+        <li>
+          <p>
+            equality holds if and only if \(\mathbf{x}= 0\).
+          </p>
+        </li>
+      </ol></i>
+    </div>
+    <p>
+      There is a one-to-one correspondence: 
+    </p>
+    <p>
+      inner product on a vector space \(\leftrightarrow\) \(n \times n\)
+      positive definite symmetric matrix.
+    </p>
+    <p>
+      The dual space \(V^{\vee}\) of a vector space \(V\) is by definition
+      \(\operatorname{Hom} (V, \mathbb{R})\), the space of all linear maps
+      from \(V\) to \(\mathbb{R}\). Let \(\alpha^1, \ldots, \alpha^n\) be the
+      basis for \(V^{\vee}\), then \(\alpha^i (x) = x^i\).
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  \langle x, y \rangle & = \sum a_{i
+      j} x^i y^j = \sum a_{i j} \alpha^i (x)
+  \alpha^j (y)\\
+  & = \sum a_{i
+      j} (\alpha^i \otimes \alpha^j) (x, y) .
+\end{array}\)
+    </center>
+    <p>
+      In terms of tensor product, an inner product can be written as
+    </p>
+    <center>
+      \(\displaystyle \langle, \rangle = \sum a_{i j} \alpha^i \otimes
+      \alpha^j .\)
+    </center>
+    <h3 id="auto-5">1.3<span style="margin-left: 1em"></span>Riemannian Metrics<span style="margin-left: 1em"></span></h3>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定义 <class style="font-style: normal">1.5</class>. </strong><i>A
+      Riemannian metric on a manifold \(M\) is the assignment to each point
+      \(p\) in \(M\) of an inner product \(\langle, \rangle_p\) on the tangent
+      space \(T_p M\); the assignment is required to be \(C^{\infty}\) in the
+      following sense: if \(X\) and \(Y\) are \(C^{\infty}\) vector fields on
+      \(M\), then \(p \mapsto \langle X_p, Y_p \rangle_p\) is a \(C^{\infty}\)
+      function on \(M\). A Riemannian manifold is a pair \(\langle M, \langle,
+      \rangle \rangle\).</i>
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>例 <class style="font-style: normal">1.6</class>. </strong>The Euclidean inner
+      product on \(\mathbb{R}^n\) give rise to a Riemannian metric on
+      \(\mathbb{R}^n\), called the Euclidean metric on \(\mathbb{R}^n\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">1.7</class>. </strong>A submanifold \(M\)
+      of a manifold \(N\) is said to be regular if locally it is defined by
+      the vanishing of a set of coordinates. Locally, a regular submanifold
+      looks like a \(k\)-plane in \(\mathbb{R}^n\). At each point \(p\) in
+      \(M\), the tangent space \(T_p M\) is a vector subspace of \(T_p
+      \mathbb{R}^3\). The Euclidean metric on \(\mathbb{R}^3\) restricts to a
+      function
+    </p>
+    <center>
+      \(\displaystyle \langle, \rangle_M : T_p M \times T_p M \rightarrow
+      \mathbb{R},\)
+    </center>
+    <p style="margin-bottom: 1em">
+      which is clearly positive-definite, symmetric, and bilinear. Thus a
+      surface in \(\mathbb{R}^3\) inherits a Riemannian metric from the
+      Euclidean metric on \(\mathbb{R}^3\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>定义 <class style="font-style: normal">1.8</class>. </strong><i>A
+      \(C^{\infty}\) map \(F : (N, \langle, \rangle') \rightarrow (M, \langle,
+      \rangle)\) of Riemannian manifolds is said to be metric-preserving if
+      for all \(p \in N\) and tangent vectors \(u, v \in T_p N\),</i>
+    </p>
+    <i><table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \langle u, v \rangle_p' = \langle
+        F_{\ast} u, F_{\ast} v \rangle_{F (p)} .\)</td>
+        <td align="right">(1.3)</td>
+      </tr>
+    </table></i>
+    <p style="margin-bottom: 1em">
+      <i>An isometry is a metric-preserving diffeomorphism.</i>
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>例 <class style="font-style: normal">1.9</class>. </strong>If \(F : N
+      \rightarrow M\) is a diffeomorphism and \(\langle, \rangle\) is a
+      Riemannian metric on \(M\), then (1.3) defines an induced Riemannian
+      metric \(\langle, \rangle'\) on \(N\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">1.10</class>. </strong>Let \(N\) and
+      \(M\) be the unit circle in \(\mathbb{C}\). Define \(F : N \rightarrow
+      M\), a 2-sheeted covering space map, by \(F (z) = z^2\). Give \(M\) a
+      Riemannian metric \(\langle, \rangle\), for example the Euclidean metric
+      as a subspace of \(\mathbb{R}^2\), and define \(\langle, \rangle'\) on
+      \(N\) by
+    </p>
+    <center>
+      \(\displaystyle \langle v, w \rangle' = \langle F_{\ast} v, F_{\ast} w
+      \rangle .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      Then \(\langle, \rangle'\) is a Riemannian metric on \(N\). The map
+      \(F\) is metric-preserving but not an isometry because \(F\) is not a
+      diffeomorphism.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>例 <class style="font-style: normal">1.11</class>. </strong>A torus in
+      \(\mathbb{R}^3\) inherits the Euclidean metric from \(\mathbb{R}^3\).
+      However, a torus is also the quotient space of \(\mathbb{R}^2\) by the
+      group \(\mathbb{Z}^2\) acting as translations, or to put it more
+      plainly, the quotient space of a square with the opposite edges
+      identified. In this way, it inherits a Riemannian metric from
+      \(\mathbb{R}^2\). With these two metrics, the torus becomes two
+      different Riemannian manifolds. We will show later that there is no
+      isometry between these two Riemannian manifolds with the same underlying
+      torus.
+    </p>
+    <h3 id="auto-6">1.4<span style="margin-left: 1em"></span>Existence of a Riemannian Metric<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      We will write \(\partial_i\) for the coordinate vector field \(\partial
+      / \partial x^i\).
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \langle X, Y \rangle = \sum a^i
+        b^i\)</td>
+        <td align="right">(1.4)</td>
+      </tr>
+    </table>
+    <p>
+      defines a Riemannian metric on \(U\).
+    </p>
+    <p>
+      To construct a Riemannian metric on \(M\) one needs to piece together
+      the Riemannian metrics on the various coordinate open sets of an atlas.
+    </p>
+    <p>
+      A collection \(\{ S_{\alpha} \}\) of subsets of a topological space
+      \(S\) is said to be locally finite if every point \(p \in S\) has a
+      neighborhood \(U_p\) that intersects only finitely many of the subsets
+      \(S_{\alpha}\). The support of a function \(f : S \rightarrow
+      \mathbb{R}\) is the closure of the subset of \(S\) on which \(f \neq
+      0\):
+    </p>
+    <center>
+      \(\displaystyle \operatorname{supp}f =\operatorname{cl} \{ x \in S|f (x)
+      \neq 0 \} .\)
+    </center>
+    <p>
+      Suppose \(\{ U_{\alpha} \}_{\alpha \in A}\) is an open cover of a
+      manifold \(M\). A collection of nonnegative \(C^{\infty}\) functions 
+    </p>
+    <center>
+      \(\displaystyle \rho_{\alpha} : M \rightarrow \mathbb{R}, \quad \alpha
+      \in A\)
+    </center>
+    <p>
+      is called a \(C^{\infty}\) partition of unity subordinate to \(\{
+      U_{\alpha} \}\) if 
+    </p>
+    <ol>
+      <li>
+        <p>
+          \(\operatorname{supp} \rho_{\alpha} \subset U_{\alpha}\) for all
+          \(\alpha\),
+        </p>
+      </li>
+      <li>
+        <p>
+          the collection of supports, \(\{ \operatorname{supp} \rho_{\alpha}
+          \}_{\alpha \in A}\) is locally finite,
+        </p>
+      </li>
+      <li>
+        <p>
+          \(\sum_{\alpha \in A} \rho_{\alpha} = 1\).
+        </p>
+      </li>
+    </ol>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定理 <class style="font-style: normal">1.12</class>. </strong><i>On
+      every manifold \(M\) there is a Riemannian metric.</i>
+    </p>
+    <h2 id="auto-7">2<span style="margin-left: 1em"></span>Curves<span style="margin-left: 1em"></span></h2>
+    <p>
+      A parametrized curve, a smooth map \(c : [a, b] \rightarrow M\), or it
+      is the set of points in \(M\) that is the image of this map. A regular
+      curve is a parametrized curve whose velocity is never zero.
+    </p>
+    <h3 id="auto-8">2.1<span style="margin-left: 1em"></span>Regular Curves<span style="margin-left: 1em"></span></h3>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定义 <class style="font-style: normal">2.1</class>. </strong><i>A
+      parametrized curve \(c : [a, b] \rightarrow M\) is regular if its
+      velocity \(c' (t)\) is never zero for all \(t\) in the domain \([a,
+      b]\). In other words, a regular curve in \(M\) is an immersion: \([a, b]
+      \rightarrow M\).</i>
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">2.2</class>. </strong>The curve \(c : [-
+      1, 1] \rightarrow \mathbb{R}^2\),
+    </p>
+    <center>
+      \(\displaystyle c (t) = (t^3, t^2),\)
+    </center>
+    <p style="margin-bottom: 1em">
+      is not regular at \(t = 0\).
+    </p>
+    <p>
+      Among the various reparametrizations of a regular curve, the most
+      important is the arc length parameterization.
+    </p>
+    <h3 id="auto-9">2.2<span style="margin-left: 1em"></span>Arc Length Parameterization<span style="margin-left: 1em"></span></h3>
+    <p>
+      The arc length of the curve to be
+    </p>
+    <center>
+      \(\displaystyle \ell = \int_a^b \| c' (u) \| d u.\)
+    </center>
+    <center>
+      \(\displaystyle s (t) = \int_a^t \| c' (u) \| d t.\)
+    </center>
+    <p>
+      The function \(s : [a, b] \rightarrow [0, \ell]\) is the arc length
+      function of the curve.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>命题 <class style="font-style: normal">2.3</class>. </strong><i>The arc
+      length function \(s : [a, b] \rightarrow [0, \ell]\) of a regular curve
+      \(c : [a, b] \rightarrow M\) has a \(C^{\infty}\) inverse.</i>
+    </p>
+    <p>
+      We can write \(t\) as a \(C^{\infty}\) function of the arc length to get
+      the arc length parametrization \(\gamma (s) = c (t (s))\).
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>命题 <class style="font-style: normal">2.4</class>. </strong><i>A curve
+      is parametrized by arc length if and only if it has unit speed and its
+      parameter starts at 0.</i>
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">2.5</class>. </strong>The curve \(c : [0,
+      2 \pi] \rightarrow \mathbb{R}^2\),
+    </p>
+    <center>
+      \(\displaystyle c (t) = (a \cos t, a \sin t), \quad a > 0,\)
+    </center>
+    <p>
+      is regular. Its image is the circle of radius \(a\) centered at the
+      origin. Its arc length function is 
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  s & = \int_0^t \| c' (u) \| d u =
+      \int_0^t \left\| \left[ \begin{array}{c}
+    - a \sin u\\
+    a \cos u
+ 
+      \end{array} \right] \right\| d u\\
+  & = \int_0^t a d u = a
+      t.
+\end{array}\)
+    </center>
+    <p>
+      Hence, \(t = s / a\) and the arc length parametrization is
+    </p>
+    <p style="margin-bottom: 1em">
+      <center>
+        \(\displaystyle \gamma (s) = \left( a \cos \frac{s}{a}, a \sin
+        \frac{s}{a} \right) .\)
+      </center>
+    </p>
+    <h3 id="auto-10">2.3<span style="margin-left: 1em"></span>Signed Curvature of a Plane Curve<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      We will quantify the notion of curvature for a curve in the plane
+      \(\mathbb{R}^2\).
+    </p>
+    <p>
+      Ou plane curve \(\gamma : [0, \ell] \rightarrow \mathbb{R}^2\) will be
+      parameterized by the arc length \(s\). Then the velocity vector \(T (s)
+      = \gamma' (s)\) has unit length and is tangent to the curve at the point
+      \(p = \gamma (s)\). A reasonable measure of curvature at \(p\) is the
+      magnitude of the derivative
+    </p>
+    <center>
+      \(\displaystyle T' (s) = \frac{d T}{d s} (s) = \gamma'' (s),\)
+    </center>
+    <p>
+      since the faster \(T\) changes, the more the curve bends. However, in
+      order to distinguish the directions in which the curve can bend, we will
+      define a curvature with a sign. Usually \(\mathbf{n} (s)\) is chosen so
+      that the pair \((T (s), \mathbf{n} (s))\) is oriented positively in the
+      plane, i.e., counterclockwise.
+    </p>
+    <center>
+      \(\displaystyle \langle T, T \rangle = 1\)
+    </center>
+    <p>
+      Differentiate this equation with respect to \(s\) gives
+    </p>
+    <center>
+      \(\displaystyle \langle T', T \rangle + \langle T, T' \rangle = 0\)
+    </center>
+    <center>
+      \(\displaystyle \langle T', T \rangle = 0\)
+    </center>
+    <p>
+      Thus, \(T'\) is perpendicular to \(T\) and so it must be a multiple of
+      \(\mathbf{n}\). The scalar \(\kappa\) such that 
+    </p>
+    <center>
+      \(\displaystyle T' = \kappa \mathbf{n}\)
+    </center>
+    <p>
+      is called the signed curvature. We can also write
+    </p>
+    <center>
+      \(\displaystyle \kappa = \langle T', \mathbf{n} \rangle = \langle
+      \gamma'', \mathbf{n} \rangle
+.\)
+    </center>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">2.6</class>. </strong>(The circle). 
+    </p>
+    <center>
+      \(\displaystyle \gamma (s) = \left( a \cos \frac{s}{a}, a \sin
+      \frac{s}{a} \right), \quad 0
+\leq s \leq 2 \pi a.\)
+    </center>
+    <center>
+      \(\displaystyle T (s) = \gamma' (s) = \left[ \begin{array}{c}
+  - \sin
+      \frac{s}{a}\\
+  \cos \frac{s}{a}
+\end{array} \right],\)
+    </center>
+    <center>
+      \(\displaystyle T' (s) = \gamma'' (s) = \left[ \begin{array}{c}
+  -
+      \frac{1}{a} \cos \frac{s}{a}\\
+  - \frac{1}{a} \sin
+      \frac{s}{a}
+\end{array} \right] .\)
+    </center>
+    <center>
+      \(\displaystyle \operatorname{rot} \left( \frac{\pi}{2} \right) = \left[
+      \begin{array}{cc}
+  \cos \frac{\pi}{2} & - \sin \frac{\pi}{2}\\
+  \sin
+      \frac{\pi}{2} & \cos \frac{\pi}{2}
+\end{array} \right] = \left[
+      \begin{array}{cc}
+  0 & - 1\\
+  1 & 0
+\end{array} \right]\)
+    </center>
+    <center>
+      \(\displaystyle \mathbf{n}= \left[ \begin{array}{cc}
+  0 & - 1\\
+  1 &
+      0
+\end{array} \right] T = \left[ \begin{array}{c}
+  - \cos
+      \frac{s}{a}\\
+  - \sin \frac{s}{a}
+\end{array} \right]\)
+    </center>
+    <p style="margin-bottom: 1em">
+      So \(T' = (1 / a) \mathbf{n}\) and \(\kappa (s) = 1 / a\).
+    </p>
+    <h3 id="auto-11">2.4<span style="margin-left: 1em"></span>Orientation and Curvature<span style="margin-left: 1em"></span></h3>
+    <p>
+      Reversing the orientation of a plane curve reverses the sign of its
+      signed curvature at any point.
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">2.7</class>. </strong>The
+      counterclockwise circle
+    </p>
+    <center>
+      \(\displaystyle \gamma (s) = (a \cos s / a, a \sin s / a), \quad 0 \leq
+      s \leq 2 \pi a\)
+    </center>
+    <p>
+      has signed curvature \(1 / a\), and the clockwise circle
+    </p>
+    <center>
+      \(\displaystyle \tilde{\gamma} (s) = \gamma (- s)\)
+    </center>
+    <p style="margin-bottom: 1em">
+      has signed curvature \(- 1 / a\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例. </strong>The Frenet-Serret formulas
+    </p>
+    <p>
+      Let \(\gamma : I \rightarrow \mathbb{R}^3\) be a regular space curve
+      parameterized by arc length. Then \(T = \gamma' (s)\) is tangent to
+      \(\gamma\) at \(\gamma (s)\) and has unit length. Assume that \(\gamma''
+      (s) \neq 0\).
+    </p>
+    <ol style="margin-bottom: 1em">
+      <li>
+        <p>
+          Prove that \(\gamma'' (s)\) is normal to \(T\).
+        </p>
+      </li>
+      <li>
+        <p>
+          Let \(N\) be the unit vector \(\gamma'' (s) / \| \gamma'' (s) \|\).
+          Then \(T' = \kappa N\), where \(\kappa\) is the curvature of the
+          space curve.
+        </p>
+      </li>
+      <li>
+        <p>
+          The unit vector \(B = T \times N\) is called the binormal of
+          \(\gamma\) at \(\gamma (s)\). The three vectors \(T, N, B\) form an
+          orhonormal basis for \(\mathbb{R}^3\) at \(\gamma (s)\), called the
+          Frenet-Serret frame. Prove that 
+        </p>
+        <center>
+          \(\displaystyle N' = - \kappa T + \tau B\)
+        </center>
+        <p>
+          for some real number \(\tau\), which is called the torsion of the
+          unit-speed curve \(\gamma\).
+        </p>
+      </li>
+      <li>
+        <p>
+          Prove that \(B' = - \tau N\).
+        </p>
+        <p>
+          The set of equations
+        </p>
+        <center>
+          \(\displaystyle \begin{array}{rl}
+  T' = & \kappa N\\
+  N' = & -
+          \kappa T + \tau B\\
+  B' = & - \tau N
+\end{array}\)
+        </center>
+        <p>
+          is called the Frenet-Serret formulas. In matrix notation
+        </p>
+        <center>
+          \(\displaystyle \left[ \begin{array}{c}
+  T\\
+  N\\
+  B
+\end{array}
+          \right]' = \left[ \begin{array}{ccc}
+  & \kappa & \\
+  - \kappa &  &
+          \tau\\
+  & - \tau & 
+\end{array} \right] \left[ \begin{array}{c}
+ 
+          T\\
+  N\\
+  B
+\end{array} \right] . \hspace{10em}
+          \operatorname{vg}\)
+        </center>
+      </li>
+    </ol>
+    <h2 id="auto-12">3<span style="margin-left: 1em"></span>Surfaces in Space<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-13">3.1<span style="margin-left: 1em"></span>Principal, Mean, and Gaussian
+    Curvatures<span style="margin-left: 1em"></span></h3>
+    <p>
+      There are several ways to generalize the curvature of a plane curve to a
+      surface. One way, following Euler, is to consider the curvature of all
+      the normal sections of the surface at a point. A second way is to study
+      the derivative of a unit normal vector field on the surface. This
+      section uses Euler's method to define several measurements of curvature
+      at a point on a surface. We then state two theorems, Gauss's Theorema
+      Egregium and the Gauss-Bonnet theorem. We will take up the relationship
+      between curvature and the derivative of a normal vector field in Section
+      5.
+    </p>
+    <h3 id="auto-14">3.2<span style="margin-left: 1em"></span>Principal, Mean, and Gaussian
+    Curvatures<span style="margin-left: 1em"></span></h3>
+    <p>
+      By a surface in \(\mathbb{R}^3\), we mean a 2-dimensional regular
+      submanifold of \(\mathbb{R}^3\). A <b>normal vector</b> to \(M\) at
+      \(p\) is a vector \(N_p \in T_p \mathbb{R}^3\) that is orthogonal to the
+      tangent plane \(T_p M\). A <b>normal vector field</b> on \(M\) is a
+      function \(N\) that assigns to each \(p \in M\) a normal vector \(N_p\)
+      at \(p\). If \(N\) is a normal vector field on \(M\), then at each point
+      \(p \in M\), we can write
+    </p>
+    <center>
+      \(\displaystyle N_p = \sum_{i = 1}^3 a^i (p) \frac{\partial}{\partial
+      x^i} |_p .\)
+    </center>
+    <p>
+      The normal vector field \(N\) on \(M\) is said to be \(C^{\infty}\) if
+      the coefficient functions \(a^1, a^2, a^3\) are \(C^{\infty}\) functions
+      on \(M\). 
+    </p>
+    <p>
+      Let \(N\) be a \(C^{\infty}\) unit normal vector field on a neighborhood
+      of \(p\) in \(M\). Denote by \(N_p\) the unit normal vector at \(p\).
+      Under the canonical identification of \(T_p \mathbb{R}^3\) with
+      \(\mathbb{R}^3\), every plane \(P\) through \(N_p\) slices the surface
+      \(M\) along a plane curve \(P \cap M\) through \(p\). By the
+      transversality theorem from differential topology, the intersection \(P
+      \cap M\), being transversal, is smooth. We call such a plane curve a
+      <b>normal section</b> of the surface through \(p\). We can compute the
+      curvature of a normal section with respect to \(N_p\). The collection of
+      the curvatures at \(p\) of all the normal sections gives a fairly good
+      picture of how the surface curves at \(p\).
+    </p>
+    <p>
+      More precisely, each unit tangent vector \(X_p\) to the surface \(M\) at
+      \(p\) determines together with \(N_p\) a plane that slices \(M\) along a
+      normal section. The unit tangent vector \(X_p\) determines an
+      orientation of the normal section. Let \(\gamma (s)\) be the arc length
+      parameterization of this normal section with initial point \(\gamma (0)
+      = p\) and intial vector \(\gamma' (0) = X_p\). Note that \(\gamma (0)\)
+      is completely determined by the unit tangent vector \(X_p\). Define the
+      <b>normal curvature</b> of the normal section \(\gamma (s)\) at \(p\)
+      with respect to \(N_p\) by
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \kappa (X_p) = \langle \gamma'' (0),
+        N_p \rangle\)</td>
+        <td align="right">(3.1)</td>
+      </tr>
+    </table>
+    <p>
+      Of course, the \(N_p\) is not always the same as the \(\mathbf{n} (0)\)
+      in Section 2, which was obtained by rotating the unit tangent vector
+      \(90^{\circ}\) counterclockwise in \(\mathbb{R}^2\); an arbitrary plane
+      in \(\mathbb{R}^3\) does not have a preferred orientation.
+    </p>
+    <p>
+      Since the set of all unit vectors in \(T_p M\) is a circle, we have a
+      function
+    </p>
+    <center>
+      \(\displaystyle \kappa : S^1 \rightarrow \mathbb{R}.\)
+    </center>
+    <p>
+      \(\kappa (- X_p) = \kappa (X_p)\) for \(X_p \in S^1\).
+    </p>
+    <p>
+      The maximum and minimum values \(\kappa_1, \kappa_2\) of the function
+      \(\kappa\) are the <b>principal curvatures</b> of the surface at \(p\).
+      Their average \((\kappa_1 + \kappa_2) / 2\) is the <b>mean curvature</b>
+      \(H\), and their product \(\kappa_1 \kappa_2\) the <b>Gaussian
+      curvature</b> \(K\). A unit direction \(X_p \in T_p M\) along which a
+      principal curvature occurs is called a <b>principal direction</b>. Note
+      that if \(X_p\) is a principal direction, then so is \(- X_p\), since
+      \(\kappa (- X_p) = \kappa (X_p)\). If \(\kappa_1\) and \(\kappa_2\) are
+      equal, then every unit vector in \(T_p M\) is a principal direction.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>注意 <class style="font-style: normal">3.1</class>. </strong>Using \(-
+      N_p\) instead of \(N_p\) reverses the sign of all the normal curvatures
+      at \(p\). This will change the sign of the mean curv, but not the
+      Gaussian curv. 
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>例 <class style="font-style: normal">3.2</class>. </strong>(Sphere of radius
+      \(a\)). \(1 / a\), \(H = 1 / a, K = 1 / a^2\).
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>例 <class style="font-style: normal">3.3</class>. </strong>For a plane \(M\)
+      in \(\mathbb{R}^3\) the principal curvatures, mean curvature and
+      Gaussian curvature are all zero.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>例 <class style="font-style: normal">3.4</class>. </strong>For a cylinder of
+      radius \(a\) with a unit inward normal, it appears that the principal
+      curvatures are 0 and \(1 / a\). The mean curvature is \(1 / 2 a\), the
+      Gaussian curvature is 0. 
+    </p>
+    <h3 id="auto-15">3.3<span style="margin-left: 1em"></span>Gauss's Theorema Egregium<span style="margin-left: 1em"></span></h3>
+    <p>
+      Since the plane is locally isometric to a cylinder, Example 3.3 and 3.4
+      show that the principal curvatures and the mean curvature are not
+      isometric invariants. It is an astonishing fact that although neither
+      \(\kappa_1\) and \(\kappa_2\) is invariant under isometrics, their
+      product, the Gaussian curvature \(K\), is. This is the content of the
+      Theorema Egregium of Gauss.
+    </p>
+    <p>
+      Another way to appreciate the significance of this theorem is to think
+      in terms of isometric embeddings. We may think of portions of the plane
+      and the cylinder as different isometric embeddings of the same plane
+      region. 
+    </p>
+    <h3 id="auto-16">3.4<span style="margin-left: 1em"></span>The Gauss-Bonnet Theorem<span style="margin-left: 1em"></span></h3>
+    <p>
+      For an oriented surface \(M\) in \(\mathbb{R}^3\) the Gaussian curvature
+      \(K\) is a function on the surface. If the surface is compact, we can
+      integrate \(K\) to obtain a single number \(\int_M K d S\). 
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">3.5</class>. </strong>For the sphere
+      \(M\) of radius \(a\), the integral of the Gaussian curvature is
+    </p>
+    <p style="margin-bottom: 1em">
+      <center>
+        \(\displaystyle \begin{array}{rl}
+  \int_M K d S & = \int_M
+        \frac{1}{a^2} d S = \frac{1}{a^2} \int 1 d S\\
+  & = \frac{1}{a^2}
+ 
+        (\operatorname{surface}\operatorname{area}\operatorname{of}M)\\
+  & =
+        \frac{1}{a^2} 4 \pi a^2 = 4 \pi .
+\end{array}\)
+      </center>
+    </p>
+    <p>
+      Example 3.5 is a special case of the Gauss-Bonnet theorem, which for a
+      compact oriented surface \(M\) in \(\mathbb{R}^3\) asserts that
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \int_M K d S = 2 \pi \chi
+        (M),\)</td>
+        <td align="right">(3.2)</td>
+      </tr>
+    </table>
+    <p>
+      where \(\chi (M)\) denotes the Euler characteristic.
+    </p>
+    <h2 id="auto-17">4<span style="margin-left: 1em"></span>Directional Derivatives in Euclidean
+    Space<span style="margin-left: 1em"></span></h2>
+    <p>
+      In this section, we extend the calculus definition of the directional
+      derivative of a function to the directional derivative of a vector field
+      along a submanifold of \(\mathbb{R}^n\).
+    </p>
+    <h3 id="auto-18">4.1<span style="margin-left: 1em"></span>Directional Derivatives in Euclidean
+    Space<span style="margin-left: 1em"></span></h3>
+    <p>
+      Suppose \(X_p = \sum a^i \partial / \partial x^i |_p\) is a tangent
+      vector at a point \(p = (p^1, \ldots, p^n)\) in \(\mathbb{R}^n\) and \(f
+      (x^1, \ldots, x^n)\) is a \(C^{\infty}\) function in a neighborhood of
+      \(p\) in \(\mathbb{R}^n\). To compute the <b>directional derivative</b>
+      of \(f\) at \(p\) in the direction \(X_p\), we first write down a set of
+      parametric equations for the line through \(p\) in the direction \(X_p\)
+    </p>
+    <center>
+      \(\displaystyle x^i = p^i + t a^i, \quad i = 1, \ldots, n.\)
+    </center>
+    <p>
+      Let \(a = (a^1, \ldots, a^n)\). Then the directional derivative
+      \(D_{X_p} f\) is
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  D_{X_p} f & = \lim_{t \rightarrow 0}
+      \frac{f (p + t a) - f (p)}{t} =
+  \frac{d}{d t} |_{t = 0} f (p + t a)
+      \hspace{3cm}   \text{(4.1)}\\
+  & = \sum \frac{\partial f}{\partial x^i}
+      |_p \cdot \frac{d x^i}{d t} |_{t =
+  0} = \sum \frac{\partial
+      f}{\partial x^i} |_p \cdot a^i\\
+  & = \left( \sum a^i
+      \frac{\partial}{\partial x^i} |_p \right) f = X_p f.
+\end{array}\)
+    </center>
+    <p>
+      We write \(\partial_i\) for \(\partial / \partial x^i\). The
+      <b>directional derivative</b> at \(p\) of a \(C^{\infty}\) vector field
+      \(Y = \sum b^i \partial i = \sum b^i \partial / \partial x^i\) on
+      \(\mathbb{R}^n\) in the direction \(X_p\) is defined to be
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle D_{X_p} Y = \sum (X_p b^i)
+        \frac{\partial}{\partial x^i} |_p .\)</td>
+        <td align="right">(4.2)</td>
+      </tr>
+    </table>
+    <p>
+      The formula shows that \(D_{X_p} Y\) is \(\mathbb{R}\)-linear in
+      \(X_p\).
+    </p>
+    <p>
+      We can in fact use any curve \(c (t)\) with initial point \(p\) and
+      initial vector \(X_p\), for 
+    </p>
+    <center>
+      \(\displaystyle D_{X_p} f = X_p f = c' (0) f = c_{\ast} \left(
+      \frac{d}{d t} |_{t = 0} \right)
+f = \frac{d}{d t} |_{t = 0} f (c (t))
+      .\)
+    </center>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>注意 <class style="font-style: normal">4.1</class>. </strong>Thus, for
+      \(D_{X_p} f\) to be defined, it is not necessary that \(f\) be defined
+      in an open neighborhood of \(p\). As long as \(f\) is defined along some
+      curve starting at \(p\) with initial velocity \(X_p\), the directional
+      derivative will make sense. A similar remark applies to the directional
+      derivative \(D_{X_p} Y\) of a vector field \(Y\).
+    </p>
+    <p>
+      When \(X\) is a \(C^{\infty}\) vector field on \(\mathbb{R}^n\), we
+      define the vector field \(D_X Y\) on \(\mathbb{R}^n\) by
+    </p>
+    <center>
+      \(\displaystyle (D_X Y)_p = D_{X_p} Y \quad
+      \operatorname{for}\operatorname{all}p \in
+\mathbb{R}^n .\)
+    </center>
+    <p>
+      Let \(\mathfrak{X} (\mathbb{R}^n)\) be the vector space of all
+      \(C^{\infty}\) vector fields on \(\mathbb{R}^n\). The directional
+      derivative in \(\mathbb{R}^n\) gives a map
+    </p>
+    <center>
+      \(\displaystyle D : \mathfrak{X} (\mathbb{R}^n) \times \mathfrak{X}
+      (\mathbb{R}^n) \rightarrow
+\mathfrak{X} (\mathbb{R}^n),\)
+    </center>
+    <p>
+      which we write as \(D_X Y\) instead of \(D (X, Y)\). Let \(\mathcal{F}=
+      C^{\infty} (\mathbb{R}^n)\) be the ring of \(C^{\infty}\) functions on
+      \(\mathbb{R}^n\). Then \(\mathfrak{X} (\mathbb{R}^n)\) is both a vector
+      space over \(\mathbb{R}\) and a module over \(\mathcal{F}\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">4.2</class>. </strong><i>For \(X,
+      Y \in \mathfrak{X} (\mathbb{R}^n)\), the directional derivative \(D_X
+      Y\) satisfies the following properties:</i>
+    </p>
+    <div style="margin-bottom: 1em">
+      <i><ol>
+        <li>
+          <p>
+            \(D_X Y\) is \(\mathcal{F}\)-linear in \(X\) and
+            \(\mathbb{R}\)-linear in \(Y\);
+          </p>
+        </li>
+        <li>
+          <p>
+            (Leibniz rule) if \(f\) is a \(C^{\infty}\) function on
+            \(\mathbb{R}^n\), then
+          </p>
+          <center>
+            \(\displaystyle D_X (f Y) = (X f) Y + f D_X Y.\)
+          </center>
+        </li>
+      </ol></i>
+    </div>
+    <h3 id="auto-19">4.2<span style="margin-left: 1em"></span>Other Properties of the Directional
+    Derivative<span style="margin-left: 1em"></span></h3>
+    <p>
+      The directional derivative \(D\) in \(\mathbb{R}^n\) is an
+      \(\mathbb{R}\)-bilinear map
+    </p>
+    <center>
+      \(\displaystyle D : \mathfrak{X} (\mathbb{R}^n) \times \mathfrak{X}
+      (\mathbb{R}^n) \rightarrow
+\mathfrak{X} (\mathbb{R}^n),\)
+    </center>
+    <p>
+      one can ask if it is symmetric, that is, for all \(X, Y \in \mathfrak{X}
+      (\mathbb{R}^n)\), is \(D_X Y = D_Y X\)? A simple calculation using the
+      standard frame shows that the answer is no; in fact, \([X, Y]\) is the
+      Lie bracket defined in (A.2), then
+    </p>
+    <center>
+      \(\displaystyle D_X Y - D_Y X = [X, Y] .\)
+    </center>
+    <p>
+      The quantity
+    </p>
+    <center>
+      \(\displaystyle T (X, Y) = D_X Y - D_Y X - [X, Y]\)
+    </center>
+    <p>
+      turns out to be fundamental in differential geometry and is called the
+      <b>torsion</b> of the directional derivative \(D\).
+    </p>
+    <p>
+      For each smooth vector field \(X \in \mathfrak{X} (\mathbb{R}^n)\), the
+      directional derivative \(D_X : \mathfrak{X} (\mathbb{R}^n) \rightarrow
+      \mathfrak{X} (\mathbb{R}^n)\) is an \(\mathbb{R}\)-linear endomorphism.
+      This gives rise to a map
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="width: 33.3333333333333%; padding-left: 0em; text-align: right"><p>
+          \(\mathfrak{X} (\mathbb{R}^n)\)
+        </p></td>
+        <td style="width: 33.3333333333333%"><p>
+          \(\rightarrow \operatorname{End}_{\mathbb{R}} (\mathfrak{X}
+          (\mathbb{R}^n))\)
+        </p></td>
+        <td style="width: 33.3333333333333%; padding-right: 0em; vertical-align: middle"><div class="right-tab">
+          <class style="font-style: normal">(4.3)</class>
+        </div></td>
+      </tr><tr>
+        <td style="width: 33.3333333333333%; padding-left: 0em; text-align: right"><p>
+          \(X\)
+        </p></td>
+        <td style="width: 33.3333333333333%"><p>
+          \(\mapsto D_X\)
+        </p></td>
+        <td style="width: 33.3333333333333%; padding-right: 0em"><p>
+          
+        </p></td>
+      </tr></tbody>
+    </table>
+    <p>
+      The vector space \(\mathfrak{X} (\mathbb{R}^n)\) of \(C^{\infty}\)
+      vector fields on \(\mathbb{R}^n\) is a Lie algebra under the Lie bracket
+      of vector fields. For any vector space \(V\), the endomorphism ring
+      \(\operatorname{End}_{\mathbb{R}} (V)\) of endomorphisms of \(V\) is
+      also a Lie algebra, with Lie bracket
+    </p>
+    <center>
+      \(\displaystyle [A, B] = A \circ B - B \circ A, \quad A, B \in
+      \operatorname{End} (V) .\)
+    </center>
+    <p>
+      So the map in (4.3) is an \(\mathbb{R}\)-linear map of Lie algebras. It
+      is natural to ask if its is a Lie algebra homomorphism, i.e., is
+    </p>
+    <center>
+      \(\displaystyle [D_X, D_Y] = D_{[X, Y]} ?\)
+    </center>
+    <p>
+      The answer is yes for the directional derivative in \(\mathbb{R}^n\). A
+      measure of the deviation of the linear map \(X \mapsto D_X\) from being
+      a Lie algebra homomorphism is given by the function
+    </p>
+    <center>
+      \(\displaystyle R (X, Y) = [D_X, D_Y] - D_{[X, Y]} = D_X D_Y - D_Y D_X -
+      D_{[X, Y]} \in
+\operatorname{End}_{\mathbb{R}} (\mathfrak{X} (M)),\)
+    </center>
+    <p>
+      called the <b>curvature</b> of \(D\).
+    </p>
+    <p>
+      Finally, one may ask if the product rules holds for the Euclidean inner
+      product:
+    </p>
+    <center>
+      \(\displaystyle D_Z \langle X, Y \rangle = \langle D_Z X, Y \rangle +
+      \langle X, D_Z Y \rangle
+.\)
+    </center>
+    <p>
+      The answer is again yes. 
+    </p>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">4.3</class>. </strong><i>Let
+      \(D\) be the directional derivative in \(\mathbb{R}^n\) and \(X, Y, Z\)
+      \(C^{\infty}\) vector fields on \(\mathbb{R}^n\). Then</i>
+    </p>
+    <div style="margin-bottom: 1em">
+      <i><ol>
+        <li>
+          <p>
+            (zero torsion) \(D_X Y - D_Y X - [X, Y] = 0\),
+          </p>
+        </li>
+        <li>
+          <p>
+            (zero curvature) \(D_X D_Y Z - D_Y D_X Z - D_{[X, Y]} Z = 0\),
+          </p>
+        </li>
+        <li>
+          <p>
+            (compatibility with the metric) \(X \langle Y, Z \rangle = \langle
+            D_X Y, Z \rangle + \langle Y, D_X Z \rangle\).
+          </p>
+        </li>
+      </ol></i>
+    </div>
+    <p>
+      If \(X\) and \(Y\) are smooth vector fields on a manifold \(M\), then
+      the Lie derivative \(\mathcal{L}_X Y\) is another way of differentiating
+      \(Y\) with respect to \(X\) (for a discussion of the Lie derivative, see
+      ). While the directional derivative \(D_X Y\) in \(\mathbb{R}^n\) is
+      \(\mathcal{F}\)-linear in \(X\), the Lie derivative \(\mathcal{L}_X Y\)
+      is not, so the two concepts are not the same. Indeed, since
+      \(\mathcal{L}_X Y = [X, Y]\), by Proposition 4.3(i), for vector fields
+      on \(\mathbb{R}^n\),
+    </p>
+    <center>
+      \(\displaystyle \mathcal{L}_X Y = D_X Y - D_Y X.\)
+    </center>
+    <h3 id="auto-20">4.3<span style="margin-left: 1em"></span>Vector Fields Along a Curve<span style="margin-left: 1em"></span></h3>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定义 <class style="font-style: normal">4.4</class>. </strong><i><b>A
+      vector field \(V\) along</b> \(c : [a, b] \rightarrow M\) is the
+      assignment of a tangent vector \(V (t) \in T_{c (t)} M\). Such a vector
+      field is said to be \(C^{\infty}\) if for every \(C^{\infty}\) function
+      \(f\) on \(M\), the function \(V (t) f\) is \(C^{\infty}\) as a function
+      of \(f\).</i>
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">4.5</class>. </strong>The <b>velocity
+      vector field</b> \(c' (t)\) of a parametrized curve \(c\) is defined by
+    </p>
+    <center>
+      \(\displaystyle c' (t) = c_{\ast, t} \left( \frac{d}{d t} |_t \right)
+      \in T_{c (t)} M.\)
+    </center>
+    <p style="margin-bottom: 1em">
+      It is a vector field along \(c\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">4.6</class>. </strong>If \(\tilde{V}\) is
+      a vector field on \(M\) and \(c : [a, b] \rightarrow M\) is a
+      parametrized curve in \(M\), then \(\tilde{V}\) induces a vector field
+      \(V\) along \(c\) by
+    </p>
+    <p style="margin-bottom: 1em">
+      <center>
+        \(\displaystyle V (t) = \tilde{V}_{c (t)} .\)
+      </center>
+    </p>
+    <p>
+      \(V (t)\) can be written as a linear combination of the standard basis
+      vectors:
+    </p>
+    <center>
+      \(\displaystyle V (t) = \sum v^i (t) \partial_i |_{c (t)} .\)
+    </center>
+    <p>
+      So it makes sense to differentiate \(V\) with respect to \(t\):
+    </p>
+    <center>
+      \(\displaystyle \frac{d V}{d t} (t) = \sum \frac{d v^i}{d t} (t)
+      \partial_i |_{c (t)},\)
+    </center>
+    <p>
+      which is also a \(C^{\infty}\) vector field along \(c\).
+    </p>
+    <p>
+      For a smooth vector field \(V\) along a curve \(c\) in an arbitrary
+      manifold \(M\), without further hypotheses on \(M\), the derivative \(d
+      V / d t\) is in general not defined. This is becausse an arbitrary
+      manifold does not have a canonical frame of vector fields such as
+      \(\partial / \partial x^i, \ldots, \partial / \partial x^n\) on
+      \(\mathbb{R}^n\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">4.7</class>. </strong><i>Let \(c
+      : [a, b] \rightarrow \mathbb{R}^n\) be a curve in \(\mathbb{R}^n\) and
+      let \(V (t), W (t)\) be smooth vector fields along \(c\). Then</i>
+    </p>
+    <p style="margin-bottom: 1em">
+      <i><center>
+        \(\displaystyle \frac{d}{d t} \langle V (t), W (t) \rangle =
+        \left\langle \frac{d V}{d t}, W
+\right\rangle + \left\langle V,
+        \frac{d W}{d t} \right\rangle .\)
+      </center></i>
+    </p>
+    <h3 id="auto-21">4.4<span style="margin-left: 1em"></span>Vector Fields Along a Submanifold<span
+    style="margin-left: 1em"></span></h3>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定义 <class style="font-style: normal">4.8</class>. </strong><i>Let
+      \(M\) be a submanifold of a manifold \(\tilde{M}\). A vector field \(X\)
+      <b>on</b> \(M\) assigns to each \(p \in M\) a tangent vector \(X_p \in
+      T_p M\). A vector field <b>along</b> \(M\) in \(\tilde{M}\) assigns to
+      each \(p \in M\) a tangent vector \(X_p \in T_p \tilde{M}\). A vector
+      field \(X\) along \(M\) is called \(C^{\infty}\) if for every
+      \(C^{\infty}\) function \(f\) on \(\tilde{M}\), the function \(X f\) is
+      \(C^{\infty}\) on \(M\).</i>
+    </p>
+    <p>
+      The set of all \(C^{\infty}\) vector fields on a manifold \(M\) is
+      denoted by \(\mathfrak{X} (M)\). The set of all \(C^{\infty}\) vector
+      fields along a submanifold \(M\) in a manifold \(\tilde{M}\) will be
+      denoted by \(\Gamma (T \tilde{M} |_M)\). They are both modules over the
+      ring \(\mathcal{F}= C^{\infty} (M)\) of \(C^{\infty}\) functions on
+      \(M\).
+    </p>
+    <h3 id="auto-22">4.5<span style="margin-left: 1em"></span>Directional Derivatives on a Submanifold of
+    \(\mathbb{R}^n\)<span style="margin-left: 1em"></span></h3>
+    <p>
+      Suppose \(M\) is a regular submanifold of \(\mathbb{R}^n\). 
+    </p>
+    <p>
+      For any \(p \in M\), we have \((D_X Y)_p = D_{X_p} Y\) by definition. it
+      follows that there is an \(\mathbb{R}\)-linear map
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  D : \mathfrak{X} (M) \times \Gamma
+      (T\mathbb{R}^n |_M) & \rightarrow \Gamma
+  (T\mathbb{R}^n |_M)\\
+  D (X,
+      Y) & = D_X Y.
+\end{array}\)
+    </center>
+    <p>
+      We call \(D\) the directional derivative on \(M\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">4.9</class>. </strong><i>Suppose
+      \(M\) is a regular submanifold of \(\mathbb{R}^n\) and \(D\) is the
+      directional derivative on \(M\). For \(X \in \mathfrak{X} (M)\) and \(Y
+      \in \Gamma (T\mathbb{R}^n |_M)\),</i>
+    </p>
+    <div style="margin-bottom: 1em">
+      <i><ol>
+        <li>
+          <p>
+            \(D (X, Y) = D_X Y\) is \(\mathcal{F}\)-linear in \(X\) and
+            \(\mathbb{R}\)-linear in \(Y\);
+          </p>
+        </li>
+        <li>
+          <p>
+            (Leibniz rule) if \(f \in C^{\infty} (M)\), then
+          </p>
+          <center>
+            \(\displaystyle D (X, f Y) = D_X (f Y) = (X f) Y + f D_X Y.\)
+          </center>
+        </li>
+      </ol></i>
+    </div>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">4.10</class>. </strong><i>Suppose
+      \(M\) is a regular submaniold of \(\mathbb{R}^n\) and \(D\) is the
+      directional derivative on \(M\).</i>
+    </p>
+    <div style="margin-bottom: 1em">
+      <i><ol>
+        <li>
+          <p>
+            (zero curvature) If \(X, Y \in \mathfrak{X} (M)\) and \(Z \in
+            \Gamma (T\mathbb{R}^n |_M)\), then
+          </p>
+          <center>
+            \(\displaystyle D_X D_Y Z - D_Y D_X Z - D_{[X, Y]} Z = 0.\)
+          </center>
+        </li>
+        <li>
+          <p>
+            (compatibility with the metric) If \(X \in \mathfrak{X} (M)\) and
+            \(Y, Z \in \Gamma (T\mathbb{R}^n |_M)\), then
+          </p>
+          <center>
+            \(\displaystyle X \langle Y, Z \rangle = \langle D_X Y, Z \rangle
+            + \langle Y, D_X Z \rangle .\)
+          </center>
+        </li>
+      </ol></i>
+    </div>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">4.11</class>.
+      </strong><i>Differentiation with respect to \(t\) of a vector field
+      along a curve is the directional derivative in the tangent
+      direction:</i>
+    </p>
+    <p style="margin-bottom: 1em">
+      <i><center>
+        \(\displaystyle \frac{d V}{d t} = D_{c' (t)} \tilde{V} .\)
+      </center></i>
+    </p>
+    <p>
+      
+    </p>
+    <h2 id="auto-23">5<span style="margin-left: 1em"></span>The Shape Operator<span style="margin-left: 1em"></span></h2>
+    <p>
+      
+    </p>
+    <h3 id="auto-24">5.1<span style="margin-left: 1em"></span>Normal Vector Fields<span style="margin-left: 1em"></span></h3>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>命题 <class style="font-style: normal">5.1</class>. </strong><i>If 0 is
+      a regular value of the \(C^{\infty}\) function \(f\) on
+      \(\mathbb{R}^3\), then \(N =\operatorname{grad}f\) is a
+      nowhere-vanishing normal vector field along the smooth hypersurface \(M
+      = Z (f) .\)</i>
+    </p>
+    <h3 id="auto-25">5.2<span style="margin-left: 1em"></span>The Shape Operator<span style="margin-left: 1em"></span></h3>
+    <p>
+      Let \(p\) be a point on a surface \(m\) in \(\mathbb{R}^3\) and let
+      \(N\) be a \(C^{\infty}\) unit normal vector field on \(M\). For any
+      tangent vector \(X_p \in T_p M\), define
+    </p>
+    <center>
+      \(\displaystyle L_p (X_p) = - D_{X_p} N\)
+    </center>
+    <p>
+      \(L_p\) is a linear map \(T_p M \rightarrow T_p M\). It is called the
+      <b>shape operator</b> or the <b>Weingarten map</b> of the surface \(M\)
+      at \(p\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>引理 <class style="font-style: normal">5.2</class>. </strong><i>Let
+      \(M\) be a surface in \(\mathbb{R}^3\) having a \(C^{\infty}\) unit
+      normal vector field \(N\). For \(X, Y \in \mathfrak{X} (M)\),</i>
+    </p>
+    <p style="margin-bottom: 1em">
+      <i><center>
+        \(\displaystyle \langle L (X), Y \rangle = \langle D_X Y, N \rangle
+        .\)
+      </center></i>
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>证明. </strong>Differentiating the equation
+      \(\langle Y, N \rangle \equiv 0\) with respect to \(X\).<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      In general, if \(e_1, \ldots, e_n\) is a basis for a vector space \(V\)
+      and
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle v = \sum_i v^i e_i \in V,
+        \operatorname{with}v^i \in \mathbb{R},\)</td>
+        <td align="right">(5.1)</td>
+      </tr>
+    </table>
+    <p>
+      then \(v^i\) is called the <b>component</b> of \(v\) in the
+      \(e_i\)-direction.
+    </p>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">5.3</class>. </strong><i>The
+      shape operator is self-adjoint: for any \(X_p, Y_p \in T_p M\),</i>
+    </p>
+    <p style="margin-bottom: 1em">
+      <i><center>
+        \(\displaystyle \langle L (X_p), Y_p \rangle = \langle X_p, L (Y_p)
+        \rangle .\)
+      </center></i>
+    </p>
+    <p style="margin-top: 1em">
+      <strong>证明. </strong>
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \langle L (X), Y \rangle = \langle
+        D_X Y, N \rangle\)</td>
+        <td align="right">(5.2)</td>
+      </tr>
+    </table>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \langle L (Y), X \rangle = \langle
+        D_Y X, N \rangle .\)</td>
+        <td align="right">(5.3)</td>
+      </tr>
+    </table>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle D_X Y - D_Y X = [X, Y] .\)</td>
+        <td align="right">(5.4)</td>
+      </tr>
+    </table>
+    <p>
+      Combining the three equaitons, we get
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  & \langle L (X), Y \rangle - \langle
+      L (Y), X \rangle\\
+  = & \langle D_X Y, N \rangle - \langle D_Y X, N
+      \rangle\\
+  = & \langle D_X Y - D_Y X, N \rangle\\
+  = & \langle [X, Y],
+      N \rangle\\
+  = & 0 \quad (\operatorname{since} [X, Y]
+ 
+      \operatorname{is}a\operatorname{tangent}\operatorname{vector}\operatorname{field}\operatorname{on}M)
+\end{array}\)
+    </center>
+    <p>
+      Hence, 
+    </p>
+    <p style="margin-bottom: 1em">
+      <center>
+        \(\displaystyle \langle L (X), Y \rangle = \langle L (Y), X \rangle =
+        \langle X, L (Y) \rangle
+.\)
+      </center>
+      <span style="margin-left: 1em"></span>
+      \(\Box\)
+    </p>
+    <p>
+      If \(T : V \rightarrow W\) is a linear map between two vector spaces
+      \(V\) and \(W\), \(\mathcal{B}_V = \{ v_1, \ldots, v_n \}\) a basis for
+      \(V\), and \(\mathcal{B}_W = \{ w_1, \ldots, w_m \}\) for \(W\), then
+    </p>
+    <center>
+      \(\displaystyle T (v_j) = \sum_{i = 1}^m {a ^i}_j w_i, \quad j = 1,
+      \ldots, n,\)
+    </center>
+    <p>
+      for a unique matrix \([a^i_j]\), called the matrix of the linear map
+      \(T\) with respect to the bases \(\mathcal{B}_V\) and \(\mathcal{B}_W\).
+    </p>
+    <p>
+      It follows from Proposition 5.3 that the matrix of the shape operator
+      with respect to an orthonormal basis for \(T_p M\) is symmetric, for if
+      \(e_1, e_2\) is an orthonormal basis for \(T_p M\) and 
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  L (e_1) & = a e_1 + b e_c,\\
+  L
+      (e_2) & = h e_1 + c e_2,
+\end{array}\)
+    </center>
+    <p>
+      then
+    </p>
+    <center>
+      \(\displaystyle b = \langle L (e_1), e_2 \rangle = \langle e_1, L (e_2)
+      \rangle = h.\)
+    </center>
+    <p>
+      Since the eigenvalues of a symmetric matrix are real, the shape operator
+      has real eigenvalues. We will see the meaning of these eigenvalues.
+    </p>
+    <h3 id="auto-26">5.3<span style="margin-left: 1em"></span>Curvature and the Shape Operator<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Consider as before a surface \(M\) in \(\mathbb{R}^3\) having a
+      \(C^{\infty}\) unit normal vector field \(N\). Lemma 5.2 on the shape
+      operator has a counterpart for vector fields along a curve.
+    </p>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">5.4</class>. </strong><i>Let \(c
+      : [a, b] \rightarrow M\) be a curve in \(M\) and let \(V\) be a vector
+      field in \(M\) along \(c\). Then</i>
+    </p>
+    <p>
+      <i><center>
+        \(\displaystyle \langle L (c' (t)), V \rangle = \left\langle \frac{d
+        V}{d t}, N_{c (t)}
+\right\rangle .\)
+      </center></i>
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <i><strong>注意. </strong>When we write \(V\) or \(d V / d
+      t\), we mean \(V (t)\) and \(d V (t) / d t\), respectively.</i>
+    </p>
+    <p style="margin-top: 1em">
+      <strong>证明. </strong>\(V (t)\) is tangent to \(M\), the
+      inner product \(\langle V (t), N_{c (t)} \rangle\) is zero.
+      Differentiating with respect to \(t\) yields
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  0 & = \frac{d}{d t} \langle V (t),
+      N_{c (t)} \rangle\\
+  & = \left\langle \frac{d V}{d t}, N_{c (t)}
+      \right\rangle + \left\langle V
+  (t), \frac{d}{d t} N_{c (t)}
+      \right\rangle\\
+  & = \left\langle \frac{d V}{d t}, N_{c (t)}
+      \right\rangle + \langle V (t),
+  D_{c' (t)} N \rangle
+\end{array}\)
+    </center>
+    <p>
+      Thus, 
+    </p>
+    <p style="margin-bottom: 1em">
+      <center>
+        \(\displaystyle \langle V (t), L (c' (t)) \rangle = \langle V (t), -
+        D_{c' (t)} N \rangle =
+\left\langle \frac{d V}{d t}, N_{c (t)}
+        \right\rangle .\)
+      </center>
+      <span style="margin-left: 1em"></span>
+      \(\Box\)
+    </p>
+    <p style="margin-top: 1em">
+      <strong>命题 <class style="font-style: normal">5.5</class>. </strong><i>Suppose
+      \(\gamma (t)\) is a normal section, parametrized by arc length,
+      determined by a unit tangent vector \(X_p \in T_p M\) and the unit
+      normal vector \(N_p\). Then the normal curvature of \(\gamma (s)\) with
+      respect to \(N_p\) at \(p\) is given by the second fundamental form:</i>
+    </p>
+    <p style="margin-bottom: 1em">
+      <i><center>
+        \(\displaystyle \kappa (X_p) = \langle L (X_p), X_p \rangle
+        =
+\textrm{\textrm{\textrm{\mathrm{I} \mathrm{I}}}} (X_p, X_p)\)
+      </center></i>
+    </p>
+    <p style="margin-top: 1em">
+      <strong>证明. </strong>By definition, \(\gamma (0) = p\) and
+      \(\gamma' (0) = X_p\). Let \(T (s) := \gamma' (s)\) be the unit tangent
+      vector field along \(\gamma (s)\). Then the curvature of the normal
+      section \(\gamma (s)\) is
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  \kappa (\gamma' (s)) & = \langle
+      \gamma'' (s), N_{\gamma (s)} \rangle\\
+  & = \langle d T / d s,
+      N_{\gamma (s)} \rangle\\
+  & = \langle L (\gamma' (s)), T \rangle \quad
+
+      (\operatorname{by}\operatorname{Proposition}5.4)\\
+
+& = \langle L (T),
+T \rangle .
+\end{array}\)
+</center>
+<p>
+Evaluating at \(s = 0\) gives
+</p>
+<p style="margin-bottom: 1em">
+<center>
+\(\displaystyle \kappa (X_p) = \langle L (X_p), X_p \rangle =
+\textrm{\textrm{\mathrm{I}
+\mathrm{I}} \langle X_p, X_p \rangle .}\)
+</center>
+<span style="margin-left: 1em"></span>
+\(\Box\)
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>命题 <class style="font-style: normal">5.6</class>. </strong><i>The
+principal directions of the surface \(M\) in \(\mathbb{R}^3\) at \(p\)
+are the unit eigenvectors of the shape operator \(L\); the principal
+curvatures are the eigenvalues of \(L\).</i>
+</p>
+<p style="margin-top: 1em">
+<strong>证明. </strong>The principal curvatures at \(p\) are
+the maximum and minimum values of the function
+</p>
+<center>
+\(\displaystyle \kappa (X_p) = \textrm{\mathrm{I} \mathrm{I}} (X_p, X_p)
+= \langle L (X_p),
+X_p \rangle\)
+</center>
+<p>
+for \(X_p \in T_p M\) satisfying \(\langle X_p, X_p \rangle = 1\). This
+type of optimization problem with a constraint lends itself to the
+method of the Lagrange multiplier from vector calculus.
+</p>
+<p>
+Choose an orthonormal basis \(e_1, e_2\) for \(T_p M\) so that
+</p>
+<center>
+\(\displaystyle X_p = x e_1 + y e_2 = \left[ \begin{array}{c}
+x\\
+
+      y
+
+\end{array} \right] .\)
+</center>
+<p>
+By Proposition 5.3, the matrix of \(L\) relative to the basis \(e_1,
+e_2\) is a symmetric matrix
+</p>
+<center>
+\(\displaystyle A = \left[ \begin{array}{cc}
+a & b\\
+b &
+c
+\end{array} \right],\)
+</center>
+<p>
+meaning
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+L (e_1) & = a e_1 + b e_c\\
+L
+(e_2) & = b e_1 + c e_2
+\end{array}\)
+</center>
+<p>
+In matrix notation,
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+L (X_P) & = L (x e_1 + y e_2) = (a x + b y) e_1 + (b x + c y) e_2\\
+& = \left[ \begin{array}{c}
+a x + b
+y\\
+b x + c y
+\end{array} \right] = \left[ \begin{array}{cc}
+a
+& b\\
+b & c
+\end{array} \right] \left[ \begin{array}{c}
+x\\
+
+      y
+
+\end{array} \right] = A X_p,
+\end{array}\)
+</center>
+<p>
+and
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+\kappa (X_p) & = \langle L (X_p),
+X_p \rangle = \langle A X_p, X_p \rangle =
+X_p^T A X_p\\
+& = a x^2 +
+2 b x y + c y^2 .
+\end{array}\)
+</center>
+<p>
+The problem of finding the principal curvatures becomes a standard
+calculus problem: find the maximum and minimum of the function
+</p>
+<center>
+\(\displaystyle \kappa (X_p) = a x^2 + 2 b x y + c y^2 = X_p^T A X_p\)
+</center>
+<p>
+subject to the constraint
+</p>
+<center>
+\(\displaystyle g (X_p) = \langle X_p, X_p \rangle = x^2 + y^2 = 1.\)
+</center>
+<p>
+Now
+</p>
+<center>
+\(\displaystyle \operatorname{grad} \kappa = \left[ \begin{array}{c}
+2
+a x + 2 b y\\
+2 b x + 2 c y
+\end{array} \right] = 2 A X_p\)
+</center>
+<p>
+and
+</p>
+<center>
+\(\displaystyle \operatorname{grad}g = 2 X_p .\)
+</center>
+<p>
+By the method of Lagrange multiplier, at the maximum or minimum of
+\(\kappa\), there is a scalar \(\lambda\) such that
+</p>
+<center>
+\(\displaystyle \operatorname{grad} \kappa = \lambda
+\operatorname{grad}g, \quad
+\operatorname{or}A X_p = \lambda X_p .\)
+</center>
+<p>
+Thus, the maximum and minimum of \(\kappa\) occur at unit eigenvecrtors
+of \(A\). These are the principal directions at \(p\).
+</p>
+<p>
+Let \(X_p\) be a principal direction at \(p\). Then the corresponding
+principal curvature is the normal curvature
+</p>
+<center>
+\(\displaystyle \kappa (X_p) = \langle L (X_p), X_p \rangle = \langle A
+X_p, X_p \rangle =
+\langle \lambda X_p, X_p \rangle = \lambda \langle
+X_p, X_p \rangle = \lambda,\)
+</center>
+<p style="margin-bottom: 1em">
+the eigenvalue associated to the eigenvector \(X_p\).<span style="margin-left: 1em"></span>\(\Box\)
+</p>
+<p style="margin-top: 1em">
+<strong>推论 <class style="font-style: normal">5.7</class>. </strong><i></i>
+</p>
+<div style="margin-bottom: 1em">
+<i><ol>
+<li>
+<p>
+The Gaussian curvature of a surface \(M\) in \(\mathbb{R}^3\) is
+the determinant of the shape operator.
+</p>
+</li>
+<li>
+<p>
+If \(e_1, e_2\) is an orthonormal basis for the tangent space
+\(T_p M\) of the surface \(M\), then the Gaussian curvature at
+\(p\) is
+</p>
+<center>
+\(\displaystyle K = \langle L (e_1), e_1 \rangle \langle L (e_2),
+e_2 \rangle - \langle L
+(e_1), e_2 \rangle \langle L (e_2), e_1
+\rangle .\)
+</center>
+</li>
+</ol></i>
+</div>
+<h3 id="auto-27">5.4<span style="margin-left: 1em"></span>The First and Second Fundamental Forms<span
+    style="margin-left: 1em"></span></h3>
+<p>
+A point \(p\) of a smooth surface \(M\) in \(\mathbb{R}^3\), the
+Euclidean Riemannian metric is a symmetric bilinear form on the tangent
+space \(T_p M\). It is called the <b>first fundamental form</b> of \(M\)
+at \(p\). If \(L : T_p M \rightarrow T_p M\) is the shape operator, the
+symmetric bilinear form on \(T_p M\)
+</p>
+<center>
+\(\displaystyle \mathrm{I} \mathrm{I} (X_p, X_p) = \langle L (X_p), X_p
+\rangle\)
+</center>
+<p>
+is called the <b>second fundamental form</b> of the surface of \(M\) at
+\(p\). The first fundamental form is the metric and the second
+fundamental form is essentially the shape operator. These two
+fundamental forms encode in them much of the geometry of the surface
+\(M\).
+</p>
+<p>
+Let \(e_1, e_2\) be a basis for the tangent space \(T_p M\). We set
+</p>
+<center>
+\(\displaystyle E := \langle e_1, e_1 \rangle, \quad F := \langle e_1,
+e_2 \rangle, \quad G :=
+\langle e_2, e_2 \rangle .\)
+</center>
+<p>
+If \(X_p = x^1 e_1 + x^2 e_2\) and \(Y = y^1 e_1 + y^2 e_2\), then
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+\langle X_p, Y_p \rangle & = \langle
+e_1, e_1 \rangle x^1 y^1 + \langle e_1,
+e_2 \rangle x^1 y^2\\
+&
+\quad + \langle e_2, e_1 \rangle x^2 y^1 + \langle e_2, e_2 \rangle x^2
+
+      y^2\\
+
+& = E x^1 y^1 + F x^1 y^2 + F x^2 y^1 + G x^2 y^2\\
+& =
+\left[ \begin{array}{cc}
+x^1 & x^2
+\end{array} \right] \left[
+\begin{array}{cc}
+E & F\\
+F & G
+\end{array} \right] \left[
+\begin{array}{c}
+y^1\\
+y^2
+\end{array} \right] .
+\end{array}\)
+</center>
+<p>
+\(E, F, G\) completely determine the first fundamental form of \(M\) at
+\(p\). They are called the coefficients of the first fundamental form
+relative to \(e_1, e_2\).
+</p>
+<p>
+Similarly, the three numbers
+</p>
+<center>
+\(\displaystyle e := \mathrm{I} \mathrm{I} (e_1, e_2), \quad f :=
+\mathrm{I} \mathrm{I} (e_1,
+e_2), \quad g := \mathrm{I} \mathrm{I} (e_2,
+e_2)\)
+</center>
+<p>
+determine completely the second fundamental form of \(M\) at \(p\):
+</p>
+<center>
+\(\displaystyle \mathrm{I} \mathrm{I} (X_p, Y_p) = \left[
+\begin{array}{cc}
+x^1 & x^2
+\end{array} \right] \left[
+\begin{array}{cc}
+e & f\\
+f & g
+\end{array} \right] \left[
+\begin{array}{c}
+y^1 \\
+y^2
+\end{array} \right] .\)
+</center>
+<p>
+
+    </p>
+    <p>
+      They are called the coefficients of the second fundamental form relative
+      to \(e_1, e_2\). As \(p\) varies in an open set \(U\), if \(e_1, e_2\)
+      remain a basis of \(T_p M\) at each point, these coefficients are six
+      functions on \(U\). Classically, \(M\) is taken to be a coordinate patch
+      \((U, u, v)\) with \(e_1 = \partial / \partial u\) and \(e_2 = \partial
+      / \partial v\), and the differential geometry of \(M\) is done in terms
+      of the six functions \(E, F, G, e, f, g\).
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定理 <class style="font-style: normal">5.8</class>. </strong><i>Suppose
+      \(M\) and \(M'\) are two smooth Riemannian manifolds of dimension 2, and
+      \(\varphi : M \rightarrow M'\) is a diffeomorphism. Let \(E, F, G\) be
+      the coefficients of the first fundamental form relative to a frame
+      \(e_1, e_2\) on \(M\), and \(E', F', G'\) be corresponding coefficients
+      relative to \(e'_1 := \varphi_{\ast} e_1, e'_2 := \varphi_{\ast} e_2\)
+      on \(M'\). Then \(\varphi\) is an isometry if and only if E,F,G at \(p\)
+      are equal to \(E', F', G'\) at \(\varphi (p)\)&bdquo; respectively, for
+      all \(p \in M\).</i>
+    </p>
+    <h3 id="auto-28">5.5<span style="margin-left: 1em"></span>The Catenoid and the Helicoid<span style="margin-left: 1em"></span></h3>
+    <p>
+      The graph of the hyperbolic cosine function
+    </p>
+    <center>
+      \(\displaystyle y = \cosh x := \frac{e^x + e^{- x}}{2}\)
+    </center>
+    <p>
+      is called a catenary.
+    </p>
+    <p>
+      The surface of revolution obtained by rotating the catenary \(r = \cosh
+      z\) about the \(z\)-axis is called a <b>catenoid</b>. It has
+      parameterization
+    </p>
+    <center>
+      \(\displaystyle (r \cos \theta, r \sin \theta, z) = ((\cosh u) \cos
+      \theta, (\cosh u) \sin
+
+\theta, u),\)
+</center>
+<p>
+where we set \(z = u\)
+</p>
+<p>
+The <b>helicoid</b> is the surface with parameterization
+</p>
+<center>
+\(\displaystyle (r \cos \theta, r \sin \theta, \theta), \quad - \infty <
+r, \theta < \infty ;\)
+</center>
+<p>
+it is the surface traced out by a horizontal stick moving upward with
+constant speed while rotating about a vertical axis through its
+midpoint.
+</p>
+<p>
+As coordinate charts, there are diffeomorphisms \(U \simeq (- 1, 1)
+\times (0, 2 \pi)\) and \(U' \simeq (- a, a) \times (0, 2 \pi)\). Since
+\((- 1, 1)\) is diffeomorphic to \((- \sinh 1, \sinh 1)\) via the map
+\(u \mapsto \sinh u\), there is a diffeomorphism \(\varphi : U
+\rightarrow U'\) given by
+</p>
+<center>
+\(\displaystyle ((\cosh u) \cos \theta, (\cosh u) \sin \theta, u)
+\mapsto ((\sinh u) \cos
+\theta, (\sinh u) \sin \theta, \theta) .\)
+</center>
+<p>
+By computing the three functions \(E, F, G\) relative to the frame \(e*1
+= \partial / \partial u, e_2 = \partial / \partial \theta\) on the
+catenoid and the frame \(e'\_1 = \varphi*{\ast} e*1, e'\_2 =
+\varphi*{\ast} e*2\) on the helicoid, respectively, one can show that
+\(\varphi : U \rightarrow U'\) is an isometry. Physically, what this
+means is that if one cuts the catenoid along a meridian, straighten out
+the meridian, and let the catenoid hang, it will assume the shape of the
+helicoid.<span style="margin-left: 1em"></span>
+</p>
+<h2 id="auto-29">6<span style="margin-left: 1em"></span>Affine<em><strong></strong></em>
+Connections<span style="margin-left: 1em"></span></h2>
+<p>
+Consider a smooth vector field \(Y\) on a manifold \(M\) and a tangent
+vector \(X_p \in T_p M\) at a point \(p\) in \(M\). To define the
+directional derivative of \(Y\) in the direction \(X_p\), it is
+necessary to compare the values of \(Y\) in a neighborhood of \(p\). If
+\(q\) is a point near \(p\), in general it is not possible to compare
+the vectors \(Y_q\) and \(Y_p\) , since they are in distinct tangent
+spaces. Instead, we extract from the directional derivative in
+\(\mathbb{R}^n\) certain key properties and call any map \(D :
+\mathfrak{X} (M) \times \mathfrak{X} (M) \rightarrow \mathfrak{X} (M)\)
+with these properties an <b>affine connection</b>. Intuitively, an
+affine connection on a manifold is simply a way of differentiating
+vector fields on the manifold.
+</p>
+<p>
+We will see later that there are infinitely many affine connections on
+any manifold. On a Riemannian manifold, there is a unique torsion-free
+affine connection compatible with the metric, called the Riemannian or
+Levi-Civita connection.
+</p>
+<h3 id="auto-30">6.1<span style="margin-left: 1em"></span>Affine Connections<span style="margin-left: 1em"></span></h3>
+<p>
+We can define the directional derivative of a \(C^{\infty}\) function in
+the direction \(X_p \in T_p M\) in the same way as before
+</p>
+<center>
+\(\displaystyle \nabla*{X*p} f = X_p f.\)
+</center>
+<p>
+However, there is no longer a canonical way to define the directional
+derivative of a vector field \(Y\). Formula (4.2) fails because unlike
+in \(\mathbb{R}^n\), there is no canonical basis for the tangent space
+\(T_p M\).
+</p>
+<p style="margin-top: 1em">
+<strong>定义 <class style="font-style: normal">6.1</class>. </strong><i>An
+affine connection on a manifold \(M\) is an \(\mathbb{R}\)-bilinear
+map</i>
+</p>
+<p>
+<i><center>
+\(\displaystyle \nabla : \mathfrak{X} (M) \times \mathfrak{X} (M)
+\rightarrow \mathfrak{X}
+(M),\)
+</center></i>
+</p>
+<p>
+<i>written \(\nabla_X Y\) for \(\nabla (X, Y)\), satisfying the two
+properties below: if \(\mathcal{F}\) is the ring \(C^{\infty} (M)\) of
+\(C^{\infty}\) functions on \(M\), then for all \(X, Y \in \mathfrak{X}
+(M)\),</i>
+</p>
+<div style="margin-bottom: 1em">
+<i><ol>
+<li>
+<p>
+\(\nabla_X Y\) is \(\mathcal{F}\)-linear in \(X\),
+</p>
+</li>
+<li>
+<p>
+(Leibniz rule) \(\nabla_X Y\) satisfies the Leibniz rule in \(Y\):
+for \(f \in \mathcal{F}\),
+</p>
+<center>
+\(\displaystyle \nabla_X (f Y) = (X f) Y + f \nabla_X Y.\)
+</center>
+</li>
+</ol></i>
+</div>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>例 <class style="font-style: normal">6.2</class>. </strong>The directional
+derivative \(D_X\) of a vector field \(Y\) on \(\mathbb{R}^n\) is an
+affine connection on \(\mathbb{R}^n\), sometimes called the Euclidean
+connection on \(\mathbb{R}^n\).
+</p>
+<h3 id="auto-31">6.2<span style="margin-left: 1em"></span>Torsion and Curvature<span style="margin-left: 1em"></span></h3>
+<p>
+Given an affine connection \(\nabla\) on a manifold \(M\), one might ask
+whether it satisfies the same properties as Proposition 4.3 for the
+Euclidean connection on \(\mathbb{R}^n\). For \(X, Y \in \mathfrak{X}
+(M)\), set
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+T (X, Y) & = \nabla_X Y - \nabla_Y X - [X, Y] \in \mathfrak{X} (M)\\
+R (X, Y) & = [\nabla_X, \nabla_Y] -
+\nabla*{[X, Y]}\\
+& = \nabla*X \nabla Y - \nabla_Y \nabla_X -
+\nabla*{[X, Y]} \in
+\operatorname{End} (\mathfrak{X}
+(M))
+\end{array}\)
+</center>
+<p>
+We call \(T\) the torsion and \(R\) the curvature of the connection.
+</p>
+<p>
+An affine connection \(\nabla\) on a manifold \(M\) gives rise to a
+linear map
+</p>
+<center>
+\(\displaystyle \mathfrak{X} (M) \rightarrow
+\operatorname{End}_{\mathbb{R}} (\mathfrak{X}
+(M)), \quad X \mapsto
+\nabla_X .\)
+</center>
+<p>
+Here both vector spaces \(\mathfrak{X} (M)\) and
+\(\operatorname{End}_{\mathbb{R}} (\mathfrak{X} (M))\) are Lie algebras.
+The curvature means the deviation of the map \(X \mapsto \nabla*X\) from
+being a Lie algebra homomorphism.
+</p>
+<p>
+Although \(\nabla_X Y\) is not \(\mathcal{F}\)-linear in \(Y\), it turns
+out, amazingly, that both torsion and curvature are
+\(\mathcal{F}\)-linear in all their arguments.
+</p>
+<p style="margin-top: 1em">
+<strong>命题 <class style="font-style: normal">6.3</class>. </strong><i>Let \(X,
+Y, Z\) be smooth vector fields on a manifold \(M\) with affine
+connection \(\nabla\).</i>
+</p>
+<div style="margin-bottom: 1em">
+<i><ol>
+<li>
+<p>
+The torsion \(T (X, Y)\) is \(\mathcal{F}\)-linear in \(X\) and in
+\(Y\);
+</p>
+</li>
+<li>
+<p>
+The curvature \(R (X, Y) Z\) is \(\mathcal{F}\)-linear in \(X, Y\)
+and \(Z\).
+</p>
+</li>
+</ol></i>
+</div>
+<p style="margin-top: 1em">
+<strong>证明. </strong>
+</p>
+<p>
+if \(f, g \in \mathcal{F}= C^{\infty} (M)\), then
+</p>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle [f X, g Y] = f g [X, Y] + f (X g) Y - g (Y f) X.\)</td>
+<td align="right">(6.1)</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle R (f X, Y) Z = \nabla*{f X} \nabla*Y
+Z - \nabla_Y \nabla*{f X} Z - \nabla\_{[f
+X, Y]} Z.\)</td>
+<td align="right">(6.2)</td>
+</tr>
+</table>
+<p style="margin-bottom: 1em">
+<span style="margin-left: 1em"></span>\(\Box\)
+</p>
+<h3 id="auto-32">6.3<span style="margin-left: 1em"></span>The Riemannian Connection<span style="margin-left: 1em"></span></h3>
+<p>
+We say that a connection is torsion-free if its torsion is zero. On a
+Riemannian manifold, we say that a connection is compatible with the
+metric if for all \(X, Y, Z \in \mathfrak{X} (M)\),
+</p>
+<center>
+\(\displaystyle Z \langle X, Y \rangle = \langle \nabla_Z X, Y \rangle +
+\langle X, \nabla_Z Y
+\rangle .\)
+</center>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>定义 <class style="font-style: normal">6.4</class>. </strong><i>On a
+Riemannian manifold, a Riemannian connection, sometimes called a
+Levi-Civita connection, is an affine connection that is torsion-free and
+compatible with the metric.</i>
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>引理 <class style="font-style: normal">6.5</class>. </strong><i>A
+\(C^{\infty}\) vector field \(X\) on a Riemannian manifold \((M,
+\langle, \rangle)\) is uniquely determined by the values \(\langle X, Z
+\rangle\) for all \(Z \in \mathfrak{X} (M)\).</i>
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>定理 <class style="font-style: normal">6.6</class>. </strong><i>On a
+Riemannian manifold, there is a unique Riemannian connection.</i>
+</p>
+<p style="margin-top: 1em">
+<strong>证明. </strong>
+</p>
+<p>
+By Lemma 6.5, to specify \(\nabla_X Y\), it suffices to know \(\langle
+\nabla_X Y, Z \rangle\) for every vector field \(Z \in \mathfrak{X}
+(M)\). So we will try to find a formula for \(\langle \nabla_X Y, Z
+\rangle\) involving only the Riemannian metric and canonical operations
+on vector fields such as the Lie bracket.
+</p>
+<p>
+A Riemannian connection satisfies the two formulas
+</p>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle \nabla_X Y - \nabla_Y X - [X, Y] =
+0\)</td>
+<td align="right">(6.3)</td>
+</tr>
+</table>
+<p>
+and
+</p>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle X \langle Y, Z \rangle = \langle
+\nabla_X Y, Z \rangle + \langle Y, \nabla_X Z
+\rangle .\)</td>
+<td align="right">(6.4)</td>
+</tr>
+</table>
+<p>
+Cyclically permuting \(X, Y, Z\) in (6.4) gives two other formulas:
+</p>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle Y \langle Z, X \rangle = \langle
+\nabla_Y Z, X \rangle + \langle Z, \nabla_Y X
+\rangle,\)</td>
+<td align="right">(6.5)</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle Z \langle X, Y \rangle = \langle
+\nabla_Z X, Y \rangle + \langle X, \nabla_Z Y
+\rangle\)</td>
+<td align="right">(6.6)</td>
+</tr>
+</table>
+<p>
+Using (6.3), we can rewrite \(\nabla_Y X\) in (6.5) in terms of
+\(\nabla_X Y\):
+</p>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle Y \langle Z, X \rangle = \langle
+\nabla_Y Z, X \rangle + \langle Z, \nabla_Y X
+\rangle - \langle Z, [X,
+Y] \rangle\)</td>
+<td align="right">(6.7)</td>
+</tr>
+</table>
+<p>
+Subtracting (6.6) from (6.4) and then adding (6.7) to it will create
+terms involving \(\nabla_X Z - \nabla_Z X\) and \(\nabla_Y Z - \nabla_Z
+Y\), which are equal to \([X, Z]\) and \([Y, Z]\) by torsion-freeness:
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+X \langle Y, Z \rangle & + Y \langle
+Z, X \rangle - Z \langle X, Y \rangle\\
+& = 2 \langle \nabla_X Y, Z
+\rangle + \langle Y, \nabla_X Z - \nabla_Z X
+\rangle + \langle X,
+\nabla_Y Z - \nabla_Z Y \rangle - \langle Z, [X, Y]
+\rangle\\
+& = 2
+\langle \nabla_X Y, Z \rangle + \langle Y, [X, Z] \rangle + \langle
+X,
+[Y, Z] \rangle - \langle Z, [X, Y] \rangle .
+\end{array}\)
+</center>
+<p>
+Solving for \(\langle \nabla_X Y, Z \rangle\), we get
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+2 \langle \nabla_X Y, Z \rangle = &
+X \langle Y, Z \rangle + Y \langle Z, X
+\rangle - Z \langle X, Y
+\rangle \hspace{3cm} \text{(6.8)}\\
+& - \langle X, [Y, Z] \rangle +
+\langle Y, [Z, X] \rangle + \langle Z, [X,
+Y] \rangle .
+\end{array}\)
+</center>
+<p>
+This formula proves that a Riemannian connection, if it exists, is
+unique.
+</p>
+<p style="margin-bottom: 1em">
+Define \(\nabla_X Y\) by (6.8). It is a straightforward exercise to
+check that so defined, \(\nabla\) is a torsion-free affine connection
+compactible with the metric. This proves the existence of a Riemannian
+connection on a Riemannian manifold.<span style="margin-left: 1em"></span>\(\Box\)
+</p>
+<h2 id="auto-33">7<span style="margin-left: 1em"></span>Vector Bundles<span style="margin-left: 1em"></span></h2>
+<p>
+The set \(\mathfrak{X} (M)\) of all \(C^{\infty}\) vector fields on a
+manifold has the structure of a real vector spacce, which is the same as
+a module over the field \(\mathbb{R}\) of real numbers. Let
+\(\mathcal{F}= C^{\infty} (M)\) again be the ring of \(C^{\infty}\)
+functions on \(M\). Since we can multiply a vector field by a
+\(C^{\infty}\) function, the vector space \(\mathfrak{X} (M)\) is also a
+module over \(\mathcal{F}\).
+</p>
+<p>
+We will try to understand \(\mathcal{F}\)-linear maps from the point of
+view of vector bundles. The main result (Theorem 7.26) asserts the
+existence of a one-to-one correspondence between \(\mathcal{F}\)-linear
+maps \(\alpha : \Gamma (E) \rightarrow \Gamma (F)\) of sections of
+vector bundles and bundle maps \(\varphi : E \rightarrow F\).
+</p>
+<h3 id="auto-34">7.1<span style="margin-left: 1em"></span>Definition of a Vector Bundle<span style="margin-left: 1em"></span></h3>
+<p>
+
+    </p>
+    <p style="margin-top: 1em">
+      <strong>定义 <class style="font-style: normal">7.1</class>. </strong><i>A
+      \(C^{\infty}\) surjection \(\pi : E \rightarrow M\) is a \(C^{\infty}\)
+      vector bundle of rank \(r\) if</i>
+    </p>
+    <div style="margin-bottom: 1em">
+      <i><ol>
+        <li>
+          <p>
+            For every \(p \in M\), the set \(E_p := \pi^{- 1} (p)\) is a real
+            vector space of dimension \(r\);
+          </p>
+        </li>
+        <li>
+          <p>
+            every point \(p \in M\) has an open neighborhood \(U\) such that
+            there is a fiber-preserving diffeomorphism
+          </p>
+          <center>
+            \(\displaystyle \phi_U : \pi^{- 1} (U) \rightarrow U \times
+            \mathbb{R}^r\)
+          </center>
+          <p>
+            that restricts to a linear isomorphism \(E_p \rightarrow \{ p \}
+            \times \mathbb{R}^r\) on each fiber.
+          </p>
+        </li>
+      </ol></i>
+    </div>
+    <p>
+      The space \(E\) is called the total space, the space \(M\) the base
+      space, and the space \(E_p\) the fiber above \(p\) of the vector bundle.
+      We often say that \(E\) is a vector bundle over \(M\). A vector bundle
+      of rank 1 is also called a line bundle.
+    </p>
+    <p>
+
+    </p>
+    <p style="margin-top: 1em">
+      <strong>例 <class style="font-style: normal">7.2</class>. </strong>(Product Bundle)
+    </p>
+    <p style="margin-bottom: 1em">
+
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>例 <class style="font-style: normal">7.3</class>. </strong>(Mobius strip).
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>例 <class style="font-style: normal">7.4</class>. </strong>(Restriction of a
+      vector bundle).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>定义 <class style="font-style: normal">7.5</class>. </strong><i>Let
+      \(\pi_E : E \rightarrow M\) and \(\pi_F : F \rightarrow N\) be a
+      \(C^{\infty}\) vector bundles. A \(C^{\infty}\) bundle map from \(E\) to
+      \(F\) is a pair of \(C^{\infty}\) maps \(\left( \varphi : E \rightarrow
+      F, \underline{\varphi} : M \rightarrow N
+
+\right)\) such that </i>
+</p>
+<div style="margin-bottom: 1em">
+<i><ol>
+<li>
+<p>
+the diagram
+</p>
+<p>
+<center>
+<script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "amsfonts": "", "tikz-cd": "" }'>
+\begin{tikzcd}
+E \arrow[r, "\varphi"] \arrow[d, "\pi_E"'] & F \arrow[d, "\pi_F"] \\
+M \arrow[r, "\underline{\varphi}"'] & N  
+ \end{tikzcd}
+</script>
+</center>
+</p>
+<p>
+commutes.
+</p>
+</li>
+<li>
+<p>
+\(\varphi\) restricts to a linear map \(\varphi*p : E_p
+\rightarrow F*{\underline{\varphi} (p)}\) of fibers for each \(p
+\in M\).
+</p>
+</li>
+</ol></i>
+</div>
+<p>
+Abusing language, we often call the map \(\varphi : E \rightarrow F\)
+along the bundle map.
+</p>
+<p>
+An important special case of a bundle map occurs when \(E\) and \(F\)
+are vector fields over the same manifold \(M\) and the base map
+\(\underline{\varphi}\) is the identity map. In this case, we call the
+bundle map \((\varphi : E \rightarrow F, 1*M)\) a bundle map over \(M\).
+</p>
+<p>
+If there is a bundle map \(\psi : F \rightarrow E\) over \(M\) such that
+\(\psi \circ \varphi = 1_E\) and \(\varphi \circ \psi = 1_F\), then
+\(\varphi\) is called a bundle isomorphism over \(M\), and the vector
+bundles \(E\) and \(F\) are said to be isomorphic over \(M\).
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>定义 <class style="font-style: normal">7.6</class>. </strong><i>A vector
+bundle \(\pi : E \rightarrow M\) is said to be trivial if it is
+isomorphic to a product bundle \(M \times \mathbb{R}^r \rightarrow M\)
+over \(M\).</i>
+</p>
+<p style="margin-top: 1em">
+<strong>例 <class style="font-style: normal">7.7</class>. </strong>(Tangent bundle)
+For any manifold \(M\), define \(T M\) to be the set of all tangent
+vectors of \(M\)
+</p>
+<p style="margin-bottom: 1em">
+<center>
+\(\displaystyle T M = \{ (p, v) |p \in M, v \in T_p M \} .\)
+</center>
+</p>
+<p>
+If \(U\) is a coordinate open subset of \(M\), then \(T U\) is bijective
+with the product bundle \(U \times \mathbb{R}^n\). We give \(T M\) the
+topology generated by \(T U\) as \(U\) runs over all coordinate open
+subsets of \(M\). In this way \(T M\) can be given a manifold structure
+so that \(T M \rightarrow M\) becomes a vector bundle. It is called the
+tangent bundle of \(M\).
+</p>
+<p style="margin-top: 1em">
+<strong>例 <class style="font-style: normal">7.8</class>. </strong>If \(f : M
+\rightarrow N\) is a \(C^{\infty}\) map of manifolds, then its
+differential gives rise to a bundle map \(f*{\ast} : T M \rightarrow T
+N\) defined by
+</p>
+<p style="margin-bottom: 1em">
+<center>
+\(\displaystyle f*{\ast} (p, v) = (f (p), f*{\ast, p} (v)) .\)
+</center>
+</p>
+<h3 id="auto-35">7.2<span style="margin-left: 1em"></span>The Vector Space of Sections<span style="margin-left: 1em"></span></h3>
+<p>
+A <b>section<i></i></b> of a vector bundle \(\pi : E \rightarrow M\)
+over an open set \(U\) is a function \(s : U \rightarrow E\) such that
+\(\pi \circ s = 1*U\), the identity map on \(U\). For each \(p \in U\),
+the section \(s\) picks out one element of the fiber \(E_p\). The set of
+all \(C^{\infty}\) sections of \(E\) over \(U\) is denoted by \(\Gamma
+(U, E)\). If \(U\) is the manifold \(M\), we also write \(\Gamma (E)\)
+instead of \(\Gamma (M, E)\).
+</p>
+<p>
+The set \(\Gamma (U, E)\) of \(C^{\infty}\) sections of \(E\) over \(U\)
+is clearly a vector space over \(\mathbb{R}\). It is in fact a module
+over the ring \(C^{\infty} (U)\) of \(C^{\infty}\) functions, for if
+\(f\) is a \(C^{\infty}\) function over \(U\) and \(s\) is a
+\(C^{\infty}\) section of \(E\) over \(U\), then the definition
+</p>
+<center>
+\(\displaystyle (f s) (p) := f (p) s (p) \in E_p, \quad p \in U,\)
+</center>
+<p>
+makes \(f s\) into a \(C^{\infty}\) section of \(E\) over \(U\).
+</p>
+<p style="margin-top: 1em">
+<strong>例 <class style="font-style: normal">7.9</class>. </strong>(Sections of a
+product line bundle) A section \(s\) of the product bundle \(M \times
+\mathbb{R} \rightarrow M\) is a map \(s (p) = (p, f (p))\). So there is
+a one-to-one correspondence
+</p>
+<center>
+\(\displaystyle \{ \operatorname{section}\operatorname{of}M \times
+\mathbb{R} \rightarrow M \}
+\longleftrightarrow \{
+\operatorname{functions}f : M \rightarrow \mathbb{R} \}
+.\)
+</center>
+<p style="margin-bottom: 1em">
+In particular, the space of \(C^{\infty}\) sections of the product line
+bundle \(M \times \mathbb{R} \rightarrow M\) may be identified with
+\(C^{\infty} (M)\).
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>例 <class style="font-style: normal">7.10</class>. </strong>(Sections of the
+tangent bundle). A vector field on a manifold \(M\) assigns to each
+point \(p \in M\) a tangent vector \(X_p \in T_p M\). Therefore, it is
+precisely a section of the tangent bundle \(T M\). Thus, \(\mathfrak{X}
+(M) = \Gamma (T M)\).
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>例 <class style="font-style: normal">7.11</class>. </strong>(Vector fields
+along a submanifold). If \(M\) is a regular submanifold of
+\(\mathbb{R}^n\), then a \(C^{\infty}\) vector field along \(M\) is
+precisely a section of the restriction \(T\mathbb{R}^n |\_M\) of
+\(T\mathbb{R}^n\) to \(M\). This explains our earlier notation \(\Gamma
+(T\mathbb{R}^3 |\_M)\) for the space of \(C^{\infty}\) vector fields
+along \(M\) in \(\mathbb{R}^3\).
+</p>
+<p style="margin-top: 1em">
+<strong>定义 <class style="font-style: normal">7.12</class>. </strong><i>A
+bundle map \(\varphi : E \rightarrow F\) over a manifold \(M\) (meaning
+that the base map is the identity \(1_M\)) induces a map on the sapce of
+sections:</i>
+</p>
+<p>
+<i><center>
+\(\displaystyle \varphi*{\#} : \Gamma (E) \rightarrow \Gamma (F),\)
+</center></i>
+</p>
+<p>
+<i><center>
+\(\displaystyle \varphi*{\#} (s) = \varphi \circ s.\)
+</center></i>
+</p>
+<p>
+<i>The induced map \(\varphi*{\#}\) is \(\mathcal{F}\)-linear becuase if
+\(f \in \mathcal{F}\), then</i>
+</p>
+<p style="margin-bottom: 1em">
+<i><center>
+\(\displaystyle \begin{array}{rl}
+(\varphi*{\#} (f s)) (p) & =
+(\varphi \circ (f s) (p)) = \varphi (f (p) s
+(p))\\
+& = f (p)
+\varphi (s (p))\\
+& = (f \varphi*{\#} (s)) (p)
+\end{array}\)
+</center></i>
+</p>
+<p>
+Our goal in the rest of this chapter is to prove that conversely, every
+\(\mathcal{F}\)-linear map \(\alpha : \Gamma (E) \rightarrow \Gamma
+(F)\) comes from a bundle map \(\varphi : E \rightarrow F\), i.e.,
+\(\alpha = \varphi*{\#}\).
+</p>
+<h3 id="auto-36">7.3<span style="margin-left: 1em"></span>Extending a Local Section to a Global
+Section<span style="margin-left: 1em"></span></h3>
+<p>
+The example of the tangent function \(\tan : (- \pi / 2, \pi / 2)
+\rightarrow \mathbb{R}\) shows that it may not be possible to extend the
+domain of a \(C^{\infty}\) function \(f : U \rightarrow \mathbb{R}\)
+from an open set \(U \subset M\) to the manifold \(M\). However, given a
+point \(p \in U\), it is always possible to find a \(C^{\infty}\) global
+function \(\tilde{f} : M \rightarrow \mathbb{R}\) that agrees with \(f\)
+on some neighborhood of \(p\). More generally, this is also true for
+sections of a vector bundle.
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>命题 <class style="font-style: normal">7.13</class>. </strong><i>Let \(E
+\rightarrow M\) be a \(C^{\infty}\) vector bundle, \(s\) a
+\(C^{\infty}\) section of \(E\) over some open set \(U\) in \(M\), and
+\(p\) a point in \(U\). Then there exists a \(C^{\infty}\) global
+section \(\bar{s} \in \Gamma (M, E)\) that agrees with \(s\) over some
+neighborhood of \(p\).</i>
+</p>
+<p style="margin-top: 1em">
+<strong>证明. </strong>Choose a \(C^{\infty}\) bump function
+\(f\) on \(M\) such that \(f \equiv 1\) on a neighborhood \(W\) of \(p\)
+contained in \(U\) and \(\operatorname{supp}f \subset U\). Define
+\(\bar{s} : M \rightarrow E\) by
+</p>
+<center>
+\(\displaystyle \bar{s} = \left\{ \begin{array}{ll}
+f (q) s (q) &
+\operatorname{for}q \in U,\\
+0 & \operatorname{for}q \not\in
+U.
+\end{array} \right.\)
+</center>
+<p style="margin-bottom: 1em">
+<span style="margin-left: 1em"></span>\(\Box\)
+</p>
+<h3 id="auto-37">7.4<span style="margin-left: 1em"></span>Local Operators<span style="margin-left: 1em"></span></h3>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>定义 <class style="font-style: normal">7.14</class>. </strong><i>Let
+\(E\) and \(F\) be vector bundles over a manifold \(M\). An
+\(\mathbb{R}\)-linear map \(\alpha : \Gamma (E) \rightarrow \Gamma (F)\)
+is a local operator if whenever a section \(s \in \Gamma (E)\) vanishes
+on an open set \(U\) in \(M\), then \(\alpha (s) \in \Gamma (F)\) also
+vanishes on \(U\). It is a point operator if whenever a section \(s \in
+\Gamma (E)\) vanishes at a point \(p\) in \(M\), then \(\alpha (s) \in
+\Gamma (F)\) also vanishes at \(p\).</i>
+</p>
+<p style="margin-top: 1em">
+<strong>例 <class style="font-style: normal">7.15</class>. </strong>By Example 7.9,
+the vector space \(C^{\infty} (\mathbb{R})\) of \(C^{\infty}\) functions
+on \(\mathbb{R}\) may be identified with the vector space \(\Gamma
+(\mathbb{R} \times \mathbb{R})\) of \(C^{\infty}\) sections of the
+product line bundle over \(\mathbb{R}\). The derivative
+</p>
+<center>
+\(\displaystyle \frac{d}{d t} : C^{\infty} (\mathbb{R}) \rightarrow
+C^{\infty} (\mathbb{R})\)
+</center>
+<p style="margin-bottom: 1em">
+is a local operator since if \(f (t) \equiv 0\) on \(U\), then \(f' (t)
+\equiv 0\) on \(U\). However, \(d / d t\) is not a point operator.
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>例 <class style="font-style: normal">7.16</class>. </strong>Let \(\Omega^k
+(M)\) denote the vector space of \(C^{\infty}\) \(k\)-forms on a
+manifold \(M\). Then the exterior derivative \(d : \Omega^k (M)
+\rightarrow \Omega^{k + 1} (M)\) is a local operator.
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>命题 <class style="font-style: normal">7.17</class>. </strong><i>Let
+\(E\) and \(F\) be \(C^{\infty}\) vector bundles over a manifold \(M\),
+and \(\mathcal{F}= C^{\infty} (M)\). If a map \(\alpha : \Gamma (E)
+\rightarrow \Gamma (F)\) is \(\mathcal{F}\)-linear, then it is a local
+operator.</i>
+</p>
+<p style="margin-top: 1em">
+<strong>例 <class style="font-style: normal">7.18</class>. </strong>On a
+\(C^{\infty}\) manifold \(M\), a derivation \(D : C^{\infty} (M)
+\rightarrow C^{\infty} (M)\) is \(\mathbb{R}\)-linear, but not
+\(\mathcal{F}\)-linear since by the Leibniz rule,
+</p>
+<center>
+\(\displaystyle D (f g) = (D f) g + f D g, \quad \operatorname{for}f, g
+\in \mathcal{F}.\)
+</center>
+<p style="margin-bottom: 1em">
+However, by Problem 7.1, \(D\) is a local operator.
+</p>
+<p style="margin-top: 1em">
+<strong>例 <class style="font-style: normal">7.19</class>. </strong>Fix a
+\(C^{\infty}\) vector field \(X \in \mathfrak{X} (M)\). Then a
+connection \(\nabla\) on \(M\) induces a map
+</p>
+<center>
+\(\displaystyle \nabla_X : \mathfrak{X} (M) \rightarrow \mathfrak{X}
+(M)\)
+</center>
+<p style="margin-bottom: 1em">
+that satisfies the Leibniz rule. By problem 7.2, \(\nabla_X\) is a local
+operator.
+</p>
+<h3 id="auto-38">7.5<span style="margin-left: 1em"></span>Restriction of a Local Operator to an Open
+Subset<span style="margin-left: 1em"></span></h3>
+<p>
+A continuous global section of a vector bundle can always be restricted
+to an open subset, but in general a section over an open subset cannnot
+be extended to a continuous global section. A local operator, which is
+defined on global sections of a vector bundle, can always be restricted
+to an open subset.
+</p>
+<p style="margin-top: 1em">
+<strong>定理 <class style="font-style: normal">7.20</class>. </strong><i>Let
+\(E\) and \(F\) be vector bundle over a manifold \(M\). If \(\alpha :
+\Gamma (E) \rightarrow \Gamma (F)\) is a local operator, then for each
+open subset \(U\) of \(M\) there is a unique linear map, called the
+restriction of \(\alpha\) to \(U\),</i>
+</p>
+<p>
+<i><center>
+\(\displaystyle \alpha_U : \Gamma (U, E) \rightarrow \Gamma (U, F)\)
+</center></i>
+</p>
+<p>
+<i>such that for any global section \(t \in \Gamma (E)\),</i>
+</p>
+<div style="margin-bottom: 1em">
+<i><table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle \alpha_U (t |\_U) = \alpha (t) |\_U
+.\)</td>
+<td align="right">(7.1)</td>
+</tr>
+</table></i>
+</div>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>命题 <class style="font-style: normal">7.21</class>. </strong><i>Let
+\(E\) and \(F\) be \(C^{\infty}\) vector bundles over a manifold \(M\),
+let \(U\) be an open subset of \(M\), and let \(\mathcal{F} (U) =
+C^{\infty} (U)\), the ring of \(C^{\infty}\) functions on \(U\). If
+\(\alpha : \Gamma (E) \rightarrow \Gamma (F)\) is
+\(\mathcal{F}\)-linear, then the restriction \(\alpha_U : \Gamma (U, E)
+\rightarrow \Gamma (U, F)\) is \(\mathcal{F} (U)\)-linear.</i>
+</p>
+<h3 id="auto-39">7.6<span style="margin-left: 1em"></span>Frames<span style="margin-left: 1em"></span></h3>
+<p>
+A <b><i>fram</i>e</b> for a vector bundle \(E\) of rank \(r\) over an
+open subset \(U\) is a collection of sections \(e_1, \ldots, e_r\) of
+\(E\) over \(U\) such that at each point \(p \in U\), the elements \(e_1
+(p), \ldots, e_r (p)\) form a basis for the fiber \(E_p\).
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>命题 <class style="font-style: normal">7.22</class>. </strong><i>A
+\(C^{\infty}\) vector bundle \(\pi : E \rightarrow M\) is trivial if and
+only if it has a \(C^{\infty}\) frame.</i>
+</p>
+<p>
+It follows from this proposition that over any trivializing open set
+\(U\) of a vector bundle \(E\), there is always a frame.
+</p>
+<h3 id="auto-40">7.7<span style="margin-left: 1em"></span>\(\mathcal{F}\)-Linearity and Bundle
+Maps<span style="margin-left: 1em"></span></h3>
+<p>
+Throughout this subsection, \(E\) and \(F\) are \(C^{\infty}\) vector
+bundles over a manifold \(M\), and \(\mathcal{F}= C^{\infty} (M)\) is
+the ring of \(C^{\infty}\) real-valued functions on \(M\). We will show
+that an \(\mathcal{F}\)-linear map \(\alpha : \Gamma (E) \rightarrow
+\Gamma (F)\) can be defined pointwise and therefore corresponds uniquely
+to a bundle map \(E \rightarrow F\).
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>引理 <class style="font-style: normal">7.23</class>. </strong><i>An
+\(\mathcal{F}\)-linear map \(\alpha : \Gamma (E) \rightarrow \Gamma
+(F)\) is a point operator.</i>
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>引理 <class style="font-style: normal">7.24</class>. </strong><i>Let
+\(E\) and \(F\) be \(C^{\infty}\) vector bundles over a manifold \(M\).
+A fiber-preserving map \(\varphi : E \rightarrow F\) that is linear on
+each fiber is \(C^{\infty}\) if and only if \(\varphi*{\#}\) takes
+\(C^{\infty}\) sections of \(E\) to \(C^{\infty}\) sections of
+\(F\).</i>
+</p>
+<p style="margin-top: 1em">
+<strong>命题 <class style="font-style: normal">7.25</class>. </strong><i>If
+\(\alpha : \Gamma (E) \rightarrow \Gamma (F)\) is
+\(\mathcal{F}\)-linear, then for each \(p \in M\), there is a unique
+linear map \(\varphi*p : E_p \rightarrow F_p\) such that for all \(s \in
+\Gamma (E)\),</i>
+</p>
+<p style="margin-bottom: 1em">
+<i><center>
+\(\displaystyle \varphi_p (s (p)) = \alpha (s) (p) .\)
+</center></i>
+</p>
+<p style="margin-top: 1em">
+<strong>定理 <class style="font-style: normal">7.26</class>. </strong><i>There
+is a one-to-one correspondence</i>
+</p>
+<p>
+<i><center>
+\(\displaystyle \{ \operatorname{bundle}\operatorname{maps} \varphi :
+E \rightarrow F \}
+\longleftrightarrow \{ \mathcal{F} \text{-linear
+maps} \alpha : \Gamma (E)
+\rightarrow \Gamma (F) \}\)
+</center></i>
+</p>
+<p style="margin-bottom: 1em">
+<i><center>
+\(\displaystyle \varphi \mapsto \varphi*{\#} .\)
+</center></i>
+</p>
+<p style="margin-top: 1em; margin-bottom: 1em">
+<strong>推论 <class style="font-style: normal">7.27</class>. </strong><i>An
+\(\mathcal{F}\)-linear map \(\omega : \mathfrak{X} (M) \rightarrow
+C^{\infty} (M)\) is a \(C^{\infty}\) 1-form on \(M\).</i>
+</p>
+<h3 id="auto-41">7.8<span style="margin-left: 1em"></span>Multilinear Maps over Smooth Functions<span
+    style="margin-left: 1em"></span></h3>
+<p>
+By Proposition 7.25, if \(\alpha : \Gamma (E) \rightarrow \Gamma (F)\)
+is an \(\mathcal{F}\)-linear map of sections of vector bundles over
+\(M\), then at each \(p \in M\), it si possible to define a linear map
+\(\varphi*p : E_p \rightarrow F_p\) such that for any \(s \in \Gamma
+(E)\),
+</p>
+<center>
+\(\displaystyle \varphi_p (s (p)) = \alpha (s) (p) .\)
+</center>
+<p>
+This can be generalized to \(\mathcal{F}\)-multilinear maps.
+</p>
+<p style="margin-top: 1em">
+<strong>命题 <class style="font-style: normal">7.28</class>. </strong><i>Let
+\(E, E', F\) be vector bundles over a manifold \(M\). If</i>
+</p>
+<p>
+<i><center>
+\(\displaystyle \alpha : \Gamma (E) \times \Gamma (E') \rightarrow
+\Gamma (F)\)
+</center></i>
+</p>
+<p>
+<i>is \(\mathcal{F}\)-linear, then for each \(p \in M\) there is a
+unique \(\mathbb{R}\)-bilinear map</i>
+</p>
+<p>
+<i><center>
+\(\displaystyle \varphi_p : E_p \times E'\_p \rightarrow F_p\)
+</center></i>
+</p>
+<p>
+<i>such that for all \(s \in \Gamma (E)\) and \(s' \in \Gamma
+(E')\),</i>
+</p>
+<p style="margin-bottom: 1em">
+<i><center>
+\(\displaystyle \varphi_p (s (p), s' (p)) = (\alpha (s, s')) (p) .\)
+</center></i>
+</p>
+<p>
+Proposition 7.28 generalizes to \(\mathcal{F}\)-linear maps with \(k\)
+arguments. Just as in Corollary 7.27, we conclude that is an alternating
+map
+</p>
+<center>
+\(\displaystyle \omega : \mathfrak{X} (M) \times \ldots \times
+\mathfrak{X} (M)
+(k\operatorname{times}) \rightarrow C^{\infty} (M)\)
+</center>
+<p>
+is \(\mathcal{F}\)-linear in each argument, then \(\omega\) induces a
+\(k\)-form \(\tilde{\omega}\) on \(M\) such that for \(X_1, \ldots, X_k
+\in \mathfrak{X} (M)\),
+</p>
+<center>
+\(\displaystyle \tilde{\omega} (X*{1, p}, \ldots, X_k, p) = (\omega
+(X_1, \ldots, X_k)) (p) .\)
+</center>
+<p>
+It is customary to write the \(k\)-form \(\tilde{\omega}\) as
+\(\omega\).
+</p>
+<p>
+
+    </p>
+    <h2 id="auto-42">8<span style="margin-left: 1em"></span>Gauss's Theorema Egregium<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-43">8.1<span style="margin-left: 1em"></span>The Gauss and Codazzi-Mainardi
+    Equations<span style="margin-left: 1em"></span></h3>
+    <p>
+      defined in Section 4.5 the directional derivative \(D_X Z\). It is a
+      vector field along \(M\) in \(\mathbb{R}^n\).
+    </p>
+    <p>
+      For \(X, Y \in \mathfrak{X} (M)\) and \(Z \in \Gamma (T\mathbb{R}^n
+      |_M)\), we verified in Proposition 4.10 the equation
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle R (X, Y) Z := D_X D_Y Z - D_Y D_X Z
+        - D_{[X, Y]} Z = 0.\)</td>
+        <td align="right">(8.1)</td>
+      </tr>
+    </table>
+    <p>
+      Note that this is not the same curvature operator as the curvature
+      operator of the directional derivative on \(\mathbb{R}^n\). The earlier
+      curvature operator was a map
+    </p>
+    <center>
+      \(\displaystyle R : \mathfrak{X} (\mathbb{R}^n) \times \mathfrak{X}
+      (\mathbb{R}^n) \times
+
+\mathfrak{X} (\mathbb{R}^n) \rightarrow
+\mathfrak{X} (\mathbb{R}^n) ;\)
+</center>
+<p>
+the current curvature operator is a map
+</p>
+<center>
+\(\displaystyle R : \mathfrak{X} (M) \times \mathfrak{X} (M) \times
+\mathfrak{X}
+(T\mathbb{R}^n |_M) \rightarrow \mathfrak{X} (T\mathbb{R}^n
+|\_M) .\)
+</center>
+<p>
+Since the Riemannian connection \(\nabla\) of a surface \(M\) in
+\(\mathbb{R}^3\) is defined in terms of the directional derivative \(D\)
+on \(M\), it is easy to compare the curvature tensors of \(\nabla\) and
+\(D\). This will lead to a formula for the curvature \(R\) of
+\(\nabla\), called the <b>Gauss curvature equation<i></i></b>.
+</p>
+<p>
+A vector field \(Y \in \mathfrak{X} (M)\) is also a vector field along
+\(M\) in \(\mathbb{R}^3\). Hence, if \(X, Y \in \mathfrak{X} (M)\), the
+directional derivative \(D_X Y\) makes sense. Assume that \(M\) is
+oriented with a unit normal vector field \(N\). At any point \(p \in
+M\), the normal component of the vector \(D_{X*p} Y\) is \(\langle
+D*{X*p} Y, N_p \rangle N_p\), and therefore the tangent component is
+</p>
+<center>
+\(\displaystyle \operatorname{pr} (D*{X*p} Y) = D*{X*p} Y - \langle
+D*{X*p} Y, N_p \rangle N_p
+.\)
+</center>
+<p>
+By (6.9), this is the definition of the Riemannian connection
+\(\nabla*{X*p} Y\) on \(M\). Hence,
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+D*{X*p} Y & = \nabla*{X*p} Y +
+\langle D*{X*p} Y, N_p \rangle N_p\\
+& = \nabla*{X*p} Y + \langle L_p
+(X_p), Y_p \rangle N_p \hspace{3cm}  
+ \text{(8.2)}
+\end{array}\)
+</center>
+<p>
+Gloablizing this equation, we have, for \(X, Y \in \mathfrak{X} (M)\),
+</p>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle D_X Y = \nabla_X Y + \langle L (X),
+Y \rangle N,\)</td>
+<td align="right">(8.3)</td>
+</tr>
+</table>
+<p>
+which decomposes the vector field \(D_X Y\) into its tangential and
+normal components.
+</p>
+<p style="margin-top: 1em">
+<strong>定理 <class style="font-style: normal">8.1</class>. </strong><i>Let
+\(M\) be an oriented surface in \(\mathbb{R}^3\), \(\nabla\) its
+Riemannian connection. \(R\) the curvature operator of \(\nabla\), and
+\(L\) the shape operator on \(M\). For \(X, Y, Z \in \mathfrak{X}
+(M)\),</i>
+</p>
+<div style="margin-bottom: 1em">
+<i><ol>
+<li>
+<p>
+(Gauss curvature equation)
+</p>
+<center>
+\(\displaystyle R (X, Y) Z = \langle L (Y), Z \rangle L (X) -
+\langle L (X), Z \rangle L (Y) ;\)
+</center>
+</li>
+<li>
+<p>
+(Codazzi-Mainardi equation)
+</p>
+<center>
+\(\displaystyle \nabla_X L (Y) - \nabla_Y L (X) - L ([X, Y]) =
+0.\)
+</center>
+</li>
+</ol></i>
+</div>
+<p style="margin-top: 1em">
+<strong>证明. </strong>
+</p>
+<ol>
+<li>
+<p>
+Decomposing \(D_Y Z\) into its tangential and normal components, one
+has
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+D_Y Z & = (D_Y Z)*{\tan} + (D*Y
+Z)*{\operatorname{nor}}\\
+& = \nabla_Y Z + \langle L (Y), Z
+\rangle N. \hspace{3cm} \text{(8.4)}
+\end{array}\)
+</center>
+<p>
+Hence,
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+D_X D_Y Z & = D_X D_Y Z + D_X
+(\langle L (Y), Z \rangle N)\\
+& = \nabla_X \nabla_Y Z + \langle L
+(X), \nabla_Y Z \rangle N + X \langle L
+(Y), Z \rangle N + \langle
+L (Y), Z \rangle D_X N\\
+& (\operatorname{by} (8.4)
+
+          \operatorname{and}\operatorname{Leibniz}\operatorname{rule})\\
+
+& =
+\nabla*X \nabla_Y Z - \langle L (X), Z \rangle L (X) + \langle L
+(Y),
+\nabla_X Z \rangle N + Y \langle L (X), Z \rangle N.
+\hspace{3cm}  
+ \text{(8.5)}
+\end{array}\)
+</center>
+<p>
+Interchanging \(X\) and \(Y\) gives
+</p>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle D_Y D_X Z = \nabla_X \nabla_Y Z - \langle L (X), Z \rangle L (Y) + \langle L
+(Y), \nabla_X Z
+\rangle N + Y \langle L (X), Z \rangle N.\)</td>
+<td align="right">(8.6)</td>
+</tr>
+</table>
+<p>
+By (8.4)
+</p>
+<table width="100%">
+<tr>
+<td width="100%" align="center">\(\displaystyle D*{[X, Y]} Z = \nabla\_{[X, Y]} Z + \langle L ([X, Y]), Z \rangle N.\)</td>
+<td align="right">(8.7)</td>
+</tr>
+</table>
+<p>
+Subtracting (8.6) and (8.7) from (8.5) gives
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+0 = & R_D (X, Y) Z = R (X, Y) Z - \langle L (Y), Z \rangle L (X) + \langle L
+(X), Z \rangle L
+(Y)\\
+& +\operatorname{normal}\operatorname{component}.
+\hspace{3cm}  
+ \text{(8.8)}
+\end{array}\)
+</center>
+<p>
+The tangential component of (8.8) gives
+</p>
+<center>
+\(\displaystyle R (X, Y) = \langle L (Y), Z \rangle L (X) - \langle
+L (X), Z \rangle L (Y)\)
+</center>
+<p>
+which is the Gauss curvature equation.
+</p>
+</li>
+<li>
+<p>
+The normal component of (8.8) is
+</p>
+<center>
+\(\displaystyle \begin{array}{rl}
+( \langle L (X), \nabla_Y Z
+\rangle + X \langle L (Y), Z \rangle & \\
+
+- \langle L (Y),
+  \nabla*X Z \rangle - Y \langle L (X), Z \rangle & - \langle
+  L ([X,
+  Y]), Z \rangle ) N = 0.
+  \end{array}\)
+  </center>
+  <p>
+  By the compatibility of \(\nabla\) with the metric, this simplies to
+  </p>
+  <center>
+  \(\displaystyle \langle \nabla_X L (Y), Z \rangle - \langle \nabla_Y
+  L (X), Z \rangle -
+  \langle L ([X, Y]), Z \rangle = 0.\)
+  </center>
+  <p>
+  Since the equation above is true for all \(Z\), by the nondegeneracy
+  of the inner product,
+  </p>
+  <center>
+  \(\displaystyle \nabla_X L (Y) - \nabla_Y L (X) - L ([X, Y]) = 0.\)
+  </center>
+  </li>
+  </ol>
+  <p style="margin-bottom: 1em">
+  <span style="margin-left: 1em"></span>\(\Box\)
+  </p>
+  <p style="margin-top: 1em">
+  <strong>注意 <class style="font-style: normal">8.2</class>. </strong>By the
+  generalization of Proposition 7.28 to \(\mathcal{F}\)-trilinear maps,
+  because \(R (X, Y) Z\) is \(\mathcal{F}\)-trilinear in \(X, Y, Z\), for
+  each \(p \in M\), there is a unique \(\mathbb{R}\)-trilinear map
+  </p>
+  <center>
+  \(\displaystyle R_p : T_p M \times T_p M \times T_p M \rightarrow T_p
+  M\)
+  </center>
+  <p style="margin-bottom: 1em">
+  such that \(R_p (X_p, Y_p) Z_p = (R (X, Y) Z)\_p\). Thus, although we
+  have stated the Gauss curvature equation for vector fields, it is also
+  true for vectors \(X_p, Y_p, Z_p \in T_p M\) at a point \(p\).
+  </p>
+  <h3 id="auto-44">8.2<span style="margin-left: 1em"></span>A Proof of the Theorema Egregium<span
+      style="margin-left: 1em"></span></h3>
+  <p>
+  Suppose for every Riemannian manifold \(M\), there is defined a function
+  \(f_M : M \rightarrow \mathbb{R}\). The function \(f_M\) is said to be
+  an isometric invariant if for every isometry \(\varphi : M \rightarrow
+  \tilde{M}\) of Riemannian manifolds, we have \(f_M (p) = f*{\tilde{M}}
+  (\varphi (p))\) for all \(p \in M\).
+  </p>
+  <p style="margin-top: 1em">
+  <strong>定理 <class style="font-style: normal">8.3</class>.
+  </strong><i>(Theorema Egregium). Let \(M\) be a surface in
+  \(\mathbb{R}^3\) and \(p\) a point in \(M\). </i>
+  </p>
+  <div style="margin-bottom: 1em">
+  <i><ol>
+  <li>
+  <p>
+  If \(e_1, e_2\) is an orthonormal basis for the tangent plane
+  \(T_p M\), then the Gaussian curvature \(K_p\) of \(M\) at \(p\)
+  is
+  </p>
+  <table width="100%">
+  <tr>
+  <td width="100%" align="center">\(\displaystyle K_p = \langle R_p (e_1, e_2)
+  e_2, e_1 \rangle .\)</td>
+  <td align="right">(8.9)</td>
+  </tr>
+  </table>
+  </li>
+  <li>
+  <p>
+  The Gaussian curvature is an isometric invariant of smooth
+  surfaces in \(\mathbb{R}^3\).
+  </p>
+  </li>
+  </ol></i>
+  </div>
+  <p style="margin-top: 1em">
+  <strong>证明. </strong>
+  </p>
+  <ol>
+  <li>
+  <p>
+  In Corollary 5.7, we found a formula for the Gaussian curvature
+  \(K_p\) in terms of the shape operator \(L\) and an orthonormal
+  basis \(e_1, e_2\) for \(T_p M\):
+  </p>
+  <center>
+  \(\displaystyle K_p = \langle L (e_1), e_1 \rangle \langle L (e_2),
+  e_2 \rangle - \langle L
+  (e_1), e_2 \rangle \langle L (e_2), e_1
+  \rangle .\)
+  </center>
+  <p>
+  By the Gauss curvature equation,
+  </p>
+  <center>
+  \(\displaystyle R_p (e_1, e_2) e_2 = \langle L (e_2), e_2 \rangle L
+  (e_1) - \langle L (e_1),
+  e_2 \rangle L (e_2) .\)
+  </center>
+  <p>
+  Take the inner product with \(e_1\) gives
+  </p>
+  <center>
+  \(\displaystyle \begin{array}{rl}
+  \langle R_p (e_1, e_2) e_2, e_1
+  \rangle & = \langle L (e_2), e_2 \rangle
+  \langle L (e_1), e_1
+  \rangle - \langle L (e_1), e_2 \rangle \langle L (e_2),
+  e_1
+  \rangle\\
+  & = K_p .
+  \end{array}\)
+  </center>
+  </li>
+  <li>
+  <p>
+  Since \(R_p (e_1, e_2)\) is determined completely by the metric, by
+  Formula (8.9) the same can be said for \(K_p\). A detailed proof is
+  left to Problem 8.3.
+  </p>
+  </li>
+  </ol>
+  <p style="margin-bottom: 1em">
+  <span style="margin-left: 1em"></span>\(\Box\)
+  </p>
+  <p>
+      </p>
+      <h3 id="auto-45">8.3<span style="margin-left: 1em"></span>The Gaussian Curvature in Terms of an
+      Arbitrary Basis<span style="margin-left: 1em"></span></h3>
+      <p style="margin-top: 1em">
+        <strong>命题 <class style="font-style: normal">8.4</class>. </strong><i>Let
+        \(M\) be a smooth surface in \(\mathbb{R}^3\) and \(p \in M\). If \(u,
+        v\) is any basis for the tangent plane \(T_p M\), then the Gaussian
+        curvature at \(p\) is</i>
+      </p>
+      <p style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle K_p = \frac{\langle R_p (u, v) v, u \rangle}{\langle
+          u, u \rangle \langle v, v
+  \rangle - \langle u, v \rangle^2} .\)
+  </center></i>
+  </p>
+  <p style="margin-top: 1em">
+  <strong>证明. </strong>Let \(e*1, e_2\) be an orthonormal
+  basis for \(T_p M\) and suppose
+  </p>
+  <center>
+  \(\displaystyle \begin{array}{rl}
+  u & = a e_1 + b e_2\\
+  v & = c e_1 + d e_2
+  \end{array}\)
+  </center>
+  <p>
+  By the skew-symmetry of the curvature tensor,
+  </p>
+  <center>
+  \(\displaystyle R_p (u, v) = (a d - b c) R_p (e_1, e_2)\)
+  </center>
+  <p>
+  so that
+  </p>
+  <center>
+  \(\displaystyle \langle R_p (u, v) v, u \rangle = (a d - b c)^2 \langle
+  R_p (e_1, e_2) e_2,
+  e_1 \rangle .\)
+  </center>
+  <p>
+  On the other hand,
+  </p>
+  <center>
+  \(\displaystyle \begin{array}{rl}
+  \langle u, u \rangle \langle v, v
+  \rangle - \langle u, v \rangle^2 & \\
+  = (a^2 + b^2) (c^2 + d^2) & - (a
+  c + b d)^2 = (a d - b c)^2
+  \end{array}\)
+  </center>
+  <p>
+  Hence,
+  </p>
+  <p style="margin-bottom: 1em">
+  <center>
+  \(\displaystyle K_p = \langle R_p (e_1, e_2) e_2, e_1 \rangle =
+  \frac{\langle R_p (u, v) v, u
+  \rangle}{\langle u, u \rangle \langle v,
+  v \rangle - \langle u, v \rangle^2} .\)
+  </center>
+  <span style="margin-left: 1em"></span>
+  \(\Box\)
+  </p>
+  <h2 id="auto-46">9<span style="margin-left: 1em"></span>Generalizations to Hypersurfaces in
+  \(\mathbb{R}^{n + 1}\)<span style="margin-left: 1em"></span></h2>
+  <h3 id="auto-47">9.1<span style="margin-left: 1em"></span>The Shape Operator of a Hypersurface<span
+      style="margin-left: 1em"></span></h3>
+  <p>
+  A <b><i>hypersurface</i></b> \(M\) in \(\mathbb{R}^{n + 1}\) is a
+  submanifold of codimension 1. Although all of our hypersurfaces are by
+  definition smooth, sometimes for emphasis we adopt the redundant
+  locution &quot;smooth hypersurfaces&quot;. Assume that there is a smooth
+  unit normal vector field \(N\) on \(M\); note that this is always
+  possible locally on any hypersurface. By Proposition 4.3, we know that
+  the directional derivative \(D\) on \(\mathbb{R}^{n + 1}\) is the
+  Riemannian connection of \(\mathbb{R}^{n + 1}\).
+  </p>
+  <p>
+  For any point \(p \in M\) and tangent vector \(X_p \in T_p M\), since
+  \(\langle N, N \rangle \equiv 1\),
+  </p>
+  <center>
+  \(\displaystyle 0 = X_p \langle N, N \rangle = 2 \langle D*{X*p} N, N
+  \rangle .\)
+  </center>
+  <p>
+  Therefore, \(D*{X*p} N\) is tangent to \(M\). The <b><i>shape
+  operator</i></b> \(L_p : T_p M \rightarrow T_p M\) is defined to be
+  </p>
+  <center>
+  \(\displaystyle L_p (X_p) = - D*{X*p} N \quad \operatorname{for}X_p \in
+  T_p M.\)
+  </center>
+  <p>
+  Recall that \(\mathfrak{X} (M)\) is the vector space of \(C^{\infty}\)
+  vector fields and \(\mathcal{F}= C^{\infty} (M)\) the ring of
+  \(C^{\infty}\) functions on \(M\). As the point \(p\) varies over \(M\),
+  the shape operator globalizes to an \(\mathcal{F}\)-linear map \(L :
+  \mathfrak{X} (M) \rightarrow \mathfrak{X} (M)\) given by \(L (X)\_p = L_p
+  (X_p)\).
+  </p>
+  <p style="margin-top: 1em">
+  <strong>命题 <class style="font-style: normal">9.1</class>. </strong><i>Let \(X,
+  Y \in \mathfrak{X} (M)\) be \(C^{\infty}\) vector fields on an oriented
+  hypersurface \(M\) in \(\mathbb{R}^{n + 1}\). Then</i>
+  </p>
+  <div style="margin-bottom: 1em">
+  <i><ol>
+  <li>
+  <p>
+  \(\langle L (X), Y \rangle = \langle D_X Y, N \rangle\).
+  </p>
+  </li>
+  <li>
+  <p>
+  the shape operator is self-adjoint with respect to the Euclidean
+  metric inherited from \(\mathbb{R}^{n + 1}\).
+  </p>
+  </li>
+  </ol></i>
+  </div>
+  <p style="margin-top: 1em">
+  <strong>证明. </strong>Since \(\langle Y, N \rangle = 0\),
+  by the compatibility of \(D\) with the metric,
+  </p>
+  <center>
+  \(\displaystyle 0 = X \langle Y, N \rangle = \langle D_X Y, N \rangle +
+  \langle Y, D_X N
+  \rangle .\)
+  </center>
+  <p>
+  Hence,
+  </p>
+  <table width="100%">
+  <tr>
+  <td width="100%" align="center">\(\displaystyle \langle D_X Y, N \rangle = \langle
+  Y, - D_X N \rangle = \langle Y, L (X)
+  \rangle .\)</td>
+  <td align="right">(9.1)</td>
+  </tr>
+  </table>
+  <p>
+  Reversing the roles of \(X\) and \(Y\) gives
+  </p>
+  <table width="100%">
+  <tr>
+  <td width="100%" align="center">\(\displaystyle \langle D_Y X, N \rangle = \langle
+  X, L (Y) \rangle .\)</td>
+  <td align="right">(9.2)</td>
+  </tr>
+  </table>
+  <p>
+  Since \([X, Y]\) is tangent to \(M\),
+  </p>
+  <table width="100%">
+  <tr>
+  <td width="100%" align="center">\(\displaystyle \langle [X, Y], N \rangle =
+  0.\)</td>
+  <td align="right">(9.3)</td>
+  </tr>
+  </table>
+  <p>
+  By torsion-freeness, subtracting (9.2) and (9.3) from (9.1) gives
+  </p>
+  <p style="margin-bottom: 1em">
+  <center>
+  \(\displaystyle 0 = \langle D_X Y - D_Y X - [X, Y], N \rangle =
+  \langle Y, L (X) \rangle -
+  \langle X, L (Y) \rangle .\)
+  </center>
+  <span style="margin-left: 1em"></span>
+  \(\Box\)
+  </p>
+  <p>
+  Since the shape operator \(L_p : T_p M \rightarrow T_p M\) is
+  self-adjoint, all of its eigenvalues \(\lambda_1, \ldots, \lambda_n\)
+  are real. These are the <b><i>principal curvatures</i></b> of the
+  hypersurface \(M\) at \(p\). We define the <b><i>mean curvature</i></b>
+  of \(M\) at \(p\) to be the average of the principal curvature
+  </p>
+  <center>
+  \(\displaystyle H (p) = \frac{1}{n} \sum*{i = 1}^n \lambda*i =
+  \frac{1}{n} \operatorname{tr}
+  (L_p),\)
+  </center>
+  <p>
+  and the <b><i>Gaussian curvature</i><i></i></b> at \(p\) to be the
+  determinant of the shape operator
+  </p>
+  <center>
+  \(\displaystyle K (p) = \prod*{i = 1}^n \lambda*i = \det (L_p) .\)
+  </center>
+  <h3 id="auto-48">9.2<span style="margin-left: 1em"></span>The Riemannian Connection of a
+  Hypersurface<span style="margin-left: 1em"></span></h3>
+  <p>
+  We learned earlier that the unique Riemannian connection on
+  \(\mathbb{R}^{n + 1}\) is the directional derivative \(D\).
+  </p>
+  <p style="margin-top: 1em">
+  <strong>定理 <class style="font-style: normal">9.2</class>. </strong><i>Let
+  \(M\) be a smooth hypersurface in \(\mathbb{R}^{n + 1}\) and \(D\) the
+  directional derivative on \(R^{n + 1}\). For \(X, Y \in \mathfrak{X}
+  (M)\), the tangential component of \(D_X Y\) defines the Riemannian
+  connection \(\nabla\) of \(M\):</i>
+  </p>
+  <p style="margin-bottom: 1em">
+  <i><center>
+  \(\displaystyle \nabla_X Y = (D_X Y)*{\tan} .\)
+  </center></i>
+  </p>
+  <p style="margin-top: 1em">
+  <strong>证明. </strong>Since it is evident that \(\nabla\)
+  satisfies the two defining properties of a connection, it suffices to
+  check that \(\nabla*X Y\) is torsion-free and compatible with the
+  metric.
+  </p>
+  <ol>
+  <li>
+  <p>
+  Torsion-freeness: Let \(T_D\) and \(T*{\nabla}\) be the torsions of
+  \(D\) and \(\nabla\), respectively. By definition, for \(X, Y \in
+  \mathfrak{X} (M)\),
+  </p>
+  <table width="100%">
+  <tr>
+  <td width="100%" align="center">\(\displaystyle D*X Y = \nabla_X Y + (D_X
+  Y)*{\operatorname{nor}},\)</td>
+  <td align="right">(9.4)</td>
+  </tr>
+  </table>
+  <table width="100%">
+  <tr>
+  <td width="100%" align="center">\(\displaystyle D*Y X = \nabla_Y X + (D_Y
+  X)*{\operatorname{nor}} .\)</td>
+  <td align="right">(9.5)</td>
+  </tr>
+  </table>
+  <p>
+  Since \(D\) is torsion-free,
+  </p>
+  <center>
+  \(\displaystyle D*X Y - D_Y X = [X, Y] .\)
+  </center>
+  <p>
+  Equating the normal components of both sides, we get \((D_X
+  Y)*{\operatorname{nor}} - (D*Y X)*{\operatorname{nor}} = 0\).
+  Therefore, by (9.4) and (9.5),
+  </p>
+  <center>
+  \(\displaystyle \begin{array}{rl}
+  0 = T*D (X, Y) & = D_X Y - D_Y X - [X, Y]\\
+  & = (\nabla_X Y - \nabla_Y X - [X, Y]) + (D_X
+  Y)*{\operatorname{nor}} -
+  (D*Y X)*{\operatorname{nor}}\\
+  & =
+  \nabla*X Y - \nabla_Y X - [X, Y] = T*{\nabla} (X, Y) .
+  \end{array}\)
+  </center>
+  </li>
+  <li>
+  <p>
+  Compatibility with the metric: For \(X, Y, Z \in \mathfrak{X} (M)\),
+  </p>
+  <center>
+  \(\displaystyle \begin{array}{rl}
+  X \langle Y, Z \rangle & =
+  \langle D*X Y, Z \rangle + \langle Y, D_X Z
+  \rangle\\
+  & =
+  \langle \nabla_X Y + (D_X Y)*{\operatorname{nor}}, Z \rangle +
+  \langle
+  Y, \nabla*X Z + (\nabla_X Y)*{\operatorname{nor}}
+  \rangle\\
+  & = \langle \nabla_X Y, Z \rangle + \langle Y, \nabla_X
+  Z \rangle .
+  \end{array}\)
+  </center>
+  </li>
+  </ol>
+  <p style="margin-bottom: 1em">
+  Therefore, \(\nabla_X Y\) is the Riemannian connection on
+  \(E\)(?M).<span style="margin-left: 1em"></span>\(\Box\)
+  </p>
+  <h3 id="auto-49">9.3<span style="margin-left: 1em"></span>The Second Fundamental Form<span style="margin-left: 1em"></span></h3>
+  <p>
+  At each point \(p\) of an oriented hypersurface \(M \subset
+  \mathbb{R}^{n + 1}\), there is a sequence of symmetric bilinear maps on
+  \(T_p M\) called the <b><i>first, second</i></b> and <b><i>third
+  fundamental forms</i></b>, and so on:
+  </p>
+  <center>
+  \(\displaystyle \begin{array}{rl}
+  \mathrm{I} (X_p, Y_p) & = \langle
+  X_p, Y_p \rangle\\
+  \mathrm{I} \mathrm{I} (X_p, Y_p) & = \langle L
+  (X_p), Y_p \rangle = \langle
+  X_p, L (Y_p) \rangle\\
+  \mathrm{I}
+  \mathrm{I} \mathrm{I} (X_p, Y_p) & = \langle L^2 (X_p), Y_p
+  \rangle =
+  \langle L (X_p), L (Y_p) \rangle = \langle X_p, L^2 (Y_p) \rangle,
+        \ldots
+  \end{array}\)
+  </center>
+  <p>
+  For \(X, Y \in \mathfrak{X} (M)\), the directional derivative \(D*X Y\)
+  decompose into the sum of tangential component and a normal component.
+  The tangential component \((D_X Y)*{\tan}\) is the Riemannian connection
+  on \(M\); the normal component \((D*X Y)*{\operatorname{nor}}\) is
+  essentially the second fundamental form.
+  </p>
+  <p style="margin-top: 1em">
+  <strong>命题 <class style="font-style: normal">9.3</class>. </strong><i>If \(N\)
+  is a smooth unit normal vector field on the hypersurface \(M\) in
+  \(\mathbb{R}^{n + 1}\) and \(X, Y \in \mathfrak{X} (M)\) are smooth
+  vector fields on \(M\), then</i>
+  </p>
+  <p style="margin-bottom: 1em">
+  <i><center>
+  \(\displaystyle (D*X Y)*{\operatorname{nor}} = \mathrm{I} \mathrm{I}
+  (X, Y) N.\)
+  </center></i>
+  </p>
+  <h3 id="auto-50">9.4<span style="margin-left: 1em"></span>The Gauss Curvature and Codazzi-Mainardi
+  Equations<span style="margin-left: 1em"></span></h3>
+  <p>
+  Let \(M\) be an oriented, smooth hypersurface in \(\mathbb{R}^{n + 1}\),
+  with a smooth unit normal vector field \(N\). The relation between the
+  Riemannian connection \(D\) on \(\mathbb{R}^{n + 1}\) and the Riemannian
+  connection on \(M\) implies a relation between the curvature \(R_D (X,
+  Y) Z = 0\) on \(\mathbb{R}^{n + 1}\) and the curvature \(R (X, Y) Z\) on
+  \(M\). The tangential component of this relation gives the Gauss
+  curvature equation, and the normal component gives the Codazzi-Mainardi
+  equation.
+  </p>
+  <p style="margin-top: 1em">
+  <strong>定理 <class style="font-style: normal">9.4</class>. </strong><i>If \(M\)
+  is an oriented, smooth hypersurface in \(\mathbb{R}^{n + 1}\) and \(X,
+  Y, Z \in \mathfrak{X} (M)\), then</i>
+  </p>
+  <div style="margin-bottom: 1em">
+  <i><ol>
+  <li>
+  <p>
+  (the Gauss curvature equation)
+  </p>
+  <center>
+  \(\displaystyle R (X, Y) = \langle L (Y), Z \rangle L (X) -
+  \langle L (X), Z \rangle L (Y) .\)
+  </center>
+  </li>
+  <li>
+  <p>
+  (the Codazzi-Mainardi equation)
+  </p>
+  <center>
+  \(\displaystyle \nabla_X L (Y) - \nabla_Y L (X) - L ([X, Y]) =
+  0.\)
+  </center>
+  </li>
+  </ol></i>
+  </div>
+  <p style="margin-top: 1em">
+  <strong>推论 <class style="font-style: normal">9.5</class>. </strong><i>If \(M\)
+  is a smooth oriented hypersurface in \(\mathbb{R}^{n + 1}\) with
+  curvature \(R\) and \(X, Y \in \mathfrak{X} (M)\), then</i>
+  </p>
+  <p style="margin-bottom: 1em">
+  <i><center>
+  \(\displaystyle \langle R (X, Y) Y, X \rangle = \mathrm{I} \mathrm{I}
+  (X, X) \mathrm{I}
+  \mathrm{I} (Y, Y) - \mathrm{I} \mathrm{I} (X, Y)^2
+  .\)
+  </center></i>
+  </p>
+    </body>
