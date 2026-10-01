@@ -12,8 +12,9 @@ jobs:
         with:
           ref: gh-pages
 
-      - name: Find and Remove </source> Tags
-        run: find . -type f -name "*.html" -exec sed -i 's/<\/source>//g' {} +
+      - name: Remove end tags from HTML void elements
+        # TeXmacs exports paired meta/link tags that Prettier's HTML parser rejects.
+        run: find . -type f -name "*.html" -exec sed -E -i 's@</(area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)[[:space:]]*>@@gI' {} +
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
