@@ -303,6 +303,6 @@ categories: math
     
 <h3 id="auto-1">References<span style="margin-left: 1em"></span></h3>
 
-{% bibliography --cited %}
+{% bibliography --file references.bib --cited %}
 
 </body>
