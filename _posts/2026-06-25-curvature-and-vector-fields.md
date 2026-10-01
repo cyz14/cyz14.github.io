@@ -8,6 +8,10 @@ categories: math
 tikzjax: true
 ---
 
+<!-- Preserve exported HTML and LaTeX: Markdown formatting can rewrite math operators. -->
+
+<!-- prettier-ignore-start -->
+
 <body>
     <h1 id="auto-1">1<span style="margin-left: 1em"></span>Curvature and Vector Fields<span style="margin-left: 1em"></span></h1>
     <p>
@@ -3388,3 +3392,5 @@ The normal component of (8.8) is
   </center></i>
   </p>
     </body>
+
+<!-- prettier-ignore-end -->

@@ -8,6 +8,10 @@ categories: math
 tikzjax: true
 ---
 
+<!-- Preserve exported HTML and LaTeX: Markdown formatting can rewrite math operators. -->
+
+<!-- prettier-ignore-start -->
+
 <body>
     <h1 id="auto-1">2<span style="margin-left: 1em"></span>Curvature and Differential Forms<span style="margin-left: 1em"></span></h1>
     <p>
@@ -1800,3 +1804,5 @@ X \langle s, t \rangle & = X
   diffeomorphic to the circle \(S^1\).
   </p>
     </body>
+
+<!-- prettier-ignore-end -->

@@ -8,6 +8,10 @@ categories: math
 tikzjax: true
 ---
 
+<!-- Preserve exported HTML and LaTeX: Markdown formatting can rewrite math operators. -->
+
+<!-- prettier-ignore-start -->
+
 <body>
     <h2 id="auto-1">1<span style="margin-left: 1em"></span>Bump Functions and Partitions of Unity<span
     style="margin-left: 1em"></span></h2>
@@ -2218,3 +2222,5 @@ Calculate the dimension of \(\operatorname{Sp} (2 n,
 Notes taken and exported by TeXmacs.
 </p>
   </body>
+
+<!-- prettier-ignore-end -->
