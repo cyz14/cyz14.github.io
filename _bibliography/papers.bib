@@ -43,20 +43,22 @@
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 
-% @article{engel_geometric_2026,
-% 	title = {Geometric optimal transport for generative modeling without hallucinations},
-% 	volume = {5},
-% 	issn = {2642-1917, 2642-1909},
-% 	url = {https://intlpress.com/JDetail/2062899876611665922},
-% 	doi = {10.4310/MCGD.260605220738},
-% 	abstract = {Modern generative models aim to learn a transport map from a data distribution to a prior distribution. While the true objective is to map the support of the source measure onto that of the target measure, widely used flow-based models - Normalizing Flows (NF), Continuous Normalizing Flows (CNF), and Flow Matching (FM)-are restricted to learning diffeomorphic transformations, i.e., smooth and invertible maps over the ambient space. Denoising Diffusion (DDPM) must similarly reconstruct manifold structure from noise without explicit coverage guarantees. However, when the data distribution has disconnected support, the regularity theory of the Monge-Ampère equation implies that the optimal transport map is inherently discontinuous. As a result, these models fail to fully cover the target support, leaving zero-density regions that lead to hallucinations in generated samples. The geometric variational formulation of optimal transport directly solves a discrete Monge-Ampère equation and constructs transport maps that exactly cover the target support without gaps, thereby eliminating hallucination and mode-mixing issues. We first illustrate this coverage property on the Swiss Roll and Checkerboard datasets, and on two-dimensional UMAP embeddings of MNIST. We then provide quantitative comparisons (FID) across four benchmark datasets in a 100 -dimensional latent space. Although the exact geometric construction becomes intractable in high dimensions, we introduce a Monte Carlo-based approximation that bypasses this limitation while preserving the essential geometric structure. Experimental results demonstrate that the proposed method achieves competitive generative performance while eliminating hallucinations, an advantage not attainable with conventional generative models.},
-% 	language = {en},
-% 	number = {1},
-% 	urldate = {2026-07-07},
-% 	journal = {Mathematics, Computation and Geometry of Data},
-% 	publisher = {International Press of Boston},
-% 	author = {Engel, Ryan and Chen, Yazheng and Gu, Ben Xin and Yau, Shing-Tung and Gu, Xianfeng},
-% 	month = jun,
-% 	year = {2026},
-% 	pages = {1--36},
-% }
+@comment{
+  @article{engel_geometric_2026,
+    title = {Geometric optimal transport for generative modeling without hallucinations},
+    volume = {5},
+    issn = {2642-1917, 2642-1909},
+    url = {https://intlpress.com/JDetail/2062899876611665922},
+    doi = {10.4310/MCGD.260605220738},
+    abstract = {Modern generative models aim to learn a transport map from a data distribution to a prior distribution. While the true objective is to map the support of the source measure onto that of the target measure, widely used flow-based models - Normalizing Flows (NF), Continuous Normalizing Flows (CNF), and Flow Matching (FM)-are restricted to learning diffeomorphic transformations, i.e., smooth and invertible maps over the ambient space. Denoising Diffusion (DDPM) must similarly reconstruct manifold structure from noise without explicit coverage guarantees. However, when the data distribution has disconnected support, the regularity theory of the Monge-Ampère equation implies that the optimal transport map is inherently discontinuous. As a result, these models fail to fully cover the target support, leaving zero-density regions that lead to hallucinations in generated samples. The geometric variational formulation of optimal transport directly solves a discrete Monge-Ampère equation and constructs transport maps that exactly cover the target support without gaps, thereby eliminating hallucination and mode-mixing issues. We first illustrate this coverage property on the Swiss Roll and Checkerboard datasets, and on two-dimensional UMAP embeddings of MNIST. We then provide quantitative comparisons (FID) across four benchmark datasets in a 100 -dimensional latent space. Although the exact geometric construction becomes intractable in high dimensions, we introduce a Monte Carlo-based approximation that bypasses this limitation while preserving the essential geometric structure. Experimental results demonstrate that the proposed method achieves competitive generative performance while eliminating hallucinations, an advantage not attainable with conventional generative models.},
+    language = {en},
+    number = {1},
+    urldate = {2026-07-07},
+    journal = {Mathematics, Computation and Geometry of Data},
+    publisher = {International Press of Boston},
+    author = {Engel, Ryan and Chen, Yazheng and Gu, Ben Xin and Yau, Shing-Tung and Gu, Xianfeng},
+    month = jun,
+    year = {2026},
+    pages = {1--36},
+  }
+}
