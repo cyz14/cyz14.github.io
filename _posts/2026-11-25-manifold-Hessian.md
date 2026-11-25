@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hessian
-date: 2026-11-25 20:50:00
+date: 2026-11-25 20:50:00 +0800
 description: Lectures of Differential Geometry, chapter 1
 tags: connection, curvature, Hessian
 categories: math
