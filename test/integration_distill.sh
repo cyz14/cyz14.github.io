@@ -4,13 +4,31 @@ set -euo pipefail
 tmp_dir="$(mktemp -d)"
 tmp_override="${tmp_dir}/distill-override.yml"
 tmp_site="${tmp_dir}/site"
+tmp_source="${tmp_dir}/source"
 
 cleanup() {
   rm -rf "${tmp_dir}"
 }
 trap cleanup EXIT
 
+mkdir -p "${tmp_source}/_posts"
+cp -R _data "${tmp_source}/_data"
+cat >"${tmp_source}/_posts/2000-01-01-distill.md" <<'MARKDOWN'
+---
+layout: distill
+title: Distill integration fixture
+description: Cross-plugin rendering fixture
+permalink: /test/distill/
+giscus_comments: true
+mermaid:
+  enabled: true
+tikzjax: true
+---
+Distill integration fixture.
+MARKDOWN
+
 cat >"${tmp_override}" <<'YAML'
+jekyll_get_json: []
 giscus:
   repo: alshedivat/al-folio
   repo_id: R_kgDOExample
@@ -18,9 +36,9 @@ giscus:
   category_id: DIC_kwDOExample
 YAML
 
-bundle exec jekyll build --config "_config.yml,${tmp_override}" -d "${tmp_site}" >/dev/null
+bundle exec jekyll build --source "${tmp_source}" --config "_config.yml,${tmp_override}" -d "${tmp_site}" >/dev/null
 
-distill_page="${tmp_site}/blog/2021/distill/index.html"
+distill_page="${tmp_site}/test/distill/index.html"
 
 if [ ! -f "${distill_page}" ]; then
   echo "distill page was not generated at ${distill_page}" >&2
