@@ -1,0 +1,430 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Hessian | Yazheng's Notes </title> <meta name="author" content="Yazheng Chen"> <meta name="description" content="Lectures of Differential Geometry, chapter 1"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://cyz14.github.io/blog/2026/manifold-Hessian/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link defer rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@1.0.63/dist/fonts.css" crossorigin="anonymous"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Yazheng's Notes </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">courses </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/teaching/">beginners</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/ot_course/">OT</a> </div> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Hessian</h1> <p class="post-meta"> Created on November 25, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>   ·   <a href="/blog/tag/connection"> <i class="fa-solid fa-hashtag fa-sm"></i> connection,</a>   <a href="/blog/tag/curvature"> <i class="fa-solid fa-hashtag fa-sm"></i> curvature,</a>   <a href="/blog/tag/hessian"> <i class="fa-solid fa-hashtag fa-sm"></i> Hessian</a>   ·   <a href="/blog/category/math"> <i class="fa-solid fa-tag fa-sm"></i> math</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <table class="title-block" style="margin-bottom: 2em"> <tr> <td> <table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em"> <tr> <td><font style="font-size: 168.2%"><strong>流形上仿射联络、Hessian、Laplacian的定义</strong></font></td> </tr> </table> <div class="compact-block" style="margin-top: 1em; margin-bottom: 1em"> <table class="title-block"> <tr> <td> <p style="margin-top: 0.5em; margin-bottom: 0.5em"> </p> <div style="display: inline"> <span style="margin-left: 0pt"></span> </div> <table style="display: inline-table; vertical-align: middle"> <tbody><tr> <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-bottom: 0em; padding-top: 0em; width: 100%"><center> <p> <class style="font-variant: small-caps">by 《微分几何讲义》，DeepSeek，GPT</class> </p> </center></td> </tr></tbody> </table> </td> </tr> </table> </div> </td> </tr> </table> <p> </p> <h2 id="auto-1">1<span style="margin-left: 1em"></span>仿射联络<span style="margin-left: 1em"></span> </h2> <h3 id="auto-2">1.1<span style="margin-left: 1em"></span>仿射联络的定义<span style="margin-left: 1em"></span> </h3> <p> 设\(M\)是光滑流形，\(T M\)是切丛，\(\Gamma (T M)\)表示光滑向量场空间。 </p> <p> 一个仿射联络是一个映射 </p> <center> \(\displaystyle \nabla : \Gamma (T M) \times \Gamma (T M) \rightarrow \Gamma (T M), \quad (X, Y) \mapsto \nabla_X Y\) </center> <p> 满足两条公理： </p> <p> (A1) 对第一个变量\(C^{\infty} (M)\)-线性 </p> <center> \(\displaystyle \nabla_{f X + g Y} Z = f \nabla_X Z + g \nabla_Y Z.\) </center> <p> (A2) 对第二个变量满足 Leibniz 律 </p> <center> \(\displaystyle \nabla_X (f Y) = X (f) Y + f \nabla_X Y.\) </center> <p> 这条说明：\(\nabla_X\)作用在向量场上像一个“沿\(X\)方向的导数”。 </p> <h3 id="auto-3">1.2<span style="margin-left: 1em"></span>Leibniz律：从向量场扩展到张量场<span style="margin-left: 1em"></span> </h3> <p> Leibniz律不只是对 \(f Y\) 这一条。它是把\(\nabla\)从向量场唯一扩展到所有张量场的核心原则。 </p> <h4 id="auto-4">1.2.1<span style="margin-left: 1em"></span>对函数<span style="margin-left: 1em"></span> </h4> <p> 规定 </p> <center> \(\displaystyle \nabla_X f = X (f) .\) </center> <h4 id="auto-5">1.2.2<span style="margin-left: 1em"></span>对\(1\)-形式<span style="margin-left: 1em"></span> </h4> <p> 要求\(\nabla\)与缩并相容，即对\(1\)-形式\(\omega\)和向量场\(Y\)， </p> <center> \(\displaystyle \nabla_X (\omega (Y)) = (\nabla_X \omega) (Y) + \omega (\nabla_X Y) .\) </center> <p> 左边是函数的方向导数\(X (\omega (Y))\)。移项得 </p> <center> \(\displaystyle (\nabla_X \omega) (Y) = X (\omega (Y)) - \omega (\nabla_X Y) .\) </center> <p> 这里的负号是Leibniz律的产物。 </p> <h4 id="auto-6">1.2.3<span style="margin-left: 1em"></span>对张量积<span style="margin-left: 1em"></span> </h4> <p> 要求 </p> <center> \(\displaystyle \nabla_X (T \otimes S) = (\nabla_X T) \otimes S + T \otimes (\nabla_X S) .\) </center> <h4 id="auto-7">1.2.4<span style="margin-left: 1em"></span>对一般\((r, s)\)型张量<span style="margin-left: 1em"></span> </h4> <p> 综合以上，对\(T \in \Gamma (T^{r, s} M)\)， </p> <center> \(\displaystyle (\nabla_X T) (\omega^1, \ldots, \omega^r, Y_1, \ldots, Y_s) = X (T (\omega^1, \ldots, Y_s)) - \sum_a T (\ldots, \nabla_X \omega^a, \ldots, Y_s) - \sum_b T (\ldots, \omega^a, \ldots, \nabla_X Y_b, \ldots) .\) </center> <p> 协变指标 \((Y_b)\)带负号，逆变指标 \((\omega^a)\) 也带负号，因为缩并时要扣掉“标架变化”的部分。 </p> <p> 前面Hessian的协变导数 </p> <center> \(\displaystyle (\nabla_X H) (Y, Z) = X (H (Y, Z)) - H (\nabla_X Y, Z) - H (Y, \nabla_X Z)\) </center> <p> 正是这个公式在\((0, 2)\)型张量上的特例。 </p> <h3 id="auto-8">1.3<span style="margin-left: 1em"></span>度量相容性<span style="margin-left: 1em"></span> </h3> <p> 设\((M, g)\)是黎曼流形，\(\nabla\)是仿射联络。称\(\nabla\)与度量相容，若 </p> <center> \(\displaystyle \nabla g = 0,\) </center> <p> 等价地，对任意向量场 \(X, Y, Z\)， </p> <center> \(\displaystyle X (g (Y, Z)) = g (\nabla_X Y, Z) + g (Y, \nabla_X Z) .\) </center> <p> 直观意义 </p> <ul> <li> <p> 沿任意曲线平行移动向量时，内积保持不变； </p> </li> <li> <p> 平行移动是正交变换； </p> </li> <li> <p> 可以用\(\nabla\)和\(g\)自由地降指标、升指标，因为\(g\)是平行的。 </p> </li> </ul> <p> 局部坐标形式 </p> <center> \(\displaystyle \partial_k g_{i j} = \Gamma_{k i}^l g_{l j} + \Gamma^l_{k j} g_{i l} .\) </center> <h3 id="auto-9">1.4<span style="margin-left: 1em"></span>无挠性<span style="margin-left: 1em"></span> </h3> <p> 仿射联络的挠率张量定义为 </p> <center> \(\displaystyle T (X, Y) = \nabla_X Y - \nabla_Y X - [X, Y] .\) </center> <p> 称\(\nabla\)无挠，若 </p> <center> \(\displaystyle \nabla_X Y - \nabla_Y X = [X, Y] .\) </center> <p> 局部坐标中，无挠等价于Christoffel符号对称： </p> <center> \(\displaystyle \Gamma_{i j}^k = \Gamma_{j i}^k .\) </center> <h3 id="auto-10">1.5<span style="margin-left: 1em"></span>Levi-Civita 联络：基本定理<span style="margin-left: 1em"></span> </h3> <p> 黎曼几何基本定理：在黎曼流形\((M, g)\)上，存在唯一的仿射联络\(\nabla\)，同时满足: </p> <ol> <li> <p> 无挠：\(\nabla_X Y - \nabla_Y X = [X, Y]\); </p> </li> <li> <p> 度量相容：\(\nabla g = 0\). </p> </li> </ol> <p> 这个联络称为Levi-Civita联络（或黎曼联络）。 </p> <p> Koszul公式 </p> <p> 它由度量唯一确定： </p> <center> \(\displaystyle 2 g (\nabla_X Y, Z) = X (g (Y, Z)) + Y (g (X, Z)) - Z (g (X, Y)) + g ([X, Y], Z) - g ([X, Z], Y) - g\) </center> <p> 局部坐标：Christoffel符号 </p> <center> \(\displaystyle \nabla_{\partial_i} \partial_j = \Gamma_{i j}^k \partial k\) </center> <center> \(\displaystyle \Gamma_{i j}^k = \frac{1}{2} g^{k l} (\partial_i g_{j l} + \partial_j g_{i l} - \partial_l g_{i j}) .\) </center> <h3 id="auto-11">1.6<span style="margin-left: 1em"></span>应用<span style="margin-left: 1em"></span> </h3> <h4 id="auto-12">1.6.1<span style="margin-left: 1em"></span>Hessian的对称性来自无挠<span style="margin-left: 1em"></span> </h4> <center> \(\displaystyle (\operatorname{Hess}f) (X, Y) = (\nabla_X d f) (Y) = X (Y f) - (\nabla_X Y) f.\) </center> <p> 交换\(X, Y\)相减： </p> <center> \(\displaystyle (\operatorname{Hess}f) (X, Y) - (\operatorname{Hess}f) (Y, X) = [X, Y] f - (\nabla_X Y - \nabla_Y X) f.\) </center> <p> 无挠时\(\nabla_X Y - \nabla_Y X = [X, Y]\)，右边为0。所以 </p> <center> \(\displaystyle \operatorname{Hess}f (X, Y) =\operatorname{Hess}f (Y, X) .\) </center> <h4 id="auto-13">1.6.2<span style="margin-left: 1em"></span>Hessian写成内积形式依赖度量相容<span style="margin-left: 1em"></span> </h4> <center> \(\displaystyle \operatorname{Hess}f (X, Y) = g (\nabla_X \nabla f, Y)\) </center> <p> 中，\(\nabla f\) 由 \(g (\nabla f, X) = d f (X)\)定义，内积是\(g\)。度量相容保证这套“升指标-求导-降指标”的操作与 \(\nabla d f\) 一致。 </p> <h4 id="auto-14">1.6.3<span style="margin-left: 1em"></span>联络Laplacian的伴随依赖度量<span style="margin-left: 1em"></span> </h4> <center> \(\displaystyle L = - \nabla^{\ast} \nabla\) </center> <p> 中 \(\nabla^{\ast}\) 是 \(\nabla\) 关于 \(L^2\) 内积的正式伴随。\(L^2\) 内积由 \(g\) 和体积元定义，所以 \(L\) 的良定义依赖度量相容性。 </p> <h4 id="auto-15">1.6.4<span style="margin-left: 1em"></span>正交标架和迹<span style="margin-left: 1em"></span> </h4> <center> \(\displaystyle \langle L \nabla f, e_j \rangle = \sum_i (\nabla_{e_i} H) (e_j, e_i)\) </center> <p> 中，\(\{ e_i \}\)是 \(g\)-正交标架，\(\sum_i\)是取迹。这些都依赖 \(g\) 和 \(\nabla g = 0\)。 </p> <h2 id="auto-16">2<span style="margin-left: 1em"></span>Hessian<span style="margin-left: 1em"></span> </h2> <h3 id="auto-17">2.1<span style="margin-left: 1em"></span>预备记号<span style="margin-left: 1em"></span> </h3> <p> 切丛 \(T M\)，余切丛 \(T^{\ast} M\)。 </p> <p> 向量场空间 \(\Gamma (T M)\)，1-形式空间 \(\Gamma (T^{\ast} M)\)。 </p> <p> 度量 \(g (\cdot, \cdot) = \langle \cdot, \cdot \rangle\)。 </p> <p> 梯度 \(\nabla f =\operatorname{grad}f\) 由 </p> <center> \(\displaystyle g (\nabla f, X) = d f (X) = X f\) </center> <p> 唯一确定。 </p> <p> 协变导数 \(\nabla_X Y\) 对 \(X\) 是 \(C^{\infty} (M)\)-线性的，对 \(Y\) 满足Leibniz律。 </p> <h3 id="auto-18">2.2<span style="margin-left: 1em"></span>Hessian的定义<span style="margin-left: 1em"></span> </h3> <p style="margin-top: 1em"> <strong>定义 <class style="font-style: normal">1</class>. </strong><i>(协变导数定义)</i> </p> <p> <i>函数\(f \in C^{\infty} (M)\)的Hessian定义为 \(d f\) 的协变导数</i> </p> <p> <i></i></p> <center> \(\displaystyle \operatorname{Hess}f := \nabla d f \in \Gamma (T^{\ast} M \otimes T^{\ast} M) .\) </center> <p> <i>它对 \(X, Y \in \Gamma (T M)\)的作用为</i> </p> <p style="margin-bottom: 1em"> <i></i></p> <center> \(\displaystyle (\operatorname{Hess}f) (X, Y) = (\nabla_X d f) (Y) = X (Y f) - (\nabla_X Y) f.\) </center> <p style="margin-top: 1em"> <strong>定义 <class style="font-style: normal">2</class>. </strong><i>（梯度-内积定义）</i> </p> <p> <i>等价地，</i> </p> <p> <i></i></p> <center> \(\displaystyle (\operatorname{Hess}f) (X, Y) = g (\nabla_X \nabla f, Y) .\) </center> <p> <i>这与定义1一致，因为</i> </p> <p style="margin-bottom: 1em"> <i></i></p> <center> \(\displaystyle g (\nabla_X \nabla f, Y) = X g (\nabla f, Y) - g (\nabla f, \nabla_X Y) = X (Y f) - (\nabla_X Y) f.\) </center> <p> 性质 </p> <ol> <li> <p> 对称性（由\(\nabla\)无挠） </p> <center> \(\displaystyle (\operatorname{Hess}f) (X, Y) = (\operatorname{Hess}f) (Y, X) .\) </center> </li> <li> <p> 张量性：\(\operatorname{Hess}f\) 是 \((0, 2)\)型张量，对 \(X, Y\) 均 \(C^{\infty} (M)\)-线性。 </p> </li> <li> <p> 局部坐标： </p> <center> \(\displaystyle (\operatorname{Hess}f)_{i j} = \partial_i \partial_j f - \Gamma_{i j}^k \partial_k f.\) </center> <p> 在临界点 \(d f = 0\) 处退化为普通二阶偏导矩阵。 </p> </li> <li> <p> 与度量的关系：\(\operatorname{Hess}f\) 与 \(g\) 同型，可定义其 \(g\)-迹，即Laplace算子。 </p> </li> </ol> <h3 id="auto-19">2.3<span style="margin-left: 1em"></span>\(\nabla H\): Hessian 的协变导数<span style="margin-left: 1em"></span> </h3> <p> 令 </p> <center> \(\displaystyle H =\operatorname{Hess}f = \nabla d f.\) </center> <p> 它是一个 \((0, 2)\)-型张量。对它再求协变导数，得到 \((0, 3)\)-型张量 </p> <center> \(\displaystyle \nabla H \in \Gamma (T^{\ast} M \otimes T^{\ast} M \otimes T^{\ast} M) .\) </center> <p style="margin-top: 1em"> <strong>定义. </strong><i>(Leibniz 扩展)</i> </p> <p> <i>对 \(X, Y, Z \in \Gamma (T M)\),</i> </p> <p> <i></i></p> <center> \(\displaystyle (\nabla_X H) (Y, Z) = X (H (Y, Z)) - H (\nabla_X Y, Z) - H (Y, \nabla_X Z) .\) </center> <p> <i>取 \(X = e_i\):</i> </p> <p style="margin-bottom: 1em"> <i></i></p> <center> \(\displaystyle (\nabla_{e_i} H) (Y, Z) = e_i (H (Y, Z)) - H (\nabla_{e_i} Y, Z) - H (Y, \nabla_{e_i} Z) .\) </center> <p> 局部坐标 </p> <center> \(\displaystyle (\nabla_i H)_{j k} = \partial_i H_{j k} - \Gamma_{i j}^l H_{l k} - \Gamma_{i k}^l H_{j l} .\) </center> <p> 性质 </p> <ol> <li> <p> 张量性：\(\nabla H\)对 \(X, Y, Z\) 均 \(C^{\infty} (M)\)-线性 </p> </li> <li> <p> 对称性：由于 \(H\) 对称且 \(\nabla\)无挠，\(\nabla H\) 在后两个指标上对称： </p> <center> \(\displaystyle (\nabla_X H) (Y, Z) = (\nabla_X H) (Z, Y) .\) </center> </li> <li> <p> \(\nabla H\) 是 \(\operatorname{Hess}f\) 的三阶导数，在临界点附近刻画 Hessian 的变化率。 </p> </li> </ol> <h3 id="auto-20">2.4<span style="margin-left: 1em"></span>Laplace 算子的定义<span style="margin-left: 1em"></span> </h3> <p> 流形上有两个常用Laplace算子 </p> <h4 id="auto-21">2.4.1<span style="margin-left: 1em"></span>Laplace-Beltrami 算子，作用在函数上<span style="margin-left: 1em"></span> </h4> <p style="margin-top: 1em"> <strong>定义. </strong><i>(散度-梯度）</i> </p> <p> <i></i></p> <center> \(\displaystyle \Delta f =\operatorname{div} (\nabla f) .\) </center> <p> <i>其中散度由</i> </p> <p> <i></i></p> <center> \(\displaystyle \operatorname{div}X =\operatorname{tr}_g (\nabla X) = \sum_i g (\nabla_{e_i} X, e_i)\) </center> <p style="margin-bottom: 1em"> <i>定义。</i> </p> <p style="margin-top: 1em"> <strong>定义. </strong><i>(Hessian 的迹)</i> </p> <p> <i>等价地</i> </p> <p> <i></i></p> <center> \(\displaystyle \Delta f =\operatorname{tr}_g (\operatorname{Hess}f) = \sum_i (\operatorname{Hess}f) (e_i, e_i) = \sum_i g (\nabla_{e_i} \nabla f, e_i) .\) </center> <p> <i>局部坐标</i> </p> <p style="margin-bottom: 1em"> <i></i></p> <center> \(\displaystyle \Delta f = \frac{1}{\sqrt{| g |}} \partial_i \left( \sqrt{| g |} g^{i j} \partial_j f \right) .\) </center> <p> 性质 </p> <ul> <li> <p> \(\Delta f\) 是标量函数。 </p> </li> <li> <p> 符号约定：几何中常用 \(\Delta =\operatorname{div} \nabla\)(非负谱的反号取决于约定)，分析中常用\(- \Delta\)使其正定。 </p> </li> <li> <p> 在 \(\mathbb{R}^n\) 中退化为普通 Laplacian \(\sum_i \partial_i^2 f\). </p> </li> </ul> <h4 id="auto-22">2.4.2<span style="margin-left: 1em"></span>联络Laplacian （Bochner Laplacian，作用在张量场/向量场上）<span style="margin-left: 1em"></span> </h4> <p> 对向量场 \(X\), </p> <center> \(\displaystyle L X = - \nabla^{\ast} \nabla X = \sum_i \left( \nabla_{e_i} \nabla_{e_i} X - \nabla_{\nabla_{e_i} e_i} X \right) .\) </center> <p> 符号约定不同则整体差负号。 </p> <p> 对1-形式 \(\omega\),同理 </p> <center> \(\displaystyle L \omega = - \nabla^{\ast} \nabla \omega,\) </center> <p> 局部上 </p> <center> \(\displaystyle (L \omega)_j = - g^{i k} (\nabla_i \nabla_k \omega)_j .\) </center> <p> 与函数Laplacian的关系 </p> <p> 对函数 \(f\)， </p> <center> \(\displaystyle L f {=\!\!=} - \nabla^{\ast} \nabla f = - \Delta f\) </center> <p> （在 \(\Delta =\operatorname{div} \nabla\)约定下差负号）。 </p> <p> 但对1-形式\(d f\)，\(L (d f)\)与 \(d (\Delta f)\) 一般不同，二者由 Weitzenbock 公式联系 </p> <center> \(\displaystyle \Delta_H d f = d (\Delta f) +\operatorname{Ric} (\nabla f),\) </center> <p> 其中 \(\Delta_H\) 是 Hodge-de Rham Laplacian。联络 Laplacian \(L\) 与 Hodge Laplacian也差 Ricci项。 </p> <h3 id="auto-23">2.5<span style="margin-left: 1em"></span>\(\langle L \nabla f, e_j \rangle\)与 \(\nabla H\)的关系<span style="margin-left: 1em"></span> </h3> <p> 这是前面讨论的核心恒等式。取 \(X = \nabla f\), \(H =\operatorname{Hess}f\). </p> <p> 由联络 Laplacian定义 </p> <center> \(\displaystyle \langle L \nabla f, e_j \rangle = \sum_i \left[ \langle \nabla_{e_i} \nabla_{e_i} \nabla f, e_j \rangle - \left\langle \nabla_{\nabla_{e_i} e_i} \nabla f, e_j \right\rangle \right] .\) </center> <p> 利用 </p> <center> \(\displaystyle \langle \nabla_{e_i} \nabla f, e_j \rangle = H (e_i, e_j)\) </center> <p> 并展开 </p> <center> \(\displaystyle e_i (H (e_i, e_j)) = \langle \nabla_{e_i} \nabla_{e_i} \nabla f, e_j \rangle + \langle \nabla_{e_i} \nabla f, \nabla_{e_i} e_j \rangle,\) </center> <p> 得到 </p> <center> \(\displaystyle \langle \nabla_{e_i} \nabla_{e_i} \nabla f, e_j \rangle = e_i H (e_i, e_j) - H (e_i, \nabla_{e_i} e_j) .\) </center> <p> 代回： </p> <center> \(\displaystyle \langle L \nabla f, e_j \rangle = \sum_i [e_i H (e_i, e_j) - H (e_i, \nabla_{e_i} e_j) - H (\nabla_{e_i} e_i, e_j)] .\) </center> <p> 方括号正是 \((\nabla_{e_i} H) (e_i, e_j)\)，于是 </p> <center> \(\displaystyle \langle L \nabla f, e_j \rangle = \sum_i (\nabla_{e_i} H) (e_i, e_j) .\) </center> <p> 再由 \(H\) 对称， </p> <center> \(\displaystyle \langle L \nabla f, e_j \rangle = \sum_i (\nabla_{e_i} H) (e_j, e_i) .\) </center> <h2 id="auto-24">3<span style="margin-left: 1em"></span>Bochner公式<span style="margin-left: 1em"></span> </h2> <p> 为什么要计算梯度平方的Laplacian？因为我们想把“函数变化得有多快”变成一个能用最大值原理控制的标量问题。Bochner公式把这个标量的Laplacian分解成 Hessian 的非负平方项、原方程提供的项以及曲率项。 </p> <p> 以下设 \((M^n, g)\) 是光滑黎曼流形，\(f \in C^{\infty} (M)\)，\(\nabla\) 是 Levi-Civita 联络。统一采用 \(\Delta =\operatorname{div}\operatorname{grad}\)，并取 \(R (X, Y) Z = \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X, Y]} Z\)，使单位球面的截面曲率为正。 </p> <p style="margin-top: 1em"> <strong>定义. </strong><i>Bochner恒等式</i> </p> <p style="margin-bottom: 1em"> <i></i></p> <center> \(\displaystyle \frac{1}{2} \Delta | \nabla f |^2 = | \operatorname{Hess}f |^2 + \langle \nabla f, \nabla \Delta f \rangle +\operatorname{Ric} (\nabla f, \nabla f)\) </center> <p> 欧氏空间情形 </p> <p> 记 \(f_j = \partial_j f\)，\(f_{i j} = \partial_i \partial_j f\)。对平方连续求两次导数 </p> <center> \(\displaystyle \begin{array}{rl} \frac{1}{2} \Delta | \nabla f |^2 &amp; = \frac{1}{2} \sum_i \partial_i^2 \left( \sum_j f_j^2 \right)\\ &amp; = \sum_{i, j} f_{i j}^2 + \sum_j f_j \sum_i \partial_i^2 \partial_j f\\ &amp; = | D^2 f |^2 + \langle \nabla f, \nabla \Delta f \rangle . \end{array}\) </center> <p> 在流形上，先对向量场的长度平方求导 </p> <p> 令\(V = \nabla f\)。为区分标量Laplacian与向量场上的算子，记 </p> <center> \(\displaystyle L V := \sum_i \left( \nabla_{e_i} \nabla_{e_i} V - \nabla_{\nabla_{e_i} e_i} V \right) .\) </center> <p> 这里 \(\{ e_i \}\) 是局部正交单位标架，\(L\) 是二阶协变导数的迹。固定一点\(p\)，选取满足 \(\nabla_{e_i} e_j (p) = 0\) 的标架。利用联络和度量相容，在 \(p\) 有 </p> <center> \(\displaystyle \begin{array}{rl} \frac{1}{2} \Delta | V |^2 &amp; = \sum_i e_i \langle \nabla_{e_i} V, V \rangle\\ &amp; = \sum_i | \nabla_{e_i} V |^2 + \left\langle \sum_i \nabla_{e_i} \nabla_{e_i} V, V \right\rangle\\ &amp; = | \nabla V |^2 + \langle L V, V \rangle \end{array}\) </center> <p> 当 \(V = \nabla f\) 时，\(| \nabla V |^2 = | \operatorname{Hess}f |^2\)。因此，剩下的问题只有一个：\(L \nabla f\) 与 \(\nabla \Delta f\) 相差什么？ </p> <b></b><p> 交换导数产生Ricci曲率 </p> <center> \(\displaystyle L \nabla f = \nabla \Delta f +\operatorname{Ric} (\nabla f, \cdot)^{\sharp}\) </center> <p> \(\sharp\) 表示用度量把一形式变成向量。将这个恒等式代入上面的平方求导公式，就得到Bochner公式。下面展开它的证明。 </p> <p style="margin-top: 1em"> <strong>证明. </strong> </p> <p> 令 \(H =\operatorname{Hess}f = \nabla d f\). 仍使用上面的标架。由Hessian的对称性 </p> <center> \(\displaystyle \langle L \nabla f, e_j \rangle = \sum_i (\nabla_{e_i} H) (e_i, e_j) = \sum_i (\nabla_{e_i} H) (e_j, e_i)\) </center> <p> 对一形式 \(\alpha\)，协变导数的变换公式是 </p> <center> \(\displaystyle ((\nabla_X \nabla_Y - \nabla_Y \nabla_X - \nabla_{[X, Y]}) \alpha) (Z) = - \alpha (R (X, Y) Z) .\) </center> <p> 取 \(\alpha = d f\)，并利用联络无挠，得到 </p> <center> \(\displaystyle (\nabla_{e_i} H) (e_j, e_i) - (\nabla_{e_i} H) (e_i, e_i) = - \langle \nabla f, R (e_i, e_j) e_i \rangle .\) </center> <p> 于是 </p> <center> \(\displaystyle \begin{array}{rl} \langle L \nabla f, e_j \rangle &amp; = \sum_i (\nabla_{e_j} H) (e_i, e_i) - \sum_i \langle \nabla f, R (e_i, e_j) e_i \rangle\\ &amp; = e_j (\Delta f) +\operatorname{Ric} (e_j, \nabla f) . \end{array}\) </center> <p> 第一项是 Hessian 的迹的导数。第二项用到曲率算子关于度量的反对称性与 Ricci 曲率的定义: </p> <center> \(\displaystyle - \sum_i \langle \nabla f, R (e_i, e_j) e_i \rangle = \sum_i \langle R (e_i, e_j) \nabla f, e_i \rangle =\operatorname{Ric} (e_j, \nabla f) .\) </center> <p style="margin-bottom: 1em"> 这对每个 \(e_j\) 都成立，所以给出了所需的向量恒等式。<span style="margin-left: 1em"></span>\(\Box\) </p> <h3 id="auto-25">3.1<span style="margin-left: 1em"></span>为什么选择梯度平方的Laplacian<span style="margin-left: 1em"></span> </h3> <p> 假设 \(u\) 满足一个方程，如 \(\Delta u = 0\)，目标是估计它的变化率 \(| \nabla u |\)。这个选择有三个具体原因： </p> <ul> <li> <p> 取梯度：直接对应我们想控制的变化率 </p> </li> <li> <p> 取平方范数：把向量换成标量，且 \(| \nabla u |^2\)在临界点光滑；\(| \nabla u |\)未必如此。平方求导还产生有利的Hessian平方项。 </p> </li> <li> <p> 取 Laplacian：能连接原方程，并且在标量函数的内部局部最大点有 \(\Delta w \leq 0\)，可以使用最大值原理。 </p> </li> </ul> <p> 例如，若 \(u\) 调和且 \(\operatorname{Ric} \geq 0\)，则 </p> <center> \(\displaystyle \frac{1}{2} \Delta | \nabla u |^2 = | \operatorname{Hess}u |^2 +\operatorname{Ric} (\nabla u, \nabla u) \geq 0.\) </center> <p> 梯度平方因此是次调和函数：几何条件已变成标量微分不等式。 </p> <p> 但仅凭这一点，不能在任意非紧流形上直接得到梯度上界，因为它未必取得最大值，也缺少能限制其大小的项。 </p> <h3 id="auto-26">3.2<span style="margin-left: 1em"></span>用于梯度估计：正的二次项怎么出现<span style="margin-left: 1em"></span> </h3> <p> 设\(u\)在所讨论的开集上光滑、严格为正且调和，即 \(u &gt; 0, \Delta u = 0\)。令 \(f = \log u, w = | \nabla f |^2\)。取对数是为了控制相对变化率: \(u \mapsto c u (c &gt; 0)\)只使\(f\)增加常数，不改变它的梯度。下面逐步计算 \(\Delta f\)。 </p> <p> 取 \(a = u^{- 1}, V = \nabla u\)。注意 \(\nabla (u^{- 1}) = - u^{- 2} \nabla u\)。于是 </p> <center> \(\displaystyle \begin{array}{rl} \Delta f &amp; =\operatorname{div} (\nabla f) =\operatorname{div} (u^{- 1} \nabla u)\\ &amp; = \langle \nabla (u^{- 1}), \nabla u \rangle + u^{- 1} \operatorname{div} (\nabla u)\\ &amp; = - u^{- 2} \langle \nabla u, \nabla u \rangle + u^{- 1} \Delta u\\ &amp; = \frac{\Delta u}{u} - \frac{| \nabla u |^2}{u^2} = - \frac{| \nabla u |^2}{u^2}\\ &amp; = - w \end{array}\) </center> <p> 因此， </p> <center> \(\displaystyle \Delta f = - | \nabla f |^2 = - w\) </center> <p> 所以 \(u\) 调和并不意味着 \(\log u\) 调和；对数产生的梯度平方项恰好把线性方程 \(\Delta u = 0\) 变成后续估计所需的非线性方程。负号来自 \((\log s)'' = - s^{- 2}\)，不是来自曲率。 </p> <p> 最后，为看清它怎样代入 Bochner 公式，对 \(\Delta f = - w\) 再取梯度： </p> <center> \(\displaystyle \nabla \Delta f = - \nabla w, \quad \langle \nabla f, \nabla \Delta f \rangle = - \langle \nabla f, \nabla w \rangle .\) </center> <p> 对 \(f\) 使用 Bochner 公式，便有 </p> <center> \(\displaystyle \frac{1}{2} \Delta w = | \operatorname{Hess}f |^2 - \langle \nabla f, \nabla w \rangle +\operatorname{Ric} (\nabla f, \nabla f) .\) </center> <p> </p> <p> 在一点把对称的 Hessian 对角化，设其特征值为 \(\lambda_1, \ldots, \lambda_n\)。Cauchy-Schwarz 不等式给出 </p> <center> \(\displaystyle (\Delta f)^2 = \left( \sum_i \lambda_i \right)^2 \leq n \sum_i \lambda_i^2 = n | \operatorname{Hess}f |^2 .\) </center> <p> 又因 \(\Delta f = - w\)，得到 \(| \operatorname{Hess}f |^2 \geq w^2 / n\). </p> <p> 若 \(\operatorname{Ric} \geq - (n - 1) K g\)，其中 \(K \geq 0\)，则 </p> <p style="margin-top: 1em"> <strong>定义. </strong><i>梯度估计的核心微分不等式</i> </p> <p style="margin-bottom: 1em"> <i></i></p> <center> \(\displaystyle \frac{1}{2} \Delta w \geq \frac{w^2}{n} - (n - 1) K w - \langle \nabla f, \nabla w \rangle .\) </center> <p> 正项 \(w^2 / n\) 是限制梯度不能太大的关键。假如 \(w\) 在内部取得局部最大值，那么该点 \(\nabla w = 0, \Delta w \leq 0\)，从而 </p> <center> \(\displaystyle 0 \geq \frac{w^2}{n} - (n - 1) K w, \quad w \leq n (n - 1) K.\) </center> <p> 这是最大点处的条件性结论，不是对任意局部调和函数已经完成的估计。实际证明要在球内对截断后的\(\psi w\) 使用最大值原理，控制截断产生的误差，最终得到 \(| \nabla \log u | \leq C_n \left( \sqrt{K} + 1 / R \right)\)的内部估计。 </p> <p> </p> <p> 用于距离比较：梯度长度已知时反过来用 </p> <p> 设流形完备、连通、无边界且 \(n \geq 2\)，取 \(r = d (p, \cdot)\)。只在 \(M\backslash (\{ p \} \cup \operatorname{Cut} (p))\) 上作下面的点态计算。由于 \(| \nabla r |^2 = 1\)，Bochner公式左边为零： </p> <center> \(\displaystyle 0 = | \operatorname{Hess}r |^2 + \partial_r (\Delta r) +\operatorname{Ric} (\partial_r, \partial_r), \quad \partial_r = \nabla r.\) </center> <p> 由 \(\operatorname{Hess}r (\partial_r, \cdot) = 0\)，Hessian的迹只在 \(n - 1\) 个横向方向上求和，因此 </p> <center> \(\displaystyle | \operatorname{Hess}r |^2 \geq \frac{(\Delta r)^2}{n - 1} .\) </center> <p> 若 \(\operatorname{Ric} \geq (n - 1) \kappa g\)，沿从 \(p\) 出发、初始方向是 \(v\) 的径向测地线 \(\gamma_v (t)\), 令 \(m (t) = \Delta r (\gamma_v (t))\)。在到达割迹之前 (即 \(0 &lt; t &lt; c (v)\)，其中 \(c (v)\) 是该方向的割时间)，距离函数 \(r\) 光滑，因此得到 </p> <center> \(\displaystyle m' + \frac{m^2}{n - 1} + (n - 1) \kappa \leq 0.\) </center> <p> 这正是Laplacian比较所需的Riccati型不等式。对距离函数，梯度长度已知，用 Bochner 公式控制 \(\Delta r\)；对正调和函数，方程已知，用它控制 \(| \nabla \log u |\)。完整矩阵 Riccati 方程还需 Jacobi 场，不能仅由这条取迹的恒等式恢复。 </p> <p> </p> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yazheng Chen. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@1.0.63/dist/tikzjax.js" type="text/javascript" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "publications by categories in reversed chronological order. generated by jekyll-scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "This is a description.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "dropdown-beginners",
+              title: "beginners",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/";
+              },
+            },{id: "dropdown-ot",
+              title: "OT",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/ot_course/";
+              },
+            },{id: "post-hessian",
+        
+          title: "Hessian",
+        
+        description: "Lectures of Differential Geometry, chapter 1",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/manifold-Hessian/";
+          
+        },
+      },{id: "post-curvature-and-differential-forms",
+        
+          title: "Curvature and Differential Forms",
+        
+        description: "chapter 2 of Differential Geometry, Connection, Curvature and Characteristic Classes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/curvature-and-differential-forms/";
+          
+        },
+      },{id: "post-curvature-and-vector-fields",
+        
+          title: "Curvature and Vector Fields",
+        
+        description: "chapter 1 of Differential Geometry, Connection, Curvature and Characteristic Classes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/curvature-and-vector-fields/";
+          
+        },
+      },{id: "post-the-founding-fathers-of-optimal-transport-cédric-villani",
+        
+          title: "The founding fathers of optimal transport, Cédric Villani",
+        
+        description: "part of chapter 3 of Optimal Transport, Old and New",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/fathers-of-OT/";
+          
+        },
+      },{id: "post-three-example-of-coupling-techniques-cédric-villani",
+        
+          title: "Three example of coupling techniques, Cédric Villani",
+        
+        description: "part of chapter 2 of Optimal Transport, Old and New",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/coupling-and-langevin-convergence/";
+          
+        },
+      },{id: "post-the-monge-ampère-equation-connor-mooney",
+        
+          title: "The Monge-Ampère Equation, Connor Mooney",
+        
+        description: "this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/survey-Monge-Ampere-equation-Connor/";
+          
+        },
+      },{id: "post-chap-2-the-theory-of-pfaffian-forms-cartan",
+        
+          title: "Chap 2 The Theory of Pfaffian Forms, Cartan",
+        
+        description: "note of this chapter",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Pfaffian-Forms/";
+          
+        },
+      },{id: "post-on-the-monge-mass-transfer-problem-trudinger-amp-xu-jia-wang",
+        
+          title: "On the Monge mass transfer problem, Trudinger & Xu-Jia Wang",
+        
+        description: "note of this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/On-the-Monge-mass-transfer-problem/";
+          
+        },
+      },{id: "post-differential-forms",
+        
+          title: "Differential Forms",
+        
+        description: "notes of Chap 5 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/differential-forms/";
+          
+        },
+      },{id: "post-notes-of-lie-group-and-lie-algebra",
+        
+          title: "notes of Lie Group and Lie Algebra",
+        
+        description: "notes of Chap 4 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Lie-group-Lie-algebra/";
+          
+        },
+      },{id: "post-the-rank-of-a-smooth-map-and-the-tangent-bundle",
+        
+          title: "The Rank of a Smooth Map and The Tangent Bundle",
+        
+        description: "notes of Chap 3 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/tangent-bundle/";
+          
+        },
+      },{id: "post-the-tangent-space-submanifolds-categories-and-functors",
+        
+          title: "The Tangent Space, Submanifolds, Categories and Functors",
+        
+        description: "notes of Chap 3 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the-tangent-space/";
+          
+        },
+      },{id: "post-manifolds-smooth-maps-on-a-manifold-and-quotients",
+        
+          title: "Manifolds, Smooth Maps on a Manifold and Quotients",
+        
+        description: "notes of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/manifolds/";
+          
+        },
+      },{id: "post-minkowski-type-theorems-and-least-squares-partitioning-aurenhammer-hoffmann-and-aronov",
+        
+          title: "Minkowski-Type Theorems and Least-Squares Partitioning, Aurenhammer, Hoffmann and Aronov",
+        
+        description: "notes of this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Minkowski-type-thm-and-least-squares-partitioning/";
+          
+        },
+      },{id: "post-moving-frames",
+        
+          title: "Moving Frames",
+        
+        description: "notes of Riemannian Geometry in an Orthonormal Frame",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/moving-frames/";
+          
+        },
+      },{id: "post-differential-forms-symmetrizing-and-alternating-operators",
+        
+          title: "Differential Forms, Symmetrizing and Alternating Operators",
+        
+        description: "notes of Chap 1 of The Introduction to Manifolds, Loring W. Tu",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/differential-forms-Rn/";
+          
+        },
+      },{id: "post-the-deleted-product-of-wen-tsun-wu-and-chern-class",
+        
+          title: "The Deleted Product of Wen-Tsun Wu and Chern class",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Wen-Tsun-Wu-and-Chern/";
+          
+        },
+      },{id: "post-polar-factorization-and-monotone-rearrangement-of-vector-valued-functions-yann-brenier",
+        
+          title: "Polar Factorization and Monotone Rearrangement of Vector-Valued Functions, Yann Brenier",
+        
+        description: "notes of this famous paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Brenier91/";
+          
+        },
+      },{id: "post-introduction-of-alexandrov-39-s-convex-polyhedra",
+        
+          title: "Introduction of Alexandrov's Convex Polyhedra",
+        
+        description: "note of this book",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Convex-Polyhedra-Alexandrov/";
+          
+        },
+      },{id: "post-on-the-regularity-of-the-monge-ampere-equation-shiu-yuen-cheng-and-shing-tung-yau",
+        
+          title: "On the Regularity of the Monge-Ampere Equation, Shiu-Yuen Cheng and Shing-Tung Yau",
+        
+        description: "note of this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/On-the-regularity-of-the-Monge-Ampere-equation/";
+          
+        },
+      },{id: "post-a-visual-introduction-to-riemannian-curvatures-and-some-discrete-generalizations",
+        
+          title: "A visual introduction to Riemannian curvatures and some discrete generalizations",
+        
+        description: "note of this paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Yann-Ollivier-visual-intro-to-Riemannian-curvatures/";
+          
+        },
+      },{id: "post-some-sentences-from-the-book",
+        
+          title: "some sentences from the book",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/daily-whisper/";
+          
+        },
+      },{id: "post-made-my-day",
+        
+          title: "made my day",
+        
+        description: "At lunch, Gu said I should learn math.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/teacher-said-I-should-learn-math/";
+          
+        },
+      },{id: "post-review-of-2025",
+        
+          title: "review of 2025",
+        
+        description: "simple review",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/review-of-2025/";
+          
+        },
+      },{id: "post-how-gauss-predicted-ceres-orbit-part-2",
+        
+          title: "how-gauss-predicted-Ceres-orbit-part-2",
+        
+        description: "a translation of Bachelor Thesis of Daniel Bed’at\check{s}, Gauss’ calculation of Ceres’ orbit",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/how-gauss-predicted-Ceres-orbit-part-2/";
+          
+        },
+      },{id: "post-how-gauss-predicted-ceres-orbit-part-1",
+        
+          title: "how-gauss-predicted-Ceres-orbit-part-1",
+        
+        description: "a translation of Bachelor Thesis of Daniel Bed’at\check{s}, Gauss’ calculation of Ceres’ orbit",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/how-gauss-predicted-Ceres-orbit-part-1/";
+          
+        },
+      },{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+        },
+      },{
+        id: 'social-inspire',
+        title: 'Inspire HEP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://inspirehep.net/authors/1010907", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://cyz14.github.io/", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

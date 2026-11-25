@@ -50,8 +50,13 @@ grep -q '/assets/js/distillpub/template.v2.js' "${distill_page}"
 grep -q '/assets/js/distillpub/transforms.v2.js' "${distill_page}"
 grep -q '/assets/js/distillpub/overrides.js' "${distill_page}"
 grep -q '/assets/al_charts/js/mermaid-setup.js' "${distill_page}"
-grep -q 'https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@1.0.8/dist/fonts.css' "${distill_page}"
-grep -q 'https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@1.0.8/dist/tikzjax.js' "${distill_page}"
+for asset in css js; do
+  resource_url="$(bundle exec ruby -rpsych -e 'puts Psych.unsafe_load_file("_config.yml").fetch("third_party_libraries").fetch("tikzjax").fetch("url").fetch(ARGV.fetch(0))' "${asset}")"
+  if [ -z "${resource_url}" ] || ! grep -Fq "${resource_url}" "${distill_page}"; then
+    echo "missing configured TikZJax ${asset} resource in ${distill_page}: ${resource_url}" >&2
+    exit 1
+  fi
+done
 grep -q 'id="giscus_thread"' "${distill_page}"
 transforms_runtime="${tmp_site}/assets/js/distillpub/transforms.v2.js"
 distill_runtime="$(PATH="$HOME/.rbenv/shims:$PATH" bundle exec ruby -e 'spec = Gem.loaded_specs["al_folio_distill"]; puts(spec ? File.join(spec.full_gem_path, "assets/js/distillpub/transforms.v2.js") : "")')"
