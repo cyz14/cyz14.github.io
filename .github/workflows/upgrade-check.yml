@@ -17,6 +17,7 @@ on:
       - "Gemfile.lock"
       - "test/integration_upgrade_cli.sh"
       - ".github/workflows/upgrade-check.yml"
+      - ".al-folio-overrides.yml"
   pull_request:
     branches:
       - master
@@ -33,6 +34,7 @@ on:
       - "Gemfile.lock"
       - "test/integration_upgrade_cli.sh"
       - ".github/workflows/upgrade-check.yml"
+      - ".al-folio-overrides.yml"
 
 jobs:
   upgrade-check:
@@ -44,11 +46,14 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          ruby-version: "3.3"
           bundler-cache: true
 
       - name: Run upgrade audit 🧪
         run: bundle exec al-folio upgrade audit
+
+      - name: Audit reviewed local overrides 🧪
+        run: bundle exec al-folio upgrade overrides audit --fail-on-stale
 
       - name: Upload upgrade report 📄
         if: always()

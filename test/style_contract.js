@@ -1,5 +1,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
+const { createHash } = require("node:crypto");
+const { execFileSync } = require("node:child_process");
 
 const root = process.cwd();
 
@@ -61,7 +63,50 @@ if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
   failures.push("`Gemfile` must not use git-branch pin for `al_math`; use released gem version.");
 }
 
-for (const forbiddenPath of ["_includes", "_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
+// Customized sites may keep reviewed theme overrides (see docs/BOUNDARIES.md).
+// Ruby is already required by Jekyll; use its YAML parser for the CLI's manifest.
+let overrides = {};
+if (exists(".al-folio-overrides.yml")) {
+  try {
+    const manifest = JSON.parse(
+      execFileSync(
+        "ruby",
+        ["-ryaml", "-rjson", "-e", "puts JSON.generate(YAML.safe_load(File.read(ARGV[0])))", path.join(root, ".al-folio-overrides.yml")],
+        { encoding: "utf8" }
+      )
+    );
+    overrides = manifest.overrides || {};
+  } catch (error) {
+    failures.push(`Cannot read local override acknowledgements: ${error.message}`);
+  }
+}
+
+function checkOverrides(directory) {
+  for (const entry of fs.readdirSync(path.join(root, directory), { withFileTypes: true })) {
+    const relative = `${directory}/${entry.name}`;
+    if (entry.isDirectory()) {
+      checkOverrides(relative);
+      continue;
+    }
+    const acknowledgement = overrides[relative];
+    if (!entry.isFile() || !acknowledgement?.owner || !acknowledgement?.upstream_sha256) {
+      failures.push(`Local theme override \`${relative}\` must be reviewed and recorded in .al-folio-overrides.yml.`);
+      continue;
+    }
+    const sha = createHash("sha256")
+      .update(fs.readFileSync(path.join(root, relative)))
+      .digest("hex");
+    if (sha !== acknowledgement.local_sha256) {
+      failures.push(`Local theme override \`${relative}\` changed since acknowledgement; review and run al-folio upgrade overrides accept.`);
+    }
+  }
+}
+
+for (const directory of ["_includes", "_layouts", "_sass"]) {
+  if (exists(directory)) checkOverrides(directory);
+}
+
+for (const forbiddenPath of ["_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
   if (exists(forbiddenPath)) {
     failures.push(`Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`);
   }

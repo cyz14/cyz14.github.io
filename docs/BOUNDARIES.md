@@ -39,6 +39,8 @@ Local site overrides are still valid. A starter site may define `_layouts/<name>
 
 When a site keeps local overrides of plugin-owned files, run `bundle exec al-folio upgrade overrides audit`. Commit `.al-folio-overrides.yml` after review so future plugin gem updates can flag upstream changes to shadowed files.
 
+The starter style contract permits files in `_layouts`, `_includes`, and `_sass` only when their current checksums are recorded in that manifest. CI also runs `bundle exec al-folio upgrade overrides audit --fail-on-stale` to check the recorded upstream versions and checksums. Comments and Distill integration tests create temporary fixtures, so customized sites do not need to retain the starter's example posts.
+
 Plugin releases are versioned and published independently on RubyGems. A plugin patch release does not require a new starter release unless the starter wiring, dependency pins, lockfile/image metadata, docs, or test fixtures need to change.
 
 ## Plugin naming convention
