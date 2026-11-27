@@ -1148,7 +1148,7 @@ f}{\partial \bar{z} \partial z}\)
     <p style="margin-bottom: 1em">
       <i><center>
         \(\displaystyle \operatorname{Ind}_O \lambda
-        \xequal{\operatorname{def}} \frac{1}{2 \pi}
+        \overset{\mathrm{def}}{=} \frac{1}{2 \pi}
 \oint_{S^1} g \ast \frac{u
         \mathrm{d} v - v \mathrm{d} u}{u^2 + v^2} .\)
       </center></i>
